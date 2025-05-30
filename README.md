@@ -225,7 +225,7 @@ Estamos abertos a contribuições de todos os tipos: Desenvolvimento de novas t�
 
 Para começar a contribuir:
 
-- Leia nosso [Código de Conduta](https://www.google.com/search?q=LINK_PARA_CODE_OF_CONDUCT.MD) para garantir um ambiente respeitoso.
+- Leia nosso [Código de Conduta](https://github.com/Resck/Takwara-Tech/blob/main/CODE_OF_CONDUCT.md) para garantir um ambiente respeitoso.
 - Crie uma "issue" (problema) neste repositório para propor, relatar ou sugerir.
 - Envie um "pull request" (solicitação de incorporação) com suas contribuições.
 
