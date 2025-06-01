@@ -6,8 +6,6 @@ Tecnologia Social de Geração de Renda e Sustentabilidade com Bambu - Licença 
 ![Licença CC BY 4.0](https://i.creativecommons.org/l/by/4.0/88x31.png)
 *Este trabalho está licenciado sob a Creative Commons Atribuição 4.0 Internacional.*
 
-Este repositório é uma semente plantada por Fabio Takwara, um educador autodidata que, superando desafios pessoais e a resistência do sistema, dedicou mais de uma década a pesquisar o potencial do bambu para a construção sustentável.
-
 ### Índice
 
 1.  [Introdução: A Chama da Inovação](#1-introdução-a-chama-da-inovação)
@@ -29,12 +27,11 @@ Este repositório é uma semente plantada por Fabio Takwara, um educador autodid
 *(Nota: Os links do índice acima se tornarão navegáveis quando este documento estiver no GitHub. Os links para pastas e documentos técnicos ao longo do texto também apontarão para o conteúdo completo dentro do repositório.)*
 
 ---
-
 ## 1. Introdução: A Chama da Inovação
 
 Bem-vindo ao repositório da Tecnologia Takwara! Aqui, compartilhamos abertamente soluções inovadoras para a construção sustentável com bambu, visando mitigar a crise habitacional e o impacto ambiental da construção civil. A Tecnologia Takwara, idealizada por Fabio "Takwara" Resck, oferece métodos ecológicos para tratamento do bambu, técnicas construtivas acessíveis e aproveitamento de resíduos na criação de ecomateriais, direcionadas a arquitetos, engenheiros, construtores, estudantes e comunidades locais.
 
-Este repositório é uma semente plantada por Fabio Takwara, um educador autodidata que, superando desafios pessoais e a resistência do sistema, dedicou mais de uma década a pesquisar o potencial do bambu para a construção sustentável.
+Este repositório é uma semente plantada por Fabio Takwara, um educador autodidata que, superando desafios pessoais e a resistência do sistema, dedicou mais de uma década a pesquisar o potencial do bambu para a construção sustentável. **Sua jornada se inspira em visionários como Alberto Santos Dumont, que buscaram soluções inovadoras para problemas urgentes, unindo engenhosidade técnica, impacto social e responsabilidade ambiental [link para análise comparativa com Santos Dumont].**
 
 Nossa missão é democratizar o acesso a técnicas construtivas que sejam ao mesmo tempo ecológicas, economicamente viáveis, socialmente inclusivas e capazes de responder aos urgentes desafios climáticos e habitacionais que enfrentamos globalmente. Acreditamos no poder do "aço vegetal" e na sabedoria ancestral combinada com a ciência moderna para transformar nossa relação com o ambiente construído.
 
