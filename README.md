@@ -32,6 +32,7 @@ Tecnologia Social de Geração de Renda e Sustentabilidade com Bambu - Licença 
 Bem-vindo ao repositório da Tecnologia Takwara! Aqui, compartilhamos abertamente soluções inovadoras para a construção sustentável com bambu, visando mitigar a crise habitacional e o impacto ambiental da construção civil. A Tecnologia Takwara, idealizada por Fabio "Takwara" Resck, oferece métodos ecológicos para tratamento do bambu, técnicas construtivas acessíveis e aproveitamento de resíduos na criação de ecomateriais, direcionadas a arquitetos, engenheiros, construtores, estudantes e comunidades locais.
 
 Este repositório é uma semente plantada por Fabio Takwara, um educador autodidata que, superando desafios pessoais e a resistência do sistema, dedicou mais de uma década a pesquisar o potencial do bambu para a construção sustentável. Sua jornada se inspira em visionários como Alberto Santos Dumont, que não apenas sonhou com os céus, mas uniu engenhosidade técnica, o uso de materiais leves como o bambu, e um profundo desejo de que suas inovações servissem ao progresso da humanidade, muitas vezes abrindo mão de patentes para o bem comum. [Para uma reflexão sobre essa inspiradora conexão, explore nosso ensaio em: ./Artigos_Publicacoes_FabioTakwara/Filosofia_Inspiracao/Santos_Dumont_e_Takwara.pdf].
+
 Nossa missão é democratizar o acesso a técnicas construtivas que sejam ao mesmo tempo ecológicas, economicamente viáveis, socialmente inclusivas e capazes de responder aos urgentes desafios climáticos e habitacionais que enfrentamos globalmente. Acreditamos no poder do "aço vegetal" e na sabedoria ancestral combinada com a ciência moderna para transformar nossa relação com o ambiente construído.
 
 ---
@@ -56,7 +57,7 @@ As crises climáticas, sociais e habitacionais que assolam o planeta exigem solu
 
 A Tecnologia Takwara surge como uma resposta esperançosa e concreta a este cenário crítico. Através do uso inteligente e sustentável do bambu e da valorização de resíduos, nosso objetivo é transformar o "aço vegetal" em moradia digna e acessível, em autonomia para comunidades vulneráveis e em um pilar para um futuro mais justo, resiliente e em profunda harmonia com os ciclos da natureza.
 
-O bambu, como detalhado em estudos de referência (a exemplo do "Relatório Bambu 2025" – explore mais na pasta /Referencias_Academicas_e_Tecnicas/), representa um mercado global em franca expansão e é reconhecido como uma ferramenta chave para alcançar diversos Objetivos de Desenvolvimento Sustentável (ODS) da Agenda 2030.
+O bambu, como detalhado em estudos de referência (a exemplo do "Relatório Bambu 2025" – explore mais em ./Referencias_Academicas_e_Tecnicas/Relatorio_Bambu_2025_Compilado.pdf), representa um mercado global em franca expansão e é reconhecido como uma ferramenta chave para alcançar diversos Objetivos de Desenvolvimento Sustentável (ODS) da Agenda 2030.
 
 No entanto, o Brasil, apesar de sua imensa riqueza natural e do vasto potencial do bambu, ainda subutiliza drasticamente esta planta. A Tecnologia Takwara busca ser um catalisador para mudar essa realidade, oferecendo um caminho prático e replicável para que o bambu ocupe seu devido lugar como protagonista na construção de um Brasil mais sustentável e equitativo.
 
@@ -69,7 +70,7 @@ A Tecnologia Takwara é um sistema integrado de soluções que visa superar os d
 ### 4.1. Forno Ecológico e Tratamento com Vapor de Pirolenhoso: Tratamento Sustentável do Bambu
 
 A Tecnologia Takwara desafia os métodos convencionais de tratamento de bambu [...]. Nossa abordagem se baseia no **Forno Ecológico** [...], uma inovação inspirada em conceitos como as Estufas Rocket (Estufas de Inércia Térmica). O Forno Ecológico combina conhecimentos ancestrais com princípios científicos para um tratamento eficaz, seguro e de baixo impacto.
-Para entender o conceito de design e a inspiração, explore o "Artigo - Inércia térmica.pdf" e outros materiais em: [`/Documentacao_Tecnica/Forno_Ecologico/`](./Documentacao_Tecnica/Forno_Ecologico/).
+Para entender o conceito de design e a inspiração, explore o "Artigo - Inércia térmica.pdf" e outros materiais em: ./Documentacao_Tecnica/01_Forno_Ecologico_e_Tratamento_Pirolenhoso/Artigo_Inercia_Termica.pdf.
 
 _[Placeholder para uma IMAGEM ou ESQUEMA CHAVE do Forno Ecológico]_
 
