@@ -110,7 +110,7 @@ Esta escolha honra o legado do **Prof. Dr. Gilberto Orivaldo Chierice**, pioneir
 * **Atoxicidade e Segurança:** Desenvolvido a partir do óleo de mamona, o PU Vegetal da Imperveg é **totalmente atóxico**, isento de isocianato livre e não emite VOCs.
 * **Sustentabilidade Intrínseca:** Sua origem renovável e processo de produção de menor impacto o alinham com os princípios da bioeconomia.
 
-O PU Vegetal é o escudo que confere ao bambu Takwara a longevidade necessária para ser um material construtivo de vanguarda. O processo completo está detalhado no memorial "Tratamento e Comercialização de Varas de Bambu.pdf". Para especificações e guias, acesse: [`/Documentacao_Tecnica/Tratamento_Impermeabilizacao_Bambu/`](./Documentacao_Tecnica/Tratamento_Impermeabilizacao_Bambu/).
+O PU Vegetal é o escudo que confere ao bambu Takwara a longevidade necessária para ser um material construtivo de vanguarda. O processo completo está detalhado no memorial "Memoriais Descritivos/Tratamento e Comercialização de Varas de Bambu.md". Para especificações e guias, acesse: [`/Documentacao_Tecnica/Tratamento_Impermeabilizacao_Bambu/`](./Documentacao_Tecnica/Tratamento_Impermeabilizacao_Bambu/).
 
 ### 4.4. Ecompósitos com PU Vegetal: Transformando Resíduos em Recursos e Oportunidades
 
