@@ -1,0 +1,20 @@
+site_name: Tecnologia Takwara
+site_description: 'Inovação Aberta para Construção Sustentável com Bambu.'
+site_author: 'Fabio "Takwara" Resck'
+
+theme:
+  name: material
+  palette:
+    primary: 'teal'
+    accent: 'amber'
+  logo: 'assets/logo.png' # (Opcional, se você tiver um logo)
+
+# Esta é a parte mais importante: a Navegação do seu site
+nav:
+  - 'Início': 'index.md'
+  - 'A Tecnologia':
+    - 'Forno Ecológico': 'forno-ecologico.md'
+    - 'Conexões Flexíveis': 'conexoes.md'
+    - 'Impermeabilização com PU Vegetal': 'impermeabilizacao.md'
+    - 'Ecocompósitos': 'ecompositos.md'
+  - 'Chatbot do Repositório': 'chatbot.md'

@@ -1,0 +1,5 @@
+# Ambiente Virtual
+.venv/
+
+# Pasta temporária do GitLoader
+temp_repo/
