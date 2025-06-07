@@ -7,6 +7,8 @@ Tecnologia Social de Geração de Renda e Sustentabilidade com Bambu - Licença 
 *Este trabalho está licenciado sob a Creative Commons Atribuição 4.0 Internacional.*
 
 ---
+## Converse com Takwara
+Tire suas dúvidas sobre a atecnologia
 
 <div id="chat-container">
     <div id="chat-box"></div>
