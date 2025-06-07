@@ -5,7 +5,7 @@ Use o assistente abaixo para fazer perguntas sobre os documentos e a tecnologia 
 <div id="chat-container">
     <div id="chat-box"></div>
     <form id="chat-form">
-        <input type="text" id="user-input" placeholder="Faça uma pergunta..." autocomplete="off" required>
+        <input type="text" id="user-input" placeholder="Faça uma pergunta sobre o projeto..." autocomplete="off" required>
         <button type="submit">Enviar</button>
     </form>
 </div>
