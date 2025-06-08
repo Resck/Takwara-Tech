@@ -1,4 +1,5 @@
-Guia Completo: Como Criar um Chatbot Inteligente para o seu Repositório no GitHub
+### Guia Completo: Como Criar um Chatbot Inteligente para o seu Repositório no GitHub
+
 Bem-vindo, desenvolvedor e inovador! Este guia é um passo a passo detalhado para construir uma aplicação web completa: um chatbot inteligente capaz de responder a perguntas sobre o conteúdo de qualquer repositório no GitHub.
 
 Ao final desta jornada, você terá:
@@ -7,7 +8,7 @@ Um backend (o "cérebro") publicado na nuvem, usando Python, LangChain e a API d
 Um frontend (o "rosto") bonito e interativo, publicado gratuitamente no GitHub Pages.
 Vamos começar.
 
-Fase 1: Construindo o "Cérebro" (O Backend Serverless)
+*Fase 1:* Construindo o "Cérebro" (O Backend Serverless)
 Nesta fase, construiremos a API que lê um repositório, cria uma base de conhecimento e responde a perguntas.
 
 Passo 1.1: Estrutura de Pastas
