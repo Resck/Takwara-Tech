@@ -6,7 +6,7 @@ A Takwara Tech representa uma solução promissora para habilitar o uso estrutur
 
 A Takwara Tech consiste em um conjunto de técnicas desenvolvidas para o tratamento e utilização estrutural do bambu em várias aplicações, como material de construção, revestimentos, esquadrias, decoração, mobiliário, entre outros. Os principais elementos técnicos da TT são:
 
-- Tratamento térmico do bambu por meio da exposição controlada a vapor d'água saturado com ácido pirolenhoso e sal marinho. O processo utiliza um equipamento com câmara de aquecimento para elevar a temperatura interna do colmo a cerca de 90°C por um período de 4 a 6 horas, o que aumenta a durabilidade e resistência à decomposição.
+- Tratamento térmico do bambu por meio da exposição controlada a vapor d'água saturado com ácido pirolenhoso e sal marinho. O processo utiliza um equipamento com câmara de aquecimento para elevar a temperatura interna do colmo a cerca de 90°C por um período de 4 a 6 horas (P. Áurea), o que aumenta a durabilidade e resistência à decomposição.
 - Impermeabilização dos colmos com Poliuretano Vegetal, um polímero à base de óleos vegetais. Isso previne a deterioração por absorção de umidade e garante estabilidade dimensional.
 - Conexões mecânicas inovadoras entre peças de bambu usando aço flexível e a injeção de um exclusivo PU Vegetal Expansivo, que permite construções modulares sem a necessidade de embuchamento, grampos, parafusos ou amarrações.
 Usinagem e acabamento de peças estruturais, como pilares, vigas, tesouras e treliças, permitindo o uso do bambu em sistemas construtivos modernos.
