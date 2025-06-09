@@ -31,7 +31,7 @@ Flask==3.0.3
 flatbuffers==25.2.10
 frozenlist==1.6.2
 fsspec==2025.5.1
-functions-framework==3.8.3
+functions-framework==3.8.0
 ghp-import==2.1.0
 gitdb==4.0.12
 GitPython==3.1.43
