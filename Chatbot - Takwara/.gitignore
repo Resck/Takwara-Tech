@@ -5,3 +5,23 @@
 temp_repo/
 
 chroma_db/
+
+# Ignora a pasta gerada pelo MkDocs
+site/
+
+# Ignora a pasta do ambiente virtual do Python
+venv/
+
+# Ignora arquivos de cache do Python
+__pycache__/
+*.pyc
+.Python
+*.env
+
+# Ignora arquivos específicos do IDE (se aplicável)
+.vscode/
+.idea/
+
+# Ignora arquivos temporários e de log
+*.log
+*.tmp

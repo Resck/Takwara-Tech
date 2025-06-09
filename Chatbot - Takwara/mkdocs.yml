@@ -1,26 +1,34 @@
+# ---------------- Início do arquivo mkdocs.yml ----------------
+
 site_name: Tecnologia Takwara
+
 theme:
   name: material
   palette:
     primary: 'teal'
     accent: 'amber'
 
-# Define a navegação do site com os caminhos corretos
 nav:
   - 'Início': 'index.md'
-  - 'Artigos':
-    - 'Forno Ecológico': 'Artigos/Forno Ecológico.md'
-    - 'HIS e Briquetes': 'Artigos/HIS e BRIQUETES STL.md'
-    - 'Normas para Ensaios': 'Artigos/Normas para ensaios.md'
-  - 'Patentes e Memoriais':
-    - 'Roteiro para Ensaios': 'PATENTES/6- Roteiro para Ensaios.md'
-    - 'Conexões Geodésicas': 'PATENTES/7 - Memorial Conexões Geodésicos.md'
-    - 'Memorial Forno Ecológico': 'PATENTES/8 - Memorial Forno Ecológico.md'
-    - 'Painéis de Bambu': 'PATENTES/Painéis de Bambu - Takwara Tech.md'
-    # Adicione os outros arquivos que desejar da mesma forma...
+  - 'Chatbot': 'chatbot.md'
 
-# Inclui os nossos arquivos de CSS e JavaScript personalizados
+  - 'Artigos':
+      - 'Forno Ecológico': 'Artigos/Forno Ecológico.md'
+  - 'Patentes e Memoriais':
+      - 'Roteiro para Ensaios': 'PATENTES/6- Roteiro para Ensaios.md'
+      - 'Conexões Geodésicas': 'PATENTES/7 - Memorial Conexões Geodésicos.md'
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: "2-6"
+
 extra_css:
   - assets/css/style.css
+
+# CORREÇÃO AQUI: Liste todos os scripts em uma única entrada de extra_javascript
 extra_javascript:
-  - assets/js/script.js
+  - assets/js/script.js        # O script do chatbot
+  - assets/js/calculadora.js   # O novo script da calculadora
+
+# ---------------- Fim do arquivo mkdocs.yml ----------------
