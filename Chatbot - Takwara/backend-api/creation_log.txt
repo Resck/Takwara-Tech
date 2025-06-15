@@ -1,0 +1,7 @@
+--- O SCRIPT OTIMIZADO COMEÇOU A SER EXECUTADO ---
+A garantir que o repositório 'https://github.com/Resck/Takwara-Tech' está atualizado em './temp_repo'...
+Repositório existente atualizado com sucesso.
+
+A carregar e a dividir todos os documentos .md da pasta 'docs'...
+
+AVISO: Nenhum documento processado. A base de dados ficará vazia.

@@ -82,13 +82,9 @@ def calculadora_domo_api(request):
         if frequency not in DOME_DATA[base_solid]:
             raise KeyError(f"Frequência '{frequency}' não encontrada para o sólido '{base_solid}'.")
 
-        # Ajuste aqui para acessar a truncagem corretamente
-        # dome_info é AGORA o dicionário da truncagem selecionada
         if truncation not in DOME_DATA[base_solid][frequency]['truncation']:
             raise KeyError(f"Truncagem '{truncation}' não encontrada para o sólido '{base_solid}' e frequência '{frequency}'.")
         
-        # O dome_info agora é o dicionário de dados da truncagem, por exemplo:
-        # {"segments": {...}, "num_segments": {...}, "vertex_angles": {...}, "total_vertices": 91}
         dome_info = DOME_DATA[base_solid][frequency]['truncation'][truncation]
         
         radius = diameter / 2.0
@@ -102,8 +98,7 @@ def calculadora_domo_api(request):
         # Garante que 'num_segments' seja um dicionário antes de somar os valores
         total_segments = sum(dome_info.get('num_segments', {}).values()) if dome_info.get('num_segments') else 0
         
-        # **Ajuste aqui: Acessa total_vertices diretamente de dome_info, que AGORA é o nível correto**
-        total_vertices = dome_info.get('total_vertices', 'N/D') 
+        total_vertices = dome_info.get('total_vertices', 'N/D') # Retorna N/D se não encontrado
 
         results = {
             "success": True,
@@ -113,7 +108,6 @@ def calculadora_domo_api(request):
             "total_segments": total_segments,
             "total_vertices": total_vertices # Inclui o número de vértices na resposta
         }
-        print(f"DEBUG: Resposta final da API: {results}")
         response = jsonify(results)
 
     except (ValueError, TypeError) as e:

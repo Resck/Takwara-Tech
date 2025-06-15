@@ -1,0 +1,66 @@
+/* --- ARQUIVO DE ESTILOS CUSTOMIZADO FINAL E DEFINITIVO --- */
+
+/* --- 1. CORES GERAIS DO TEMA --- */
+
+.md-header {
+  background-color: #000000 !important;
+}
+
+.md-header, .md-header a, .md-header .md-icon {
+    color: #ffffff;
+}
+
+
+/* --- 2. ALINHAMENTO DEFINITIVO DO CABEÇALHO --- */
+
+/* Garante que o container interno é flexível */
+.md-header__inner {
+  display: flex;
+  align-items: center;
+}
+
+/* Pega o formulário de busca e o empurra para o canto direito */
+form.md-search {
+  margin-left: auto;
+}
+
+
+/* --- 3. LAYOUT DE 3 COLUNAS --- */
+
+.md-grid {
+  max-width: none !important;
+  display: grid !important;
+  grid-template-columns: 260px 1fr 260px !important;
+  gap: 1.5rem !important;
+}
+
+
+/* --- 4. RODAPÉ CUSTOMIZADO --- */
+
+footer.md-footer {
+    display: none !important;
+}
+
+.takwara-full-footer-container {
+  margin-top: 3rem;
+  background-color: #000000;
+  border-top: 1px solid #333;
+  grid-column: 1 / -1; 
+}
+
+.takwara-dashboard-footer {
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+.takwara-credits-footer {
+    padding: 2rem;
+    color: #f5f5f5;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.takwara-credits-footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}

@@ -1,97 +1,135 @@
-# main.py - Versão de DEPURAÇÃO DE CAMINHOS
+# /Users/fabiotakwara/Documents/GitHub/Takwara-Tech/Chatbot - Takwara/backend-api/main.py
+# VERSÃO DE DEBUGGING CORRIGIDA E COMPLETA
+
 import os
 import functions_framework
-from flask import jsonify
-
-# --- CÓDIGO DETETIVE DE CAMINHOS ---
-# Este bloco irá imprimir nos logs a estrutura de arquivos que a aplicação encontra.
-print("--- [DETETIVE] INICIANDO VERIFICAÇÃO DE CAMINHOS ---")
-try:
-    cwd_path = os.getcwd()
-    print(f"--- [DETETIVE] Diretório de trabalho atual (CWD): {cwd_path}")
-    print(f"--- [DETETIVE] Conteúdo do CWD: {os.listdir(cwd_path)}")
-
-    # Onde esperamos que a base de dados esteja
-    db_path = os.path.join(cwd_path, 'chroma_db')
-    print(f"--- [DETETIVE] Verificando a existência do caminho: {db_path}")
-    if os.path.exists(db_path):
-        print("--- [DETETIVE] SUCESSO! A pasta 'chroma_db' foi encontrada!")
-        print(f"--- [DETETIVE] Conteúdo da 'chroma_db': {os.listdir(db_path)}")
-    else:
-        print("--- [DETETIVE] FALHA! A pasta 'chroma_db' NÃO foi encontrada no diretório de trabalho atual.")
-except Exception as e:
-    print(f"--- [DETETIVE] Ocorreu um erro ao verificar os caminhos: {e}")
-print("--- [DETETIVE] FIM DA VERIFICAÇÃO DE CAMINHOS ---")
-# --- FIM DO CÓDIGO DETETIVE ---
-
-
-# O nosso código original da IA começa aqui.
-# Note que ele irá falhar se o ChromaDB não for encontrado, e isso é o que queremos testar.
+from flask import Flask, request, jsonify, make_response
+from dotenv import load_dotenv
 from langchain_community.vectorstores import Chroma
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
-from langchain.chains.combine_documents import create_stuff_documents_chain
-from langchain_core.prompts import ChatPromptTemplate
-from langchain.chains import create_retrieval_chain
+from langchain.chains import RetrievalQA
+from langchain.prompts import PromptTemplate
+from langchain.retrievers.multi_query import MultiQueryRetriever
 
-PERSIST_DIRECTORY = "./chroma_db"
-EMBEDDING_MODEL = "models/embedding-001"
-LLM_MODEL = "gemini-1.5-flash"
+load_dotenv()
+app = Flask(__name__)
 
-embeddings = GoogleGenerativeAIEmbeddings(model=EMBEDDING_MODEL)
-vector_store = Chroma(persist_directory=PERSIST_DIRECTORY, embedding_function=embeddings)
-llm = ChatGoogleGenerativeAI(model=LLM_MODEL, temperature=0.3)
-# ... (O resto do seu código completo continua aqui, sem alterações)
-# (Copie e cole o resto do seu main.py inteligente a partir desta linha)
-retriever = vector_store.as_retriever()
+qa_chain = None
 
-qa_prompt_template = ChatPromptTemplate.from_template("""
-Responda à pergunta do utilizador de forma clara e concisa, com base apenas no contexto fornecido.
-Se a resposta não estiver no contexto, diga: "Não encontrei informações sobre isso no repositório."
+def load_qa_chain():
+    """Carrega a cadeia de IA com um retriever avançado (MultiQuery)."""
+    global qa_chain
+    print("Iniciando o carregamento da base de vetores e do modelo...")
+    try:
+        embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+        persist_directory = "./chroma_db"
+        vector_store = Chroma(persist_directory=persist_directory, embedding_function=embeddings)
+        llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro-latest", temperature=0.3)
 
-Contexto:
-{context}
+        prompt_template = """
+        Você é a assistente virtual da Takwara-Tech, uma especialista em construção sustentável com bambu.
+        Sua missão é ser cordial, prestativa e responder às perguntas usando apenas as informações fornecidas nos seguintes documentos.
+        Seja clara e responda em Português do Brasil.
+        Se a resposta não estiver nos documentos, diga educadamente que não possui essa informação.
+        Ao final da sua resposta, se possível, cite o nome do documento de onde extraiu a informação.
 
-Pergunta:
-{input}
-""")
-qa_document_chain = create_stuff_documents_chain(llm, qa_prompt_template)
-retrieval_chain = create_retrieval_chain(retriever, qa_document_chain)
+        Contexto (Documentos):
+        {context}
 
-# O CÓDIGO CORRIGIDO
-social_prompt_template = ChatPromptTemplate.from_template("""
-Você é o assistente cordial do projeto Tecnologia Takwara. Responda de forma amigável e direta.
-Não se apresente a menos que perguntem.
-Se o utilizador agradecer, agradeça de volta.
-Se o utilizador fizer uma saudação, responda à saudação.
-O contexto abaixo é para perguntas técnicas e pode estar vazio para conversas casuais.
+        Pergunta:
+        {question}
 
-Contexto:
-{context}
+        Resposta útil e cordial:
+        """
+        PROMPT = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
 
-Pergunta do Utilizador:
-{input}
-""")
+        # --- UPGRADE DO RETRIEVER ---
+        print("A criar um MultiQueryRetriever para buscas mais inteligentes...")
+        retriever_from_llm = MultiQueryRetriever.from_llm(
+            retriever=vector_store.as_retriever(), 
+            llm=llm
+        )
+        # --- FIM DO UPGRADE ---
 
-social_chain = create_stuff_documents_chain(llm, social_prompt_template)
+        qa_chain = RetrievalQA.from_chain_type(
+            llm=llm,
+            chain_type="stuff",
+            retriever=retriever_from_llm, # <--- Usamos o nosso novo retriever avançado
+            chain_type_kwargs={"prompt": PROMPT},
+            return_source_documents=True
+        )
+        print(">>> Modelo e base de vetores carregados com o MultiQueryRetriever! <<<")
+    except Exception as e:
+        print(f"ERRO CRÍTICO AO CARREGAR O MODELO: {e}")
+        qa_chain = None
 
 @functions_framework.http
 def chatbot_api(request):
-    headers = {'Access-Control-Allow-Origin': '*','Access-Control-Allow-Methods': 'POST, OPTIONS','Access-Control-Allow-Headers': 'Content-Type',}
+    global qa_chain
+    
+    if qa_chain is None:
+        load_qa_chain()
+
+    if qa_chain is None:
+        return (jsonify({"error": "O modelo de IA falhou ao carregar. Verifique os logs do servidor."}), 500, {'Access-Control-Allow-Origin': '*'})
+
+    headers = {'Access-Control-Allow-Origin': '*'}
     if request.method == 'OPTIONS':
-        return '', 204, headers
-    if request.method == 'POST':
-        request_json = request.get_json(silent=True)
-        user_question = request_json.get('question', '').lower() if request_json else ""
-        if not user_question:
-            return jsonify({"error": "'question' ausente."}), 400, headers
+        response = make_response('', 204)
+        headers.update({'Access-Control-Allow-Methods': 'POST, GET, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type'})
+        response.headers.extend(headers)
+        return response
 
-        greetings = ["olá", "oi", "bom dia", "boa tarde", "boa noite", "tudo bem", "como vai"]
-        thanks = ["obrigado", "obrigada", "valeu", "agradecido", "agradecida", "grato", "grata"]
+    request_json = request.get_json(silent=True)
+    
+    if request_json and 'query' in request_json:
+        query = request_json['query']
+        
+        if query.lower().strip() in ["olá", "oi", "ola"]:
+            return (jsonify({"answer": "Olá, eu sou a assistente virtual Takwara. Em que posso ajudar?"}), 200, headers)
+            
+        # O bloco try...except começa aqui, alinhado com o 'if' acima
+        try:
+            source_file = None
+            context_url = request_json.get('context')
+            if context_url and context_url != "/" and context_url != "/chatbot/":
+                try:
+                    source_file = os.path.basename(context_url.strip('/')).replace('%20', ' ') + ".md"
+                    print(f"Contexto identificado. A procurar primeiro em: {source_file}")
+                except:
+                    source_file = None
+            
+            retriever = qa_chain.retriever
+            if source_file:
+                retriever = vector_store.as_retriever(
+                    search_kwargs={'filter': {'source': source_file}}
+                )
+            
+            print(f"A procurar documentos para a pergunta: '{query}'")
+            retrieved_docs = retriever.get_relevant_documents(query)
+            
+            if not retrieved_docs:
+                print(f"Nenhum documento encontrado no contexto. A fazer busca geral.")
+                retrieved_docs = qa_chain.retriever.get_relevant_documents(query)
 
-        if any(word in user_question for word in greetings) or any(word in user_question for word in thanks):
-            response = social_chain.invoke({"input": user_question, "context": []})
-        else:
-            response = retrieval_chain.invoke({"input": user_question})
+            print(f"--- BUSCA CONCLUÍDA. {len(retrieved_docs)} DOCUMENTOS ENCONTRADOS ---")
 
-        return jsonify({"answer": response.get("answer", "Ocorreu um erro.")}), 200, headers
-    return jsonify({"error": "Método não permitido."}), 405, headers
+            result = qa_chain.combine_documents_chain.invoke({
+                "input_documents": retrieved_docs,
+                "question": query
+            })
+            
+            answer = result.get('output_text', 'Não foi possível extrair uma resposta.')
+            sources = [doc.metadata.get('source', 'desconhecida') for doc in retrieved_docs]
+            unique_sources = list(set(sources))
+            
+            if unique_sources:
+                answer += f"\n\nFonte(s): {', '.join(unique_sources)}"
+
+            return (jsonify({"answer": answer}), 200, headers)
+
+        except Exception as e:
+            print(f"!!! ERRO DURANTE A EXECUÇÃO DA IA: {e} !!!")
+            return (jsonify({"error": f"Erro ao processar a sua pergunta: {str(e)}"}), 500, headers)
+    else:
+        return (jsonify({"error": "Pedido inválido."}), 400, headers)
