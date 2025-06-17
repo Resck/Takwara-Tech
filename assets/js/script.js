@@ -1,57 +1,60 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // DETETIVE 1: O script começou a ser executado?
-    console.log("Script.js carregado e DOM pronto.");
+// docs/assets/js/script.js - Versão que "escuta" o evento certo
 
-    const chatForm = document.getElementById('chat-form');
-    const userInput = document.getElementById('user-input');
-    const chatBox = document.getElementById('chat-box');
+function initializeTakwaraChatbot() {
+  console.log('Takwara AVT: A inicializar após receber o sinal "tools-ready".');
 
-    // DETETIVE 2: Encontramos o formulário de chat no HTML?
-    console.log("Elemento do formulário:", chatForm);
+  const API_URL = 'https://southamerica-east1-adroit-citadel-397215.cloudfunctions.net/chatbot-api';
+  const chatForm = document.getElementById('chat-form');
 
-    // O URL da sua API
-    const apiUrl = 'https://us-central1-adroit-citadel-397215.cloudfunctions.net/chatbot-api'; 
+  if (!chatForm) {
+    console.error('Takwara AVT: Formulário de chat não encontrado. Verifique os IDs no HTML.');
+    return;
+  }
 
-    // Verificamos se o formulário foi encontrado antes de adicionar o "ouvinte"
-    if (chatForm) {
-        chatForm.addEventListener('submit', async (e) => {
-            e.preventDefault(); 
+  const chatBox = document.getElementById('chat-box');
+  const userInput = document.getElementById('user-input');
 
-            // DETETIVE 3: O clique no botão "Enviar" foi detetado?
-            console.log("Formulário submetido!");
+  chatForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const userMessage = userInput.value.trim();
+    if (!userMessage) return;
 
-            const userQuestion = userInput.value.trim();
-            if (!userQuestion) return;
+    addMessage(userMessage, 'user');
+    userInput.value = '';
 
-            addMessage(userQuestion, 'user');
-            userInput.value = '';
+    try {
+      addMessage('...', 'bot-loading');
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: userMessage, context: window.location.pathname })
+      });
 
-            try {
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ question: userQuestion }),
-                });
+      chatBox.querySelector('.bot-loading')?.remove();
+      if (!response.ok) throw new Error(`Erro de servidor: ${response.status}`);
 
-                if (!response.ok) { throw new Error('Erro na API'); }
+      const data = await response.json();
+      addMessage(data.answer || 'Não obtive uma resposta válida.', 'bot');
 
-                const data = await response.json();
-                addMessage(data.answer, 'assistant');
+    } catch (error) {
+      console.error('Takwara AVT: Erro durante a chamada à API:', error);
+      chatBox.querySelector('.bot-loading')?.remove();
+      addMessage('Desculpe, ocorreu um erro de comunicação. Tente novamente.', 'bot');
+    }
+  });
 
-            } catch (error) {
-                console.error('Falha ao comunicar com a API:', error);
-                addMessage('Desculpe, ocorreu um erro de comunicação.', 'assistant');
-            }
-        });
+  function addMessage(text, sender) {
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('message', `${sender}-message`);
+    if (sender === 'bot-loading') {
+      messageElement.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
     } else {
-        console.error("ERRO CRÍTICO: Não foi possível encontrar o elemento com id 'chat-form'. Verifique o seu HTML.");
+      messageElement.innerText = text;
     }
+    chatBox.appendChild(messageElement);
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+}
 
-    function addMessage(text, sender) {
-        const messageElement = document.createElement('div');
-        messageElement.classList.add('message', `${sender}-message`);
-        messageElement.textContent = text;
-        chatBox.appendChild(messageElement);
-        chatBox.scrollTop = chatBox.scrollHeight;
-    }
-});
+// OUVINTE PRINCIPAL: Escuta pelo nosso evento customizado.
+document.addEventListener('takwara:tools-ready', initializeTakwaraChatbot);
