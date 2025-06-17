@@ -1,66 +1,299 @@
-/* --- ARQUIVO DE ESTILOS CUSTOMIZADO FINAL E DEFINITIVO --- */
 
-/* --- 1. CORES GERAIS DO TEMA --- */
-
-.md-header {
-  background-color: #000000 !important;
+/* Estilo do Rodapé Customizado */
+.takwara-full-footer-container {
+  background-color: #1c1c1c; /* Cor de fundo escura */
+  color: #fff; /* Cor do texto */
+  padding: 2rem 1rem;
+  text-align: right;
 }
 
-.md-header, .md-header a, .md-header .md-icon {
-    color: #ffffff;
+.climate-clock-widget .footer-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
 }
 
+.climate-clock-widget .footer-subtitle {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0rem;
+  color: #ccc;
+}
+/* Estilo do Modal de Ferramentas */
+.takwara-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1050; /* Z-index alto para ficar sobre tudo */
+  display: none; /* Começa escondido */
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px); /* Efeito de desfoque moderno */
+}
 
-/* --- 2. ALINHAMENTO DEFINITIVO DO CABEÇALHO --- */
+.takwara-modal-overlay.active {
+  display: flex; /* Mostra o modal quando ativo */
+}
 
-/* Garante que o container interno é flexível */
-.md-header__inner {
+.takwara-modal-content {
+  background: var(--md-default-bg-color, #fff); /* Usa a cor de fundo do tema */
+  padding: 1rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 1000px; /* Largura máxima */
+  height: 85vh; /* Altura responsiva */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+}
+
+.takwara-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2.5rem;
+  line-height: 1;
+  border: none;
+  background: none;
+  color: var(--md-default-fg-color--light, #888);
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Estilos das Abas dentro do Modal */
+.takwara-sidebar-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--md-typeset-hr-color, #eee);
+  flex-shrink: 0; /* Impede que as abas encolham */
+}
+
+.takwara-tab-button {
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--md-default-fg-color--light, #888);
+  font-weight: bold;
+  font-size: 1rem;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px; /* Alinha a borda inferior */
+  transition: all 0.2s ease-in-out;
+}
+
+.takwara-tab-button:hover {
+    color: var(--md-primary-fg-color, #009688);
+}
+
+.takwara-tab-button.active {
+  color: var(--md-primary-fg-color, #009688);
+  border-bottom-color: var(--md-accent-fg-color, #009688);
+}
+
+.takwara-sidebar-content {
+  overflow-y: auto; /* Permite scroll se o conteúdo for grande */
+  flex-grow: 1; /* Ocupa o espaço restante */
+  padding-top: 1.5rem;
+}
+
+.takwara-tab-pane {
+  display: none;
+}
+
+.takwara-tab-pane.active {
+  display: block;
+}
+
+/* Estilos para a Takwara Tool Box na barra lateral */
+.takwara-toolbox-wrapper {
+  width: 100%;
+}
+
+.takwara-toolbox-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--md-typeset-hr-color);
+  margin-bottom: 0.8rem;
+}
+
+.takwara-tab-button {
+  flex: 1; /* Faz os botões ocuparem o mesmo espaço */
+  padding: 0.8em 0.5em;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--md-default-fg-color--light);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: -1px; /* Alinha a borda com a linha de baixo */
+}
+
+.takwara-tab-button:hover {
+  color: var(--md-primary-fg-color);
+  background-color: var(--md-default-bg-color--lightest);
+}
+
+.takwara-tab-button.active {
+  color: var(--md-primary-fg-color);
+  border-bottom-color: var(--md-primary-fg-color);
+}
+
+.takwara-tab-pane {
+  display: none; /* Esconde todos os painéis por padrão */
+}
+
+.takwara-tab-pane.active {
+  display: block; /* Mostra apenas o painel ativo */
+}
+
+/* Estilos para as secções dentro das ferramentas */
+.tool-section {
+  margin-bottom: 2rem;
+}
+.tool-section h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--md-typeset-hr-color);
+    padding-bottom: 0.3rem;
+}
+
+/* CORREÇÃO DE LAYOUT: Força o contentor a ocupar todo o espaço */
+.md-container {
+  max-width: none !important; /* Remove a largura máxima padrão */
+}
+
+/* ESTILOS PARA OS PAINÉIS DE IMPACTO (HEADER/FOOTER) */
+.takwara-impact-panel {
+    background-color: #1a1a1a; /* Um preto um pouco mais suave */
+    color: #f1f1f1;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #333;
+    border-top: 1px solid #333;
+}
+
+.takwara-panel-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.8rem;
+}
+
+.takwara-footer-panel {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+
+  /* 1. Definimos uma altura fixa e menor para o painel */
+  height: 80px;
+
+  /* 2. Usamos Flexbox para centrar o conteúdo verticalmente */
   display: flex;
   align-items: center;
+  justify-content: right;
+
+  /* 3. Garantimos que nada "vaze" para fora do painel */
+  overflow: hidden;
 }
 
-/* Pega o formulário de busca e o empurra para o canto direito */
-form.md-search {
+/* 4. A MÁGICA: Reduzimos a escala do próprio widget do relógio */
+.takwara-footer-panel climate-clock {
+  transform: scale(0.6); /* Reduz o tamanho do relógio para 80% do original */
+  transform-origin: center; /* Garante que ele encolha a partir do centro */
+}
+
+/* ================================================================== */
+/* ================================================================== */
+/* CSS - AJUSTE PARA O CONTEÚDO PRINCIPAL (COBRIR A TARJA BRANCA) */
+/* ================================================================== */
+@media screen and (min-width: 76.25em) { /* Corresponde ao nosso breakpoint da Tool Box */
+    .md-main {
+        margin-left: 25rem !important; /* A largura da nossa Tool Box */
+    }
+}
+/* CSS - POLIMENTO FINAL DOS RODAPÉS */
+/* ================================================================== */
+
+/* Prepara o nosso painel customizado para ter múltiplos indicadores lado a lado */
+.takwara-footer-panel .takwara-panel-content {
+  display: flex;
+  gap: 2rem; /* Espaçamento entre os indicadores */
+  flex-wrap: wrap; /* Permite que os indicadores quebrem a linha se não couberem */
+}
+
+/* CSS - POLIMENTO FINAL DOS RODAPÉS (COM !IMPORTANT) */
+/* ================================================================== */
+
+/* Prepara o nosso painel customizado para ter múltiplos indicadores lado a lado */
+.takwara-footer-panel .takwara-panel-content {
+  display: flex;
+  gap: 2rem; 
+  flex-wrap: wrap;
+}
+
+/* Reduz o tamanho do rodapé padrão do tema - VERSÃO FINAL */
+.md-footer {
+  font-size: 0.7rem !important;
+}
+.md-footer-meta.md-typeset {
+  padding-top: 5% !important;    /* Força a redução do espaçamento */
+  padding-bottom: 5% !important; /* Força a redução do espaçamento */
+}
+/* CSS PARA AS FERRAMENTAS DENTRO DA TOOL BOX */
+/* ================================================================== */
+
+/* Estilos para o Chatbot (AVT) */
+.takwara-chatbot .chat-box {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid var(--md-typeset-hr-color);
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+.takwara-chatbot .message {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  max-width: 85%;
+}
+.takwara-chatbot .user-message {
+  background-color: var(--md-primary-fg-color-light);
   margin-left: auto;
+  text-align: right;
+}
+.takwara-chatbot .bot-message {
+  background-color: var(--md-default-bg-color--lightest);
+}
+.takwara-chatbot .chat-form {
+  display: flex;
+}
+.takwara-chatbot .user-input {
+  flex-grow: 1;
+  border: 1px solid var(--md-typeset-hr-color);
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+.takwara-chatbot .submit-button {
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
 }
 
-
-/* --- 3. LAYOUT DE 3 COLUNAS --- */
-
-.md-grid {
-  max-width: none !important;
-  display: grid !important;
-  grid-template-columns: 260px 1fr 260px !important;
-  gap: 1.5rem !important;
-}
-
-
-/* --- 4. RODAPÉ CUSTOMIZADO --- */
-
-footer.md-footer {
-    display: none !important;
-}
-
-.takwara-full-footer-container {
-  margin-top: 3rem;
-  background-color: #000000;
-  border-top: 1px solid #333;
-  grid-column: 1 / -1; 
-}
-
-.takwara-dashboard-footer {
-    padding: 20px 0;
-    border-bottom: 1px solid #333;
-}
-
-.takwara-credits-footer {
-    padding: 2rem;
-    color: #f5f5f5;
-    font-size: 0.8rem;
-    text-align: center;
-}
-
-.takwara-credits-footer a {
-    color: #ffffff;
-    text-decoration: underline;
+/* Estilos para o Grafo de Conhecimento */
+.knowledge-graph-canvas {
+  height: 400px; /* Altura da "tela" do grafo */
+  border: 1px solid var(--md-typeset-hr-color);
+  border-radius: 4px;
 }
