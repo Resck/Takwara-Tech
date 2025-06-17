@@ -25,18 +25,19 @@ theme:
     - search.highlight
     - navigation.sticky
   palette:
+    - scheme: slate
+      primary: green
+      accent: indigo
+      toggle:  # <--- Corrigido! Agora está dentro do 'slate'
+        icon: material/toggle-switch
+        name: Mudar para o modo claro
+
     - scheme: default
-      primary: green # Restaura a cor verde
+      primary: green
       accent: indigo
       toggle:
         icon: material/toggle-switch-off-outline
         name: Mudar para o modo escuro
-    - scheme: slate
-      primary: green # Mantém verde no modo escuro
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch
-        name: Mudar para o modo claro
 
 # --- Extensões do Markdown ---
 markdown_extensions:
@@ -56,9 +57,9 @@ markdown_extensions:
 # --- Navegação (Menu Expansível Restaurado) ---
 nav:
   - 'Início': 'index.md'
-  - 'Chatbot': 'chatbot.md'
+  # - 'Chatbot': 'chatbot.md'
   - 'Calculadora de Domos': 'calculadora.md' 
-  - 'Grafo de Conhecimento': 'grafo.md'
+  # - 'Grafo de Conhecimento': 'grafo.md'
   - 'Artigos':
       - 'O Bambu (Visão Geral)': 'Artigos/O Bambu.md'
       - 'O Bambu (Tópicos)':
@@ -90,8 +91,9 @@ extra_css:
   - assets/css/custom.css
 extra_javascript:
   - assets/js/script.js
-  - assets/js/calculadora.js
+  # - assets/js/calculadora.js
   - https://unpkg.com/vis-network/standalone/umd/vis-network.min.js
   - assets/js/graph-data.js
   - assets/js/graph.js
-  # - assets/js/layout.js
+  - assets/js/modal.js  # <--- Agora corretamente alinhado
+  - assets/js/toolbox.js

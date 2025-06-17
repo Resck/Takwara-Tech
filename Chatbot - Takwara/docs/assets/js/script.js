@@ -1,98 +1,60 @@
-// Usamos esta variável global para garantir que o script só é inicializado uma vez.
-if (window.takwaraScriptLoaded === undefined) {
-    window.takwaraScriptLoaded = true;
-    
-    // URL da tua API na nuvem.
-   // const API_URL = 'https://southamerica-east1-adroit-citadel-397215.cloudfunctions.net/chatbot-api';
-   const API_URL = 'https://southamerica-east1-adroit-citadel-397215.cloudfunctions.net/chatbot-api';
+// docs/assets/js/script.js - Versão que "escuta" o evento certo
 
-    // Espera que todo o conteúdo da página seja carregado antes de executar o código.
-    document.addEventListener('DOMContentLoaded', () => {
-        console.log('Script.js executado.');
-        const chatForm = document.getElementById('chat-form');
-        
-        if (chatForm) {
-            console.log('Formulário de chat encontrado. A inicializar...');
-            const chatBox = document.getElementById('chat-box');
-            const userInput = document.getElementById('user-input');
+function initializeTakwaraChatbot() {
+  console.log('Takwara AVT: A inicializar após receber o sinal "tools-ready".');
 
-            // Adiciona um "ouvinte" para quando o formulário for submetido (botão Enviar clicado).
-            chatForm.addEventListener('submit', async (e) => {
-                e.preventDefault(); // Impede que a página recarregue.
-                const userMessage = userInput.value.trim();
-                if (!userMessage) return; // Não faz nada se a mensagem estiver vazia.
+  const API_URL = 'https://southamerica-east1-adroit-citadel-397215.cloudfunctions.net/chatbot-api';
+  const chatForm = document.getElementById('chat-form');
 
-                addMessage(userMessage, 'user');
-                userInput.value = ''; // Limpa o campo de texto.
+  if (!chatForm) {
+    console.error('Takwara AVT: Formulário de chat não encontrado. Verifique os IDs no HTML.');
+    return;
+  }
 
-                // Este é o bloco completo e corrigido para fazer a chamada à API.
-                try {
-                    addMessage('...', 'bot-loading');
-                    
-                    // Técnica de cache-busting para garantir que o pedido é sempre novo.
-                    const cacheBustingURL = `${API_URL}?t=${new Date().getTime()}`;
-                    console.log('A contactar o URL com cache-busting:', cacheBustingURL);
+  const chatBox = document.getElementById('chat-box');
+  const userInput = document.getElementById('user-input');
 
-                    const pageContext = window.location.pathname;
-console.log("Contexto da página enviado:", pageContext);
+  chatForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const userMessage = userInput.value.trim();
+    if (!userMessage) return;
 
-const response = await fetch(cacheBustingURL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    // Adicionamos o contexto ao corpo do pedido
-    body: JSON.stringify({ 
-      query: userMessage,
-      context: pageContext 
-    })
-});
+    addMessage(userMessage, 'user');
+    userInput.value = '';
 
-                    const loadingMessage = chatBox.querySelector('.bot-loading');
-                    if (loadingMessage) {
-                        chatBox.removeChild(loadingMessage);
-                    }
+    try {
+      addMessage('...', 'bot-loading');
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: userMessage, context: window.location.pathname })
+      });
 
-                    if (!response.ok) {
-                        throw new Error(`Erro de comunicação com o servidor: ${response.status} ${response.statusText}`);
-                    }
+      chatBox.querySelector('.bot-loading')?.remove();
+      if (!response.ok) throw new Error(`Erro de servidor: ${response.status}`);
 
-                    const data = await response.json();
-                    console.log('Dados recebidos:', data);
-                    
-                    if (data.answer) {
-                        addMessage(data.answer, 'bot');
-                    } else {
-                        addMessage('A API respondeu, mas sem uma resposta válida.', 'bot');
-                    }
+      const data = await response.json();
+      addMessage(data.answer || 'Não obtive uma resposta válida.', 'bot');
 
-                } catch (error) {
-                    console.error('Ocorreu um erro DURANTE o fetch:', error);
-                    
-                    const loadingMessage = chatBox.querySelector('.bot-loading');
-                    if (loadingMessage) {
-                        chatBox.removeChild(loadingMessage);
-                    }
-                    
-                    addMessage('Desculpe, ocorreu um erro de comunicação. Por favor, tente novamente.', 'bot');
-                }
-            });
+    } catch (error) {
+      console.error('Takwara AVT: Erro durante a chamada à API:', error);
+      chatBox.querySelector('.bot-loading')?.remove();
+      addMessage('Desculpe, ocorreu um erro de comunicação. Tente novamente.', 'bot');
+    }
+  });
 
-            // Função auxiliar para adicionar mensagens à caixa de chat.
-            function addMessage(text, sender) {
-                const messageElement = document.createElement('div');
-                messageElement.classList.add('message', `${sender}-message`);
-                
-                if (sender === 'bot-loading') {
-                    messageElement.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
-                } else {
-                    messageElement.textContent = text;
-                }
-                
-                chatBox.appendChild(messageElement);
-                chatBox.scrollTop = chatBox.scrollHeight;
-            }
-
-        } else {
-            console.log('Formulário de chat não encontrado nesta página.');
-        }
-    });
+  function addMessage(text, sender) {
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('message', `${sender}-message`);
+    if (sender === 'bot-loading') {
+      messageElement.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
+    } else {
+      messageElement.innerText = text;
+    }
+    chatBox.appendChild(messageElement);
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
 }
+
+// OUVINTE PRINCIPAL: Escuta pelo nosso evento customizado.
+document.addEventListener('takwara:tools-ready', initializeTakwaraChatbot);
