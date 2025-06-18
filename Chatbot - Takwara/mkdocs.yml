@@ -61,7 +61,9 @@ nav:
   - 'Calculadora de Domos': 'calculadora.md' 
   # - 'Grafo de Conhecimento': 'grafo.md'
   - 'Artigos':
-      - 'O Bambu (Visão Geral)': 'Artigos/O Bambu.md'
+  # ''
+      - 'O Github': 'Artigos/O Github.md'
+      - 'O Bambu' : 'Artigos/Bambu/Visão geral ilustrada.md'
       - 'O Bambu (Tópicos)':
           - 'Caracterização Física': 'Artigos/Bambu/Caracterização física.md'
           - 'Mercado Global': 'Artigos/Bambu/mercado global.md'
@@ -91,9 +93,9 @@ extra_css:
   - assets/css/custom.css
 extra_javascript:
   - assets/js/script.js
-  # - assets/js/calculadora.js
+  - assets/js/calculadora.js # <--- DESCOMENTADO!
   - https://unpkg.com/vis-network/standalone/umd/vis-network.min.js
   - assets/js/graph-data.js
   - assets/js/graph.js
-  - assets/js/modal.js  # <--- Agora corretamente alinhado
+  - assets/js/modal.js
   - assets/js/toolbox.js
