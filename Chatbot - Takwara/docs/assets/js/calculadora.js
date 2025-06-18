@@ -50,7 +50,7 @@ function initializeTakwaraCalculator(shadowRoot) {
     function populateSelect(selectElement, options) {
         selectElement.innerHTML = '';
         if (options.length === 0) {
-            const opt = shadowRoot.createElement('option'); // Cria elemento no Shadow DOM
+            const opt = document.createElement('option'); // Cria elemento no Shadow DOM
             opt.value = "";
             opt.textContent = "N/D";
             selectElement.appendChild(opt);
@@ -58,7 +58,7 @@ function initializeTakwaraCalculator(shadowRoot) {
         } else {
             selectElement.disabled = false;
             options.forEach(option => {
-                const opt = shadowRoot.createElement('option'); // Cria elemento no Shadow DOM
+                const opt = document.createElement('option'); // Cria elemento no Shadow DOM
                 opt.value = option;
                 opt.textContent = option;
                 selectElement.appendChild(opt);
@@ -342,8 +342,7 @@ function initializeTakwaraCalculator(shadowRoot) {
 
         markdownContent += `- Número de Vértices: ${numVerticesMd}\n`;
         markdownContent += `- Número Total de Varas: ${totalSegmentsMd}\n`;
-        markdownContent += `- Total de Metros Lineares de Varas de Bambu: ${typeof totalLinearMetersMd === 'number' ? totalLinearMetersMd.toFixed(2)} m\n`;
-        
+        markdownContent += `- Número Total de Metros Lineares de Varas de Bambu: ${typeof totalLinearMetersMd === 'number' ? totalLinearMetersMd.toFixed(2) : 'N/A'} m\n`;      
         const numConectoresMd = totalSegmentsMd * 2;
         markdownContent += `- Número de Conectores Utilizados: ${numConectoresMd} (2 por vara)\n`;
 
@@ -421,7 +420,7 @@ function initializeTakwaraCalculator(shadowRoot) {
             const markdown = generateMarkdown();
             const filename = `resultados_domo_${lastSelectedSolid.replace(/\s/g, '_')}_${lastSelectedFreq.replace(/\//g, '-')}_${lastSelectedTrunc.replace(/\//g, '-')}.md`;
             const blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8;' });
-            const link = shadowRoot.createElement('a'); // Cria elemento no Shadow DOM
+            const link = document.createElement('a'); // Cria elemento no Shadow DOM
             if (link.download !== undefined) {
                 link.setAttribute('href', URL.createObjectURL(blob));
                 link.setAttribute('download', filename);
