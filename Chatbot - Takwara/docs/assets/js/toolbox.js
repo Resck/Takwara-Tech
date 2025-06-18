@@ -1,4 +1,4 @@
-// docs/assets/js/toolbox.js - VERSÃO COM POLIMENTO FINAL
+// docs/assets/js/toolbox.js - VERSÃO COM POLIMENTO FINAL E PASSANDO SHADOW ROOT
 
 const TakwaraToolboxTemplate = document.createElement('template');
 TakwaraToolboxTemplate.innerHTML = `
@@ -9,7 +9,6 @@ TakwaraToolboxTemplate.innerHTML = `
       width: 25rem; 
       z-index: 10;
 
-      /* 1. ANIMAÇÃO MAIS LENTA: Aumentamos a duração da transição da altura */
       transition: transform 0.3s ease-in-out, height 0.5s ease-in-out; 
 
       overflow-y: auto;
@@ -17,7 +16,6 @@ TakwaraToolboxTemplate.innerHTML = `
       border-right: 1px solid var(--md-typeset-hr-color, #ccc);
       top: var(--header-height);
 
-      /* 2. AJUSTE FINO DO ENCOLHIMENTO: Subtraímos 10px extras para evitar a sobreposição */
       height: calc(100vh - var(--header-height) - var(--footer-shrink-amount) - 10px);
     }
     @media screen and (max-width: 76.25em) { :host { transform: translateX(-100%); } }
@@ -26,25 +24,37 @@ TakwaraToolboxTemplate.innerHTML = `
   <div class="toolbox-inner-content"></div>
 `;
 
-// O resto do ficheiro (a classe, o customElements.define, etc.) continua exatamente igual...
 class TakwaraToolbox extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(TakwaraToolboxTemplate.content.cloneNode(true));
   }
+
   connectedCallback() {
     const toolsContainer = this.shadowRoot.querySelector('.toolbox-inner-content');
     const globalTemplate = document.getElementById('takwara-tools-template');
+    
     if (globalTemplate) {
       const toolsContent = globalTemplate.content.cloneNode(true);
       toolsContainer.appendChild(toolsContent);
-      console.log('Takwara Toolbox: Evento "tools-ready" disparado.');
-    document.dispatchEvent(new CustomEvent('takwara:tools-ready'));
+      console.log('Takwara Toolbox: Conteúdo do template anexado ao Shadow DOM.');
+
+      // AGORA: Disparar o evento CUSTOMIZADO e passar o shadowRoot como detalhe
+      const event = new CustomEvent('takwara:tools-ready', {
+          bubbles: true,
+          composed: true,
+          detail: { shadowRoot: this.shadowRoot } // Passa a referência ao shadowRoot
+      });
+      document.dispatchEvent(event); // Dispara o evento no documento principal
+      console.log('Takwara Toolbox: Evento "tools-ready" disparado com shadowRoot.');
+    } else {
+        console.error('Takwara Toolbox: Template "takwara-tools-template" não encontrado no DOM principal.');
     }
   }
 }
 customElements.define('takwara-toolbox', TakwaraToolbox);
+
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.md-header');
     const customFooter = document.querySelector('.takwara-footer-panel');

@@ -1,0 +1,99 @@
+# /Users/fabiotakwara/Documents/GitHub/Takwara-Tech/Chatbot - Takwara/mkdocs.yml
+
+# --- Configuração do Site ---
+site_name: Tecnologia Takwara
+# site_url: https://resck.github.io/Takwara-Tech/
+repo_url: https://github.com/Resck/Takwara-Tech
+repo_name: Resck/Takwara-Tech
+edit_uri: ""
+
+
+# --- Tema e Aparência (Verde e Layout Clássico) ---
+theme:
+  name: material
+  language: pt-BR
+  logo: /assets/images/logo.png
+  favicon: /assets/images/favicon.png
+  custom_dir: overrides
+
+  features:
+    - navigation.expand # Mantém os menus expandidos
+    # - navigation.tabs
+    - content.code.annotate
+    # - navigation.top
+    - search.suggest
+    - search.highlight
+    - navigation.sticky
+  palette:
+    - scheme: slate
+      primary: green
+      accent: indigo
+      toggle:  # <--- Corrigido! Agora está dentro do 'slate'
+        icon: material/toggle-switch
+        name: Mudar para o modo claro
+
+    - scheme: default
+      primary: green
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Mudar para o modo escuro
+
+# --- Extensões do Markdown ---
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+# --- Navegação (Menu Expansível Restaurado) ---
+nav:
+  - 'Início': 'index.md'
+  # - 'Chatbot': 'chatbot.md'
+  - 'Calculadora de Domos': 'calculadora.md' 
+  # - 'Grafo de Conhecimento': 'grafo.md'
+  - 'Artigos':
+      - 'O Bambu (Visão Geral)': 'Artigos/O Bambu.md'
+      - 'O Bambu (Tópicos)':
+          - 'Caracterização Física': 'Artigos/Bambu/Caracterização física.md'
+          - 'Mercado Global': 'Artigos/Bambu/mercado global.md'
+      - 'Domos Geodésicos':
+          - 'Especificações Técnicas': 'Artigos/domos geodésicos/especificações tecnicas.md'
+          - 'Dados Estruturais': 'Artigos/domos geodésicos/dados estruturais.md'
+          - 'Ferramentas de Layout': 'Artigos/domos geodésicos/Ferramentas para layout.md'
+      - 'Documentação Técnica Takwara':
+          - 'Conexões Geodésicas': 'Artigos/documentação técnica Takwara/Conexões Geodésicos.md'
+          - 'Ecoprojeto': 'Artigos/documentação técnica Takwara/Ecopo projeto.md'
+          - 'Forno Ecológico': 'Artigos/documentação técnica Takwara/forno ecologico.md'
+          - 'HIS e Briquetes': 'Artigos/documentação técnica Takwara/HIS e BRIQUETES STL.md'
+          - 'Painéis de Bambu': 'Artigos/documentação técnica Takwara/Painéis de Bambu.md'
+          - 'PU + Bambu': 'Artigos/documentação técnica Takwara/PU + Bambu.md'
+          - 'Roteiro para Ensaios': 'Artigos/documentação técnica Takwara/Roteiro para Ensaios.md'
+          - 'Reforço Interno com PU': 'Artigos/documentação técnica Takwara/Sistema de Reforço Interno de Colmos de Bambu com Espuma de Poliuretano Vegetal.md'
+          - 'Tijolos e Briquetes': 'Artigos/documentação técnica Takwara/Tijolos Briquetes.md'
+          - 'Tratamento e Comercialização': 'Artigos/documentação técnica Takwara/Tratamento e Comercialização de Varas de Bambu.md'
+      - 'Artigos de Fundo':
+          - 'Défice Habitacional': 'Artigos/Deficit habitacional.md'
+          - 'Resposta à Crise Habitacional': 'Artigos/Resposta a crise habitacional.md'
+          - 'Sintéticos X Orgânicos': 'Artigos/Sintéticos X Orgânicos.md'
+
+# --- Ficheiros Extra (CSS e JS) ---
+extra_css:
+  - assets/css/style.css
+  - assets/css/custom.css
+extra_javascript:
+  - assets/js/script.js
+  # - assets/js/calculadora.js
+  - https://unpkg.com/vis-network/standalone/umd/vis-network.min.js
+  - assets/js/graph-data.js
+  - assets/js/graph.js
+  - assets/js/modal.js  # <--- Agora corretamente alinhado
+  - assets/js/toolbox.js
