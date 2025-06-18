@@ -1,18 +1,26 @@
-// docs/assets/js/script.js - Versão que "escuta" o evento certo
+// docs/assets/js/script.js - Versão que "escuta" o evento certo e usa shadowRoot
 
-function initializeTakwaraChatbot() {
+// OUVINTE PRINCIPAL: Escuta pelo nosso evento customizado.
+document.addEventListener('takwara:tools-ready', (event) => {
+    // Pega o shadowRoot do detalhe do evento
+    const shadowRoot = event.detail.shadowRoot;
+    initializeTakwaraChatbot(shadowRoot);
+});
+
+function initializeTakwaraChatbot(shadowRoot) {
   console.log('Takwara AVT: A inicializar após receber o sinal "tools-ready".');
 
   const API_URL = 'https://southamerica-east1-adroit-citadel-397215.cloudfunctions.net/chatbot-api';
-  const chatForm = document.getElementById('chat-form');
+  
+  // Acessa os elementos DENTRO do Shadow DOM
+  const chatForm = shadowRoot.getElementById('chat-form');
+  const chatBox = shadowRoot.getElementById('chat-box');
+  const userInput = shadowRoot.getElementById('user-input');
 
-  if (!chatForm) {
-    console.error('Takwara AVT: Formulário de chat não encontrado. Verifique os IDs no HTML.');
+  if (!chatForm || !chatBox || !userInput) { // Verifica todos os elementos importantes
+    console.error('Takwara AVT: Um ou mais elementos HTML essenciais não foram encontrados no Shadow DOM. Verifique os IDs no HTML do template `widget-chatbot.html`.');
     return;
   }
-
-  const chatBox = document.getElementById('chat-box');
-  const userInput = document.getElementById('user-input');
 
   chatForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -30,7 +38,8 @@ function initializeTakwaraChatbot() {
         body: JSON.stringify({ query: userMessage, context: window.location.pathname })
       });
 
-      chatBox.querySelector('.bot-loading')?.remove();
+      // Remove loading indicator do chatBox que está no Shadow DOM
+      chatBox.querySelector('.bot-loading')?.remove(); 
       if (!response.ok) throw new Error(`Erro de servidor: ${response.status}`);
 
       const data = await response.json();
@@ -44,7 +53,7 @@ function initializeTakwaraChatbot() {
   });
 
   function addMessage(text, sender) {
-    const messageElement = document.createElement('div');
+    const messageElement = shadowRoot.createElement('div'); // Cria elemento no Shadow DOM
     messageElement.classList.add('message', `${sender}-message`);
     if (sender === 'bot-loading') {
       messageElement.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
@@ -54,7 +63,11 @@ function initializeTakwaraChatbot() {
     chatBox.appendChild(messageElement);
     chatBox.scrollTop = chatBox.scrollHeight;
   }
-}
 
-// OUVINTE PRINCIPAL: Escuta pelo nosso evento customizado.
-document.addEventListener('takwara:tools-ready', initializeTakwaraChatbot);
+  // Problema da AVT não reconhecendo textos do menu e sem referências:
+  // Este é um problema de backend (API). Se ela não está citando fontes ou reconhecendo
+  // o contexto, significa que a busca de similaridade ou a engenharia de prompt
+  // na Google Cloud Function não está funcionando como deveria.
+  // Vamos deixar para investigar isso NA PRÓXIMA FASE, após estabilizarmos o frontend.
+  // Por enquanto, focamos em fazer o CHATBOT APARECER E ENVIAR MENSAGENS.
+}

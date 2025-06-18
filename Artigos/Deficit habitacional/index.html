@@ -342,12 +342,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../O%20Bambu/" class="md-nav__link">
+      <a href="../O%20Github/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    O Bambu (Visão Geral)
+    O Github
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bambu/Vis%C3%A3o%20geral%20ilustrada/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    O Bambu
     
   </span>
   
@@ -375,10 +398,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
   
@@ -391,8 +414,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             O Bambu (Tópicos)
           </label>
@@ -469,10 +492,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
             
   
   
@@ -485,8 +508,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             Domos Geodésicos
           </label>
@@ -586,10 +609,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
         
           
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
             
   
   
@@ -602,8 +625,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             Documentação Técnica Takwara
           </label>
@@ -864,10 +887,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
             
   
   
@@ -880,8 +903,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
             Artigos de Fundo
           </label>
@@ -2309,6 +2332,8 @@ Madeira: O manejo florestal sustentável é apresentado como uma ferramenta para
       
         <script src="../../assets/js/script.js"></script>
       
+        <script src="../../assets/js/calculadora.js"></script>
+      
         <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
       
         <script src="../../assets/js/graph-data.js"></script>
@@ -2359,8 +2384,49 @@ Madeira: O manejo florestal sustentável é apresentado como uma ferramenta para
 
   <div class="tool-section" id="tool-calculadora">
     <h4>Calculadora de Domos</h4>
-    <div id="domo-calculator-container">
-  <p>Interface da Calculadora de Domos.</p>
+    <div id="calculator-fixed-box">
+    <h2 id="calculator-title">Calculadora de Domos</h2>
+    <form id="calculator-form-widget">
+        <div class="form-group-widget">
+            <label for="diameter-widget">Diâmetro (m):</label>
+            <input type="number" id="diameter-input-widget" step="0.01" required>
+        </div>
+        <div class="form-group-widget">
+            <label for="base-solid-widget">Sólido Base:</label>
+            <select id="base-solid-input-widget"></select>
+        </div>
+        <div class="form-group-widget">
+            <label for="frequency-widget">Frequência/Variante:</label>
+            <select id="frequency-input-widget"></select>
+        </div>
+        <div class="form-group-widget">
+            <label for="truncation-widget">Tipo de Esfera:</label>
+            <select id="truncation-input-widget"></select>
+        </div>
+        <div class="form-group-widget">
+            <label for="pole-diameter-widget">Diâmetro das Varas (cm):</label>
+            <input type="number" id="pole-diameter-input-widget" step="0.01" value="5">
+            <small id="pole-diameter-note" style="display: none; color: gray; font-size: 0.8em; margin-top: 5px;">Se não preenchido, o cálculo de PU e Cabo de Aço será N/A ou padrão.</small>
+        </div>
+        <button type="submit" id="calculate-button">Calcular</button>
+    </form>
+    <div id="results-container-widget" style="margin-top: 1rem;">
+        <h4>resultados:</h4>
+        <div id="results-table-widget"></div>
+        <div id="material-costs-widget"></div>
+        <div id="diagram-section-widget" style="display: none; text-align: center; margin-top: 15px;">
+            <img id="dome-diagram-img" src="" alt="Diagrama da Cúpula" style="max-width: 100%; height: auto; border-radius: 8px;">
+            <button id="view-diagram-button" style="margin-top: 10px; padding: 8px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Ver Diagrama Grande</button>
+        </div>
+        <button id="download-results-button" style="margin-top: 15px; padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; display: none;">Baixar Resultados (.md)</button>
+    </div>
+    <p id="error-message-widget" style="color: red;"></p>
+    <p id="footer-notes" style="font-size: 0.8em; color: gray; margin-top: 15px; display: none;"></p>
+</div>
+
+<div id="diagram-modal" style="display: none; position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8);">
+    <span class="close-button" id="close-diagram-modal" style="position: absolute; right: 25px; top: 15px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+    <img class="modal-content" id="modal-diagram-img" style="margin: auto; display: block; width: 80%; max-width: 700px; border-radius: 8px;">
 </div>
   </div>
 
