@@ -24,6 +24,7 @@ markdown_extensions:
 - toc:
     permalink: true
 nav:
+- A Tecnologia Takwara:
   - Tecnologia Takwara:
     - Ecopo do Projeto.md: A1. A Tecnologia Takwara/A1. Tecnologia Takwara/a1.1 Ecopo
         do Projeto.md
@@ -40,7 +41,7 @@ nav:
         Tijolos e Briquetes.md
     - Roteiro para Ensaios.md: A1. A Tecnologia Takwara/A1. Tecnologia Takwara/a1.8
         Roteiro para Ensaios.md
-  - O Bambu:
+- O Bambu:
   - Personalidades:
     - Jayme Gonçalves.md: A2. O Bambu/A2.a Personalidades/a2.a1 Jayme Gonçalves.md
     - Khorow Ghavami.md: A2. O Bambu/A2.a Personalidades/a2.a2 Khorow Ghavami.md
@@ -57,20 +58,22 @@ nav:
   - O Bambu na Ásia.md: A2. O Bambu/a2.5 O Bambu na Ásia.md
   - O Broto de Bambu.md: A2. O Bambu/a2.6 O Broto de Bambu.md
   - O carvão e o Pirolenhoso.md: A2. O Bambu/a2.7 O carvão e o Pirolenhoso.md
-  - Domos Geodésicos:
+- Domos Geodésicos:
   - Dados Estruturais.md: A3. Domos Geodésicos/a3.1 Dados Estruturais.md
   - Especificações Tecnicas.md: A3. Domos Geodésicos/a3.2 Especificações Tecnicas.md
   - Ferramentas para Layout.md: A3. Domos Geodésicos/a3.3 Ferramentas para Layout.md
-  - O PU Vegetal:
+- O PU Vegetal:
   - A Imperveg Polímeros Vegetais.md: A4. O PU Vegetal/a4.1 A Imperveg Polímeros Vegetais.md
   - Orgânicos X Sintéticos .md: A4. O PU Vegetal/a4.2 Orgânicos X Sintéticos .md
-  - Artigos:
+- Artigos:
   - Brasil Paradoxo da Sustentabilidade.md: A5. Artigos/a5.1 Brasil Paradoxo da Sustentabilidade.md
   - Deficit Habitacional.md: A5. Artigos/a5.2 Deficit Habitacional.md
   - Resposta a Crise Habitacional.md: A5. Artigos/a5.3 Resposta a Crise Habitacional.md
-  - Sobre Este Repositório:
+- Sobre Este Repositório:
   - Código de Conduta.md: A6. Sobre Este Repositório/a6.2 Código de Conduta.md
   - O Github.md: A6. Sobre Este Repositório/a6.3 O Github.md
+- grafo.md: grafo.md
+- index.md: index.md
 repo_name: Resck/Takwara-Tech
 repo_url: https://github.com/Resck/Takwara-Tech
 site_name: Tecnologia Takwara
