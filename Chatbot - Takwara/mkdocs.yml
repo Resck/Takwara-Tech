@@ -1,101 +1,101 @@
-# /Users/fabiotakwara/Documents/GitHub/Takwara-Tech/Chatbot - Takwara/mkdocs.yml
-
-# --- Configuração do Site ---
-site_name: Tecnologia Takwara
-# site_url: https://resck.github.io/Takwara-Tech/
-repo_url: https://github.com/Resck/Takwara-Tech
+edit_uri: ''
+extra_css:
+- assets/css/style.css
+- assets/css/custom.css
+extra_javascript:
+- assets/js/script.js
+- assets/js/calculadora.js
+- https://unpkg.com/vis-network/standalone/umd/vis-network.min.js
+- assets/js/graph.js
+- assets/js/modal.js
+- assets/js/toolbox.js
+- https://cdn.jsdelivr.net/npm/marked/marked.min.js
+markdown_extensions:
+- pymdownx.highlight:
+    anchor_linenums: true
+- pymdownx.inlinehilite
+- pymdownx.snippets
+- admonition
+- pymdownx.details
+- pymdownx.superfences
+- pymdownx.mark
+- attr_list
+- md_in_html
+- toc:
+    permalink: true
+nav:
+- A Tecnologia Takwara:
+  - Tecnologia Takwara:
+    - Ecopo do Projeto.md: A1. A Tecnologia Takwara/A1. Tecnologia Takwara/a1.1 Ecopo
+        do Projeto.md
+    - Forno Ecológico.md: A1. A Tecnologia Takwara/A1. Tecnologia Takwara/a1.2 Forno
+        Ecológico.md
+    - Sistema de Reforço.md: A1. A Tecnologia Takwara/A1. Tecnologia Takwara/a1.3
+        Sistema de Reforço.md
+    - Conexões Geodésicos.md: A1. A Tecnologia Takwara/A1. Tecnologia Takwara/a1.4
+        Conexões Geodésicos.md
+    - PU + Bambu.md: A1. A Tecnologia Takwara/A1. Tecnologia Takwara/a1.5 PU + Bambu.md
+    - Painéis de Bambu.md: A1. A Tecnologia Takwara/A1. Tecnologia Takwara/a1.6 Painéis
+        de Bambu.md
+    - Tijolos e Briquetes.md: A1. A Tecnologia Takwara/A1. Tecnologia Takwara/a1.7
+        Tijolos e Briquetes.md
+    - Roteiro para Ensaios.md: A1. A Tecnologia Takwara/A1. Tecnologia Takwara/a1.8
+        Roteiro para Ensaios.md
+- O Bambu:
+  - Personalidades:
+    - Jayme Gonçalves.md: A2. O Bambu/A2.a Personalidades/a2.a1 Jayme Gonçalves.md
+    - Khorow Ghavami.md: A2. O Bambu/A2.a Personalidades/a2.a2 Khorow Ghavami.md
+    - Ludovico Beraldo e Reis Pereira.md: A2. O Bambu/A2.a Personalidades/a2.a3 Ludovico
+        Beraldo e Reis Pereira.md
+    - Oscar Hidalgo.md: A2. O Bambu/A2.a Personalidades/a2.a4 Oscar Hidalgo.md
+    - Simon Velez.md: A2. O Bambu/A2.a Personalidades/a2.a5 Simon Velez.md
+  - Visão Geral.md: A2. O Bambu/a2.1 Visão Geral.md
+  - Caracterização Física.md: A2. O Bambu/a2.2 Caracterização Física.md
+  - Mercado Global.md: A2. O Bambu/a2.3 Mercado Global.md
+  - O Bambu na Ásia.md: A2. O Bambu/a2.4 O Bambu na Ásia.md
+  - O Broto de Bambu.md: A2. O Bambu/a2.5 O Broto de Bambu.md
+  - O carvão e o Pirolenhoso.md: A2. O Bambu/a2.6 O carvão e o Pirolenhoso.md
+- O PU Vegetal:
+  - A Imperveg Polímeros Vegetais.md: A3. O PU Vegetal/a2.1 A Imperveg Polímeros Vegetais.md
+  - Orgânicos X Sintéticos .md: A3. O PU Vegetal/a2.2 Orgânicos X Sintéticos .md
+- Domos Geodésicos:
+  - Dados Estruturais.md: A3. Domos Geodésicos/a3.1 Dados Estruturais.md
+  - Especificações Tecnicas.md: A3. Domos Geodésicos/a3.2 Especificações Tecnicas.md
+  - Ferramentas para Layout.md: A3. Domos Geodésicos/a3.3 Ferramentas para Layout.md
+- Sobre Este Repositório:
+  - Código de Conduta.md: A4. Sobre Este Repositório/Código de Conduta.md
+  - Github.md: A4. Sobre Este Repositório/O Github.md
+- Artigos:
+  - Paradoxo da Sustentabilidade.md: A5. Artigos/Brasil Paradoxo da Sustentabilidade.md
+  - Habitacional.md: A5. Artigos/Deficit Habitacional.md
+  - a Crise Habitacional.md: A5. Artigos/Resposta a Crise Habitacional.md
+- grafo.md: grafo.md
+- index.md: index.md
 repo_name: Resck/Takwara-Tech
-edit_uri: ""
-
-
-# --- Tema e Aparência (Verde e Layout Clássico) ---
+repo_url: https://github.com/Resck/Takwara-Tech
+site_name: Tecnologia Takwara
 theme:
-  name: material
+  custom_dir: overrides
+  favicon: /assets/images/favicon.png
+  features:
+  - navigation.expand
+  - content.code.annotate
+  - search.suggest
+  - search.highlight
+  - navigation.sticky
   language: pt-BR
   logo: /assets/images/logo.png
-  favicon: /assets/images/favicon.png
-  custom_dir: overrides
-
-  features:
-    - navigation.expand # Mantém os menus expandidos
-    # - navigation.tabs
-    - content.code.annotate
-    # - navigation.top
-    - search.suggest
-    - search.highlight
-    - navigation.sticky
+  name: material
   palette:
-    - scheme: slate
-      primary: green
-      accent: indigo
-      toggle:  # <--- Corrigido! Agora está dentro do 'slate'
-        icon: material/toggle-switch
-        name: Mudar para o modo claro
-
-    - scheme: default
-      primary: green
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Mudar para o modo escuro
-
-# --- Extensões do Markdown ---
-markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.mark
-  - attr_list
-  - md_in_html
-  - toc:
-      permalink: true
-
-# --- Navegação (Menu Expansível Restaurado) ---
-nav:
-  - 'Início': 'index.md'
-  # - 'Chatbot': 'chatbot.md'
-  - 'Calculadora de Domos': 'calculadora.md' 
-  # - 'Grafo de Conhecimento': 'grafo.md'
-  - 'Artigos':
-  # ''
-      - 'O Github': 'Artigos/O Github.md'
-      - 'O Bambu' : 'Artigos/Bambu/Visão geral ilustrada.md'
-      - 'O Bambu (Tópicos)':
-          - 'Caracterização Física': 'Artigos/Bambu/Caracterização física.md'
-          - 'Mercado Global': 'Artigos/Bambu/mercado global.md'
-      - 'Domos Geodésicos':
-          - 'Especificações Técnicas': 'Artigos/domos geodésicos/especificações tecnicas.md'
-          - 'Dados Estruturais': 'Artigos/domos geodésicos/dados estruturais.md'
-          - 'Ferramentas de Layout': 'Artigos/domos geodésicos/Ferramentas para layout.md'
-      - 'Documentação Técnica Takwara':
-          - 'Conexões Geodésicas': 'Artigos/documentação técnica Takwara/Conexões Geodésicos.md'
-          - 'Ecoprojeto': 'Artigos/documentação técnica Takwara/Ecopo projeto.md'
-          - 'Forno Ecológico': 'Artigos/documentação técnica Takwara/forno ecologico.md'
-          - 'HIS e Briquetes': 'Artigos/documentação técnica Takwara/HIS e BRIQUETES STL.md'
-          - 'Painéis de Bambu': 'Artigos/documentação técnica Takwara/Painéis de Bambu.md'
-          - 'PU + Bambu': 'Artigos/documentação técnica Takwara/PU + Bambu.md'
-          - 'Roteiro para Ensaios': 'Artigos/documentação técnica Takwara/Roteiro para Ensaios.md'
-          - 'Reforço Interno com PU': 'Artigos/documentação técnica Takwara/Sistema de Reforço Interno de Colmos de Bambu com Espuma de Poliuretano Vegetal.md'
-          - 'Tijolos e Briquetes': 'Artigos/documentação técnica Takwara/Tijolos Briquetes.md'
-          - 'Tratamento e Comercialização': 'Artigos/documentação técnica Takwara/Tratamento e Comercialização de Varas de Bambu.md'
-      - 'Artigos de Fundo':
-          - 'Défice Habitacional': 'Artigos/Deficit habitacional.md'
-          - 'Resposta à Crise Habitacional': 'Artigos/Resposta a crise habitacional.md'
-          - 'Sintéticos X Orgânicos': 'Artigos/Sintéticos X Orgânicos.md'
-
-# --- Ficheiros Extra (CSS e JS) ---
-extra_css:
-  - assets/css/style.css
-  - assets/css/custom.css
-extra_javascript:
-  - assets/js/script.js
-  - assets/js/calculadora.js # <--- DESCOMENTADO!
-  - https://unpkg.com/vis-network/standalone/umd/vis-network.min.js
-  - assets/js/graph-data.js
-  - assets/js/graph.js
-  - assets/js/modal.js
-  - assets/js/toolbox.js
+  - accent: indigo
+    primary: green
+    scheme: slate
+    toggle:
+      icon: material/toggle-switch
+      name: Mudar para o modo claro
+  - accent: indigo
+    primary: green
+    scheme: default
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: Mudar para o modo escuro

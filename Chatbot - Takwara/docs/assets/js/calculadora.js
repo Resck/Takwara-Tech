@@ -1,19 +1,49 @@
-// docs/assets/js/calculadora.js - OTIMIZADA PARA TOOLBOX E SHADOW DOM
+// docs/assets/js/calculadora.js - VERSÃO FINAL LIMPA E COM DOWNLOAD CORRIGIDO
 
-document.addEventListener('takwara:tools-ready', (event) => {
-    const shadowRoot = event.detail.shadowRoot;
-    initializeTakwaraCalculator(shadowRoot);
-});
+// A base de dados para popular os menus (mantida no frontend)
+const DOME_DATA = {
+    "Icosahedron": {
+        "V1": {"truncation": {"2/3": {}}}, "V2": {"truncation": {"1/2": {}}},
+        "V3": {"truncation": {"3/8": {}, "5/8": {}}}, "V4": {"truncation": {"1/2": {}}},
+        "L3": {"truncation": {"1/2": {}}}, "V5": {"truncation": {"7/15": {}, "8/15": {}}},
+        "V6": {"truncation": {"1/2": {}}}, "2V.3V": {"truncation": {"1/2": {}}}
+    },
+    "Cube": {
+        "V1": {"truncation": {"N/D": {}}}, "V2": {"truncation": {"N/D": {}}},
+        "V3": {"truncation": {"N/D": {}}}, "V4": {"truncation": {"N/D": {}}},
+        "V5": {"truncation": {"~1/2": {}}}, "V6": {"truncation": {"1/2": {}}},
+        "2V.3V": {"truncation": {"1/2": {}}}, "3V.2V": {"truncation": {"1/2": {}}}
+    },
+    "Octahedron": {
+        "V1": {"truncation": {"1/2": {}}}, "V2": {"truncation": {"1/2": {}}},
+        "V3": {"truncation": {"1/2": {}}}, "L3_3/8": {"truncation": {"3/8": {}}},
+        "L3_5/8": {"truncation": {"5/8": {}}}, "V4": {"truncation": {"N/D": {}}},
+        "V5": {"truncation": {"N/D": {}}}, "V6": {"truncation": {"N/D": {}}}
+    },
+    "Dodecahedron": {
+        "L1": {"truncation": {"N/D": {}}}, "L2": {"truncation": {"N/D": {}}},
+        "L2T": {"truncation": {"N/D": {}}}
+    },
+    "Tetrahedron": {
+        "L2T": {"truncation": {"N/D": {}}}, "L3T": {"truncation": {"N/D": {}}}
+    }
+};
 
+// URL da API da Calculadora (substitua se necessário)
+const apiUrl = 'https://southamerica-east1-adroit-citadel-397215.cloudfunctions.net/calculadora-domo-api';
+
+// Função de arredondamento (mantida)
+function customRound(value) {
+    if (typeof value !== 'number' || isNaN(value)) return 'N/A';
+    return (Math.round(value * 100) / 100).toFixed(2);
+}
+
+// --- FUNÇÃO DE INICIALIZAÇÃO DA CALCULADORA ---
 function initializeTakwaraCalculator(shadowRoot) {
-    console.log('Takwara Calculadora: A inicializar após receber o sinal "tools-ready".');
+    console.log('Takwara Calculator: A inicializar após receber o sinal "tools-ready".');
 
-    // A base de dados que o seu backend usa para popular os menus dinamicamente.
-    const DOME_DATA = { /* ... (conteúdo original da sua DOME_DATA) ... */ };
-    const DOME_IMAGES = { /* ... (conteúdo original da sua DOME_IMAGES) ... */ };
-
-    // --- 1. LÓGICA E INTERATIVIDADE ---
-    // Agora todos os elementos são obtidos via shadowRoot.getElementById
+    // --- SELECIONAR ELEMENTOS DENTRO DO SHADOW DOM ---
+    // Verifique se estes IDs estão em partials/widget-calculadora.html
     const calculatorForm = shadowRoot.getElementById('calculator-form-widget');
     const solidSelect = shadowRoot.getElementById('base-solid-input-widget');
     const freqSelect = shadowRoot.getElementById('frequency-input-widget');
@@ -23,47 +53,42 @@ function initializeTakwaraCalculator(shadowRoot) {
     const resultsTableDiv = shadowRoot.getElementById('results-table-widget');
     const materialCostsDiv = shadowRoot.getElementById('material-costs-widget');
     const errorMessageP = shadowRoot.getElementById('error-message-widget');
-    const diagramSection = shadowRoot.getElementById('diagram-section-widget');
-    const domeDiagramImg = shadowRoot.getElementById('dome-diagram-img');
-    const viewDiagramButton = shadowRoot.getElementById('view-diagram-button');
-    const diagramModal = shadowRoot.getElementById('diagram-modal');
-    const modalDiagramImg = shadowRoot.getElementById('modal-diagram-img');
-    const closeDiagramModal = shadowRoot.getElementById('close-diagram-modal');
     const poleDiameterNote = shadowRoot.getElementById('pole-diameter-note');
-    const downloadResultsButton = shadowRoot.getElementById('download-results-button');
-    const footerNotes = shadowRoot.getElementById('footer-notes');
+    const downloadResultsButton = shadowRoot.getElementById('download-results-button'); // Botão de download
+    const footerNotes = shadowRoot.getElementById('footer-notes'); // Parágrafo das notas no rodapé dos resultados
 
-    if (!calculatorForm || !solidSelect || !freqSelect || !truncSelect) {
-        console.error('Takwara Calculadora: Um ou mais elementos HTML essenciais não foram encontrados no Shadow DOM. Verifique o HTML no template `widget-calculadora.html`.');
-        return;
+
+    // --- VERIFICAÇÃO ESSENCIAL: Todos os elementos devem existir no Shadow DOM ---
+    if (!calculatorForm || !solidSelect || !freqSelect || !truncSelect || !poleDiameterInput || !resultsContainer || !resultsTableDiv || !materialCostsDiv || !errorMessageP || !downloadResultsButton || !footerNotes) {
+        console.error('Takwara Calculator: Um ou mais elementos HTML essenciais não foram encontrados no Shadow DOM. Verifique os IDs em `partials/widget-calculadora.html`.');
+        // Opcional: logar quais elementos faltam para depuração
+        // console.log("Elementos não encontrados:", { calculatorForm, solidSelect, freqSelect, truncSelect, poleDiameterInput, resultsContainer, resultsTableDiv, materialCostsDiv, errorMessageP, downloadResultsButton, footerNotes });
+        return; // Aborta a inicialização
     }
 
-    let lastCalculatedData = null;
+    // --- VARIÁVEIS PARA ARMAZENAR DADOS (ESCAPO DE initializeTakwaraCalculator) ---
+    // Acessíveis por displayResults e generateMarkdown
+    let lastCalculatedData = null; // Dados completos do último cálculo da API + processados
     let lastSelectedSolid = '';
     let lastSelectedFreq = '';
     let lastSelectedTrunc = '';
     let lastPoleDiameterCm = 'N/A';
-    let lastTotalLinearMeters = 0;
+    // lastTotalLinearMeters, lastVertexDiameterDisplay, lastConnectorLengthCm, etc.
+    // Serão armazenados dentro de lastCalculatedData.
 
-    const apiUrl = 'https://southamerica-east1-adroit-citadel-397215.cloudfunctions.net/calculadora-domo-api';
-
+    // --- FUNÇÕES AUXILIARES (Dentro de initializeTakwaraCalculator) ---
     function populateSelect(selectElement, options) {
-        selectElement.innerHTML = '';
-        if (options.length === 0) {
-            const opt = document.createElement('option'); // Cria elemento no Shadow DOM
-            opt.value = "";
-            opt.textContent = "N/D";
-            selectElement.appendChild(opt);
-            selectElement.disabled = true;
-        } else {
-            selectElement.disabled = false;
-            options.forEach(option => {
-                const opt = document.createElement('option'); // Cria elemento no Shadow DOM
-                opt.value = option;
-                opt.textContent = option;
-                selectElement.appendChild(opt);
-            });
-        }
+         selectElement.innerHTML = '';
+         if (options.length === 0) {
+             const opt = document.createElement('option'); opt.value = ""; opt.textContent = "N/D";
+             selectElement.appendChild(opt); selectElement.disabled = true;
+         } else {
+             selectElement.disabled = false;
+             options.forEach(option => {
+                 const opt = document.createElement('option'); opt.value = option; opt.textContent = option;
+                 selectElement.appendChild(opt);
+             });
+         }
     }
 
     function updateFreqOptions() {
@@ -77,70 +102,51 @@ function initializeTakwaraCalculator(shadowRoot) {
         const selectedSolid = solidSelect.value;
         const selectedFreq = freqSelect.value;
         let truncs = [];
-
         if (DOME_DATA[selectedSolid]?.[selectedFreq]?.truncation) {
             truncs = Object.keys(DOME_DATA[selectedSolid][selectedFreq].truncation);
         }
         populateSelect(truncSelect, truncs);
-
         if (truncs.length > 0) {
             truncSelect.value = truncs[0];
         } else {
             truncSelect.value = '';
         }
-
-        updateDiagramImage();
     }
 
-    function updateDiagramImage() {
-        const selectedSolid = solidSelect.value;
-        const selectedFreq = freqSelect.value;
-        const selectedTrunc = truncSelect.value;
-
-        const imageUrl = DOME_IMAGES[selectedSolid]?.[selectedFreq]?.[selectedTrunc] ||
-                         (selectedTrunc === '' && Object.keys(DOME_IMAGES[selectedSolid]?.[selectedFreq] || {}).length > 0
-                            ? DOME_IMAGES[selectedSolid][selectedFreq][Object.keys(DOME_IMAGES[selectedSolid][selectedFreq])[0]]
-                            : undefined);
-
-        if (imageUrl && domeDiagramImg) {
-            domeDiagramImg.src = imageUrl;
-            diagramSection.style.display = 'block';
-        } else if (diagramSection) {
-            diagramSection.style.display = 'none';
-            if (domeDiagramImg) domeDiagramImg.src = '';
-        }
-    }
-
-    function customRound(value) {
-        if (typeof value !== 'number' || isNaN(value)) {
-            return 'N/A';
-        }
-        return (Math.round(value * 100) / 100).toFixed(2);
-    }
-
+    // --- EVENT LISTENER DO FORMULÁRIO (Usa variáveis e funções do escopo superior) ---
     calculatorForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        if (resultsContainer) resultsContainer.style.display = 'none';
-        if (errorMessageP) errorMessageP.textContent = '';
-        if (materialCostsDiv) materialCostsDiv.innerHTML = '';
-        if (diagramSection) diagramSection.style.display = 'none';
-        if (downloadResultsButton) downloadResultsButton.style.display = 'none';
-        if (footerNotes) footerNotes.style.display = 'none';
 
-        const diameter = parseFloat(shadowRoot.getElementById('diameter-input-widget').value); // Acessa via shadowRoot
+        // Resetar UI e mensagens
+        resultsContainer.style.display = 'none';
+        errorMessageP.textContent = '';
+        materialCostsDiv.innerHTML = '';
+        downloadResultsButton.style.display = 'none'; // Esconde o botão até o cálculo dar sucesso
+        footerNotes.style.display = 'none';
+
+
+        // Pegar valores dos inputs
+        const diameter = parseFloat(shadowRoot.getElementById('diameter-input-widget').value);
         const base_solid = solidSelect.value;
         const frequency = freqSelect.value;
         const truncation = truncSelect.value;
 
         let poleDiameterCm = parseFloat(poleDiameterInput.value);
-        
-        if (isNaN(parseFloat(poleDiameterInput.value)) || parseFloat(poleDiameterInput.value) <= 0) {
+        if (isNaN(poleDiameterCm) || poleDiameterCm <= 0) { // Usar isNaN(parseFloat(...)) para verificar
             poleDiameterCm = "N/A";
-            if (poleDiameterNote) poleDiameterNote.style.display = 'block';
+            if(poleDiameterNote) poleDiameterNote.style.display = 'block';
         } else {
-            if (poleDiameterNote) poleDiameterNote.style.display = 'none';
+            if(poleDiameterNote) poleDiameterNote.style.display = 'none';
         }
 
+        // Indicador de carregamento
+        const loadingIndicator = document.createElement('p');
+        loadingIndicator.textContent = 'Calculando...';
+        loadingIndicator.id = 'calculator-loading-indicator'; // Adicionar um ID para facilitar a remoção
+        if (resultsContainer) resultsContainer.appendChild(loadingIndicator);
+
+
+        // Montar payload
         const payload = {
             diameter: diameter,
             base_solid: base_solid,
@@ -149,208 +155,295 @@ function initializeTakwaraCalculator(shadowRoot) {
         };
 
         try {
+            // Chamar a API
             const response = await fetch(apiUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
             });
             const data = await response.json();
-            
-            console.log("Dados da API:", data); 
+
+            // Remover indicador de carregamento
+            shadowRoot.getElementById('calculator-loading-indicator')?.remove();
+
+            console.log("Dados da API:", data);
 
             if (data.success) {
-                const SPACING_MM = 4;
+                // --- Processar dados da API e calcular valores adicionais ---
+
+                const SPACING_MM = 4; // Espaçamento fixo para cálculo do vértice
                 const SPACING_CM = SPACING_MM / 10;
-                let connectorCutoffValueCm = 0;
-                let actualConnectorCutoffMeters = 0;
+                let actualConnectorCutoffMeters = 0; // Desconto total em metros (para as duas extremidades)
+                let vertexDiameterDisplay = 'N/A';
+                let connectorLengthCalculatedCm = 'N/A';
+
 
                 if (typeof poleDiameterCm === 'number' && poleDiameterCm > 0) {
                     const calculatedVertexDiameter = 2 * (1.5 * poleDiameterCm + SPACING_CM);
-                    connectorCutoffValueCm = (calculatedVertexDiameter / 2);
-                    actualConnectorCutoffMeters = (2 * connectorCutoffValueCm / 100);
+                    actualConnectorCutoffMeters = (2 * (calculatedVertexDiameter / 2) / 100); // Duas extremidades em metros
+
+                     // Armazenar para observações e Markdown
+                     vertexDiameterDisplay = calculatedVertexDiameter.toFixed(2) + ' cm';
+                     connectorLengthCalculatedCm = (calculatedVertexDiameter / 2).toFixed(2); // Comprimento do conector
                 }
-                
+
+
                 let totalLinearMetersCalculated = 0;
                 let totalSegmentsCalculated = 0;
                 let segmentResultsForDisplay = [];
 
-                for (const key in data.segment_lengths) {
-                    const originalLength = parseFloat(data.segment_lengths[key]);
-                    const quantity = data.num_segments[key];
-                    const vertexAngle = data.vertex_angles[key];
+                // Calcular totais e resultados por segmento
+                if (data.segment_lengths && data.num_segments && data.vertex_angles) {
+                    for (const key in data.segment_lengths) {
+                        const originalLength = parseFloat(data.segment_lengths[key]);
+                        const quantity = data.num_segments[key];
+                        const vertexAngle = data.vertex_angles[key];
 
-                    let finalLengthM = originalLength - actualConnectorCutoffMeters;
+                        // Aplica o desconto
+                        let finalLengthM = originalLength - actualConnectorCutoffMeters;
 
-                    totalLinearMetersCalculated += finalLengthM * quantity;
-                    totalSegmentsCalculated += quantity;
+                        totalLinearMetersCalculated += (finalLengthM > 0 ? finalLengthM : 0) * quantity; // Só soma se o comprimento final for positivo
+                        totalSegmentsCalculated += quantity;
 
-                    segmentResultsForDisplay.push({
-                        type: key,
-                        originalLength: originalLength,
-                        discount: actualConnectorCutoffMeters,
-                        finalLength: finalLengthM,
-                        quantity: quantity,
-                        angle: vertexAngle
-                    });
+                        segmentResultsForDisplay.push({
+                            type: key,
+                            originalLength: originalLength,
+                            discount: actualConnectorCutoffMeters,
+                            finalLength: finalLengthM,
+                            quantity: quantity,
+                            angle: vertexAngle
+                        });
+                    }
                 }
-                
-                lastTotalLinearMeters = totalLinearMetersCalculated;
-                lastCalculatedData = { ...data, segmentResultsForDisplay: segmentResultsForDisplay };
 
-                displayResults(data, diameter, poleDiameterCm, totalLinearMetersCalculated, totalSegmentsCalculated, segmentResultsForDisplay);
-                updateDiagramImage();
-                if (downloadResultsButton) downloadResultsButton.style.display = 'block';
 
+                // --- Armazenar TODOS os dados necessários para display E download ---
+                lastCalculatedData = {
+                    ...data, // Inclui total_vertices, etc.
+                    usedPoleDiameterCm: poleDiameterCm, // Diâmetro usado
+                    calculatedTotalSegments: totalSegmentsCalculated, // Total calculado de varas
+                    calculatedTotalLinearMeters: totalLinearMetersCalculated, // Total calculado de metros lineares
+                    segmentResultsForDisplay: segmentResultsForDisplay, // Dados processados dos segmentos
+                    calculatedVertexDiameterDisplay: vertexDiameterDisplay, // Diâmetro do vértice
+                    calculatedConnectorLengthCm: connectorLengthCalculatedCm, // Comprimento do conector
+                     spacingMM: SPACING_MM // Espaçamento para as observações no MD
+                };
+
+                // Exibir resultados na UI usando os dados armazenados
+                displayResults(shadowRoot, lastCalculatedData);
+
+
+                // Armazenar seleções para o nome do arquivo de download
                 lastSelectedSolid = base_solid;
                 lastSelectedFreq = frequency;
                 lastSelectedTrunc = truncation;
-                lastPoleDiameterCm = poleDiameterCm;
+
+
+                downloadResultsButton.style.display = 'block'; // Mostra o botão de download após sucesso
 
             } else {
-                if (errorMessageP) errorMessageP.textContent = data.error || 'Ocorreu um erro.';
+                // Remover indicador de carregamento
+                shadowRoot.getElementById('calculator-loading-indicator')?.remove();
+                // Exibir erro da API
+                errorMessageP.textContent = data.error || 'Ocorreu um erro desconhecido durante o cálculo.';
+                if(downloadResultsButton) downloadResultsButton.style.display = 'none'; // Esconde o botão em caso de erro
+                 // Limpar resultados anteriores se o cálculo falhar
+                resultsTableDiv.innerHTML = '';
+                materialCostsDiv.innerHTML = '';
+                footerNotes.style.display = 'none';
             }
         } catch (error) {
-            if (errorMessageP) errorMessageP.textContent = 'Erro de comunicação com a API: ' + error.message;
+            // Remover indicador de carregamento
+             shadowRoot.getElementById('calculator-loading-indicator')?.remove();
+            // Exibir erro de comunicação
+            console.error('Erro durante a comunicação com a API da Calculadora:', error);
+            errorMessageP.textContent = 'Erro de comunicação com a API: ' + error.message;
+             if(downloadResultsButton) downloadResultsButton.style.display = 'none'; // Esconde o botão em caso de erro
+             // Limpar resultados anteriores em caso de erro de comunicação
+            resultsTableDiv.innerHTML = '';
+            materialCostsDiv.innerHTML = '';
+            footerNotes.style.display = 'none';
         }
-        if (resultsContainer) resultsContainer.style.display = 'block';
+        resultsContainer.style.display = 'block'; // Sempre mostra o contêiner de resultados/erro
     });
 
-    function displayResults(data, domeDiameter, poleDiameterCm, totalLinearMeters, totalSegments, segmentResultsForDisplay) {
-        let tableHTML = '<table><thead><tr><th>Tipo</th><th>Comp. Original (m)</th><th>Desconto Conector (m)</th><th>Comp. Final (m)</th><th>Qtd.</th><th>Ângulo (\u03B1)</th></tr></thead><tbody>';
-        
-        segmentResultsForDisplay.forEach(segment => {
-            const originalLengthRounded = customRound(segment.originalLength);
-            const discountRounded = customRound(segment.discount);
-            const finalLengthRounded = customRound(segment.finalLength); 
+    // displayResults function - Usa elementos do Shadow DOM e dados PASSADOS como argumento
+    function displayResults(shadowRoot, resultsData) { // Recebe os dados processados completos
+        const currentResultsTableDiv = shadowRoot.getElementById('results-table-widget');
+        const currentMaterialCostsDiv = shadowRoot.getElementById('material-costs-widget');
+        const currentFooterNotes = shadowRoot.getElementById('footer-notes'); // Acessa do escopo superior
 
-            tableHTML += `<tr><td>${segment.type}</td><td>${originalLengthRounded}</td><td>${discountRounded}</td><td>${finalLengthRounded}</td><td>${segment.quantity}</td><td>${segment.angle !== 'N/D' ? segment.angle.toFixed(2) + '\u00B0' : 'N/A'}</td></tr>`;
-        });
+        // Garantir que os elementos existem antes de usar
+        if (!currentResultsTableDiv || !currentMaterialCostsDiv || !currentFooterNotes) {
+            console.error("Elementos de display de resultados não encontrados no Shadow DOM.");
+            return;
+        }
+
+        // --- Exibir Tabela de Segmentos ---
+        let tableHTML = '<table><thead><tr><th>Tipo</th><th>Comp. Original (m)</th><th>Desconto Conector (m)</th><th>Comp. Final (m)</th><th>Qtd.</th><th>Ângulo (\u03B1)</th></tr></thead><tbody>';
+
+        if (resultsData.segmentResultsForDisplay) {
+             resultsData.segmentResultsForDisplay.forEach(segment => {
+                 const originalLengthRounded = customRound(segment.originalLength);
+                 const discountRounded = customRound(segment.discount);
+                 const finalLengthRounded = customRound(segment.finalLength);
+
+                 tableHTML += `<tr><td>${segment.type}</td><td>${originalLengthRounded}</td><td>${discountRounded}</td><td>${finalLengthRounded > 0 ? finalLengthRounded : 'N/A'}</td><td>${segment.quantity}</td><td>${segment.angle !== 'N/D' ? segment.angle.toFixed(2) + '\u00B0' : 'N/A'}</td></tr>`; // Mostrar N/A se comp. final <= 0
+             });
+        } else {
+             tableHTML += `<tr><td colspan="6">Dados dos segmentos não disponíveis.</td></tr>`;
+        }
 
         tableHTML += '</tbody></table>';
-        if (resultsTableDiv) resultsTableDiv.innerHTML = tableHTML;
+        currentResultsTableDiv.innerHTML = tableHTML;
 
+        // --- Exibir Recursos Materiais ---
         let materialHTML = '<h4>Recursos Materiais:</h4><ul>';
 
-        const numVertices = typeof data.total_vertices === 'number' ? data.total_vertices : 'N/A'; 
+        // Acessar dados de resultsData (garantindo que são números ou usar N/A)
+        const numVertices = typeof resultsData.total_vertices === 'number' ? resultsData.total_vertices : 'N/A';
+        const totalSegments = typeof resultsData.calculatedTotalSegments === 'number' ? resultsData.calculatedTotalSegments : 'N/A';
+        const totalLinearMeters = typeof resultsData.calculatedTotalLinearMeters === 'number' ? resultsData.calculatedTotalLinearMeters : 'N/A';
+        const poleDiameterCm = resultsData.usedPoleDiameterCm; // Usar o diâmetro usado
 
         materialHTML += `<li>Número de Vértices: ${numVertices}</li>`;
         materialHTML += `<li>Número Total de Varas: ${totalSegments}</li>`;
-        materialHTML += `<li>Total de Metros Lineares de Varas de Bambu: ${totalLinearMeters.toFixed(2)} m</li>`;
-        
-        const numConectores = totalSegments * 2;
-        materialHTML += `<li>Número de Conectores Utilizados: ${numConectores} (2 por vara)</li>`;
+        materialHTML += `<li>Total de Metros Lineares de Varas de Bambu: ${typeof totalLinearMeters === 'number' ? totalLinearMeters.toFixed(2) : 'N/A'} m</li>`;
+
+        const numConectores = typeof totalSegments === 'number' ? totalSegments * 2 : 'N/A';
+        materialHTML += `<li>Número de Conectores Utilizados: ${typeof numConectores === 'number' ? numConectores : 'N/A'} (2 por vara)</li>`;
 
         let cableLengthPerRod = 2;
         if (typeof poleDiameterCm === 'number' && poleDiameterCm >= 6.5) {
             cableLengthPerRod = 3;
         }
-        const totalCableLength = totalSegments * cableLengthPerRod;
+        const totalCableLength = typeof totalSegments === 'number' ? totalSegments * cableLengthPerRod : 'N/A';
+         materialHTML += `<li>Cabo de Aço: ${typeof totalCableLength === 'number' ? totalCableLength : 'N/A'} m</li>`;
 
-        materialHTML += `<li>Cabo de Aço: ${totalCableLength} m</li>`;
-        materialHTML += `<li>Número de Sapatilhas: ${totalSegments * 2}</li>`;
-        materialHTML += `<li>Prensa Cabo: ${totalSegments * 4}</li>`;
-        materialHTML += `<li>Arruelas: ${totalSegments * 4}</li>`;
-        materialHTML += `<li>Parafusos com Porcas: ${numConectores}</li>`;
+        materialHTML += `<li>Número de Sapatilhas: ${typeof totalSegments === 'number' ? totalSegments * 2 : 'N/A'}</li>`;
+        materialHTML += `<li>Prensa Cabo: ${typeof totalSegments === 'number' ? totalSegments * 4 : 'N/A'}</li>`;
+        materialHTML += `<li>Arruelas: ${typeof totalSegments === 'number' ? totalSegments * 4 : 'N/A'}</li>`;
+        materialHTML += `<li>Parafusos com Porcas: ${typeof numConectores === 'number' ? numConectores : 'N/A'}</li>`;
 
         let puUg132aMl = 0;
         if (typeof poleDiameterCm === 'number') {
-            if (poleDiameterCm > 0 && poleDiameterCm <= 5) {
-                puUg132aMl = 30 * totalLinearMeters;
-            } else if (poleDiameterCm > 5 && poleDiameterCm <= 10) {
-                puUg132aMl = 60 * totalLinearMeters;
-            }
+             if (poleDiameterCm > 0 && poleDiameterCm <= 5) {
+                 puUg132aMl = 30 * (typeof totalLinearMeters === 'number' ? totalLinearMeters : 0);
+             } else if (poleDiameterCm > 5 && poleDiameterCm <= 10) {
+                 puUg132aMl = 60 * (typeof totalLinearMeters === 'number' ? totalLinearMeters : 0);
+             }
         }
-        const displayPuUg132a = puUg132aMl >= 1000 ? `${(puUg132aMl / 1000).toFixed(2)} L` : `${puUg132aMl.toFixed(2)} ml`;
-        materialHTML += `<li>PU Vegetal UG132A: ${typeof puUg132aMl === 'number' && puUg132aMl > 0 ? displayPuUg132a : 'N/A'}</li>`;
+        const displayPuUg132a = typeof puUg132aMl === 'number' && puUg132aMl > 0 ? (puUg132aMl >= 1000 ? `${(puUg132aMl / 1000).toFixed(2)} L` : `${puUg132aMl.toFixed(2)} ml`) : 'N/A';
+        materialHTML += `<li>PU Vegetal UG132A: ${displayPuUg132a} híbrido (tratamento térmico)</li>`;
 
         let puMamonexMl = 0;
         if (typeof poleDiameterCm === 'number') {
-            if (poleDiameterCm > 0 && poleDiameterCm <= 5) {
-                puMamonexMl = 100 * totalSegments;
-            } else if (poleDiameterCm > 5 && poleDiameterCm <= 10) {
-                puMamonexMl = 150 * totalSegments;
-            }
-        }
-        const displayPuMamonex = puMamonexMl >= 1000 ? `${(puMamonexMl / 1000).toFixed(2)} L` : `${puMamonexMl.toFixed(2)} ml`;
-        materialHTML += `<li>PU Vegetal Mamonex RD70: ${typeof puMamonexMl === 'number' && puMamonexMl > 0 ? displayPuMamonex : 'N/A'}</li>`;
+             if (poleDiameterCm > 0 && poleDiameterCm <= 5) {
+                puMamonexMl = 100 * (typeof totalSegments === 'number' ? totalSegments : 0);
+             } else if (poleDiameterCm > 5 && poleDiameterCm <= 10) {
+                puMamonexMl = 150 * (typeof totalSegments === 'number' ? totalSegments : 0);
+             }
+         }
+        const displayPuMamonex = typeof puMamonexMl === 'number' && puMamonexMl > 0 ? (puMamonexMl >= 1000 ? `${(puMamonexMl / 1000).toFixed(2)} L` : `${puMamonexMl.toFixed(2)} ml`) : 'N/A';
+        materialHTML += `<li>PU Vegetal Mamonex RD70: ${displayPuMamonex} (tratamento imunizante)</li>`;
 
-        let vertexDiameterDisplay = 'N/A';
-        let connectorLengthCm = 'N/A';
-        const SPACING_MM = 4;
-        const SPACING_CM = SPACING_MM / 10;
 
-        if (typeof poleDiameterCm === 'number' && poleDiameterCm > 0) {
-            const calculatedVertexDiameter = 2 * (1.5 * poleDiameterCm + SPACING_CM);
-            vertexDiameterDisplay = calculatedVertexDiameter.toFixed(2) + ' cm';
-            connectorLengthCm = (calculatedVertexDiameter / 2).toFixed(2);
-        }
+        const vertexDiameterDisplay = resultsData.calculatedVertexDiameterDisplay; // Usar o valor já calculado
+        const connectorLengthCm = resultsData.calculatedConnectorLengthCm; // Usar o valor já calculado
+        const SPACING_MM_DISPLAY = 4; // Para texto explicativo (usar constante local)
+
         materialHTML += `<li>Diâmetro dos Vértices (estimado): ${vertexDiameterDisplay}</li>`;
 
-        materialHTML += `<li>Número de Anéis de Borracha: ${typeof numVertices === 'number' ? numVertices : 'N/A'}</li>`;
+        const numVerticesDisplay = typeof numVertices === 'number' ? numVertices : 'N/A'; // Usar o valor já calculado
+        materialHTML += `<li>Número de Anéis de Borracha: ${numVerticesDisplay} (Para união)</li>`;
+        materialHTML += `<li>Abraçadeiras (Nylon ou Inox): ${numVerticesDisplay} (Opcional, para reforço nos vértices)</li>`;
         materialHTML += `</ul>`;
-        if (materialCostsDiv) materialCostsDiv.innerHTML = materialHTML;
+        currentMaterialCostsDiv.innerHTML = materialHTML;
 
+        // --- Exibir Observações no Rodapé ---
         let notesHTML = `
             <p><strong>Observações:</strong></p>
             <ul>
                 <li>Diâmetro das Varas: ${typeof poleDiameterCm === 'number' ? poleDiameterCm + ' cm' : 'Não informado. O cálculo de PU e Cabo de Aço pode ser afetado.'}</li>
-                <li>O cálculo do diâmetro dos vértices (${vertexDiameterDisplay}) considera uma união de 6 varas dispostas circularmente, cada uma com o diâmetro da vara, e com um espaçamento de ${SPACING_MM}mm entre elas. Este diâmetro define o comprimento do conector, que é metade do diâmetro do vértice (${connectorLengthCm} cm), e é crucial para evitar colapsos estruturais.</li>
+                <li>O cálculo do diâmetro dos vértices (${vertexDiameterDisplay}) considera uma união de 6 varas dispostas circularmente, cada una com o diâmetro da vara, e com um espaçamento de ${SPACING_MM_DISPLAY}mm entre elas. Este diâmetro define o comprimento do conector, que é metade do diâmetro do vértice (${connectorLengthCm} cm), e é crucial para evitar colapsos estruturais.</li>
                 <li>A especificação do cabo de aço será determinada pela carga solicitada, espécie e diâmetro do bambu a ser utilizado.</li>
                 <li>Os furos nas varas de bambu para a passagem do cabo devem ser feitos nas extremidades a um ângulo de 45° no sentido da entrada, com diâmetro correspondente à espessura do cabo.</li>
                 <li>Serão realizados dois furos perpendiculares a 3cm da extremidade e dois furos perpendiculares a 5cm da extremidade.</li>
                 <li>A especificação de parafusos com porcas pode variar de acordo com o esforço e peso recebido pela estrutura. Consulte um engenheiro.</li>
+                <li>Recomenda-se tratamento completo (curagem e imunização) do bambu antes da montagem.</li>
+                <li>Este cálculo é uma estimativa. Variações na espécie de bambu, métodos de tratamento e tolerâncias de fabricação podem impactar os resultados finais.</li>
             </ul>
         `;
-        if (footerNotes) {
-            footerNotes.innerHTML = notesHTML;
-            footerNotes.style.display = 'block';
-        }
-    }
+        currentFooterNotes.innerHTML = notesHTML; // Usa a variável footerNotes do escopo superior
+        currentFooterNotes.style.display = 'block';
+    } // Fim de displayResults
 
+    // Função para gerar o arquivo Markdown (Usa dados armazenados em lastCalculatedData)
     function generateMarkdown() {
-        const diameter = shadowRoot.getElementById('diameter-input-widget').value; // Acessa via shadowRoot
-        const base_solid = lastSelectedSolid;
+         // Acessa os dados armazenados no escopo superior (lastCalculatedData, lastSelectedSolid, etc.)
+        const diameter = shadowRoot.getElementById('diameter-input-widget').value; // Pega o diâmetro atual do input
+
+        const data = lastCalculatedData; // Dados completos do último cálculo
+        if (!data) {
+             console.error("Não há dados de cálculo para gerar o Markdown.");
+             return ''; // Retorna string vazia se não há dados
+        }
+
+        // Acessa os dados específicos necessários do objeto data
+        const base_solid = lastSelectedSolid; // Seleções
         const frequency = lastSelectedFreq;
         const truncation = lastSelectedTrunc;
-        const poleDiameterCm = lastPoleDiameterCm;
-        const data = lastCalculatedData;
-        const totalLinearMetersMd = lastTotalLinearMeters;
-        const totalSegmentsMd = data.total_segments;
+        const poleDiameterCm = data.usedPoleDiameterCm; // Diâmetro usado no cálculo
 
-        const diagramImageUrl = domeDiagramImg ? domeDiagramImg.src : '';
+        const totalLinearMetersMd = data.calculatedTotalLinearMeters; // Totais calculados
+        const totalSegmentsMd = data.calculatedTotalSegments;
+        const numVerticesMd = typeof data.total_vertices === 'number' ? data.total_vertices : 'N/A'; // Vértices originais da API
+
+        const segmentResultsForDisplay = data.segmentResultsForDisplay; // Resultados por segmento
+
+        const vertexDiameterDisplayMd = data.calculatedVertexDiameterDisplay; // Valores de vértice calculados
+        const connectorLengthCmMd = data.calculatedConnectorLengthCm;
+        const SPACING_MM_MD = 4; // Para texto explicativo
+
 
         let markdownContent = `# Resultados da Calculadora de Domos\n\n`;
         markdownContent += `## Detalhes do Domo\n`;
         markdownContent += `- **Sólido Base:** ${base_solid}\n`;
         markdownContent += `- **Frequência/Variante:** ${frequency}\n`;
         markdownContent += `- **Tipo de Esfera (Truncagem):** ${truncation}\n`;
-        markdownContent += `- **Diâmetro do Domo:** ${diameter} m\n`;
-        markdownContent += `- **Diâmetro das Varas:** ${typeof poleDiameterCm === 'number' ? poleDiameterCm + ' cm' : 'N/A (Cálculo de PU e Cabo de Aço pode ser afetado)'}\n`;
+        markdownContent += `- **Diâmetro do Domo:** ${diameter} m\n`; // Usa o valor atual do input
+        markdownContent += `- **Diâmetro das Varas:** ${typeof poleDiameterCm === 'number' ? poleDiameterCm + ' cm' : 'Não informado.'}\n`;
         markdownContent += `\n`;
 
         markdownContent += `## Comprimento dos Segmentos\n\n`;
         markdownContent += `| Tipo | Comp. Original (m) | Desconto Conector (m) | Comp. Final (m) | Qtd. | Ângulo (α) |\n`;
         markdownContent += `|---|---|---|---|---|---|\n`;
-        lastCalculatedData.segmentResultsForDisplay.forEach(segment => {
-            markdownContent += `| ${segment.type} | ${customRound(segment.originalLength)} | ${customRound(segment.discount)} | ${customRound(segment.finalLength)} | ${segment.quantity} | ${segment.angle !== 'N/D' ? segment.angle.toFixed(2) + '°' : 'N/A'} |\n`;
-        });
+        if (segmentResultsForDisplay) {
+             segmentResultsForDisplay.forEach(segment => {
+                 const originalLengthRounded = customRound(segment.originalLength);
+                 const discountRounded = customRound(segment.discount);
+                 const finalLengthRounded = customRound(segment.finalLength);
+                 markdownContent += `| ${segment.type} | ${originalLengthRounded} | ${discountRounded} | ${finalLengthRounded > 0 ? finalLengthRounded : 'N/A'} | ${segment.quantity} | ${segment.angle !== 'N/D' ? segment.angle.toFixed(2) + '°' : 'N/A'} |\n`;
+             });
+        } else {
+              markdownContent += `| N/A | N/A | N/A | N/A | N/A | N/A |\n`;
+        }
         markdownContent += `\n`;
 
         markdownContent += `## Recursos Materiais\n\n`;
 
-        const numVerticesMd = typeof data.total_vertices === 'number' ? data.total_vertices : 'N/A';
-
         markdownContent += `- Número de Vértices: ${numVerticesMd}\n`;
-        markdownContent += `- Número Total de Varas: ${totalSegmentsMd}\n`;
-        markdownContent += `- Número Total de Metros Lineares de Varas de Bambu: ${typeof totalLinearMetersMd === 'number' ? totalLinearMetersMd.toFixed(2) : 'N/A'} m\n`;      
-        const numConectoresMd = totalSegmentsMd * 2;
-        markdownContent += `- Número de Conectores Utilizados: ${numConectoresMd} (2 por vara)\n`;
+        markdownContent += `- Número Total de Varas: ${typeof totalSegmentsMd === 'number' ? totalSegmentsMd : 'N/A'}\n`;
+        markdownContent += `- Total de Metros Lineares de Varas de Bambu: ${typeof totalLinearMetersMd === 'number' ? totalLinearMetersMd.toFixed(2) : 'N/A'} m\n`;
+
+        const numConectoresMd = typeof totalSegmentsMd === 'number' ? totalSegmentsMd * 2 : 'N/A';
+        markdownContent += `- Número de Conectores Utilizados: ${typeof numConectoresMd === 'number' ? numConectoresMd : 'N/A'} (2 por vara)\n`;
 
         let cableLengthPerRodMd = 2;
         if (typeof poleDiameterCm === 'number' && poleDiameterCm >= 6.5) {
             cableLengthPerRodMd = 3;
         }
-        const totalCableLengthMd = totalSegmentsMd * cableLengthPerRodMd;
+        const totalCableLengthMd = typeof totalSegmentsMd === 'number' ? totalSegmentsMd * cableLengthPerRodMd : 'N/A';
         markdownContent += `- Cabo de Aço: ${typeof totalCableLengthMd === 'number' ? totalCableLengthMd : 'N/A'} m\n`;
 
         markdownContent += `- Número de Sapatilhas: ${typeof totalSegmentsMd === 'number' ? totalSegmentsMd * 2 : 'N/A'}\n`;
@@ -361,111 +454,116 @@ function initializeTakwaraCalculator(shadowRoot) {
         let puUg132aMlMd = 0;
         if (typeof poleDiameterCm === 'number') {
             if (poleDiameterCm > 0 && poleDiameterCm <= 5) {
-                puUg132aMlMd = 30 * totalLinearMetersMd;
+                puUg132aMlMd = 30 * (typeof totalLinearMetersMd === 'number' ? totalLinearMetersMd : 0);
             } else if (poleDiameterCm > 5 && poleDiameterCm <= 10) {
-                puUg132aMlMd = 60 * totalLinearMetersMd;
+                puUg132aMlMd = 60 * (typeof totalLinearMetersMd === 'number' ? totalLinearMetersMd : 0);
             }
         }
-        const displayPuUg132aMd = puUg132aMlMd >= 1000 ? `${(puUg132aMlMd / 1000).toFixed(2)} L` : `${puUg132aMlMd.toFixed(2)} ml`;
-        markdownContent += `- PU Vegetal UG132A: ${typeof puUg132aMlMd === 'number' && puUg132aMlMd > 0 ? displayPuUg132aMd : 'N/A'}\n`;
+         const displayPuUg132aMd = typeof puUg132aMlMd === 'number' && puUg132aMlMd > 0 ? (puUg132aMlMd >= 1000 ? `${(puUg132aMlMd / 1000).toFixed(2)} L` : `${puUg132aMlMd.toFixed(2)} ml`) : 'N/A';
+        markdownContent += `- PU Vegetal UG132A: ${displayPuUg132aMd} híbrido (tratamento térmico)\n`;
 
         let puMamonexMlMd = 0;
         if (typeof poleDiameterCm === 'number') {
-            if (poleDiameterCm > 0 && poleDiameterCm <= 5) {
-                puMamonexMlMd = 100 * totalSegmentsMd;
-            } else if (poleDiameterCm > 5 && poleDiameterCm <= 10) {
-                puMamonexMlMd = 150 * totalSegmentsMd;
-            }
-        }
-        const displayPuMamonexMd = puMamonexMlMd >= 1000 ? `${(puMamonexMlMd / 1000).toFixed(2)} L` : `${puMamonexMlMd.toFixed(2)} ml`;
-        markdownContent += `- PU Vegetal Mamonex RD70: ${typeof puMamonexMlMd === 'number' && puMamonexMlMd > 0 ? displayPuMamonexMd : 'N/A'}\n`;
+             if (poleDiameterCm > 0 && poleDiameterCm <= 5) {
+                puMamonexMlMd = 100 * (typeof totalSegmentsMd === 'number' ? totalSegmentsMd : 0);
+             } else if (poleDiameterCm > 5 && poleDiameterCm <= 10) {
+                puMamonexMlMd = 150 * (typeof totalSegmentsMd === 'number' ? totalSegmentsMd : 0);
+             }
+         }
+        const displayPuMamonexMd = typeof puMamonexMlMd === 'number' && puMamonexMlMd > 0 ? (puMamonexMlMd >= 1000 ? `${(puMamonexMlMd / 1000).toFixed(2)} L` : `${puMamonexMlMd.toFixed(2)} ml`) : 'N/A';
+        markdownContent += `- PU Vegetal Mamonex RD70: ${displayPuMamonexMd} (tratamento imunizante)\n`;
 
-        let vertexDiameterDisplayMd = 'N/A';
-        let connectorLengthCmMd = 'N/A';
-        const SPACING_MM_MD = 4;
-        const SPACING_CM_MD = SPACING_MM_MD / 10;
-        if (typeof poleDiameterCm === 'number' && poleDiameterCm > 0) {
-            const calculatedVertexDiameterMd = 2 * (1.5 * poleDiameterCm + SPACING_CM_MD);
-            vertexDiameterDisplayMd = calculatedVertexDiameterMd.toFixed(2) + ' cm';
-            connectorLengthCmMd = (calculatedVertexDiameterMd / 2).toFixed(2);
-        }
         markdownContent += `- Diâmetro dos Vértices (estimado): ${vertexDiameterDisplayMd}\n`;
 
-        markdownContent += `- Número de Anéis de Borracha: ${typeof numVerticesMd === 'number' ? numVerticesMd : 'N/A'}\n\n`;
-
-        if (diagramImageUrl && diagramImageUrl !== '') {
-            markdownContent += `## Diagrama da Cúpula\n\n`;
-            markdownContent += `![Diagrama da Cúpula](${diagramImageUrl})\n\n`;
-            markdownContent += `*Para visualizar o diagrama em alta resolução, acesse a URL da imagem diretamente.*\n`;
-        }
+        markdownContent += `- Número de Anéis de Borracha: ${numVerticesMd} (Para união)\n`;
+        markdownContent += `- Abraçadeiras (Nylon ou Inox): ${numVerticesMd} (Opcional, para reforço nos vértices)\n`;
+        markdownContent += `\n`;
 
         markdownContent += `\n---\n\n`;
         markdownContent += `## Observações\n`;
-        markdownContent += `- Diâmetro das Varas: ${typeof poleDiameterCm === 'number' ? poleDiameterCm + ' cm' : 'Não informado. O cálculo de PU e Cabo de Aço pode ser afetado.'}\n`;
-        markdownContent += `- O cálculo do diâmetro dos vértices (${vertexDiameterDisplayMd}) considera uma união de 6 varas dispostas circularmente, cada uma com o diâmetro da vara, e com um espaçamento de ${SPACING_MM_MD}mm entre elas. Este diâmetro define o comprimento do conector, que é metade do diâmetro do vértice (${connectorLengthCmMd} cm), e é crucial para evitar colapsos estruturais.\n`;
+        // Recria as observações diretamente aqui para o Markdown
+         markdownContent += `- Diâmetro das Varas: ${typeof poleDiameterCm === 'number' ? poleDiameterCm + ' cm' : 'Não informado.'}\n`;
+        markdownContent += `- O cálculo do diâmetro dos vértices (${vertexDiameterDisplayMd}) considera uma união de 6 varas dispostas circularmente, cada una com o diâmetro da vara, e com um espaçamento de ${SPACING_MM_MD}mm entre elas. Este diâmetro define o comprimento do conector, que é metade do diâmetro do vértice (${connectorLengthCmMd} cm), e é crucial para evitar colapsos estruturais.\n`;
         markdownContent += `- A especificação do cabo de aço será determinada pela carga solicitada, espécie e diâmetro do bambu a ser utilizado.\n`;
         markdownContent += `- Os furos nas varas de bambu para a passagem do cabo devem ser feitos nas extremidades a um ângulo de 45° no sentido da entrada, com diâmetro correspondente à espessura do cabo.\n`;
         markdownContent += `- Serão realizados dois furos perpendiculares a 3cm da extremidade e dois furos perpendiculares a 5cm da extremidade.\n`;
         markdownContent += `- A especificação de parafusos com porcas pode variar de acordo com o esforço e peso recebido pela estrutura. Consulte um engenheiro.\n`;
+        markdownContent += `- Recomenda-se tratamento completo (curagem e imunização) do bambu antes da montagem.\n`;
+        markdownContent += `- Este cálculo é uma estimativa. Variações na espécie de bambu, métodos de tratamento e tolerâncias de fabricação podem impactar os resultados finais.\n`;
 
-        return markdownContent;
+
+        return markdownContent; // Retorna a string Markdown completa
     }
 
+    // Event Listener para o botão de Download (usa generateMarkdown e lastCalculatedData)
     if (downloadResultsButton) {
         downloadResultsButton.addEventListener('click', () => {
-            if (!lastCalculatedData) {
-                if (errorMessageP) errorMessageP.textContent = 'Por favor, execute um cálculo antes de baixar os resultados.';
+            const currentErrorMessageP = shadowRoot.getElementById('error-message-widget');
+
+            if (!lastCalculatedData) { // Verifica se já houve um cálculo bem sucedido
+                if(currentErrorMessageP) currentErrorMessageP.textContent = 'Por favor, execute um cálculo antes de baixar os resultados.';
                 return;
             }
-            const markdown = generateMarkdown();
-            const filename = `resultados_domo_${lastSelectedSolid.replace(/\s/g, '_')}_${lastSelectedFreq.replace(/\//g, '-')}_${lastSelectedTrunc.replace(/\//g, '-')}.md`;
+            const markdown = generateMarkdown(); // Chama generateMarkdown
+            if (!markdown) { // Verifica se generateMarkdown retornou conteúdo
+                 if(currentErrorMessageP) currentErrorMessageP.textContent = 'Erro ao gerar o conteúdo do relatório.';
+                 return;
+            }
+
+            // Gera um nome de arquivo mais amigável e compatível
+            const filename = `resultados_domo_${lastSelectedSolid.replace(/[^a-zA-Z0-9]/g, '_')}_${lastSelectedFreq.replace(/[^a-zA-Z0-9]/g, '_')}_${lastSelectedTrunc.replace(/[^a-zA-Z0-9]/g, '_')}.md`.toLowerCase();
+
             const blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8;' });
-            const link = document.createElement('a'); // Cria elemento no Shadow DOM
+            const link = document.createElement('a'); // Cria link no DOM principal (correto para downloads)
             if (link.download !== undefined) {
                 link.setAttribute('href', URL.createObjectURL(blob));
                 link.setAttribute('download', filename);
                 link.style.visibility = 'hidden';
-                shadowRoot.appendChild(link); // Anexa ao Shadow DOM
+                document.body.appendChild(link); // Adiciona link no DOM principal
                 link.click();
-                link.remove(); // Remove do Shadow DOM
+                document.body.removeChild(link);
             } else {
                 alert('Seu navegador não suporta o download automático. Copie o texto abaixo:\n\n' + markdown);
             }
         });
-    }
+    } // warning se button não for encontrado já está no início
 
+    // Inicializa o formulário (popula selects e adiciona listeners iniciais)
     populateSelect(solidSelect, Object.keys(DOME_DATA));
     solidSelect.addEventListener('change', updateFreqOptions);
     freqSelect.addEventListener('change', updateTruncOptions);
-    truncSelect.addEventListener('change', updateDiagramImage);
 
-    updateFreqOptions();
+    updateFreqOptions(); // Chama no início para popular os menus iniciais
 
-    if (poleDiameterInput && poleDiameterNote) {
+    // Event listener para a nota de N/A no campo de diâmetro da vara
+     if (poleDiameterInput && poleDiameterNote) {
         poleDiameterInput.addEventListener('input', () => {
+            // Verificar se o valor é um número válido e maior que 0
             if (isNaN(parseFloat(poleDiameterInput.value)) || parseFloat(poleDiameterInput.value) <= 0) {
                 poleDiameterNote.style.display = 'block';
             } else {
                 poleDiameterNote.style.display = 'none';
             }
         });
+        // Define o estado inicial da nota com base no valor padrão (5)
+        if (isNaN(parseFloat(poleDiameterInput.value)) || parseFloat(poleDiameterInput.value) <= 0) {
+             poleDiameterNote.style.display = 'block';
+         } else {
+             poleDiameterNote.style.display = 'none';
+         }
+     }
+
+
+     console.log('Takwara Calculator: Inicialização concluída.');
+} // Fim da função initializeTakwaraCalculator
+
+
+// OUVINTE PRINCIPAL: Escuta pelo nosso evento customizado 'takwara:tools-ready'
+document.addEventListener('takwara:tools-ready', (event) => {
+    const shadowRoot = event.detail.shadowRoot;
+    if (shadowRoot) {
+        initializeTakwaraCalculator(shadowRoot);
+    } else {
+        console.error('Takwara Calculator: Evento "tools-ready" recebido, mas shadowRoot não encontrado no detalhe.');
     }
-
-    if (viewDiagramButton && modalDiagramImg && diagramModal && closeDiagramModal) {
-        viewDiagramButton.addEventListener('click', () => {
-            modalDiagramImg.src = domeDiagramImg.src;
-            diagramModal.style.display = 'block';
-        });
-
-        closeDiagramModal.addEventListener('click', () => {
-            diagramModal.style.display = 'none';
-        });
-
-        // Este listener ainda pode ser no window, pois o modal está no documento principal
-        window.addEventListener('click', (event) => {
-            if (event.target == diagramModal) {
-                diagramModal.style.display = 'none';
-            }
-        });
-    }
-}
+});

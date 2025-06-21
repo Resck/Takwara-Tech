@@ -1,19 +1,25 @@
+{# Chatbot - Takwara/overrides/partials/widget-tools.html #}
 <div class="takwara-tools-container">
 
-  <div class="tool-section" id="tool-avt">
-    <h4>Converse com Takwara</h4>
-    <p>Tire as suas dúvidas sobre a tecnologia, aprenda sobre o bambu, pergunte, investigue!</p>
-    {% include "partials/widget-chatbot.html" %}
-  </div>
+<div class="tool-section" id="tool-avt">
+<h4>Converse com Takwara</h4>
+<p>Tire as suas dúvidas sobre a tecnologia, aprenda sobre o bambu, pergunte, investigue!</p>
+{% include "partials/widget-chatbot.html" %}
+</div>
 
-  <div class="tool-section" id="tool-grafo">
-    <h4>Grafo de Conhecimento</h4>
-    {% include "partials/widget-grafo.html" %}
-  </div>
+<div class="tool-section" id="tool-grafo">
+{# REMOVA COMPLETAMENTE AS LINHAS ABAIXO - O TÍTULO E DESCRIÇÃO AGORA ESTÃO APENAS EM widget-grafo.html #}
+{# <h4>Grafo de Conhecimento</h4> #}
+{# <p>O Grafo de Conhecimento visualiza as conexões entre os conceitos do projeto.</p> #}
+{% include "partials/widget-grafo.html" %}
+</div>
 
-  <div class="tool-section" id="tool-calculadora">
-    <h4>Calculadora de Domos</h4>
-    {% include "partials/widget-calculadora.html" %}
-  </div>
+<div class="tool-section" id="tool-calculadora">
+{# Garanta que o título H4 está APENAS AQUI se quiser que ele apareça na aba da calculadora #}
+<h4>Calculadora de Domos</h4>
+{# Remova a linha abaixo se não for mais necessária #}
+{# <p>Interface da Calculadora de Domos.</p> #}
+{% include "partials/widget-calculadora.html" %}
+</div>
 
 </div>
