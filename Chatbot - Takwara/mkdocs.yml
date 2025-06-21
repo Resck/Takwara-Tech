@@ -24,7 +24,6 @@ markdown_extensions:
 - toc:
     permalink: true
 nav:
-- A Tecnologia Takwara:
   - Tecnologia Takwara:
     - Ecopo do Projeto.md: A1. A Tecnologia Takwara/A1. Tecnologia Takwara/a1.1 Ecopo
         do Projeto.md
@@ -50,27 +49,28 @@ nav:
     - Oscar Hidalgo.md: A2. O Bambu/A2.a Personalidades/a2.a4 Oscar Hidalgo.md
     - Simon Velez.md: A2. O Bambu/A2.a Personalidades/a2.a5 Simon Velez.md
   - Visão Geral.md: A2. O Bambu/a2.1 Visão Geral.md
+  - 'Brasil: A cadeia Digital.md': 'A2. O Bambu/a2.2 Brasil: A cadeia Digital.md'
   - Caracterização Física.md: A2. O Bambu/a2.2 Caracterização Física.md
-  - Mercado Global.md: A2. O Bambu/a2.3 Mercado Global.md
-  - O Bambu na Ásia.md: A2. O Bambu/a2.4 O Bambu na Ásia.md
-  - O Broto de Bambu.md: A2. O Bambu/a2.5 O Broto de Bambu.md
-  - O carvão e o Pirolenhoso.md: A2. O Bambu/a2.6 O carvão e o Pirolenhoso.md
-- O PU Vegetal:
-  - A Imperveg Polímeros Vegetais.md: A3. O PU Vegetal/a2.1 A Imperveg Polímeros Vegetais.md
-  - Orgânicos X Sintéticos .md: A3. O PU Vegetal/a2.2 Orgânicos X Sintéticos .md
+  - O Ecossistema do Bambu no Brasil.md: A2. O Bambu/a2.3 O Ecossistema do Bambu no
+      Brasil.md
+  - Mercado Global.md: A2. O Bambu/a2.4 Mercado Global.md
+  - O Bambu na Ásia.md: A2. O Bambu/a2.5 O Bambu na Ásia.md
+  - O Broto de Bambu.md: A2. O Bambu/a2.6 O Broto de Bambu.md
+  - O carvão e o Pirolenhoso.md: A2. O Bambu/a2.7 O carvão e o Pirolenhoso.md
 - Domos Geodésicos:
   - Dados Estruturais.md: A3. Domos Geodésicos/a3.1 Dados Estruturais.md
   - Especificações Tecnicas.md: A3. Domos Geodésicos/a3.2 Especificações Tecnicas.md
   - Ferramentas para Layout.md: A3. Domos Geodésicos/a3.3 Ferramentas para Layout.md
-- Sobre Este Repositório:
-  - Código de Conduta.md: A4. Sobre Este Repositório/Código de Conduta.md
-  - Github.md: A4. Sobre Este Repositório/O Github.md
+- O PU Vegetal:
+  - A Imperveg Polímeros Vegetais.md: A4. O PU Vegetal/a4.1 A Imperveg Polímeros Vegetais.md
+  - Orgânicos X Sintéticos .md: A4. O PU Vegetal/a4.2 Orgânicos X Sintéticos .md
 - Artigos:
-  - Paradoxo da Sustentabilidade.md: A5. Artigos/Brasil Paradoxo da Sustentabilidade.md
-  - Habitacional.md: A5. Artigos/Deficit Habitacional.md
-  - a Crise Habitacional.md: A5. Artigos/Resposta a Crise Habitacional.md
-- grafo.md: grafo.md
-- index.md: index.md
+  - Brasil Paradoxo da Sustentabilidade.md: A5. Artigos/a5.1 Brasil Paradoxo da Sustentabilidade.md
+  - Deficit Habitacional.md: A5. Artigos/a5.2 Deficit Habitacional.md
+  - Resposta a Crise Habitacional.md: A5. Artigos/a5.3 Resposta a Crise Habitacional.md
+- Sobre Este Repositório:
+  - Código de Conduta.md: A6. Sobre Este Repositório/a6.2 Código de Conduta.md
+  - O Github.md: A6. Sobre Este Repositório/a6.3 O Github.md
 repo_name: Resck/Takwara-Tech
 repo_url: https://github.com/Resck/Takwara-Tech
 site_name: Tecnologia Takwara
