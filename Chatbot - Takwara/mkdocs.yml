@@ -21,8 +21,8 @@ markdown_extensions:
 - pymdownx.mark
 - attr_list
 - md_in_html
-- toc:
-    permalink: true
+# - toc:
+  #  permalink: true
 nav:
 - A Tecnologia Takwara:
   - Tecnologia Takwara:
