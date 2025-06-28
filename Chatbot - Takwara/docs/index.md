@@ -1,3 +1,5 @@
+
+
 # Tecnologia Takwara: Inovação Aberta para Construção Sustentável com Bambu e Responsabilidade Socioambiental {#indice-principal}
 
 ![Licença CC BY 4.0](https://i.creativecommons.org/l/by/4.0/88x31.png)
@@ -213,3 +215,4 @@ Acreditamos que, juntos, podemos transformar o "aço vegetal" e os princípios d
 Obrigado por se juntar a nós nesta jornada!
 
 **Fabio "Takwara" Resck**
+

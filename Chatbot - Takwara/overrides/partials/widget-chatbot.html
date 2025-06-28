@@ -1,29 +1,17 @@
-{# Chatbot - Takwara/overrides/partials/widget-chatbot.html #}
-{# Este arquivo deve conter APENAS UMA INSTÂNCIA do HTML da interface da AVT #}
-
 <div id="chatbot-container" class="takwara-chatbot">
-
   <div id="chat-box" class="chat-box">
     <div class="message bot-message">
       Olá! Sou a assistente virtual Takwara. Como posso ajudar?
     </div>
-    {# Mensagens futuras serão adicionadas aqui pelo JS #}
   </div>
-
-  {# --- Adicionar Botão de Copiar Conversa --- #}
-  {# Garanta que o ID '#copy-chat-button' está correto e único aqui #}
-  <button type="button" id="copy-chat-button" style="margin-top: 0.5rem; padding: 5px 10px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.9rem;">Copiar Conversa</button>
-
   <form id="chat-form" class="chat-form">
-      <input
-          type="text"
-          id="user-input"
-          class="user-input"
-          placeholder="Faça uma pergunta..."
-          autocomplete="off"
-      >
-      {# Garanta que o ID '#submit-button' ou classe '.submit-button' está correto #}
-      <button type="submit" class="submit-button" title="Enviar">Enviar</button>
+    <input 
+      type="text" 
+      id="user-input" 
+      class="user-input" 
+      placeholder="Faça uma pergunta..." 
+      autocomplete="off"
+    >
+    <button type="submit" class="submit-button" title="Enviar">Enviar</button>
   </form>
-
 </div>
