@@ -1,28 +1,70 @@
-edit_uri: ''
-extra_css:
-- assets/css/style.css
-- assets/css/custom.css
-extra_javascript:
-- assets/js/script.js
-- assets/js/calculadora.js
-- https://unpkg.com/vis-network/standalone/umd/vis-network.min.js
-- assets/js/graph.js
-- assets/js/modal.js
-- assets/js/toolbox.js
-- https://cdn.jsdelivr.net/npm/marked/marked.min.js
+# mkdocs.yml - VERSÃO COMPLETA E CORRIGIDA
+
+site_name: Tecnologia Takwara
+repo_url: https://github.com/Resck/Takwara-Tech
+repo_name: Resck/Takwara-Tech
+edit_uri: ""
+
+theme:
+  name: material
+  language: pt-BR
+  custom_dir: overrides # Ativa a nossa pasta de customizações
+
+  # Caminhos para logo e favicon
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.png
+
+  # Funcionalidades recomendadas
+  features:
+    - navigation.expand
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+    - navigation.sticky
+
+  # Paleta de cores
+  palette:
+    - scheme: slate
+      primary: green
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Mudar para o modo claro
+    - scheme: default
+      primary: green
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Mudar para o modo escuro
+
+# Extensões do Markdown
 markdown_extensions:
-- pymdownx.highlight:
-    anchor_linenums: true
-- pymdownx.inlinehilite
-- pymdownx.snippets
-- admonition
-- pymdownx.details
-- pymdownx.superfences
-- pymdownx.mark
-- attr_list
-- md_in_html
-# - toc:
-  #  permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - md_in_html
+
+# Arquivos CSS customizados
+extra_css:
+  - assets/css/style.css
+  - assets/css/custom.css
+
+# Arquivos JavaScript customizados
+
+# Arquivos JavaScript customizados
+extra_javascript:
+  # Bibliotecas externas primeiro
+  - https://unpkg.com/vis-network/standalone/umd/vis-network.min.js
+  - https://cdn.jsdelivr.net/npm/marked/marked.min.js
+
+  # Nosso script principal, agora SEM o 'defer' para tentar um carregamento mais imediato.
+  - assets/js/script.js
 nav:
 - A Tecnologia Takwara:
   - Tecnologia Takwara:
@@ -70,35 +112,10 @@ nav:
   - Deficit Habitacional.md: A5. Artigos/a5.2 Deficit Habitacional.md
   - Resposta a Crise Habitacional.md: A5. Artigos/a5.3 Resposta a Crise Habitacional.md
 - Sobre Este Repositório:
-  - Código de Conduta.md: A6. Sobre Este Repositório/a6.2 Código de Conduta.md
-  - O Github.md: A6. Sobre Este Repositório/a6.3 O Github.md
+  - Código de Conduta.md: A6. Sobre Este Repositório/a6.2 Código de Conduta.md # Verifique se este path/nome está correto
+  - O Github.md: A6. Sobre Este Repositório/a6.3 O Github.md # Verifique se este path/nome está correto
 - grafo.md: grafo.md
 - index.md: index.md
 repo_name: Resck/Takwara-Tech
 repo_url: https://github.com/Resck/Takwara-Tech
 site_name: Tecnologia Takwara
-theme:
-  custom_dir: overrides
-  favicon: /assets/images/favicon.png
-  features:
-  - navigation.expand
-  - content.code.annotate
-  - search.suggest
-  - search.highlight
-  - navigation.sticky
-  language: pt-BR
-  logo: /assets/images/logo.png
-  name: material
-  palette:
-  - accent: indigo
-    primary: green
-    scheme: slate
-    toggle:
-      icon: material/toggle-switch
-      name: Mudar para o modo claro
-  - accent: indigo
-    primary: green
-    scheme: default
-    toggle:
-      icon: material/toggle-switch-off-outline
-      name: Mudar para o modo escuro

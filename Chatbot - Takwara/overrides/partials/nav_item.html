@@ -1,0 +1,39 @@
+{#-
+  This file includes a single navigation item, and is called recursively
+  for all children of the navigation item.
+-#}
+
+{% if nav_item.children %}
+  <li class="md-nav__item md-nav__item--nested">
+    {% set checked = "checked" if "navigation.expand" in features and not nav_item.is_page %}
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="{{ nav_item.title | lower }}" {{ checked }}>
+    <label class="md-nav__link" for="{{ nav_item.title | lower }}">
+      {{ nav_item.title }}
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="{{ nav_item.title }}" data-md-level="{{ nav_item.level }}">
+      <label class="md-nav__title" for="{{ nav_item.title | lower }}">
+        <span class="md-nav__icon md-icon"></span>
+        {{ nav_item.title }}
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        {% for nav_item in nav_item.children %}
+          {% set path = "partials/nav_item.html" %}
+          {% include path with context %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </li>
+{% elif nav_item.is_page %}
+  <li class="md-nav__item">
+    <a href="{{ nav_item.url | url }}" class="md-nav__link{% if nav_item.active %} md-nav__link--active{% endif %}">
+      {{ nav_item.title }}
+    </a>
+  </li>
+{% elif nav_item.is_section and "navigation.sections" in features %}
+  <li class="md-nav__item">
+    <span class="md-nav__link md-nav__link--active">
+      {{ nav_item.title }}
+    </span>
+  </li>
+{% endif %}

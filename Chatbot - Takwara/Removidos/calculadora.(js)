@@ -1,0 +1,376 @@
+// docs/assets/js/calculadora.js - REVISÃO FINAL PARA ESCopos e Download
+
+// ... (Definições de DOME_DATA, apiUrl, customRound, populateSelect) ...
+
+// --- VARIÁVEIS GLOBAIS PARA ESTADO DE CÁLCULO (AGORA NO ESCopo EXTERNO) ---
+// Estas variáveis devem estar visíveis tanto para initializeTakwaraCalculator
+// quanto para a função generateMarkdown, que será chamada pelo listener.
+let lastCalculatedData = null;
+let lastSelectedSolid = '';
+let lastSelectedFreq = '';
+let lastSelectedTrunc = '';
+let lastPoleDiameterCm = 'N/A'; // Armazena o diâmetro usado
+
+// --- FUNÇÃO DE INICIALIZAÇÃO DA CALCULADORA ---
+function initializeTakwaraCalculator(shadowRoot) {
+    console.log('Takwara Calculator: A inicializar após receber o sinal "tools-ready".');
+
+    // --- SELECIONAR ELEMENTOS DENTRO DO SHADOW DOM ---
+    // (Mantenha as seleções de elementos como estão)
+    const calculatorForm = shadowRoot.getElementById('calculator-form-widget');
+    const solidSelect = shadowRoot.getElementById('base-solid-input-widget');
+    const freqSelect = shadowRoot.getElementById('frequency-input-widget');
+    const truncSelect = shadowRoot.getElementById('truncation-input-widget');
+    const poleDiameterInput = shadowRoot.getElementById('pole-diameter-input-widget');
+    const diameterInputWidget = shadowRoot.getElementById('diameter-input-widget');
+
+    const resultsContainer = shadowRoot.getElementById('results-container-widget');
+    const resultsTableDiv = shadowRoot.getElementById('results-table-widget');
+    const materialCostsDiv = shadowRoot.getElementById('material-costs-widget');
+    const errorMessageP = shadowRoot.getElementById('error-message-widget');
+    const poleDiameterNote = shadowRoot.getElementById('pole-diameter-note');
+    const downloadResultsButton = shadowRoot.getElementById('download-results-button');
+    const footerNotes = shadowRoot.getElementById('footer-notes');
+
+    if (!calculatorForm || !solidSelect || !freqSelect || !truncSelect || !poleDiameterInput || !diameterInputWidget || !resultsContainer || !resultsTableDiv || !materialCostsDiv || !errorMessageP || !downloadResultsButton || !footerNotes) {
+        console.error('Takwara Calculator: Um ou mais elementos HTML essenciais não foram encontrados no Shadow DOM.');
+        return;
+    }
+
+    // --- FUNÇÕES DE ATUALIZAÇÃO DE OPÇÕES DOS SELECTS (Dentro de initializeTakwaraCalculator) ---
+    function updateFreqOptions() { /* ... código existente ... */ }
+    function updateTruncOptions() { /* ... código existente ... */ }
+
+    // --- EVENT LISTENER DO FORMULÁRIO ---
+    calculatorForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Resetar UI
+        resultsContainer.style.display = 'none'; errorMessageP.textContent = ''; materialCostsDiv.innerHTML = ''; resultsTableDiv.innerHTML = ''; downloadResultsButton.style.display = 'none'; footerNotes.style.display = 'none';
+
+        // Pegar valores dos inputs
+        const diameter = parseFloat(diameterInputWidget.value);
+        const base_solid = solidSelect.value;
+        const frequency = freqSelect.value;
+        const truncation = truncSelect.value;
+
+        let poleDiameterCm = parseFloat(poleDiameterInput.value);
+        if (isNaN(poleDiameterCm) || poleDiameterCm <= 0) {
+            poleDiameterCm = "N/A";
+            if(poleDiameterNote) poleDiameterNote.style.display = 'block';
+        } else {
+            if(poleDiameterNote) poleDiameterNote.style.display = 'none';
+        }
+
+        // Indicador de carregamento
+        const loadingIndicator = document.createElement('p');
+        loadingIndicator.textContent = 'Calculando...'; loadingIndicator.id = 'calculator-loading-indicator';
+        if (resultsContainer) resultsContainer.appendChild(loadingIndicator);
+
+        const payload = { diameter, base_solid, frequency, truncation };
+
+        try {
+            const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+            const data = await response.json();
+
+            shadowRoot.getElementById('calculator-loading-indicator')?.remove();
+            console.log("Dados da API recebidos:", data);
+
+            if (data.success) {
+                // --- Processamento dos Dados da API e Cálculos Adicionais ---
+                const SPACING_MM = 4; const SPACING_CM = SPACING_MM / 10;
+                let actualConnectorCutoffMeters = 0;
+                let vertexDiameterDisplay = 'N/A'; let connectorLengthCalculatedCm = 'N/A';
+
+                if (typeof poleDiameterCm === 'number' && poleDiameterCm > 0) {
+                    const calculatedVertexDiameter = 2 * (1.5 * poleDiameterCm + SPACING_CM);
+                    actualConnectorCutoffMeters = (2 * (calculatedVertexDiameter / 2) / 100);
+                    vertexDiameterDisplay = calculatedVertexDiameter.toFixed(2) + ' cm';
+                    connectorLengthCalculatedCm = (calculatedVertexDiameter / 2).toFixed(2);
+                }
+
+                let totalLinearMetersCalculated = 0; let totalSegmentsCalculated = 0;
+                let segmentResultsForDisplay = [];
+
+                if (data.segment_lengths && data.num_segments && data.vertex_angles) {
+                    for (const key in data.segment_lengths) {
+                        const originalLength = parseFloat(data.segment_lengths[key]);
+                        const quantity = data.num_segments[key];
+                        const vertexAngle = data.vertex_angles[key];
+                        let finalLengthM = originalLength - actualConnectorCutoffMeters;
+                        if (finalLengthM < 0) finalLengthM = 0;
+
+                        totalLinearMetersCalculated += finalLengthM * quantity;
+                        totalSegmentsCalculated += quantity;
+
+                        segmentResultsForDisplay.push({ type: key, originalLength, discount: actualConnectorCutoffMeters, finalLength: finalLengthM, quantity, angle: vertexAngle });
+                    }
+                }
+
+                // Armazenar TODOS os dados processados
+                lastCalculatedData = {
+                    ...data, usedPoleDiameterCm: poleDiameterCm, calculatedTotalSegments: totalSegmentsCalculated,
+                    calculatedTotalLinearMeters: totalLinearMetersCalculated, segmentResultsForDisplay,
+                    calculatedVertexDiameterDisplay: vertexDiameterDisplay, calculatedConnectorLengthCm: connectorLengthCalculatedCm,
+                    spacingMM: SPACING_MM
+                };
+
+                // Exibir os resultados na UI
+                displayResults(shadowRoot, lastCalculatedData);
+
+                // Armazenar seleções para o nome do arquivo de download
+                lastSelectedSolid = base_solid; lastSelectedFreq = frequency; lastSelectedTrunc = truncation;
+
+                downloadResultsButton.style.display = 'block'; // Mostrar botão de download
+
+            } else {
+                errorMessageP.textContent = data.error || 'Erro desconhecido na API.';
+                if(downloadResultsButton) downloadResultsButton.style.display = 'none';
+                resultsTableDiv.innerHTML = ''; materialCostsDiv.innerHTML = ''; footerNotes.style.display = 'none';
+            }
+        } catch (error) {
+            console.error('Erro na comunicação com a API:', error);
+            errorMessageP.textContent = 'Erro de comunicação com a API: ' + error.message;
+            if(downloadResultsButton) downloadResultsButton.style.display = 'none';
+            resultsTableDiv.innerHTML = ''; materialCostsDiv.innerHTML = ''; footerNotes.style.display = 'none';
+        }
+        resultsContainer.style.display = 'block';
+    });
+
+    // --- FUNÇÃO PARA EXIBIR RESULTADOS NA UI (Usa elementos do Shadow DOM) ---
+    function displayResults(shadowRoot, resultsData) {
+        const currentResultsTableDiv = shadowRoot.getElementById('results-table-widget');
+        const currentMaterialCostsDiv = shadowRoot.getElementById('material-costs-widget');
+        const currentFooterNotes = shadowRoot.getElementById('footer-notes');
+
+        if (!currentResultsTableDiv || !currentMaterialCostsDiv || !currentFooterNotes) {
+            console.error("Elementos de display de resultados não encontrados no Shadow DOM.");
+            return;
+        }
+
+        // --- Tabela de Segmentos ---
+        let tableHTML = '<table><thead><tr><th>Tipo</th><th>Comp. Original (m)</th><th>Desconto Conector (m)</th><th>Comp. Final (m)</th><th>Qtd.</th><th>Ângulo (\u03B1)</th></tr></thead><tbody>';
+        if (resultsData.segmentResultsForDisplay) {
+             resultsData.segmentResultsForDisplay.forEach(segment => {
+                 tableHTML += `<tr><td>${segment.type}</td><td>${customRound(segment.originalLength)}</td><td>${customRound(segment.discount)}</td><td>${segment.finalLength > 0 ? customRound(segment.finalLength) : 'N/A'}</td><td>${segment.quantity}</td><td>${segment.angle !== 'N/D' ? segment.angle.toFixed(2) + '\u00B0' : 'N/A'}</td></tr>`;
+             });
+        } else {
+             tableHTML += `<tr><td colspan="6">Dados dos segmentos não disponíveis.</td></tr>`;
+        }
+        tableHTML += '</tbody></table>';
+        currentResultsTableDiv.innerHTML = tableHTML;
+
+        // --- Recursos Materiais ---
+        let materialHTML = '<h4>Recursos Materiais:</h4><ul>';
+        const numVertices = typeof resultsData.total_vertices === 'number' ? resultsData.total_vertices : 'N/A';
+        const totalSegments = typeof resultsData.calculatedTotalSegments === 'number' ? resultsData.calculatedTotalSegments : 'N/A';
+        const totalLinearMeters = typeof resultsData.calculatedTotalLinearMeters === 'number' ? resultsData.calculatedTotalLinearMeters : 'N/A';
+        const poleDiameterCm = resultsData.usedPoleDiameterCm;
+
+        materialHTML += `<li>Número de Vértices: ${numVertices}</li>`;
+        materialHTML += `<li>Número Total de Varas: ${totalSegments}</li>`;
+        materialHTML += `<li>Total de Metros Lineares de Varas de Bambu: ${typeof totalLinearMeters === 'number' ? totalLinearMeters.toFixed(2) : 'N/A'} m</li>`;
+        const numConectores = typeof totalSegments === 'number' ? totalSegments * 2 : 'N/A';
+        materialHTML += `<li>Número de Conectores Utilizados: ${typeof numConectores === 'number' ? numConectores : 'N/A'} (2 por vara)</li>`;
+        let cableLengthPerRod = 2; if (typeof poleDiameterCm === 'number' && poleDiameterCm >= 6.5) cableLengthPerRod = 3;
+        const totalCableLength = typeof totalSegments === 'number' ? totalSegments * cableLengthPerRod : 'N/A';
+        materialHTML += `<li>Cabo de Aço: ${typeof totalCableLength === 'number' ? totalCableLength : 'N/A'} m</li>`;
+        materialHTML += `<li>Número de Sapatilhas: ${typeof totalSegments === 'number' ? totalSegments * 2 : 'N/A'}</li>`;
+        materialHTML += `<li>Prensa Cabo: ${typeof totalSegments === 'number' ? totalSegments * 4 : 'N/A'}</li>`;
+        materialHTML += `<li>Arruelas: ${typeof totalSegments === 'number' ? totalSegments * 4 : 'N/A'}</li>`;
+        let puUg132aMl = 0;
+        if (typeof poleDiameterCm === 'number' && poleDiameterCm > 0) {
+            const meterForPu132a = typeof totalLinearMeters === 'number' ? totalLinearMeters : 0;
+            if (poleDiameterCm <= 5) puUg132aMl = 30 * meterForPu132a; else if (poleDiameterCm <= 10) puUg132aMl = 60 * meterForPu132a;
+        }
+        const displayPuUg132a = puUg132aMl > 0 ? (puUg132aMl >= 1000 ? `${(puUg132aMl / 1000).toFixed(2)} L` : `${puUg132aMl.toFixed(2)} ml`) : 'N/A';
+        materialHTML += `<li>PU Vegetal UG132A: ${displayPuUg132a} híbrido (tratamento térmico)</li>`;
+        let puMamonexMl = 0;
+        if (typeof poleDiameterCm === 'number' && poleDiameterCm > 0) {
+            const segmentsForPuMamonex = typeof totalSegments === 'number' ? totalSegments : 0;
+            if (poleDiameterCm <= 5) puMamonexMl = 100 * segmentsForPuMamonex; else if (poleDiameterCm <= 10) puMamonexMl = 150 * segmentsForPuMamonex;
+        }
+        const displayPuMamonex = puMamonexMl > 0 ? (puMamonexMl >= 1000 ? `${(puMamonexMl / 1000).toFixed(2)} L` : `${puMamonexMl.toFixed(2)} ml`) : 'N/A';
+        materialHTML += `<li>PU Vegetal Mamonex RD70: ${displayPuMamonex} (tratamento imunizante)</li>`;
+        materialHTML += `<li>Diâmetro dos Vértices (estimado): ${resultsData.calculatedVertexDiameterDisplay || 'N/A'}</li>`;
+        materialHTML += `<li>Número de Anéis de Borracha: ${numVertices} (Para união)</li>`;
+        materialHTML += `<li>Abraçadeiras (Nylon ou Inox): ${numVertices} (Opcional, para reforço nos vértices)</li>`;
+        materialHTML += `</ul>`;
+        currentMaterialCostsDiv.innerHTML = materialHTML;
+
+        // --- Exibir Observações no Rodapé ---
+        let notesHTML = `<p><strong>Observações:</strong></p><ul>`;
+        notesHTML += `<li>Diâmetro das Varas: ${typeof poleDiameterCm === 'number' ? poleDiameterCm + ' cm' : 'Não informado.'}</li>`;
+        notesHTML += `<li>O cálculo do diâmetro dos vértices (${resultsData.calculatedVertexDiameterDisplay || 'N/A'}) considera uma união de 6 varas dispostas circularmente, cada una com o diâmetro da vara, e com um espaçamento de ${resultsData.spacingMM || 4}mm entre elas. Este diâmetro define o comprimento do conector, que é metade do diâmetro do vértice (${resultsData.calculatedConnectorLengthCm || 'N/A'} cm), e é crucial para evitar colapsos estruturais.</li>`;
+        notesHTML += `<li>A especificação do cabo de aço será determinada pela carga solicitada, espécie e diâmetro do bambu a ser utilizado.</li>`;
+        notesHTML += `<li>Os furos nas varas de bambu para a passagem do cabo devem ser feitos nas extremidades a um ângulo de 45° no sentido da entrada, com diâmetro correspondente à espessura do cabo.</li>`;
+        notesHTML += `<li>Serão realizados dois furos perpendiculares a 3cm da extremidade e dois furos perpendiculares a 5cm da extremidade.</li>`;
+        notesHTML += `<li>A especificação de parafusos com porcas pode variar de acordo com o esforço e peso recebido pela estrutura. Consulte um engenheiro.</li>`;
+        notesHTML += `<li>Recomenda-se tratamento completo (curagem e imunização) do bambu antes da montagem.</li>`;
+        notesHTML += `<li>Este cálculo é uma estimativa. Variações na espécie de bambu, métodos de tratamento e tolerâncias de fabricação podem impactar os resultados finais.</li>`;
+        notesHTML += `</ul>`;
+        currentFooterNotes.innerHTML = notesHTML;
+        currentFooterNotes.style.display = 'block';
+    } // Fim de displayResults
+
+    // --- EVENT LISTENER PARA O BOTÃO DE DOWNLOAD ---
+    if (downloadResultsButton) {
+        downloadResultsButton.addEventListener('click', () => {
+            const currentErrorMessageP = shadowRoot.getElementById('error-message-widget');
+            if (!lastCalculatedData) {
+                if(currentErrorMessageP) currentErrorMessageP.textContent = 'Por favor, execute um cálculo antes de baixar os resultados.';
+                return;
+            }
+            const markdown = generateMarkdown(); // Chama generateMarkdown para obter o conteúdo
+            if (!markdown) {
+                 if(currentErrorMessageP) currentErrorMessageP.textContent = 'Erro ao gerar o conteúdo do relatório.';
+                 return;
+            }
+
+            const filename = `resultados_domo_${lastSelectedSolid.replace(/[^a-zA-Z0-9]/g, '_')}_${lastSelectedFreq.replace(/[^a-zA-Z0-9]/g, '_')}_${lastSelectedTrunc.replace(/[^a-zA-Z0-9]/g, '_')}.md`.toLowerCase();
+
+            const blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8;' });
+            const url = URL.createObjectURL(blob); // Cria a URL do blob
+            const link = document.createElement('a');
+            if (link.download !== undefined) {
+                link.setAttribute('href', url);
+                link.setAttribute('download', filename);
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url); // Revoga a URL após o uso
+            } else {
+                alert('Seu navegador não suporta o download automático. Copie o texto abaixo:\n\n' + markdown);
+                URL.revokeObjectURL(url); // Revoga a URL mesmo no fallback
+            }
+        });
+    }
+
+    // --- INICIALIZAÇÃO DO FORMULÁRIO ---
+    populateSelect(solidSelect, Object.keys(DOME_DATA));
+    solidSelect.addEventListener('change', updateFreqOptions);
+    freqSelect.addEventListener('change', updateTruncOptions);
+    updateFreqOptions();
+
+    // --- Listener para a nota de N/A do diâmetro da vara ---
+     if (poleDiameterInput && poleDiameterNote) {
+        poleDiameterInput.addEventListener('input', () => {
+            if (isNaN(parseFloat(poleDiameterInput.value)) || parseFloat(poleDiameterInput.value) <= 0) {
+                poleDiameterNote.style.display = 'block';
+            } else {
+                poleDiameterNote.style.display = 'none';
+            }
+        });
+        if (isNaN(parseFloat(poleDiameterInput.value)) || parseFloat(poleDiameterInput.value) <= 0) {
+             poleDiameterNote.style.display = 'block';
+         } else {
+             poleDiameterNote.style.display = 'none';
+         }
+     }
+
+     console.log('Takwara Calculator: Inicialização concluída.');
+} // Fim da função initializeTakwaraCalculator
+
+
+// --- OUVINTE PRINCIPAL ---
+document.addEventListener('takwara:tools-ready', (event) => {
+    const shadowRoot = event.detail.shadowRoot;
+    if (shadowRoot) {
+        initializeTakwaraCalculator(shadowRoot);
+    } else {
+        console.error('Takwara Calculator: Evento "tools-ready" recebido, mas shadowRoot não encontrado.');
+    }
+});
+
+// --- FUNÇÃO PARA GERAR O ARQUIVO MARKDOWN (Agora no escopo global, acessível pelo listener do botão) ---
+function generateMarkdown() {
+    const diameter = document.querySelector('takwara-toolbox #diameter-input-widget')?.value || document.querySelector('takwara-toolbox #diameter-input-widget')?.getAttribute('value'); // Tenta pegar do DOM principal se não estiver nos dados globais
+
+    const data = lastCalculatedData;
+    if (!data) {
+         console.error("Não há dados de cálculo para gerar o Markdown.");
+         return '';
+    }
+
+    const base_solid = lastSelectedSolid;
+    const frequency = lastSelectedFreq;
+    const truncation = lastSelectedTrunc;
+    const poleDiameterCm = data.usedPoleDiameterCm;
+
+    const totalLinearMetersMd = data.calculatedTotalLinearMeters;
+    const totalSegmentsMd = data.calculatedTotalSegments;
+    const numVerticesMd = typeof data.total_vertices === 'number' ? data.total_vertices : 'N/A';
+
+    const segmentResultsForDisplay = data.segmentResultsForDisplay;
+
+    const vertexDiameterDisplayMd = data.calculatedVertexDiameterDisplay;
+    const connectorLengthCmMd = data.calculatedConnectorLengthCm;
+    const SPACING_MM_MD = data.spacingMM || 4; // Usa o valor armazenado ou default
+
+    let markdownContent = `# Resultados da Calculadora de Domos\n\n`;
+    markdownContent += `## Detalhes do Domo\n`;
+    markdownContent += `- **Sólido Base:** ${base_solid}\n`;
+    markdownContent += `- **Frequência/Variante:** ${frequency}\n`;
+    markdownContent += `- **Tipo de Esfera (Truncagem):** ${truncation}\n`;
+    markdownContent += `- **Diâmetro do Domo:** ${diameter} m\n`;
+    markdownContent += `- **Diâmetro das Varas:** ${typeof poleDiameterCm === 'number' ? poleDiameterCm + ' cm' : 'Não informado.'}\n`;
+    markdownContent += `\n`;
+
+    markdownContent += `## Comprimento dos Segmentos\n\n`;
+    markdownContent += `| Tipo | Comp. Original (m) | Desconto Conector (m) | Comp. Final (m) | Qtd. | Ângulo (α) |\n`;
+    markdownContent += `|---|---|---|---|---|---|\n`;
+    if (segmentResultsForDisplay) {
+         segmentResultsForDisplay.forEach(segment => {
+             markdownContent += `| ${segment.type} | ${customRound(segment.originalLength)} | ${customRound(segment.discount)} | ${segment.finalLength > 0 ? customRound(segment.finalLength) : 'N/A'} | ${segment.quantity} | ${segment.angle !== 'N/D' ? segment.angle.toFixed(2) + '°' : 'N/A'} |\n`;
+         });
+    } else {
+         markdownContent += `| N/A | N/A | N/A | N/A | N/A | N/A |\n`;
+    }
+    markdownContent += `\n`;
+
+    markdownContent += `## Recursos Materiais\n\n`;
+    markdownContent += `- Número de Vértices: ${numVerticesMd}\n`;
+    markdownContent += `- Número Total de Varas: ${totalSegmentsMd}\n`;
+    markdownContent += `- Total de Metros Lineares de Varas de Bambu: ${typeof totalLinearMetersMd === 'number' ? totalLinearMetersMd.toFixed(2) : 'N/A'} m\n`;
+    const numConectoresMd = typeof totalSegmentsMd === 'number' ? totalSegmentsMd * 2 : 'N/A';
+    markdownContent += `- Número de Conectores Utilizados: ${typeof numConectoresMd === 'number' ? numConectoresMd : 'N/A'} (2 por vara)\n`;
+    let cableLengthPerRodMd = 2; if (typeof poleDiameterCm === 'number' && poleDiameterCm >= 6.5) cableLengthPerRodMd = 3;
+    const totalCableLengthMd = typeof totalSegmentsMd === 'number' ? totalSegmentsMd * cableLengthPerRodMd : 'N/A';
+    markdownContent += `- Cabo de Aço: ${typeof totalCableLengthMd === 'number' ? totalCableLengthMd : 'N/A'} m\n`;
+    markdownContent += `- Número de Sapatilhas: ${typeof totalSegmentsMd === 'number' ? totalSegmentsMd * 2 : 'N/A'}\n`;
+    markdownContent += `- Prensa Cabo: ${typeof totalSegmentsMd === 'number' ? totalSegmentsMd * 4 : 'N/A'}\n`;
+    markdownContent += `- Arruelas: ${typeof totalSegmentsMd === 'number' ? totalSegmentsMd * 4 : 'N/A'}\n`;
+    let puUg132aMlMd = 0;
+    if (typeof poleDiameterCm === 'number' && poleDiameterCm > 0) {
+        const meterForPu132a = typeof totalLinearMetersMd === 'number' ? totalLinearMetersMd : 0;
+        if (poleDiameterCm <= 5) puUg132aMlMd = 30 * meterForPu132a; else if (poleDiameterCm <= 10) puUg132aMlMd = 60 * meterForPu132a;
+    }
+    const displayPuUg132aMd = puUg132aMlMd > 0 ? (puUg132aMlMd >= 1000 ? `${(puUg132aMlMd / 1000).toFixed(2)} L` : `${puUg132aMlMd.toFixed(2)} ml`) : 'N/A';
+    markdownContent += `- PU Vegetal UG132A: ${displayPuUg132aMd} híbrido (tratamento térmico)\n`;
+    let puMamonexMlMd = 0;
+    if (typeof poleDiameterCm === 'number' && poleDiameterCm > 0) {
+        const segmentsForPuMamonex = typeof totalSegmentsMd === 'number' ? totalSegmentsMd : 0;
+        if (poleDiameterCm <= 5) puMamonexMlMd = 100 * segmentsForPuMamonex; else if (poleDiameterCm <= 10) puMamonexMlMd = 150 * segmentsForPuMamonex;
+    }
+    const displayPuMamonexMd = puMamonexMlMd > 0 ? (puMamonexMlMd >= 1000 ? `${(puMamonexMlMd / 1000).toFixed(2)} L` : `${puMamonexMlMd.toFixed(2)} ml`) : 'N/A';
+    markdownContent += `- PU Vegetal Mamonex RD70: ${displayPuMamonexMd} (tratamento imunizante)\n`;
+    markdownContent += `- Diâmetro dos Vértices (estimado): ${vertexDiameterDisplayMd}\n`;
+    markdownContent += `- Número de Anéis de Borracha: ${numVerticesMd} (Para união)\n`;
+    markdownContent += `- Abraçadeiras (Nylon ou Inox): ${numVerticesMd} (Opcional, para reforço nos vértices)\n`;
+    markdownContent += `\n`;
+    markdownContent += `\n---\n\n`;
+    markdownContent += `## Observações\n`;
+    markdownContent += `- Diâmetro das Varas: ${typeof poleDiameterCm === 'number' ? poleDiameterCm + ' cm' : 'Não informado.'}\n`;
+    markdownContent += `- O cálculo do diâmetro dos vértices (${vertexDiameterDisplayMd}) considera uma união de 6 varas dispostas circularmente, cada una com o diâmetro da vara, e com um espaçamento de ${SPACING_MM_MD}mm entre elas. Este diâmetro define o comprimento do conector, que é metade do diâmetro do vértice (${connectorLengthCmMd} cm), e é crucial para evitar colapsos estruturais.\n`;
+    markdownContent += `- A especificação do cabo de aço será determinada pela carga solicitada, espécie e diâmetro do bambu a ser utilizado.\n`;
+    markdownContent += `- Os furos nas varas de bambu para a passagem do cabo devem ser feitos nas extremidades a um ângulo de 45° no sentido da entrada, com diâmetro correspondente à espessura do cabo.\n`;
+    markdownContent += `- Serão realizados dois furos perpendiculares a 3cm da extremidade e dois furos perpendiculares a 5cm da extremidade.\n`;
+    markdownContent += `- A especificação de parafusos com porcas pode variar de acordo com o esforço e peso recebido pela estrutura. Consulte um engenheiro.\n`;
+    markdownContent += `- Recomenda-se tratamento completo (curagem e imunização) do bambu antes da montagem.\n`;
+    markdownContent += `- Este cálculo é uma estimativa. Variações na espécie de bambu, métodos de tratamento e tolerâncias de fabricação podem impactar os resultados finais.\n`;
+
+    return markdownContent;
+}
+Use code with caution.
+JavaScript

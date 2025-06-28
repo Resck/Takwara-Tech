@@ -1,0 +1,45 @@
+import os
+import shutil
+
+# Diretório de origem dos assets
+SRC_ASSETS_DIR = './docs/assets'
+
+# Diretório de destino dos assets DENTRO da pasta site/
+DEST_ASSETS_DIR = './site/assets'
+
+print(f"A copiar assets customizados de '{SRC_ASSETS_DIR}' para '{DEST_ASSETS_DIR}'...")
+
+# Verificar se a origem existe
+if not os.path.isdir(SRC_ASSETS_DIR):
+    print(f"Erro: Diretório de assets de origem não encontrado: {SRC_ASSETS_DIR}")
+    print("Certifique-se de que a pasta 'docs/assets' existe dentro de Chatbot - Takwara.")
+    exit(1)
+
+# Verificar se o diretório de destino existe (deve existir após mkdocs build)
+if not os.path.isdir(DEST_ASSETS_DIR):
+    print(f"Erro: Diretório de assets de destino não encontrado: {DEST_ASSETS_DIR}")
+    print("Certifique-se de que rodou 'mkdocs build --clean' ANTES de rodar este script.")
+    exit(1)
+
+# Copiar o conteúdo da origem para o destino.
+# Usar uma lógica para copiar arquivos e diretórios recursivamente
+# e sobrescrever se já existirem.
+try:
+    for item in os.listdir(SRC_ASSETS_DIR):
+        src_item = os.path.join(SRC_ASSETS_DIR, item)
+        dest_item = os.path.join(DEST_ASSETS_DIR, item)
+
+        if os.path.isdir(src_item):
+            # Se for um diretório, copiar recursivamente
+            if os.path.exists(dest_item):
+                # Se o destino já existe, remover antes de copiar
+                shutil.rmtree(dest_item)
+            shutil.copytree(src_item, dest_item)
+        else:
+            # Se for um arquivo, copiar
+            shutil.copy2(src_item, dest_item)
+    print("Assets customizados copiados com sucesso!")
+
+except Exception as e:
+    print(f"Erro ao copiar assets customizados: {e}")
+    exit(1)

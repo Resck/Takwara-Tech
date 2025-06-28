@@ -1,0 +1,35 @@
+{#- Arquivo: overrides/partials/nav.html (VERSÃO FINAL E CORRETA) -#}
+
+<ul class="md-nav__list" data-md-scrollfix>
+  {% for nav_item in nav %}
+    {% set path = "partials/nav_item.html" %}
+    {% include path with context %}
+  {% endfor %}
+</ul>
+
+<div class="md-nav__custom">
+  <hr>
+  <div style="padding: 0 1.2rem;">
+      
+      <h4>Conecte-se e Apoie</h4>
+      
+      <div class="donation-info">
+          <h5>Apoie (PIX):</h5>
+          <img id="pix-qrcode" src="{{ 'assets/images/pix.png' | url }}" alt="QR Code PIX" style="width: 100px; display: block; margin: 0.5rem 0;">
+      </div>
+
+      <div class="donation-info">
+          <h5>Bitcoin:</h5>
+          <img id="btc-qrcode" src="{{ 'assets/images/qrcode.png' | url }}" alt="QR Code BTC" style="width: 100px; display: block; margin: 0.5rem 0;">
+      </div>
+
+      <div class="license-info" style="font-size: 0.7rem; margin-top: 1rem;">
+          <p>Conteúdo sob <a href="https://creativecommons.org/licenses/by/4.0/deed.pt" target="_blank" rel="noopener">Licença CC BY 4.0</a></p>
+      </div>
+
+      <div class="contact-info" style="font-size: 0.7rem;">
+          <p>Contato:<br><a href="mailto:fabiotakwara@gmail.com" target="_blank">fabiotakwara@gmail.com</a></p>
+      </div>
+
+  </div>
+</div>

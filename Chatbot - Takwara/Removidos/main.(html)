@@ -1,0 +1,65 @@
+{# Arquivo: overrides/main.html #}
+{% extends "base.html" %}
+
+{% block scripts %}
+  {{ super() }} {# Carrega todos os scripts originais e do mkdocs.yml #}
+
+  {# Adiciona os templates HTML para os widgets #}
+  <template id="takwara-tools-template">
+      {% include "partials/widget-tools.html" %}
+  </template>
+  <template id="takwara-calculadora-template">
+      {% include "partials/widget-calculadora.html" %}
+  </template>
+  <template id="takwara-chatbot-template">
+      {% include "partials/widget-chatbot.html" %}
+  </template>
+  <template id="takwara-grafo-template">
+      {% include "partials/widget-grafo.html" %}
+  </template>
+{% endblock %}
+Ação 4: O overrides/partials/footer.html (O Rodapé Corrigido)
+Este é o seu rodapé customizado, já com as correções que fizemos.
+
+Local: /Chatbot - Takwara/overrides/partials/footer.html
+Conteúdo:
+
+HTML
+
+{#- overrides/partials/footer.html -#}
+<div class="takwara-impact-panel takwara-footer-panel">
+    <div class="takwara-panel-content">
+        <div class="footer-section footer-section-impact-apis">
+            <div class="climate-clock-widget">
+                <script type="text/javascript" src="https://climateclock.world/widget-v2.js" async></script>
+                <climate-clock></climate-clock>
+            </div>
+            <div class="impact-api-indicator" id="co2-indicator">CO₂: (carregando)</div>
+            <div class="impact-api-indicator" id="sealevel-indicator">Nível do Mar: (carregando)</div>
+            <div class="impact-api-indicator" id="burns-indicator">Queimadas BR: (carregando)</div>
+            <div class="impact-api-indicator" id="deforestation-indicator">Desmatamento BR: (carregando)</div>
+        </div>
+        <div class="footer-section footer-section-contact-donations">
+            <h4>Conecte-se e Apoie</h4>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:fabiotakwara@gmail.com" target="_blank">fabiotakwara@gmail.com</a></p>
+            </div>
+            <div class="donation-info">
+                <h5>Apoie o Projeto (PIX):</h5>
+                <div class="pix-info">
+                    <img id="pix-qrcode" src="{{ 'assets/images/pix.png' | url }}" alt="QR Code PIX" style="width: 100px; height: 100px; display: block; margin: 10px auto;">
+                </div>
+            </div>
+            <div class="donation-info">
+                <h5>Bitcoin:</h5>
+                <div class="btc-info">
+                    <img id="btc-qrcode" src="{{ 'assets/images/qrcode.png' | url }}" alt="QR Code BTC" style="width: 100px; height: 100px; display: block; margin: 10px auto;">
+                </div>
+                <p>Sua contribuição é fundamental!</p>
+            </div>
+            <div class="license-info">
+                <p>Conteúdo sob <a href="https://creativecommons.org/licenses/by/4.0/deed.pt" target="_blank">Licença CC BY 4.0</a></p>
+            </div>
+        </div>
+    </div>
+</div>

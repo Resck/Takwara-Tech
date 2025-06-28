@@ -1,10 +1,4 @@
-{# Chatbot - Takwara/overrides/partials/widget-grafo.html #}
-<div class="tool-section-content"> {# Wrapper para padding/margem, pode estar ou não #}
-     {# Título e Descrição - Devem estar aqui, não em widget-tools.html #}
-     <h4>Grafo de Conhecimento</h4>
-     <p>O Grafo de Conhecimento visualiza as conexões entre os conceitos do projeto.</p>
-
-     {# O contêiner onde o vis.js desenhará o grafo #}
-     {# Adicione um tamanho inicial e classes para o CSS #}
-     <div id="knowledge-graph" class="knowledge-graph-canvas" style="width: 100%; height: 600px;"></div> {# AJUSTE A ALTURA CONFORME NECESSÁRIO PARA VER OS CONTROLES #}
+<div id="knowledge-graph-container">
+  <p>O Grafo de Conhecimento visualiza as conexões entre os conceitos do projeto.</p>
+  <div id="knowledge-graph" class="knowledge-graph-canvas"></div>
 </div>
