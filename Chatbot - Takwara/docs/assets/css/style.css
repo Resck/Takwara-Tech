@@ -1,115 +1,112 @@
 /*
-O arquivo de estilo para o componente do CHATBOT - VERSÃO MELHORADA
+O arquivo de estilo para o CHATBOT - VERSÃO MINIMALISTA "BRANCO NO PRETO"
 */
 
+/* Container principal com fundo escuro */
 #chatbot-container {
     display: flex;
     flex-direction: column;
     height: 100%; 
     width: 100%;
-    background-color: #2e2e2e; /* Um fundo um pouco mais claro que o preto total */
+    background-color: #1c1c1c; /* Um tom de preto/cinza escuro */
+    font-family: monospace; /* Fonte monoespaçada para um look "terminal" */
 }
 
+/* Cabeçalho do Chat */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #333; /* Linha sutil de separação */
+}
+.chat-header h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #f1f1f1;
+}
+#copy-chat-button {
+    background-color: #333;
+    color: #f1f1f1;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.2s;
+}
+#copy-chat-button:hover {
+    background-color: #444;
+}
+
+/* Caixa onde as mensagens aparecem */
 #chat-box {
     flex-grow: 1; 
     overflow-y: auto; 
     padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem; /* Adiciona um espaço entre as bolhas de mensagem */
 }
 
-/* Estilo base para TODAS as bolhas de mensagem */
+/* Estilo base para TODAS as mensagens - SEM BOLHAS */
 .message {
-    padding: 12px 20px; /* Um pouco mais de espaço interno */
-    border-radius: 20px;
-    max-width: 90%;
+    padding: 0.5rem 0; /* Apenas espaçamento vertical */
     line-height: 1.6;
     word-wrap: break-word; 
-    font-size: 1rem; /* AUMENTA O TAMANHO DA FONTE. 1rem = 16px. Experimente 0.9rem, 1.1rem, etc. */
+    font-size: 0,9rem;
+    color: #f1f1f1; /* Cor do texto padrão */
 }
 
-/* Estilo para a bolha de mensagem do USUÁRIO */
-.user-message {
-    background-color: #007bff;
-    color: white;
-    align-self: flex-end; 
-    border-bottom-right-radius: 5px; /* Um charme no design */
+/* Usamos o pseudo-elemento ::before para adicionar "Você: " e "Takwara AV: " */
+.user-message::before {
+    content: "Você: ";
+    font-weight: bold;
+    color: #8ab4f8; /* Cor azul para destacar o usuário */
 }
 
-/* Estilo para a bolha de mensagem do BOT */
-.bot-message, .bot-loading-message {
-    background-color: #4a4a4a;
-    color: #f1f1f1;
-    align-self: flex-start;
-    border-bottom-left-radius: 5px; /* Um charme no design */
+.bot-message::before {
+    content: "Takwara AV: ";
+    font-weight: bold;
+    color: #3ddc84; /* Cor verde para destacar o bot */
 }
 
-/* ================ ESTILOS PARA O CONTEÚDO MARKDOWN ================ */
-/* Garante que os elementos dentro da bolha de mensagem tenham bom espaçamento */
+/* Estilos para o conteúdo Markdown dentro das mensagens */
+.message p { margin: 0; display: inline; } /* Faz os parágrafos continuarem na mesma linha do "Nome: " */
+.message ul, .message ol { padding-left: 20px; margin: 0.5rem 0; }
+.message li { margin-bottom: 0.25rem; }
+.message a { color: #8ab4f8; }
 
-.message p {
-    margin: 0 0 0.5rem 0; /* Adiciona um pequeno espaço abaixo de cada parágrafo */
-}
-.message p:last-child {
-    margin-bottom: 0; /* Remove o espaço do último parágrafo */
-}
-
-.message ul, .message ol {
-    padding-left: 20px; /* Adiciona indentação para listas */
-    margin-bottom: 0.5rem;
-}
-
-.message li {
-    margin-bottom: 0.25rem; /* Espaçamento entre itens da lista */
-}
-
-.message a {
-    color: #8ab4f8; /* Cor de link amigável para temas escuros */
-    text-decoration: none;
-}
-.message a:hover {
-    text-decoration: underline;
-}
-
-/* ================================================================== */
-
-
+/* Formulário de input */
 #chat-form {
     display: flex;
     padding: 1rem;
-    border-top: 1px solid #444;
-    background-color: #2e2e2e;
+    border-top: 1px solid #333;
 }
-
 #user-input {
     flex-grow: 1;
     border: 1px solid #555;
-    background-color: #3a3a3a;
+    background-color: #2a2a2a;
     color: #f1f1f1;
-    border-radius: 20px;
+    border-radius: 5px; /* Cantos menos arredondados */
     padding: 10px 15px;
     font-size: 1rem;
+    font-family: monospace;
 }
-
 #chat-form button {
-    background-color: #008000;
-    color: white;
+    background-color: #3ddc84; /* Verde do bot */
+    color: #1c1c1c; /* Texto escuro para contraste */
+    font-weight: bold;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 10px 20px;
     margin-left: 10px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.2s;
-}
-#chat-form button:hover {
-    background-color: #006400; /* Um pouco mais escuro ao passar o mouse */
 }
 
-
-/* Indicador de "digitando..." */
-.typing-indicator { display: flex; align-items: center; padding: 5px 0; }
+/* Loading não precisa de "Takwara AV: " */
+.bot-loading-message::before {
+    content: ""; /* Remove o prefixo */
+}
+.typing-indicator { display: flex; align-items: center; }
 .typing-indicator span { height: 8px; width: 8px; background-color: #999; border-radius: 50%; display: inline-block; margin: 0 2px; animation: bounce 1.4s infinite ease-in-out both; }
 .typing-indicator span:nth-of-type(2) { animation-delay: -0.16s; }
 .typing-indicator span:nth-of-type(3) { animation-delay: -0.32s; }
