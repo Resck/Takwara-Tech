@@ -13,3 +13,6 @@ venv/
 
 /Chatbot - Takwara/temp_repo/
 /site/
+
+Chatbot - Takwara/chroma_db/
+Chatbot - Takwara/backend-api/chroma_db/.DS_Store
