@@ -1,4 +1,4 @@
-// O CÓDIGO DE OURO - VERSÃO FINAL COM MELHORIAS DE LAYOUT
+// O CÓDIGO DE OURO - VERSÃO COM CORREÇÃO DA REGRESSÃO
 
 (function() {
     function setupTakwaraToolbox() {
@@ -13,7 +13,7 @@
         triggerButton.textContent = 'Takwara AV';
         triggerButton.className = 'takwara-toolbox-trigger';
         document.body.appendChild(triggerButton);
-        const chatbotHTML = `<div id="chatbot-container" class="takwara-chatbot"><div id="chat-box" class="chat-box"><div class="message bot-message">Olá! Sou a assistente virtual Takwara. Como posso ajudar?</div></div><form id="chat-form" class="chat-form"><input type="text" id="user-input" class="user-input" placeholder="Faça uma pergunta..." autocomplete="off"><button type="submit" class="submit-button" title="Enviar">Enviar</button></form></div>`;
+        const chatbotHTML = `<div id="chatbot-container" class="takwara-chatbot"><div class="chat-header"><h2>Takwara AV</h2><button id="copy-chat-button" title="Copiar conversa">Copiar</button></div><div id="chat-box" class="chat-box"><div class="message bot-message">Olá! Sou a assistente virtual Takwara. Como posso ajudar?</div></div><form id="chat-form" class="chat-form"><input type="text" id="user-input" class="user-input" placeholder="Faça uma pergunta..." autocomplete="off"><button type="submit" class="submit-button" title="Enviar">Enviar</button></form></div>`;
         toolboxContent.innerHTML = chatbotHTML;
         triggerButton.addEventListener('click', () => {
             document.body.classList.toggle('toolbox-is-open');
@@ -23,6 +23,7 @@
     }
 
     function initializeTakwaraChatbot() {
+        // ================== LÓGICA DO SUBMIT RESTAURADA ==================
         document.body.addEventListener('submit', async function(e) {
             if (e.target && e.target.id === 'chat-form') {
                 e.preventDefault();
@@ -45,7 +46,7 @@
                         body: JSON.stringify({ query: userMessage, context: window.location.pathname })
                     });
                     const loadingMessage = chatBox.querySelector('.bot-loading-message');
-                    if(loadingMessage) loadingMessage.remove();
+                    if (loadingMessage) loadingMessage.remove();
                     if (!response.ok) throw new Error(`Erro de servidor: ${response.status}`);
                     const data = await response.json();
                     if (data && data.answer) {
@@ -55,37 +56,59 @@
                     }
                 } catch (error) {
                     const loadingMessage = chatBox.querySelector('.bot-loading-message');
-                    if(loadingMessage) loadingMessage.remove();
+                    if (loadingMessage) loadingMessage.remove();
                     addMessage(`Desculpe, ocorreu um erro de comunicação: ${error.message}`, 'bot', chatBox);
                 }
             }
         });
+
+        // ================== LÓGICA DO BOTÃO COPIAR (JÁ EXISTENTE) ==================
+        const chatbotContainer = document.querySelector('#chatbot-container');
+        if (chatbotContainer) {
+            chatbotContainer.addEventListener('click', function(e) {
+                if (e.target && e.target.id === 'copy-chat-button') {
+                    const chatBox = chatbotContainer.querySelector('#chat-box');
+                    const copyButton = e.target;
+                    let conversationText = "Conversa com Takwara AV\n======================\n\n";
+                    const messages = chatBox.querySelectorAll('.message');
+                    messages.forEach(message => {
+                        if (message.classList.contains('bot-loading-message')) return;
+                        const prefix = window.getComputedStyle(message, '::before').getPropertyValue('content').replace(/['"]/g, '');
+                        const messageContent = message.textContent;
+                        conversationText += `${prefix} ${messageContent}\n\n`;
+                    });
+                    navigator.clipboard.writeText(conversationText.trim()).then(() => {
+                        const originalText = copyButton.innerText;
+                        copyButton.innerText = 'Copiado!';
+                        copyButton.disabled = true;
+                        setTimeout(() => {
+                            copyButton.innerText = originalText;
+                            copyButton.disabled = false;
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Falha ao copiar texto: ', err);
+                        alert("Erro ao copiar a conversa.");
+                    });
+                }
+            });
+        }
     }
 
-    // ================== MELHORIA NA FUNÇÃO addMessage ==================
-    /**
-     * Função para adicionar mensagens. Agora ela verifica se a biblioteca 'marked' existe.
-     * Se existir e a mensagem for do 'bot', ela converte o Markdown para HTML.
-     */
     function addMessage(text, sender, chatBox) {
         if (!chatBox) return;
         const messageElement = document.createElement('div');
         const senderClass = sender === 'bot-loading' ? 'bot-loading-message' : `${sender}-message`;
         messageElement.classList.add('message', senderClass);
-
         if (sender === 'bot-loading') {
             messageElement.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
         } else if (sender === 'bot' && typeof marked !== 'undefined') {
-            // Se a mensagem for do bot e a biblioteca 'marked' estiver carregada, use-a!
             messageElement.innerHTML = marked.parse(text);
         } else {
-            // Para mensagens do usuário, usamos innerText para segurança.
             messageElement.innerText = text;
         }
         chatBox.appendChild(messageElement);
         chatBox.scrollTop = chatBox.scrollHeight;
     }
-    // ====================================================================
 
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', setupTakwaraToolbox);
