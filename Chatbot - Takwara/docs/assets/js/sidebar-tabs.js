@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', function () {
   const tabs = document.querySelectorAll('.takwara-tab-button');
   const tabPanes = document.querySelectorAll('.takwara-tab-pane');

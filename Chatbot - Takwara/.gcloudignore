@@ -11,5 +11,8 @@ __pycache__/
 # Ignorar arquivos e pastas específicos do projeto que não fazem parte do backend
 /site/
 /Removidos/
-create_vector_store.py
-mkdocs.yml
+# create_vector_store.py
+# mkdocs.yml
+
+
+================

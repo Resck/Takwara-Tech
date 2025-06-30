@@ -1,0 +1,10 @@
+{#- overrides/partials/extrahead.html -#}
+{# Este partial é incluído no <head> do tema base. Usado para adicionar links CSS customizados. #}
+
+<link rel="stylesheet" href="{{ 'assets/css/style.css' | url }}">
+<link rel="stylesheet" href="{{ 'assets/css/custom.css' | url }}">
+
+{# --- INCLUIR A TAG TEMPLATE AQUI, NO HEAD, ANTES DE FECHAR </head> --- #}
+<template id="takwara-tools-template">
+    {% include "partials/widget-tools.html" %}
+</template>
