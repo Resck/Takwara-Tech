@@ -1,6 +1,3 @@
-# Ignorar o script de criação da base de dados vetorial
-create_vector_store.py
-
 # Ignorar ficheiros de ambiente local
 .env
 
@@ -14,7 +11,6 @@ venv/
 /Chatbot - Takwara/temp_repo/
 /site/
 
-Chatbot - Takwara/chroma_db/
 Chatbot - Takwara/backend-api/chroma_db/.DS_Store
 .DS_Store
 .DS_Store

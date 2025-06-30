@@ -1,3 +1,5 @@
+# /Users/fabiotakwara/Documents/GitHub/Takwara-Tech/Chatbot - Takwara/backend-api/calculadora-api/main.py
+
 # calculadora-api/main.py - VERSÃO FINAL E CORRIGIDA COM INFORMAÇÕES ADICIONAIS
 
 import functions_framework

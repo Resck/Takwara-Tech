@@ -1,22 +1,11 @@
 {#-
-  Override the base template.
-  This file replaces the theme's base.html and acts as the root of the template hierarchy.
-  Its structure MUST match the original base.html as closely as possible to maintain compatibility
-  with theme's main.html and other templates.
-
-  Customizations:
-  - Includes the <template> tag for the Tool Box partial at the beginning of the body.
-  - Custom CSS are included via manual <link> tags INSIDE the styles block, FORCING inclusion.
-  - Custom JS are included via the loop inside the scripts block.
-  - Custom footer is included by the theme if overrides/partials/footer.html exists.
-  - Re-enabled Climate Clock in footer partial.
+  This file was automatically generated - do not edit
 -#}
 {% import "partials/language.html" as lang with context %}
 <!doctype html>
 <html lang="{{ lang.t('language') }}" class="no-js">
   <head>
     {% block site_meta %}
-      {# Content copied from base.html standard site_meta block #}
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       {% if page.meta and page.meta.description %}
@@ -44,49 +33,23 @@
       {% endif %}
       <link rel="icon" href="{{ config.theme.favicon | url }}">
       <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-9.6.14">
-    {% block styles %}
-      {# Includes theme's main styles and palette. #}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.342714a4.min.css' | url }}">
-      {% if config.theme.palette %}
-        {% set palette = config.theme.palette %}
-        {% if not palette is mapping %}
-          {% set palette = palette | first %}
-        {% endif %}
-        {% set scheme  = palette.scheme  | d("default", true) %}
-        {% set primary = palette.primary | d("indigo", true) %}
-        {% set accent  = palette.accent  | d("indigo", true) %}
-        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.06af60db.min.css' | url }}">
-      {% endif %}
-      {% include "partials/icons.html" %}
-
-      {# Includes custom CSS files - list them manually here #} {# <-- OK para manter este comentário #}
-      {# The paths should be relative to the site root, starting with 'assets/' #} {# <-- OK para manter este comentário #}
-      <link rel="stylesheet" href="{{ 'assets/css/style.css' | url }}"> {# <--- REMOVER O COMENTÁRIO {# ... #} DESTA LINHA SE HOUVER #}
-      <link rel="stylesheet" href="{{ 'assets/css/custom.css' | url }}"> {# <--- REMOVER O COMENTÁRIO {# ... #} DESTA LINHA SE HOUVER #}
-
     {% endblock %}
-Use code with caution.
-
+    {% block htmltitle %}
+      {% if page.meta and page.meta.title %}
+        <title>{{ page.meta.title }} - {{ config.site_name }}</title>
+      {% elif page.title and not page.is_homepage %}
+        <title>{{ page.title | striptags }} - {{ config.site_name }}</title>
+      {% else %}
+        <title>{{ config.site_name }}</title>
+      {% endif %}
+    {% endblock %}
     {% block styles %}
-      {# Includes theme's main styles and palette. #}
       <link rel="stylesheet" href="{{ 'assets/stylesheets/main.342714a4.min.css' | url }}">
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
-        {% if not palette is mapping %}
-          {% set palette = palette | first %}
-        {% endif %}
-        {% set scheme  = palette.scheme  | d("default", true) %}
-        {% set primary = palette.primary | d("indigo", true) %}
-        {% set accent  = palette.accent  | d("indigo", true) %}
         <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.06af60db.min.css' | url }}">
       {% endif %}
       {% include "partials/icons.html" %}
-
-      {# ULTIMA TENTATIVA DE POSIÇÃO PARA CSS CUSTOMIZADO: MANUALMENTE AQUI DENTRO DO BLOCO styles #}
-      {# Estes caminhos devem ser relativos à raiz do site, começando com 'assets/' #}
-      <link rel="stylesheet" href="{{ 'assets/css/style.css' | url }}">
-      <link rel="stylesheet" href="{{ 'assets/css/custom.css' | url }}">
-
     {% endblock %}
     {% block libs %}
       {% for script in config.extra.polyfills %}
@@ -105,10 +68,10 @@ Use code with caution.
         <style>:root{--md-text-font:"{{ text }}";--md-code-font:"{{ code }}"}</style>
       {% endif %}
     {% endblock %}
-
-    {# Includes the base theme script - MATCHING ORIGINAL PLACEMENT #}
+    {% for path in config.extra_css %}
+      <link rel="stylesheet" href="{{ path | url }}">
+    {% endfor %}
     {% include "partials/javascripts/base.html" %}
-
     {% block analytics %}
       {% include "partials/integrations/analytics.html" %}
     {% endblock %}
@@ -118,9 +81,7 @@ Use code with caution.
       {% endfor %}
     {% endif %}
     {% block extrahead %}{% endblock %}
-
   </head>
-  {# Keep body tag as in original #}
   {% set direction = config.theme.direction or lang.t("direction") %}
   {% if config.theme.palette %}
     {% set palette = config.theme.palette %}
@@ -134,15 +95,6 @@ Use code with caution.
   {% else %}
     <body dir="{{ direction }}">
   {% endif %}
-
-    {# --- ADIÇÃO: Inclui o template da Tool Box aqui, logo após a abertura do body --- #}
-    <template id="takwara-tools-template">
-        {% include "partials/widget-tools.html" %}
-    </template>
-    {# --- FIM ADIÇÃO --- #}
-
-
-    {# Keep main content structure as in original #}
     {% set features = config.theme.features or [] %}
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -226,11 +178,9 @@ Use code with caution.
             {% endif %}
           {% endblock %}
           {% block container %}
-            {# This block often contains the main content area structure #}
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 {% block content %}
-                  {# This block is where the actual page content (from Markdown) is inserted #}
                   {% include "partials/content.html" %}
                 {% endblock %}
               </article>
@@ -243,8 +193,6 @@ Use code with caution.
         {% endif %}
       </main>
       {% block footer %}
-        {# The original base.html includes partials/footer.html here.
-           If you have overrides/partials/footer.html, it will be used. #}
         {% include "partials/footer.html" %}
       {% endblock %}
     </div>
@@ -265,8 +213,6 @@ Use code with caution.
       </div>
       {% include "partials/javascripts/consent.html" %}
     {% endif %}
-
-    {# This is the script tag that the theme uses for configuration #}
     {% block config %}
       {% set _ = namespace() %}
       {% set _.tags = config.extra.tags %}
@@ -298,6 +244,11 @@ Use code with caution.
         } | tojson -}}
       </script>
     {% endblock %}
-
+    {% block scripts %}
+      <script src="{{ 'assets/javascripts/bundle.13a4f30d.min.js' | url }}"></script>
+      {% for script in config.extra_javascript %}
+        {{ script | script_tag }}
+      {% endfor %}
+    {% endblock %}
   </body>
 </html>
