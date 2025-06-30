@@ -1,6 +1,4 @@
-/*
-O arquivo de estilo para o CHATBOT - VERSÃO MINIMALISTA "BRANCO NO PRETO"
-*/
+/* CSS do Componente Chatbot - VERSÃO MINIMALISTA "BRANCO NO PRETO" */
 
 /* Container principal com fundo escuro */
 #chatbot-container {
@@ -8,8 +6,8 @@ O arquivo de estilo para o CHATBOT - VERSÃO MINIMALISTA "BRANCO NO PRETO"
     flex-direction: column;
     height: 100%; 
     width: 100%;
-    background-color: #1c1c1c; /* Um tom de preto/cinza escuro */
-    font-family: monospace; /* Fonte monoespaçada para um look "terminal" */
+    background-color: #1c1c1c; 
+    font-family: monospace; 
 }
 
 /* Cabeçalho do Chat */
@@ -18,12 +16,22 @@ O arquivo de estilo para o CHATBOT - VERSÃO MINIMALISTA "BRANCO NO PRETO"
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 1rem;
-    border-bottom: 1px solid #333; /* Linha sutil de separação */
+    border-bottom: 1px solid #333;
+    flex-shrink: 0;
+}
+.chat-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 .chat-header h2 {
     margin: 0;
     font-size: 1.1rem;
     color: #f1f1f1;
+}
+.language-flags span {
+    font-size: 0.9rem;
+    margin-right: 0.4rem;
 }
 #copy-chat-button {
     background-color: #333;
@@ -33,7 +41,7 @@ O arquivo de estilo para o CHATBOT - VERSÃO MINIMALISTA "BRANCO NO PRETO"
     padding: 5px 10px;
     cursor: pointer;
     font-size: 0.8rem;
-    transition: background-color 0.2s;
+    align-self: flex-start;
 }
 #copy-chat-button:hover {
     background-color: #444;
@@ -46,30 +54,27 @@ O arquivo de estilo para o CHATBOT - VERSÃO MINIMALISTA "BRANCO NO PRETO"
     padding: 1rem;
 }
 
-/* Estilo base para TODAS as mensagens - SEM BOLHAS */
+/* Estilo base para mensagens (sem bolhas) */
 .message {
-    padding: 0.5rem 0; /* Apenas espaçamento vertical */
+    padding: 0.5rem 0;
     line-height: 1.6;
     word-wrap: break-word; 
-    font-size: 0,9rem;
-    color: #f1f1f1; /* Cor do texto padrão */
+    font-size: 0.9rem;
+    color: #f1f1f1;
 }
 
-/* Usamos o pseudo-elemento ::before para adicionar "Você: " e "Takwara AV: " */
+/* Adiciona prefixos "Você: " e "Takwara AV: " */
 .user-message::before {
     content: "Você: ";
     font-weight: bold;
-    color: #8ab4f8; /* Cor azul para destacar o usuário */
+    color: #8ab4f8; 
 }
-
 .bot-message::before {
     content: "Takwara AV: ";
     font-weight: bold;
-    color: #3ddc84; /* Cor verde para destacar o bot */
+    color: #3ddc84; 
 }
-
-/* Estilos para o conteúdo Markdown dentro das mensagens */
-.message p { margin: 0; display: inline; } /* Faz os parágrafos continuarem na mesma linha do "Nome: " */
+.message p { margin: 0; display: inline; }
 .message ul, .message ol { padding-left: 20px; margin: 0.5rem 0; }
 .message li { margin-bottom: 0.25rem; }
 .message a { color: #8ab4f8; }
@@ -79,20 +84,21 @@ O arquivo de estilo para o CHATBOT - VERSÃO MINIMALISTA "BRANCO NO PRETO"
     display: flex;
     padding: 1rem;
     border-top: 1px solid #333;
+    flex-shrink: 0;
 }
 #user-input {
     flex-grow: 1;
     border: 1px solid #555;
     background-color: #2a2a2a;
     color: #f1f1f1;
-    border-radius: 5px; /* Cantos menos arredondados */
+    border-radius: 5px;
     padding: 10px 15px;
     font-size: 1rem;
     font-family: monospace;
 }
 #chat-form button {
-    background-color: #3ddc84; /* Verde do bot */
-    color: #1c1c1c; /* Texto escuro para contraste */
+    background-color: #3ddc84;
+    color: #1c1c1c;
     font-weight: bold;
     border: none;
     border-radius: 5px;
@@ -102,10 +108,8 @@ O arquivo de estilo para o CHATBOT - VERSÃO MINIMALISTA "BRANCO NO PRETO"
     font-size: 1rem;
 }
 
-/* Loading não precisa de "Takwara AV: " */
-.bot-loading-message::before {
-    content: ""; /* Remove o prefixo */
-}
+/* Estilo do indicador de "digitando..." */
+.bot-loading-message::before { content: ""; }
 .typing-indicator { display: flex; align-items: center; }
 .typing-indicator span { height: 8px; width: 8px; background-color: #999; border-radius: 50%; display: inline-block; margin: 0 2px; animation: bounce 1.4s infinite ease-in-out both; }
 .typing-indicator span:nth-of-type(2) { animation-delay: -0.16s; }

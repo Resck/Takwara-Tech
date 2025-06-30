@@ -1,6 +1,6 @@
-/* CSS MESTRE - REDEFINIÇÃO TOTAL DO GRID PARA DUAS COLUNAS */
+/* CSS MESTRE - REDEFINIÇÃO DO GRID E COMPORTAMENTO DA TOOLBOX */
 
-/* Layout Padrão: Duas Colunas */
+/* Layout Padrão: Duas Colunas (remove a terceira coluna de TOC) */
 .md-main__inner.md-grid {
     grid-template-columns: var(--md-main-nav-width) 1fr;
 }
@@ -18,13 +18,16 @@
     z-index: 1000;
     overflow-y: auto;
     transform: translateX(100%);
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, visibility 0.4s;
+    visibility: hidden;
 }
 .takwara-push-sidebar.is-open {
     transform: translateX(0%);
+    visibility: visible;
 }
 .takwara-push-sidebar .takwara-toolbox-content {
-    padding: 1.5rem;
+    padding: 0; /* O padding será controlado pelo container do chat */
+    height: 100%;
 }
 
 /* O Botão Gatilho */
@@ -36,8 +39,11 @@
     border-radius: 5px; padding: 8px 12px; cursor: pointer;
 }
 
-/* O Efeito "Push" */
+/* ================== CORREÇÃO DO EFEITO PUSH ================== */
+/* Agora, o alvo são tanto o cabeçalho quanto o conteúdo principal. */
+body.toolbox-is-open .md-header,
 body.toolbox-is-open .md-main {
-    margin-right: 25rem;
     transition: margin-right 0.4s ease-in-out;
+    margin-right: 25rem;
 }
+/* ============================================================= */
