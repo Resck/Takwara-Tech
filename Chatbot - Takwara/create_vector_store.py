@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-VERSÃO SIMPLIFICADA PARA USO LOCAL:
-Processa documentos públicos (.md) da pasta local 'docs/'
-e salva a base de dados vetorial ChromaDB LOCALMENTE
+VERSÃO FINAL: Foco em persistência LOCAL do ChromaDB.
+Processa documentos Markdown (.md) da pasta local 'docs/',
+gera chunks, embeddings e salva a base vetorial LOCALMENTE
 no diretório './backend-api/chroma_db'.
-Esta versão NÃO utiliza Google Cloud Storage.
+Esta versão NÃO depende de Google Cloud Storage.
 """
 
 import os
@@ -15,59 +15,77 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter, MarkdownHead
 from langchain_community.vectorstores import Chroma
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from pathlib import Path
+from urllib.parse import quote # Usado para codificar caminhos em URLs (para metadados)
+import traceback # Para logar erros detalhados
 
 # --- Configurações ---
-load_dotenv()
+load_dotenv() # Carrega variáveis de ambiente (ex: GOOGLE_API_KEY)
 
 # --- Configurações de Carregamento e Split ---
 DOCS_ROOT_FOLDER = './docs' # Pasta onde estão os arquivos .md
-PERSIST_DIRECTORY = './backend-api/chroma_db' # Diretório local para salvar a base de dados
-BASE_URL_SITE = "https://resck.github.io/Takwara-Tech/" # Mantido para metadados de URL dos MDs
+PERSIST_DIRECTORY = './backend-api/chroma_db' # Diretório LOCAL para salvar a base de dados ChromaDB
+BASE_URL_SITE = "https://resck.github.io/Takwara-Tech/" # Mantido para metadados de URL dos .md
 
 # --- Parâmetros para dividir documentos em pedaços (chunks) ---
 CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 200
 
 # --- Definição GLOBAL dos Splitters ---
-recursive_splitter = RecursiveCharacterTextSplitter(chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP)
+# Splitter para Markdown, que considera a estrutura de cabeçalhos
 markdown_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=[("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")])
+# Splitter recursivo padrão para outros tipos de texto ou caso o markdown_splitter falhe
+recursive_splitter = RecursiveCharacterTextSplitter(chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP)
 
 # --- Funções Auxiliares ---
 
 def get_url_from_file_path(file_path):
     """
     Gera uma URL amigável para arquivos Markdown a partir de seu caminho no sistema de arquivos.
+    Exemplo: ./docs/A1. A Tecnologia Takwara/A1. Tecnologia Takwara/index.md
+    -> https://resck.github.io/Takwara-Tech/A1.%20A%20Tecnologia%20Takwara/A1.%20Tecnologia%20Takwara/
     """
     try:
         p = Path(file_path)
+        # Relativiza o caminho a partir da pasta raiz dos documentos
         relative_p = p.relative_to(DOCS_ROOT_FOLDER)
+        # Remove a extensão do arquivo para criar a estrutura de URL
         path_without_ext = relative_p.with_suffix('')
+        # Codifica cada parte do caminho para garantir que caracteres especiais sejam tratados corretamente
         url_parts = [quote(part) for part in path_without_ext.parts]
         url_path = "/".join(url_parts)
+        # Monta a URL final usando a base do site
         final_url = f"{BASE_URL_SITE}{url_path}/"
         return final_url
     except Exception as e:
         print(f"Aviso: Erro ao gerar URL para '{file_path}': {e}. Usando URL base.")
-        return BASE_URL_SITE
+        return BASE_URL_SITE # Retorna URL base em caso de falha
 
 # --- Função Principal ---
 def build_and_save_vector_store():
+    """
+    Orquestra o processo de construção da base de dados vetorial LOCAL:
+    1. Carrega documentos Markdown (.md) locais.
+    2. Divide os documentos em chunks.
+    3. Adiciona metadados de URL a cada chunk.
+    4. Limpa metadados desnecessários ('source').
+    5. Gera embeddings e salva a base vetorial LOCALMENTE no ChromaDB.
+    """
     print("--- INICIANDO CRIAÇÃO DA BASE DE VETORES LOCAL ---")
 
-    # ETAPA 1: CARREGAR DOCUMENTOS PÚBLICOS (.md)
+    # ETAPA 1: CARREGAR DOCUMENTOS MARKDOWN (.md)
     print(f"\n[ETAPA 1/4] Carregando documentos Markdown (.md) da pasta local: '{DOCS_ROOT_FOLDER}'...")
     if not os.path.isdir(DOCS_ROOT_FOLDER):
          print(f"\nErro: Diretório de documentos públicos não encontrado: '{DOCS_ROOT_FOLDER}'")
          exit(1)
     
-    # Configura o loader para buscar apenas arquivos .md na pasta especificada
+    # Configura o loader para buscar APENAS arquivos .md na pasta especificada
     loader_md = DirectoryLoader(
         DOCS_ROOT_FOLDER,
         glob="**/*.md", # Busca todos os arquivos .md em todas as subpastas
         loader_cls=TextLoader,
         recursive=True,
-        show_progress=True,
-        # load_data=True # Importante para carregar metadados como o path do arquivo
+        show_progress=True
+        # load_data=True foi removido, pois causava TypeError em versões anteriores
     )
     markdown_docs = loader_md.load() # Carrega os documentos Markdown
     print(f"Carregados {len(markdown_docs)} documentos .md.")
@@ -87,7 +105,7 @@ def build_and_save_vector_store():
 
     print("Metadados de URL adicionados aos documentos Markdown.")
 
-    # ETAPA 3: DIVIDIR DOCUMENTOS EM PEDAÇOS (CHUNKS)
+    # ETAPA 3: DIVIDIR DOCUMENTOS MARKDOWN EM PEDAÇOS (CHUNKS)
     print("\n[ETAPA 3/4] Dividindo documentos Markdown em pedaços (chunks)...")
     chunks = [] # Lista para armazenar todos os chunks finais
     for doc in markdown_docs: # Itera sobre os documentos Markdown carregados
@@ -95,7 +113,7 @@ def build_and_save_vector_store():
             # Usa o MarkdownHeaderTextSplitter para dividir o conteúdo dos .md com base nos cabeçalhos
             doc_chunks = markdown_splitter.split_text(doc.page_content)
             for chunk in doc_chunks:
-                # Copia os metadados do documento original para cada chunk gerado
+                # Copia os metadados do documento original (incluindo a URL) para cada chunk gerado
                 chunk.metadata = doc.metadata.copy() 
             chunks.extend(doc_chunks) # Adiciona os chunks de Markdown à lista final
         except Exception as e:
@@ -129,7 +147,7 @@ def build_and_save_vector_store():
             shutil.rmtree(PERSIST_DIRECTORY)
         
         # Cria a base de dados vetorial ChromaDB localmente
-        # O ChromaDB gerenciará a persistência no disco no diretório especificado
+        # ChromaDB gerencia a persistência no disco no diretório especificado
         Chroma.from_documents(
             documents=chunks,
             embedding=embeddings,

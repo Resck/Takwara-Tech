@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-VERSÃO FINAL:
-- Sem dependência do GCS.
-- ChromaDB local.
-- Busca contextual aprimorada com metadados de URL para arquivos .md.
-- Prompt revisado para NUNCA citar fontes e priorizar detalhes.
+VERSÃO FINAL AJUSTADA:
+- Foco em persistência LOCAL do ChromaDB.
+- Remoção completa de dependências e lógica do GCS.
+- Busca contextual baseada nos metadados de URL dos arquivos .md.
+- Prompt revisado para priorizar detalhes e NÃO citar fontes.
 """
 
 import os
@@ -14,25 +14,28 @@ from langchain_community.vectorstores import Chroma
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
-from langchain.retrievers.multi_query import MultiQueryRetriever
-from langchain_core.documents import Document
-import traceback
+from langchain.retrievers.multi_query import MultiQueryRetriever # Para múltiplas consultas
+from langchain_core.documents import Document # Para trabalhar com documentos
+import traceback # Para logar erros detalhados
+from pathlib import Path # Para manipulação de caminhos de arquivo
+from urllib.parse import quote # Para codificar caracteres especiais em URLs
 
 app = Flask(__name__)
 
-# --- Variáveis Globais ---
+# --- Variáveis Globais para Componentes da IA ---
 qa_chain = None
 vector_store = None
+embeddings = None
 llm = None
 
-# --- Constantes ---
-# Caminho local para a base de dados ChromaDB
+# --- Constantes de Configuração ---
+# Caminho local para a base de dados ChromaDB (onde create_vector_store.py a salva)
 PERSIST_DIRECTORY = './backend-api/chroma_db' 
-# URL base do site (para metadados de URL dos .md)
-BASE_URL_SITE = "https://resck.github.io/Takwara-Tech/"
+# URL base do site para metadados de URL dos arquivos .md
+BASE_URL_SITE = "https://resck.github.io/Takwara-Tech/" 
 
-# --- Template de Prompt (O "Cérebro" do Assistente) ---
-# Ajustado para não citar fontes e priorizar detalhes específicos
+# --- Template de Prompt (O "Cérebro" da AVT) ---
+# Ajustado para focar em detalhes específicos e evitar citações de fontes
 prompt_template = """
 You are a helpful and cordial virtual assistant Takwara, an expert in sustainable soluction for use bamboo and socio-environmental responsibility, against the global climate crise.
 
@@ -74,19 +77,19 @@ PROMPT = PromptTemplate(
     template=prompt_template, input_variables=["context", "question"]
 )
 
-# --- Função de Carregamento ---
+# --- Função de Carregamento dos Componentes de IA ---
 def load_components():
     """
     Carrega e inicializa todos os componentes de IA localmente.
     """
     print("--- EXECUTANDO CÓDIGO ATUALIZADO PARA CARREGAMENTO LOCAL ---") 
-    global qa_chain, vector_store, llm
+    global qa_chain, vector_store, llm, embeddings # Declaração para usar as globais
 
     try:
-        # Verifica se a chave de API do Google está definida (necessária para embeddings e LLM)
+        # Verifica se a chave de API do Google está definida
         if not os.getenv("GOOGLE_API_KEY"):
-             print("ERRO CRÍTICO: GOOGLE_API_KEY não encontrada. Certifique-se de que está definida no ambiente.")
-             return
+             print("ERRO CRÍTICO: GOOGLE_API_KEY não encontrada. Certifique-se de que está definida no ambiente da Cloud Function.")
+             return # Retorna None se a chave não estiver definida
 
         print("A carregar modelo de embeddings...")
         # Inicializa o modelo de embeddings do Google
@@ -97,10 +100,12 @@ def load_components():
         if not os.path.exists(PERSIST_DIRECTORY):
             print(f"ERRO CRÍTICO: Diretório ChromaDB local não encontrado em '{PERSIST_DIRECTORY}'.")
             print("Por favor, execute o script create_vector_store.py para criá-lo.")
-            return
+            return # Retorna None se o diretório não existir
             
+        print(f"A carregar a base de vetores ChromaDB local de '{PERSIST_DIRECTORY}'...")
         # Inicializa o ChromaDB a partir do diretório local persistido
         vector_store = Chroma(persist_directory=PERSIST_DIRECTORY, embedding_function=embeddings)
+        print("Base de vetores ChromaDB carregada localmente.")
         
         # Configura o retriever para buscar documentos na base de dados vetorial local
         # search_type="similarity" busca documentos semanticamente similares
@@ -108,7 +113,9 @@ def load_components():
         retriever = vector_store.as_retriever(search_type="similarity", search_kwargs={"k": 8})
         
         # Inicializa o modelo de linguagem grande (LLM)
+        print("A carregar modelo LLM...")
         llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro-latest", temperature=0.3)
+        print("Modelo LLM carregado.")
         
         # Cria a cadeia de perguntas e respostas (RetrievalQA chain)
         qa_chain = RetrievalQA.from_chain_type(
@@ -122,9 +129,9 @@ def load_components():
 
     except Exception as e:
         # Captura e loga qualquer erro durante o carregamento dos componentes
-        print(f"ERRO CRÍTICO GERAL DURANTE O CARREGAMENTO: {e}")
+        print(f"ERRO CRÍTICO GERAL DURANTE O CARREGAMENTO DOS COMPONENTES: {e}")
         traceback.print_exc() # Imprime o traceback para ajudar na depuração
-        qa_chain, vector_store, llm = None, None, None # Reseta as variáveis globais em caso de erro
+        qa_chain, vector_store, llm, embeddings = None, None, None, None # Reseta as variáveis globais em caso de erro
 
 # --- Função Principal da API ---
 @functions_framework.http
@@ -151,12 +158,13 @@ def chatbot_api(request):
         load_components()
         # Se ainda assim falhar ao carregar, retorna um erro 500
         if qa_chain is None:
-             print("Falha ao carregar a cadeia de IA. Verifique os logs e a configuração.")
+             print("Falha ao carregar os componentes de IA. Verifique os logs e a configuração.")
              return (jsonify({"error": "O sistema de IA falhou ao carregar. Verifique os logs da função."}), 500, headers)
 
     # Processa requisições POST (onde a pergunta do usuário é enviada)
     if request.method == 'POST':
         try:
+            # Obtém os dados JSON da requisição
             request_json = request.get_json(silent=True)
             # Valida se a requisição é válida e contém a chave 'query'
             if not request_json or 'query' not in request_json:
@@ -164,7 +172,7 @@ def chatbot_api(request):
                 return (jsonify({"error": "Pedido inválido. Por favor, forneça uma pergunta no corpo JSON."}), 400, headers)
 
             query = request_json['query']
-            # Captura o contexto da página, se fornecido
+            # Captura o contexto da página, se fornecido (para busca contextual)
             context_url = request_json.get('context') 
 
             # --- Lógica para Saudações ---
@@ -189,7 +197,7 @@ def chatbot_api(request):
                  print("ERRO: Vector store não está carregado. Não é possível realizar busca.")
                  raise RuntimeError("Vector store not loaded.")
 
-            retrieved_docs = []
+            retrieved_docs = [] # Lista para armazenar os documentos recuperados
             
             # Normaliza a URL do contexto para garantir consistência na busca
             normalized_context_url = None
@@ -202,6 +210,7 @@ def chatbot_api(request):
                 print(f"Buscando documentos com URL de contexto: {normalized_context_url}")
                 
                 # Realiza a busca no ChromaDB local com filtro de metadados para a URL.
+                # O ChromaDB suporta filtros de metadados diretamente na busca.
                 try:
                     relevant_docs_from_context = vector_store.similarity_search(
                         query=query,
@@ -226,12 +235,12 @@ def chatbot_api(request):
                 print("Nenhum contexto URL válido fornecido ou é a página inicial. Buscando globalmente.")
                 retrieved_docs = vector_store.similarity_search(query=query, k=8)
 
-            # Se nenhuma busca retornou documentos
+            # Se nenhuma busca retornou documentos (nem contextual nem global)
             if not retrieved_docs:
                 print("Nenhum documento recuperado para a pergunta.")
                 return (jsonify({"answer": "Não consegui encontrar informações relevantes sobre isso. Poderia reformular a pergunta ou me dar mais contexto?"}), 200, headers)
             
-            # Invoca a cadeia RAG com os documentos recuperados (contextuais ou globais)
+            # --- Invoca a cadeia RAG com os documentos recuperados ---
             # O prompt já está configurado para priorizar detalhes e não citar fontes.
             result = qa_chain.invoke({
                  "input_documents": retrieved_docs, # Documentos recuperados para gerar a resposta
