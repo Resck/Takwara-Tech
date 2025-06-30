@@ -1,0 +1,15 @@
+# Arquivo: .gcloudignore
+# Ignorar arquivos e pastas que não são necessários para a Cloud Function.
+
+.git/
+.gitignore
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Ignorar arquivos e pastas específicos do projeto que não fazem parte do backend
+/site/
+/Removidos/
+create_vector_store.py
+mkdocs.yml

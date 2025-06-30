@@ -16,6 +16,8 @@ theme:
 
   # Funcionalidades recomendadas
   features:
+    - navigation.tabs
+    - navigation.instant: false  # Adicione ou altere esta linha para 'false'
     - navigation.expand
     - content.code.annotate
     - search.suggest
@@ -59,12 +61,12 @@ extra_css:
 
 # Arquivos JavaScript customizados
 extra_javascript:
-  # Bibliotecas externas primeiro
-  - https://unpkg.com/vis-network/standalone/umd/vis-network.min.js
-  - https://cdn.jsdelivr.net/npm/marked/marked.min.js
-
-  # Nosso script principal, agora SEM o 'defer' para tentar um carregamento mais imediato.
-  - assets/js/script.js
+  - path: https://unpkg.com/vis-network/standalone/umd/vis-network.min.js
+    defer: true
+  - path: https://cdn.jsdelivr.net/npm/marked/marked.min.js
+    defer: true
+  - path: assets/js/script.js
+    defer: true
 nav:
 - A Tecnologia Takwara:
   - Tecnologia Takwara:

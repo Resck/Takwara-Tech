@@ -1,110 +1,43 @@
-/* =================================================================== */
-/* CSS FINAL - DOMÍNIO TOTAL DO LAYOUT                                 */
-/* =================================================================== */
+/* CSS MESTRE - REDEFINIÇÃO TOTAL DO GRID PARA DUAS COLUNAS */
 
-/* --- CONFIGURAÇÃO DA TOOLBOX --- */
+/* Layout Padrão: Duas Colunas */
+.md-main__inner.md-grid {
+    grid-template-columns: var(--md-main-nav-width) 1fr;
+}
+.md-sidebar--secondary {
+    display: none !important;
+}
+
+/* A Toolbox Flutuante */
 .takwara-push-sidebar {
-    width: 25rem; /* Largura desejada da toolbox */
+    width: 25rem;
     position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    background-color: #1e1e1e;
-    color: #cccccc;
+    top: 0; right: 0; height: 100vh;
+    background-color: #1e1e1e; color: #cccccc;
     box-shadow: -5px 0px 15px rgba(0,0,0,0.5);
     z-index: 1000;
     overflow-y: auto;
     transform: translateX(100%);
     transition: transform 0.4s ease-in-out;
 }
-
 .takwara-push-sidebar.is-open {
     transform: translateX(0%);
 }
-
 .takwara-push-sidebar .takwara-toolbox-content {
     padding: 1.5rem;
 }
 
-/* --- BOTÃO GATILHO --- */
+/* O Botão Gatilho */
 .takwara-toolbox-trigger {
     position: fixed;
-    top: 12px;
-    right: 80px; /* Alinhado com os outros ícones do cabeçalho */
+    top: 12px; right: 80px;
     z-index: 1001;
-    background-color: #008000;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 12px;
-    cursor: pointer;
+    background-color: #008000; color: white; border: none;
+    border-radius: 5px; padding: 8px 12px; cursor: pointer;
 }
 
-/* =================================================================== */
-/* FEITIÇO FINAL: ELIMINAR A COLUNA TOC DE UMA VEZ POR TODAS          */
-/* =================================================================== */
-
-/* Oculta a coluna TOC original com força máxima. */
-/* O !important garante que esta regra vença qualquer outra do tema. */
-.md-sidebar--secondary {
-    display: none !important;
-}
-
-/* Força a coluna de conteúdo a ocupar todo o espaço que ficou vago. */
-/* Isso elimina a "margem gigante" e alinha seu texto à esquerda. */
-.md-main__inner > .md-content {
-    width: 100%;
-    max-width: initial; /* Remove qualquer limite de largura máxima */
-}
-
-/* --- 2. A Toolbox Flutuante (Configuração) --- */
-
-.takwara-push-sidebar {
-    width: 25rem; /* A largura que você pediu */
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    background-color: #1e1e1e; /* Fundo escuro, pode ajustar */
-    color: #cccccc;
-    box-shadow: -5px 0px 15px rgba(0,0,0,0.5);
-    z-index: 1000;
-    overflow-y: auto;
-    transform: translateX(100%); /* Começa escondida */
-    transition: transform 0.4s ease-in-out;
-}
-
-.takwara-push-sidebar.is-open {
-    transform: translateX(0%); /* Desliza para a vista */
-}
-
-.takwara-push-sidebar .takwara-toolbox-content {
-    padding: 1.5rem;
-}
-
-
-/* --- 3. O Botão Gatilho (Configuração) --- */
-
-.takwara-toolbox-trigger {
-    position: fixed;
-    top: 12px;
-    right: 80px; /* Alinhado com os ícones do cabeçalho */
-    z-index: 1001;
-    background-color: #008000;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 12px;
-    cursor: pointer;
-}
-
-
-/* --- 4. A MÁGICA: O Efeito "Push" que Altera TODO O LAYOUT --- */
-
-/* QUANDO a toolbox estiver aberta... */
+/* O Efeito "Push" */
 body.toolbox-is-open .md-main {
-    /* ...nós "empurramos" toda a área principal para a esquerda, */
-    /* adicionando uma margem à direita igual à largura da toolbox. */
     margin-right: 25rem;
     transition: margin-right 0.4s ease-in-out;
 }

@@ -1,6 +1,10 @@
-// O CÓDIGO DE OURO - VERSÃO COM CORREÇÃO DA REGRESSÃO
+// =================================================================================
+//              SCRIPT FINAL E FUNCIONAL (VERSÃO 6)
+//      Com a detecção de clique validada, a lógica de cópia foi adicionada.
+// =================================================================================
 
 (function() {
+
     function setupTakwaraToolbox() {
         if (document.querySelector('.takwara-push-sidebar')) return;
         const toolboxPanel = document.createElement('div');
@@ -13,7 +17,18 @@
         triggerButton.textContent = 'Takwara AV';
         triggerButton.className = 'takwara-toolbox-trigger';
         document.body.appendChild(triggerButton);
-        const chatbotHTML = `<div id="chatbot-container" class="takwara-chatbot"><div class="chat-header"><h2>Takwara AV</h2><button id="copy-chat-button" title="Copiar conversa">Copiar</button></div><div id="chat-box" class="chat-box"><div class="message bot-message">Olá! Sou a assistente virtual Takwara. Como posso ajudar?</div></div><form id="chat-form" class="chat-form"><input type="text" id="user-input" class="user-input" placeholder="Faça uma pergunta..." autocomplete="off"><button type="submit" class="submit-button" title="Enviar">Enviar</button></form></div>`;
+        const chatbotHTML = `
+            <div id="chatbot-container" class="takwara-chatbot">
+                <div class="chat-header"><h2>Takwara AV</h2></div>
+                <div id="chat-box" class="chat-box">
+                    <div class="message bot-message">Olá! Sou a assistente virtual Takwara. Como posso ajudar?</div>
+                </div>
+                <form id="chat-form" class="chat-form">
+                    <input type="text" id="user-input" class="user-input" placeholder="Faça uma pergunta..." autocomplete="off">
+                    <button type="button" id="copy-chat-button" class="copy-button" title="Copiar conversa">Copiar</button>
+                    <button type="submit" class="submit-button" title="Enviar">Enviar</button>
+                </form>
+            </div>`;
         toolboxContent.innerHTML = chatbotHTML;
         triggerButton.addEventListener('click', () => {
             document.body.classList.toggle('toolbox-is-open');
@@ -23,16 +38,59 @@
     }
 
     function initializeTakwaraChatbot() {
-        // ================== LÓGICA DO SUBMIT RESTAURADA ==================
+        // O "ouvinte" de clique que provou funcionar.
+        document.body.addEventListener('click', function(e) {
+            // Se o alvo for o botão "Copiar"...
+            if (e.target.id === 'copy-chat-button') {
+                
+                // --- LÓGICA DE CÓPIA INSERIDA AQUI ---
+                const copyButton = e.target;
+                const container = copyButton.closest('#chatbot-container');
+                if (!container) return; // Segurança
+
+                const chatBox = container.querySelector('#chat-box');
+                if (!chatBox) return; // Segurança
+
+                let conversationText = "Conversa com Takwara AV\n======================\n\n";
+                const messages = chatBox.querySelectorAll('.message');
+
+                messages.forEach(message => {
+                    if (message.classList.contains('bot-loading-message')) return;
+
+                    let prefix = "";
+                    if (message.classList.contains('user-message')) {
+                        prefix = "Você:";
+                    } else if (message.classList.contains('bot-message')) {
+                        prefix = "Takwara AV:";
+                    }
+                    const messageContent = message.textContent;
+                    conversationText += `${prefix} ${messageContent}\n\n`;
+                });
+
+                navigator.clipboard.writeText(conversationText.trim()).then(() => {
+                    const originalText = copyButton.textContent;
+                    copyButton.textContent = 'Copiado!';
+                    copyButton.disabled = true;
+                    setTimeout(() => {
+                        copyButton.textContent = originalText;
+                        copyButton.disabled = false;
+                    }, 2000);
+                }).catch(err => {
+                    console.error("ERRO AO TENTAR COPIAR TEXTO:", err);
+                });
+                // --- FIM DA LÓGICA DE CÓPIA ---
+            }
+        });
+
+        // A lógica de SUBMIT estável.
         document.body.addEventListener('submit', async function(e) {
-            if (e.target && e.target.id === 'chat-form') {
+            if (e.target.id === 'chat-form') {
                 e.preventDefault();
                 const chatForm = e.target;
-                const chatbotContainer = chatForm.closest('.takwara-chatbot');
-                if (!chatbotContainer) return;
-                const userInput = chatbotContainer.querySelector('#user-input');
-                const chatBox = chatbotContainer.querySelector('#chat-box');
-                if (!userInput || !chatBox) return;
+                const container = chatForm.closest('#chatbot-container');
+                if (!container) return;
+                const userInput = container.querySelector('#user-input');
+                const chatBox = container.querySelector('#chat-box');
                 const userMessage = userInput.value.trim();
                 if (!userMessage) return;
                 addMessage(userMessage, 'user', chatBox);
@@ -57,41 +115,10 @@
                 } catch (error) {
                     const loadingMessage = chatBox.querySelector('.bot-loading-message');
                     if (loadingMessage) loadingMessage.remove();
-                    addMessage(`Desculpe, ocorreu um erro de comunicação: ${error.message}`, 'bot', chatBox);
+                    addMessage(`Desculpe, ocorreu um erro: ${error.message}`, 'bot', chatBox);
                 }
             }
         });
-
-        // ================== LÓGICA DO BOTÃO COPIAR (JÁ EXISTENTE) ==================
-        const chatbotContainer = document.querySelector('#chatbot-container');
-        if (chatbotContainer) {
-            chatbotContainer.addEventListener('click', function(e) {
-                if (e.target && e.target.id === 'copy-chat-button') {
-                    const chatBox = chatbotContainer.querySelector('#chat-box');
-                    const copyButton = e.target;
-                    let conversationText = "Conversa com Takwara AV\n======================\n\n";
-                    const messages = chatBox.querySelectorAll('.message');
-                    messages.forEach(message => {
-                        if (message.classList.contains('bot-loading-message')) return;
-                        const prefix = window.getComputedStyle(message, '::before').getPropertyValue('content').replace(/['"]/g, '');
-                        const messageContent = message.textContent;
-                        conversationText += `${prefix} ${messageContent}\n\n`;
-                    });
-                    navigator.clipboard.writeText(conversationText.trim()).then(() => {
-                        const originalText = copyButton.innerText;
-                        copyButton.innerText = 'Copiado!';
-                        copyButton.disabled = true;
-                        setTimeout(() => {
-                            copyButton.innerText = originalText;
-                            copyButton.disabled = false;
-                        }, 2000);
-                    }).catch(err => {
-                        console.error('Falha ao copiar texto: ', err);
-                        alert("Erro ao copiar a conversa.");
-                    });
-                }
-            });
-        }
     }
 
     function addMessage(text, sender, chatBox) {
