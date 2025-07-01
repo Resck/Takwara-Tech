@@ -1,0 +1,18 @@
+# Nova estratégia: Ignora apenas arquivos e pastas específicos.
+
+# Arquivos de configuração e versionamento
+.gcloudignore
+.gitignore
+.git
+
+# Arquivos compilados e cache do Python
+__pycache__/
+*.pyc
+
+# Arquivos e pastas do seu projeto que não são da API principal
+calculadora-api/
+temp_repo/
+creation_log.txt
+
+# Um arquivo com nome estranho que vimos no seu diretório e é bom ignorar
+main.(py)

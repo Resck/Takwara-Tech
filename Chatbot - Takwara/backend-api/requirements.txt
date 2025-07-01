@@ -1,29 +1,18 @@
-# Frameworks da API e da Google Cloud (versões travadas)
-Flask==3.0.3
-functions-framework==3.7.0
-google-api-python-client==2.138.0
-google-auth-httplib2==0.2.0
-gunicorn==22.0.0
-cryptography==42.0.8 # <-- Pacote de segurança adicionado
+# Lista de bibliotecas essenciais para a API na nuvem
 
+# Framework para rodar a função no Google Cloud
+functions-framework
 
-# Bibliotecas do Chatbot (Langchain e Google AI)
-# Deixando os pacotes principais da Langchain flexíveis para o pip resolver.
+# Pacotes da Langchain para a lógica do chatbot
 langchain
 langchain-community
-langchain-core
 langchain-google-genai
-google-generativeai==0.7.2
-python-dotenv==1.0.1
 
-# Base de Dados de Vetores (versões travadas)
-# chromadb==0.5.4 
-pypdf==4.3.1
-google-cloud-storage==2.17.0
-pymupdf
-# chromadb-core[gcs]==0.4.18
+# Biblioteca para acessar a base de dados de vetores
+chromadb
 
-# ... outras dependências ...
-chromadb==0.5.7
-# chromadb-core[gcs]==0.5.7 
-# ...
+# Dependência para garantir compatibilidade
+pydantic<2
+
+# Pacote de segurança, importante para dependências internas
+cryptography
