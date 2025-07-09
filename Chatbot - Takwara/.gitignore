@@ -17,3 +17,5 @@ Chatbot - Takwara/backend-api/chroma_db/.DS_Store
 /Removidos/
 # Ignorar a pasta com documentos privados
 /fontes-privadas/
+
+Chatbot - Takwara/backend-api/chroma_db/chroma.sqlite3

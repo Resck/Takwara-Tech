@@ -72,16 +72,18 @@ nav:
     - Orgânicos X Sintéticos .md: A4. [icon:fas fa-flask] O PU Vegetal/a4.2 Orgânicos
         X Sintéticos .md
     icon: fas fa-flask
-- Críticas Paradoxais:
+- COP30:
     children:
-    - Brasil Paradoxo da Sustentabilidade.md: A6. [icon:fas fa-file-alt] Críticas
-        Paradoxais/a5.1 Brasil Paradoxo da Sustentabilidade.md
-    - Deficit Habitacional.md: A6. [icon:fas fa-file-alt] Críticas Paradoxais/a5.2
-        Deficit Habitacional.md
-    - Resposta a Crise Habitacional.md: A6. [icon:fas fa-file-alt] Críticas Paradoxais/a5.3
-        Resposta a Crise Habitacional.md
-    - A Maloca de Concreto.md: A6. [icon:fas fa-file-alt] Críticas Paradoxais/a6.4
-        A Maloca de Concreto.md
+    - Brasil Paradoxo da Sustentabilidade.md: A6. [icon:fas fa-file-alt] COP30/a5.1
+        Brasil Paradoxo da Sustentabilidade.md
+    - Deficit Habitacional.md: A6. [icon:fas fa-file-alt] COP30/a5.2 Deficit Habitacional.md
+    - Resposta a Crise Habitacional.md: A6. [icon:fas fa-file-alt] COP30/a5.3 Resposta
+        a Crise Habitacional.md
+    - Carvão de Bambu = CO2 0.md: A6. [icon:fas fa-file-alt] COP30/a5.4 Carvão de
+        Bambu = CO2 0.md
+    - O Paradoxo do Bambu.md: A6. [icon:fas fa-file-alt] COP30/a6.1 O Paradoxo do
+        Bambu.md
+    - A Maloca de Concreto.md: A6. [icon:fas fa-file-alt] COP30/a6.4 A Maloca de Concreto.md
     icon: fas fa-file-alt
 - Contribuir:
     children:
