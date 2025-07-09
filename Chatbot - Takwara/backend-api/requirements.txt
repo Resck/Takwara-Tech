@@ -16,3 +16,6 @@ pydantic<2
 
 # Pacote de segurança, importante para dependências internas
 cryptography
+# unstructured[pdf]
+pymupdf
+lark

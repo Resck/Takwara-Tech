@@ -46,75 +46,73 @@ def parse_prefix_for_sort(prefix):
             sort_key_parts.append(part) # Mantém letras ou strings como estão
     return tuple(sort_key_parts)
 
-def extract_prefix_and_name(name):
+# Nova Regex para extrair: Prefixo, Ícone Opcional, Nome de Exibição
+# Captura 1: ([a-zA-Z0-9\.]+) -> O prefixo (ex: A1., A2.a.)
+# Captura 2: (?:\[icon:([^\]]+)\]\s*)? -> O ícone opcional (grupo não-capturante para o colchete e nome do ícone)
+# Captura 3: (.*) -> O restante do nome como nome de exibição
+ICON_NAME_REGEX = re.compile(r'^([a-zA-Z0-9\.]+)\s*(?:\[icon:([^\]]+)\])?\s*(.*)$')
+
+def extract_prefix_icon_and_name(name, entry_full_path):
     """
-    Extrai o prefixo de ordenação e o nome de exibição de um nome de arquivo/pasta.
-    Retorna (prefixo_original, nome_exibicao, nome_original) ou (None, None, None) se ignorado.
+    Extrai prefixo, ícone (se presente) e nome de exibição de um nome de arquivo/pasta.
+    Retorna (prefixo_original, ícone, nome_exibicao, nome_original, is_directory).
     """
     if name.startswith('#'):
-        # Ignora arquivos ou pastas comentados
-        return None, None, None
+        return None, None, None, None, False # Ignora itens comentados
 
-    match = PREFIX_REGEX.match(name)
+    match = ICON_NAME_REGEX.match(name)
     if match:
         prefix = match.group(1)
-        display_name = match.group(2)
-        return prefix, display_name, name # Retorna o nome original para construir o caminho
+        icon = match.group(2) # Pode ser None se não houver ícone
+        display_name = match.group(3).strip() # Remove espaços em branco extras no final
+        is_dir = os.path.isdir(entry_full_path)
+        return prefix, icon, display_name, name, is_dir
     else:
-        # Se o nome não corresponder ao padrão de prefixo, use o nome completo
-        # para exibição e como prefixo de ordenação. (Caso de fallback, pode ser ajustado)
-        print(f"Aviso: Item '{name}' na pasta docs/ não segue o padrão de prefixo (ex: 'A1. Nome'). Usando nome completo para exibição e ordenação.")
-        return name, name, name # Use nome completo para exibir e ordenar
+        # Fallback se o padrão não for encontrado
+        print(f"Aviso: Item '{name}' não seguiu o padrão de prefixo ou ícone esperado. Usando nome completo para exibição.")
+        is_dir = os.path.isdir(entry_full_path)
+        return name, None, name, name, is_dir # Sem prefixo, sem ícone, usa o nome completo.
 
 def build_nav_structure(current_dir_full_path, current_dir_relative_path):
-    """
-    Percorre recursivamente a estrutura de diretórios a partir do caminho completo
-    e constrói a estrutura de lista/dicionário para a seção 'nav:' do MkDocs.
-    Retorna uma lista de dicionários representando os itens de navegação neste nível.
-    """
-    temp_items = [] # Lista temporária para armazenar (chave_ordenacao, item_nav_dict)
-
-    # Obtém a lista de entradas no diretório atual (arquivos e subpastas)
-    # Não ordena aqui ainda, a ordenação será feita pela chave de ordenação extraída
+    temp_items = []
     entries = os.listdir(current_dir_full_path)
 
     for entry_name in entries:
-        # Ignora arquivos/pastas ocultos do sistema (ex: .DS_Store)
         if entry_name.startswith('.'):
             continue
 
-        prefix, display_name, original_name = extract_prefix_and_name(entry_name)
+        entry_full_path = os.path.join(current_dir_full_path, entry_name)
+        prefix, icon, display_name, original_name, is_dir = extract_prefix_icon_and_name(entry_name, entry_full_path)
 
-        if prefix is None: # Item para ser ignorado (começa com '#')
+        if prefix is None: # Item para ser ignorado
             continue
 
-        # Constrói os caminhos completo e relativo para a entrada atual
-        entry_full_path = os.path.join(current_dir_full_path, original_name)
-        entry_relative_path = os.path.join(current_dir_relative_path, original_name).replace('\\', '/') # Usa barras normais para caminhos do MkDocs
-
-        # Obtém a chave de ordenação para o item atual
+        entry_relative_path = os.path.join(current_dir_relative_path, original_name).replace('\\', '/')
         sort_key = parse_prefix_for_sort(prefix)
 
-        if os.path.isdir(entry_full_path):
-            # É um diretório, faz a chamada recursiva para construir seus filhos
-            sub_items = build_nav_structure(entry_full_path, entry_relative_path)
-            if sub_items:
-                # Se o subdiretório tiver itens válidos, adiciona como um item de menu pai
-                temp_items.append((sort_key, {display_name: sub_items}))
-            # Se o subdiretório estiver vazio ou só contiver itens ignorados, ele mesmo não é adicionado ao nav.
-            # Ajuste: Se você quer que o diretório apareça mesmo vazio, remova o `if sub_items:`
-            # e trate o caso de sub_items vazio na append.
-        elif os.path.isfile(entry_full_path) and entry_name.endswith('.md'):
-            # É um arquivo Markdown, adiciona como um item de menu folha (link)
-            temp_items.append((sort_key, {display_name: entry_relative_path}))
-        # Ignora outros tipos de arquivo
+        if is_dir:
+            sub_items_result = build_nav_structure(entry_full_path, entry_relative_path)
+            if sub_items_result:
+                nav_item_dict = {display_name: sub_items_result} # O nome da pasta é a chave do dicionário de subitens
+                if icon:
+                    # Para diretórios, o ícone vai diretamente no nó pai do menu
+                    nav_item_dict[display_name] = {'icon': icon, 'children': sub_items_result}
+                temp_items.append((sort_key, nav_item_dict))
+        elif entry_name.endswith('.md'): # É um arquivo
+            item_config = entry_relative_path # Por padrão, o valor é o link
+            if icon:
+                # Para itens folha (arquivos), o ícone é um campo adicional
+                item_config = {'icon': icon, 'link': entry_relative_path}
+            
+            # Se o nome de exibição for diferente do nome original do arquivo (ex: com ícone)
+            # O MkDocs precisa que o nome de exibição seja a chave do dicionário
+            if display_name != original_name.replace('.md', '').replace('.txt', '').replace('.py', ''):
+                 temp_items.append((sort_key, {display_name: item_config}))
+            else:
+                 temp_items.append((sort_key, {original_name.replace('.md', '').replace('.txt', '').replace('.py', ''): item_config}))
 
-    # Ordena os itens deste nível com base nas chaves de ordenação
     sorted_temp_items = sorted(temp_items, key=lambda item: item[0])
-
-    # Retorna apenas a lista de dicionários de itens de navegação
     nav_items = [item[1] for item in sorted_temp_items]
-
     return nav_items
 
 # --- Execução Principal ---
