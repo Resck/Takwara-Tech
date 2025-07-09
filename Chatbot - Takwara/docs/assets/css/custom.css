@@ -47,3 +47,27 @@ body.toolbox-is-open .md-main {
     margin-right: 25rem;
 }
 /* ============================================================= */
+/* Ajustes para o menu lateral - Combatendo o empacotamento */
+
+/* Aumenta o espaço entre os itens do menu lateral */
+.md-nav__item > .md-nav__link {
+    padding-bottom: 10px !important; /* Adiciona um padding inferior para espaçar */
+    margin-bottom: 5px !important;  /* Adiciona uma margem inferior para separar os blocos */
+}
+
+/* Ajustes específicos para itens de menu com subitens (pastas) */
+.md-nav__item--section > .md-nav__link {
+    font-weight: 500; /* Deixa o título da seção um pouco mais destacado */
+    margin-bottom: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+/* Ajuste fino para garantir que o conteúdo não seja empacotado contra o título */
+.md-content__inner {
+    padding-top: 20px; /* Adiciona um padding superior ao conteúdo principal */
+}
+
+/* Se houver algum problema com a barra lateral de navegação em si */
+.md-sidebar--secondary {
+    padding-top: 10px;
+}

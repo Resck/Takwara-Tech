@@ -22,74 +22,48 @@ markdown_extensions:
 - md_in_html
 nav:
 - Tecnologias:
-    children:
-    - Forno Ecológico.md: A1. [icon:fas fa-tools] Tecnologias /a1.2 Forno Ecológico.md
-    - Sistema de Reforço.md: A1. [icon:fas fa-tools] Tecnologias /a1.3 Sistema de
-        Reforço.md
-    - Conexões Geodésicos.md: A1. [icon:fas fa-tools] Tecnologias /a1.4 Conexões Geodésicos.md
-    - PU + Bambu.md: A1. [icon:fas fa-tools] Tecnologias /a1.5 PU + Bambu.md
-    - Painéis de Bambu.md: A1. [icon:fas fa-tools] Tecnologias /a1.6 Painéis de Bambu.md
-    - Tijolos e Briquetes.md: A1. [icon:fas fa-tools] Tecnologias /a1.7 Tijolos e
-        Briquetes.md
-    - Roteiro para Ensaios.md: A1. [icon:fas fa-tools] Tecnologias /a1.8 Roteiro para
-        Ensaios.md
-    - Forno Ecológico.md: A1. [icon:fas fa-tools] Tecnologias /a1.9 Forno Ecológico.md
-    icon: fas fa-tools
+  - Forno Ecológico.md: A1. Tecnologias /a1.2 Forno Ecológico.md
+  - Sistema de Reforço.md: A1. Tecnologias /a1.3 Sistema de Reforço.md
+  - Conexões Geodésicos.md: A1. Tecnologias /a1.4 Conexões Geodésicos.md
+  - PU + Bambu.md: A1. Tecnologias /a1.5 PU + Bambu.md
+  - Painéis de Bambu.md: A1. Tecnologias /a1.6 Painéis de Bambu.md
+  - Tijolos e Briquetes.md: A1. Tecnologias /a1.7 Tijolos e Briquetes.md
+  - Roteiro para Ensaios.md: A1. Tecnologias /a1.8 Roteiro para Ensaios.md
+  - Forno Ecológico.md: A1. Tecnologias /a1.9 Forno Ecológico.md
 - O Bambu:
-    children:
-    - Visão Geral.md: A2. [icon:fas fa-seedling] O Bambu/a2.1 Visão Geral.md
-    - 'Brasil: A cadeia Digital.md': 'A2. [icon:fas fa-seedling] O Bambu/a2.2 Brasil:
-        A cadeia Digital.md'
-    - Caracterização Física.md: A2. [icon:fas fa-seedling] O Bambu/a2.2 Caracterização
-        Física.md
-    - O Ecossistema do Bambu no Brasil.md: A2. [icon:fas fa-seedling] O Bambu/a2.3
-        O Ecossistema do Bambu no Brasil.md
-    - Mercado Global.md: A2. [icon:fas fa-seedling] O Bambu/a2.4 Mercado Global.md
-    - O Bambu na Ásia.md: A2. [icon:fas fa-seedling] O Bambu/a2.5 O Bambu na Ásia.md
-    - O Broto de Bambu.md: A2. [icon:fas fa-seedling] O Bambu/a2.6 O Broto de Bambu.md
-    - O carvão e o Pirolenhoso.md: A2. [icon:fas fa-seedling] O Bambu/a2.7 O carvão
-        e o Pirolenhoso.md
-    icon: fas fa-seedling
+  - Visão Geral.md: A2.  O Bambu/a2.1 Visão Geral.md
+  - 'Brasil: A cadeia Digital.md': 'A2.  O Bambu/a2.2 Brasil: A cadeia Digital.md'
+  - Caracterização Física.md: A2.  O Bambu/a2.2 Caracterização Física.md
+  - O Ecossistema do Bambu no Brasil.md: A2.  O Bambu/a2.3 O Ecossistema do Bambu
+      no Brasil.md
+  - Mercado Global.md: A2.  O Bambu/a2.4 Mercado Global.md
+  - O Bambu na Ásia.md: A2.  O Bambu/a2.5 O Bambu na Ásia.md
+  - O Broto de Bambu.md: A2.  O Bambu/a2.6 O Broto de Bambu.md
+  - O carvão e o Pirolenhoso.md: A2.  O Bambu/a2.7 O carvão e o Pirolenhoso.md
 - Personalidades:
-    children:
-    - Jayme Gonçalves.md: A2.a [icon:fas fa-users] Personalidades/a2.a1 Jayme Gonçalves.md
-    - Khorow Ghavami.md: A2.a [icon:fas fa-users] Personalidades/a2.a2 Khorow Ghavami.md
-    - Ludovico Beraldo e Reis Pereira.md: A2.a [icon:fas fa-users] Personalidades/a2.a3
-        Ludovico Beraldo e Reis Pereira.md
-    - Oscar Hidalgo.md: A2.a [icon:fas fa-users] Personalidades/a2.a4 Oscar Hidalgo.md
-    - Simon Velez.md: A2.a [icon:fas fa-users] Personalidades/a2.a5 Simon Velez.md
-    icon: fas fa-users
-- Domos [icon:fas fa-atom] Geodésicos:
-  - Dados Estruturais.md: A3. Domos [icon:fas fa-atom] Geodésicos/a3.1 Dados Estruturais.md
-  - Especificações Tecnicas.md: A3. Domos [icon:fas fa-atom] Geodésicos/a3.2 Especificações
-      Tecnicas.md
-  - Ferramentas para Layout.md: A3. Domos [icon:fas fa-atom] Geodésicos/a3.3 Ferramentas
-      para Layout.md
+  - Jayme Gonçalves.md: A2.a Personalidades/a2.a1 Jayme Gonçalves.md
+  - Khorow Ghavami.md: A2.a Personalidades/a2.a2 Khorow Ghavami.md
+  - Ludovico Beraldo e Reis Pereira.md: A2.a Personalidades/a2.a3 Ludovico Beraldo
+      e Reis Pereira.md
+  - Oscar Hidalgo.md: A2.a Personalidades/a2.a4 Oscar Hidalgo.md
+  - Simon Velez.md: A2.a Personalidades/a2.a5 Simon Velez.md
 - O PU Vegetal:
-    children:
-    - A Imperveg Polímeros Vegetais.md: A4. [icon:fas fa-flask] O PU Vegetal/a4.1
-        A Imperveg Polímeros Vegetais.md
-    - Orgânicos X Sintéticos .md: A4. [icon:fas fa-flask] O PU Vegetal/a4.2 Orgânicos
-        X Sintéticos .md
-    icon: fas fa-flask
+  - A Imperveg Polímeros Vegetais.md: A3. O PU Vegetal/a4.1 A Imperveg Polímeros Vegetais.md
+  - Orgânicos X Sintéticos .md: A3. O PU Vegetal/a4.2 Orgânicos X Sintéticos .md
+- Domos Geodésicos:
+  - Dados Estruturais.md: A4. Domos Geodésicos/a3.1 Dados Estruturais.md
+  - Especificações Tecnicas.md: A4. Domos Geodésicos/a3.2 Especificações Tecnicas.md
+  - Ferramentas para Layout.md: A4. Domos Geodésicos/a3.3 Ferramentas para Layout.md
 - COP30:
-    children:
-    - Brasil Paradoxo da Sustentabilidade.md: A6. [icon:fas fa-file-alt] COP30/a5.1
-        Brasil Paradoxo da Sustentabilidade.md
-    - Deficit Habitacional.md: A6. [icon:fas fa-file-alt] COP30/a5.2 Deficit Habitacional.md
-    - Resposta a Crise Habitacional.md: A6. [icon:fas fa-file-alt] COP30/a5.3 Resposta
-        a Crise Habitacional.md
-    - Carvão de Bambu = CO2 0.md: A6. [icon:fas fa-file-alt] COP30/a5.4 Carvão de
-        Bambu = CO2 0.md
-    - O Paradoxo do Bambu.md: A6. [icon:fas fa-file-alt] COP30/a6.1 O Paradoxo do
-        Bambu.md
-    - A Maloca de Concreto.md: A6. [icon:fas fa-file-alt] COP30/a6.4 A Maloca de Concreto.md
-    icon: fas fa-file-alt
+  - Brasil Paradoxo da Sustentabilidade.md: A6. COP30/a5.1 Brasil Paradoxo da Sustentabilidade.md
+  - Deficit Habitacional.md: A6. COP30/a5.2 Deficit Habitacional.md
+  - Resposta a Crise Habitacional.md: A6. COP30/a5.3 Resposta a Crise Habitacional.md
+  - Carvão de Bambu = CO2 0.md: A6. COP30/a5.4 Carvão de Bambu = CO2 0.md
+  - O Paradoxo do Bambu.md: A6. COP30/a6.1 O Paradoxo do Bambu.md
+  - A Maloca de Concreto.md: A6. COP30/a6.4 A Maloca de Concreto.md
 - Contribuir:
-    children:
-    - Colaboração.md: A7. [icon:fas fa-file-alt] Contribuir/a6.2 Colaboração.md
-    - O Github.md: A7. [icon:fas fa-file-alt] Contribuir/a6.3 O Github.md
-    icon: fas fa-file-alt
+  - Colaboração.md: A7. Contribuir/a6.2 Colaboração.md
+  - O Github.md: A7. Contribuir/a6.3 O Github.md
 - ? ''
   : grafo.md
 - ? ''
@@ -102,7 +76,7 @@ theme:
   favicon: assets/images/favicon.png
   features:
   - navigation.tabs
-  - navigation.instant: false
+  - navigation.instant: true
   - navigation.expand
   - content.code.annotate
   - search.suggest
