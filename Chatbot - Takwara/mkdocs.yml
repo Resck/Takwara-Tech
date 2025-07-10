@@ -22,52 +22,50 @@ markdown_extensions:
 - md_in_html
 nav:
 - Tecnologias:
-  - Forno Ecológico.md: A1. Tecnologias /a1.2 Forno Ecológico.md
-  - Sistema de Reforço.md: A1. Tecnologias /a1.3 Sistema de Reforço.md
-  - Conexões Geodésicos.md: A1. Tecnologias /a1.4 Conexões Geodésicos.md
-  - PU + Bambu.md: A1. Tecnologias /a1.5 PU + Bambu.md
-  - Painéis de Bambu.md: A1. Tecnologias /a1.6 Painéis de Bambu.md
-  - Tijolos e Briquetes.md: A1. Tecnologias /a1.7 Tijolos e Briquetes.md
-  - Roteiro para Ensaios.md: A1. Tecnologias /a1.8 Roteiro para Ensaios.md
-  - Forno Ecológico.md: A1. Tecnologias /a1.9 Forno Ecológico.md
+  - Forno Ecológico.md: A1. Tecnologias /a1.2 Forno Ecológico
+  - Sistema de Reforço.md: A1. Tecnologias /a1.3 Sistema de Reforço
+  - Conexões Geodésicos.md: A1. Tecnologias /a1.4 Conexões Geodésicos
+  - PU + Bambu.md: A1. Tecnologias /a1.5 PU + Bambu
+  - Painéis de Bambu.md: A1. Tecnologias /a1.6 Painéis de Bambu
+  - Tijolos e Briquetes.md: A1. Tecnologias /a1.7 Tijolos e Briquetes
+  - Roteiro para Ensaios.md: A1. Tecnologias /a1.8 Roteiro para Ensaios
+  - Forno Ecológico.md: A1. Tecnologias /a1.9 Forno Ecológico
 - O Bambu:
-  - Visão Geral.md: A2.  O Bambu/a2.1 Visão Geral.md
-  - 'Brasil: A cadeia Digital.md': 'A2.  O Bambu/a2.2 Brasil: A cadeia Digital.md'
-  - Caracterização Física.md: A2.  O Bambu/a2.2 Caracterização Física.md
+  - Visão Geral.md: A2.  O Bambu/a2.1 Visão Geral
+  - 'Brasil: A cadeia Digital.md': 'A2.  O Bambu/a2.2 Brasil: A cadeia Digital'
+  - Caracterização Física.md: A2.  O Bambu/a2.2 Caracterização Física
   - O Ecossistema do Bambu no Brasil.md: A2.  O Bambu/a2.3 O Ecossistema do Bambu
-      no Brasil.md
-  - Mercado Global.md: A2.  O Bambu/a2.4 Mercado Global.md
-  - O Bambu na Ásia.md: A2.  O Bambu/a2.5 O Bambu na Ásia.md
-  - O Broto de Bambu.md: A2.  O Bambu/a2.6 O Broto de Bambu.md
-  - O carvão e o Pirolenhoso.md: A2.  O Bambu/a2.7 O carvão e o Pirolenhoso.md
-  - Carvão de Bambu = 0 => CO2.md: A2.  O Bambu/a5.4 Carvão de Bambu = 0 => CO2.md
+      no Brasil
+  - Mercado Global.md: A2.  O Bambu/a2.4 Mercado Global
+  - O Bambu na Ásia.md: A2.  O Bambu/a2.5 O Bambu na Ásia
+  - O Broto de Bambu.md: A2.  O Bambu/a2.6 O Broto de Bambu
+  - O carvão e o Pirolenhoso.md: A2.  O Bambu/a2.7 O carvão e o Pirolenhoso
+  - Carvão de Bambu = 0 => CO2.md: A2.  O Bambu/a5.4 Carvão de Bambu = 0 => CO2
 - Personalidades:
-  - Jayme Gonçalves.md: A2.a Personalidades/a2.a1 Jayme Gonçalves.md
-  - Khorow Ghavami.md: A2.a Personalidades/a2.a2 Khorow Ghavami.md
+  - Jayme Gonçalves.md: A2.a Personalidades/a2.a1 Jayme Gonçalves
+  - Khorow Ghavami.md: A2.a Personalidades/a2.a2 Khorow Ghavami
   - Ludovico Beraldo e Reis Pereira.md: A2.a Personalidades/a2.a3 Ludovico Beraldo
-      e Reis Pereira.md
-  - Oscar Hidalgo.md: A2.a Personalidades/a2.a4 Oscar Hidalgo.md
-  - Simon Velez.md: A2.a Personalidades/a2.a5 Simon Velez.md
+      e Reis Pereira
+  - Oscar Hidalgo.md: A2.a Personalidades/a2.a4 Oscar Hidalgo
+  - Simon Velez.md: A2.a Personalidades/a2.a5 Simon Velez
 - O PU Vegetal:
-  - A Imperveg Polímeros Vegetais.md: A3. O PU Vegetal/a4.1 A Imperveg Polímeros Vegetais.md
-  - Orgânicos X Sintéticos .md: A3. O PU Vegetal/a4.2 Orgânicos X Sintéticos .md
+  - A Imperveg Polímeros Vegetais.md: A3. O PU Vegetal/a4.1 A Imperveg Polímeros Vegetais
+  - Orgânicos X Sintéticos .md: A3. O PU Vegetal/a4.2 Orgânicos X Sintéticos
 - Domos Geodésicos:
-  - Dados Estruturais.md: A4. Domos Geodésicos/a3.1 Dados Estruturais.md
-  - Especificações Tecnicas.md: A4. Domos Geodésicos/a3.2 Especificações Tecnicas.md
-  - Ferramentas para Layout.md: A4. Domos Geodésicos/a3.3 Ferramentas para Layout.md
+  - Dados Estruturais.md: A4. Domos Geodésicos/a3.1 Dados Estruturais
+  - Especificações Tecnicas.md: A4. Domos Geodésicos/a3.2 Especificações Tecnicas
+  - Ferramentas para Layout.md: A4. Domos Geodésicos/a3.3 Ferramentas para Layout
 - COP30:
-  - O Paradoxo da Sustentabilidade.md: A6. COP30/a5.1 O Paradoxo da Sustentabilidade.md
-  - Deficit Habitacional.md: A6. COP30/a5.2 Deficit Habitacional.md
-  - O Paradoxo do Bambu.md: A6. COP30/a6.1 O Paradoxo do Bambu.md
-  - Arquitetura das Inflências.md: A6. COP30/a6.2 Arquitetura das Inflências.md
-  - A Maloca de Concreto.md: A6. COP30/a6.4 A Maloca de Concreto.md
+  - O Paradoxo da Sustentabilidade.md: A6. COP30/a5.1 O Paradoxo da Sustentabilidade
+  - Deficit Habitacional.md: A6. COP30/a5.2 Deficit Habitacional
+  - O Paradoxo do Bambu.md: A6. COP30/a6.1 O Paradoxo do Bambu
+  - A Arquitetura das Influências.md: A6. COP30/a6.2 A Arquitetura das Influências
+  - A Maloca de Concreto.md: A6. COP30/a6.4 A Maloca de Concreto
 - Como  Contribuir:
-  - Colaboração.md: A7. Como  Contribuir/a6.2 Colaboração.md
-  - O Github.md: A7. Como  Contribuir/a6.3 O Github.md
-- ? ''
-  : grafo.md
-- ? ''
-  : index.md
+  - Colaboração.md: A7. Como  Contribuir/a6.2 Colaboração
+  - O Github.md: A7. Como  Contribuir/a6.3 O Github
+- grafo: grafo
+- index: index
 repo_name: Resck/Takwara-Tech
 repo_url: https://github.com/Resck/Takwara-Tech
 site_name: Tecnologia Takwara
