@@ -1,0 +1,1739 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Documentação do Projeto Takwara-Tech: Plataforma, Fluxo de Trabalho e Manutenção - Tecnologia Takwara</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/style.css">
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documentacao-do-projeto-takwara-tech-plataforma-fluxo-de-trabalho-e-manutencao" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Tecnologia Takwara" class="md-header__button md-logo" aria-label="Tecnologia Takwara" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tecnologia Takwara
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Documentação do Projeto Takwara-Tech: Plataforma, Fluxo de Trabalho e Manutenção
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="indigo"  aria-label="Mudar para o modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para o modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="indigo"  aria-label="Mudar para o modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para o modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Resck/Takwara-Tech" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Resck/Takwara-Tech
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../A1.%20Tecnologias%20/a1.2%20Forno%20Ecol%C3%B3gico/" class="md-tabs__link">
+          
+  
+  
+  Tecnologias 
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../A2.%20%20O%20Bambu/a2.1%20Vis%C3%A3o%20Geral/" class="md-tabs__link">
+          
+  
+  
+  O Bambu
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../A2.a%20Personalidades/a2.a1%20Jayme%20Gon%C3%A7alves/" class="md-tabs__link">
+          
+  
+  
+  Personalidades
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../A3.%20O%20PU%20Vegetal/a4.1%20A%20Imperveg%20Pol%C3%ADmeros%20Vegetais/" class="md-tabs__link">
+          
+  
+  
+  O PU Vegetal
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../A4.%20Domos%20Geod%C3%A9sicos/a3.1%20Dados%20Estruturais/" class="md-tabs__link">
+          
+  
+  
+  Domos Geodésicos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../A6.%20COP30/a5.1%20O%20Paradoxo%20da%20Sustentabilidade/" class="md-tabs__link">
+          
+  
+  
+  COP30
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../a6.2%20Colabora%C3%A7%C3%A3o/" class="md-tabs__link">
+          
+  
+  
+  Como  Contribuir
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../grafo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  grafo
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  index
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <ul class="md-nav__list" data-md-scrollfix>
+  
+    
+    
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="tecnologias " checked>
+    <label class="md-nav__link" for="tecnologias ">
+      Tecnologias 
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tecnologias " data-md-level="">
+      <label class="md-nav__title" for="tecnologias ">
+        <span class="md-nav__icon md-icon"></span>
+        Tecnologias 
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A1.%20Tecnologias%20/a1.2%20Forno%20Ecol%C3%B3gico/" class="md-nav__link">
+      Forno Ecológico
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A1.%20Tecnologias%20/a1.3%20Sistema%20de%20Refor%C3%A7o/" class="md-nav__link">
+      Sistema de Reforço
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A1.%20Tecnologias%20/a1.4%20Conex%C3%B5es%20Geod%C3%A9sicos/" class="md-nav__link">
+      Conexões Geodésicos
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A1.%20Tecnologias%20/a1.5%20PU%20%2B%20Bambu/" class="md-nav__link">
+      PU + Bambu
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A1.%20Tecnologias%20/a1.6%20Pain%C3%A9is%20de%20Bambu/" class="md-nav__link">
+      Painéis de Bambu
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A1.%20Tecnologias%20/a1.7%20Tijolos%20e%20Briquetes/" class="md-nav__link">
+      Tijolos e Briquetes
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A1.%20Tecnologias%20/a1.8%20Roteiro%20para%20Ensaios/" class="md-nav__link">
+      Roteiro para Ensaios
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A1.%20Tecnologias%20/a1.9%20Forno%20Ecol%C3%B3gico/" class="md-nav__link">
+      Forno Ecológico
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="o bambu" checked>
+    <label class="md-nav__link" for="o bambu">
+      O Bambu
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="O Bambu" data-md-level="">
+      <label class="md-nav__title" for="o bambu">
+        <span class="md-nav__icon md-icon"></span>
+        O Bambu
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A2.%20%20O%20Bambu/a2.1%20Vis%C3%A3o%20Geral/" class="md-nav__link">
+      Visão Geral
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A2.%20%20O%20Bambu/a2.2%20Brasil%3A%20A%20cadeia%20Digital/" class="md-nav__link">
+      Brasil: A cadeia Digital
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A2.%20%20O%20Bambu/a2.2%20Caracteriza%C3%A7%C3%A3o%20F%C3%ADsica/" class="md-nav__link">
+      Caracterização Física
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A2.%20%20O%20Bambu/a2.3%20O%20Ecossistema%20do%20Bambu%20no%20Brasil/" class="md-nav__link">
+      O Ecossistema do Bambu no Brasil
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A2.%20%20O%20Bambu/a2.4%20Mercado%20Global/" class="md-nav__link">
+      Mercado Global
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A2.%20%20O%20Bambu/a2.5%20O%20Bambu%20na%20%C3%81sia/" class="md-nav__link">
+      O Bambu na Ásia
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A2.%20%20O%20Bambu/a2.6%20O%20Broto%20de%20Bambu/" class="md-nav__link">
+      O Broto de Bambu
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A2.%20%20O%20Bambu/a2.7%20O%20carv%C3%A3o%20e%20o%20Pirolenhoso/" class="md-nav__link">
+      O carvão e o Pirolenhoso
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A2.%20%20O%20Bambu/a5.4%20Carv%C3%A3o%20de%20Bambu%20%3D%200%20%3D%3E%20CO2/" class="md-nav__link">
+      Carvão de Bambu = 0 => CO2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="personalidades" checked>
+    <label class="md-nav__link" for="personalidades">
+      Personalidades
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Personalidades" data-md-level="">
+      <label class="md-nav__title" for="personalidades">
+        <span class="md-nav__icon md-icon"></span>
+        Personalidades
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A2.a%20Personalidades/a2.a1%20Jayme%20Gon%C3%A7alves/" class="md-nav__link">
+      Jayme Gonçalves
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A2.a%20Personalidades/a2.a2%20Khorow%20Ghavami/" class="md-nav__link">
+      Khorow Ghavami
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A2.a%20Personalidades/a2.a3%20Ludovico%20Beraldo%20e%20Reis%20Pereira/" class="md-nav__link">
+      Ludovico Beraldo e Reis Pereira
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A2.a%20Personalidades/a2.a4%20Oscar%20Hidalgo/" class="md-nav__link">
+      Oscar Hidalgo
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A2.a%20Personalidades/a2.a5%20Simon%20Velez/" class="md-nav__link">
+      Simon Velez
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="o pu vegetal" checked>
+    <label class="md-nav__link" for="o pu vegetal">
+      O PU Vegetal
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="O PU Vegetal" data-md-level="">
+      <label class="md-nav__title" for="o pu vegetal">
+        <span class="md-nav__icon md-icon"></span>
+        O PU Vegetal
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A3.%20O%20PU%20Vegetal/a4.1%20A%20Imperveg%20Pol%C3%ADmeros%20Vegetais/" class="md-nav__link">
+      A Imperveg Polímeros Vegetais
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A3.%20O%20PU%20Vegetal/a4.2%20Org%C3%A2nicos%20X%20Sint%C3%A9ticos%20/" class="md-nav__link">
+      Orgânicos X Sintéticos 
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="domos geodésicos" checked>
+    <label class="md-nav__link" for="domos geodésicos">
+      Domos Geodésicos
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Domos Geodésicos" data-md-level="">
+      <label class="md-nav__title" for="domos geodésicos">
+        <span class="md-nav__icon md-icon"></span>
+        Domos Geodésicos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A4.%20Domos%20Geod%C3%A9sicos/a3.1%20Dados%20Estruturais/" class="md-nav__link">
+      Dados Estruturais
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A4.%20Domos%20Geod%C3%A9sicos/a3.2%20Especifica%C3%A7%C3%B5es%20Tecnicas/" class="md-nav__link">
+      Especificações Tecnicas
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A4.%20Domos%20Geod%C3%A9sicos/a3.3%20Ferramentas%20para%20Layout/" class="md-nav__link">
+      Ferramentas para Layout
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="cop30" checked>
+    <label class="md-nav__link" for="cop30">
+      COP30
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="COP30" data-md-level="">
+      <label class="md-nav__title" for="cop30">
+        <span class="md-nav__icon md-icon"></span>
+        COP30
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A6.%20COP30/a5.1%20O%20Paradoxo%20da%20Sustentabilidade/" class="md-nav__link">
+      O Paradoxo da Sustentabilidade
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A6.%20COP30/a5.2%20Deficit%20Habitacional/" class="md-nav__link">
+      Deficit Habitacional
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A6.%20COP30/a6.1%20O%20Paradoxo%20do%20Bambu/" class="md-nav__link">
+      O Paradoxo do Bambu
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A6.%20COP30/a6.2%20A%20Arquitetura%20das%20Influ%C3%AAncias/" class="md-nav__link">
+      A Arquitetura das Influências
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../../A6.%20COP30/a6.4%20A%20Maloca%20de%20Concreto/" class="md-nav__link">
+      A Maloca de Concreto
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="como  contribuir" checked>
+    <label class="md-nav__link" for="como  contribuir">
+      Como  Contribuir
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Como  Contribuir" data-md-level="">
+      <label class="md-nav__title" for="como  contribuir">
+        <span class="md-nav__icon md-icon"></span>
+        Como  Contribuir
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../a6.2%20Colabora%C3%A7%C3%A3o/" class="md-nav__link">
+      Colaboração
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../a6.3%20O%20Github/" class="md-nav__link">
+      O Github
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../../grafo/" class="md-nav__link">
+      grafo
+    </a>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      index
+    </a>
+  </li>
+
+  
+</ul>
+
+<div class="md-nav__custom">
+  <hr>
+  <div style="padding: 0 1.2rem;">
+      
+      <h4>Conecte-se e Apoie</h4>
+      
+      <div class="donation-info">
+          <h5>Apoie (PIX):</h5>
+          <img id="pix-qrcode" src="../../assets/images/pix.png" alt="QR Code PIX" style="width: 100px; display: block; margin: 0.5rem 0;">
+      </div>
+
+      <div class="donation-info">
+          <h5>Bitcoin:</h5>
+          <img id="btc-qrcode" src="../../assets/images/qrcode.png" alt="QR Code BTC" style="width: 100px; display: block; margin: 0.5rem 0;">
+      </div>
+
+      <div class="license-info" style="font-size: 0.7rem; margin-top: 1rem;">
+          <p>Conteúdo sob <a href="https://creativecommons.org/licenses/by/4.0/deed.pt" target="_blank" rel="noopener">Licença CC BY 4.0</a></p>
+      </div>
+
+      <div class="contact-info" style="font-size: 0.7rem;">
+          <p>Contato:<br><a href="mailto:fabiotakwara@gmail.com" target="_blank">fabiotakwara@gmail.com</a></p>
+      </div>
+
+  </div>
+</div>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <div class="md-sidebar__scrollwrap">
+  <div class="md-sidebar__inner">
+    <div id="chatbot-container" class="takwara-chatbot">
+  <div id="chat-box" class="chat-box">
+    <div class="message bot-message">
+      Olá! Sou a assistente virtual Takwara. Como posso ajudar?
+    </div>
+  </div>
+  <form id="chat-form" class="chat-form">
+    <input 
+      type="text" 
+      id="user-input" 
+      class="user-input" 
+      placeholder="Faça uma pergunta..." 
+      autocomplete="off"
+    >
+    <button type="submit" class="submit-button" title="Enviar">Enviar</button>
+  </form>
+</div>
+    <hr>
+    <h4>Ferramentas</h4>
+<p>Conteúdo das ferramentas aparecerá aqui.</p>
+<hr>
+    <hr>
+    <div id="calculator-fixed-box">
+    <h2 id="calculator-title">Calculadora de Domos</h2>
+    <form id="calculator-form-widget">
+        <div class="form-group-widget">
+            <label for="diameter-widget">Diâmetro (m):</label>
+            <input type="number" id="diameter-input-widget" step="0.01" required>
+        </div>
+        <div class="form-group-widget">
+            <label for="base-solid-widget">Sólido Base:</label>
+            <select id="base-solid-input-widget"></select>
+        </div>
+        <div class="form-group-widget">
+            <label for="frequency-widget">Frequência/Variante:</label>
+            <select id="frequency-input-widget"></select>
+        </div>
+        <div class="form-group-widget">
+            <label for="truncation-widget">Tipo de Esfera:</label>
+            <select id="truncation-input-widget"></select>
+        </div>
+        <div class="form-group-widget">
+            <label for="pole-diameter-widget">Diâmetro das Varas (cm):</label>
+            <input type="number" id="pole-diameter-input-widget" step="0.01" value="5">
+            <small id="pole-diameter-note" style="display: none; color: gray; font-size: 0.8em; margin-top: 5px;">Se não preenchido, o cálculo de PU e Cabo de Aço será N/A ou padrão.</small>
+        </div>
+        <button type="submit" id="calculate-button">Calcular</button>
+    </form>
+    <div id="results-container-widget" style="margin-top: 1rem;">
+        <h4>resultados:</h4>
+        <div id="results-table-widget"></div>
+        <div id="material-costs-widget"></div>
+        <div id="diagram-section-widget" style="display: none; text-align: center; margin-top: 15px;">
+            <img id="dome-diagram-img" src="" alt="Diagrama da Cúpula" style="max-width: 100%; height: auto; border-radius: 8px;">
+            <button id="view-diagram-button" style="margin-top: 10px; padding: 8px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Ver Diagrama Grande</button>
+        </div>
+        <button id="download-results-button" style="margin-top: 15px; padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; display: none;">Baixar Resultados (.md)</button>
+    </div>
+    <p id="error-message-widget" style="color: red;"></p>
+    <p id="footer-notes" style="font-size: 0.8em; color: gray; margin-top: 15px; display: none;"></p>
+</div>
+
+<div id="diagram-modal" style="display: none; position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8);">
+    <span class="close-button" id="close-diagram-modal" style="position: absolute; right: 25px; top: 15px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+    <img class="modal-content" id="modal-diagram-img" style="margin: auto; display: block; width: 80%; max-width: 700px; border-radius: 8px;">
+</div>
+    <hr>
+    <div id="knowledge-graph-container">
+  <p>O Grafo de Conhecimento visualiza as conexões entre os conceitos do projeto.</p>
+  <div id="knowledge-graph" class="knowledge-graph-canvas"></div>
+</div>
+  </div>
+</div>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="documentacao-do-projeto-takwara-tech-plataforma-fluxo-de-trabalho-e-manutencao">Documentação do Projeto Takwara-Tech: Plataforma, Fluxo de Trabalho e Manutenção</h1>
+<ul>
+<li><a href="#documentação-técnica-completa-do-projeto-takwara-tech-plataforma-fluxo-de-trabalho-e-manutenção">Documentação Técnica Completa do Projeto Takwara-Tech: Plataforma, Fluxo de Trabalho e Manutenção</a></li>
+<li><a href="#seção-1-visão-geral-da-plataforma-takwara-tech-no-github">Seção 1: Visão Geral da Plataforma Takwara-Tech no GitHub</a><ul>
+<li><a href="#11-componentes-principais">1.1. Componentes Principais</a></li>
+<li><a href="#12-visão-estratégica-da-interface">1.2. Visão Estratégica da Interface</a></li>
+</ul>
+</li>
+<li><a href="#seção-2-histórico-de-desenvolvimento-e-depuração-jornada-para-a-estabilidade">Seção 2: Histórico de Desenvolvimento e Depuração (Jornada para a Estabilidade)</a><ul>
+<li><a href="#21-estabilização-inicial-da-infraestrutura-e-api-backend">2.1. Estabilização Inicial da Infraestrutura e API Backend</a><ul>
+<li><a href="#fase-1-erros-iniciais-no-frontend">Fase 1: Erros Iniciais no Frontend</a></li>
+<li><a href="#fase-2-problema-de-cors">Fase 2: Problema de CORS</a></li>
+<li><a href="#fase-3-colapso-por-falta-de-memória">Fase 3: Colapso por Falta de Memória</a></li>
+<li><a href="#fase-4-timeout-e-permissões-de-iam">Fase 4: Timeout e Permissões de IAM</a></li>
+<li><a href="#fase-5-ponto-de-falha-final---busca-na-base-de-dados">Fase 5: Ponto de Falha Final - Busca na Base de Dados</a></li>
+</ul>
+</li>
+<li><a href="#22-refinamento-da-inteligência-da-assistente-virtual-avt">2.2. Refinamento da Inteligência da Assistente Virtual (AVT)</a></li>
+<li><a href="#23-implementação-e-desafios-de-layout-da-interface">2.3. Implementação e Desafios de Layout da Interface</a><ul>
+<li><a href="#histórico-de-implementação-e-diagnóstico-tentativas">Histórico de Implementação e Diagnóstico (Tentativas)</a></li>
+<li><a href="#implementação-da-solução-com-web-components">Implementação da Solução com Web Components</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#seção-3-ciclo-padrão-de-desenvolvimento-e-publicação-sop-atual">Seção 3: Ciclo Padrão de Desenvolvimento e Publicação (SOP Atual)</a><ul>
+<li><a href="#31-preparação-inicial-realizar-apenas-uma-vez">3.1. Preparação Inicial (Realizar Apenas Uma Vez)</a></li>
+<li><a href="#32-o-ciclo-de-atualização-realizar-para-cada-alteração">3.2. O Ciclo de Atualização (Realizar Para Cada Alteração)</a></li>
+</ul>
+</li>
+<li><a href="#seção-4-estado-atual-do-projeto-pendências-e-próximas-etapas">Seção 4: Estado Atual do Projeto, Pendências e Próximas Etapas</a><ul>
+<li><a href="#41-estado-atual-implementado-junho-de-2025">4.1. Estado Atual Implementado (Junho de 2025)</a></li>
+<li><a href="#42-pendências-críticas">4.2. Pendências Críticas</a></li>
+<li><a href="#43-plano-de-ação-e-roadmap">4.3. Plano de Ação e Roadmap</a></li>
+</ul>
+</li>
+<li><a href="#seção-5-manual-técnico-de-operação-e-manutenção">Seção 5: Manual Técnico de Operação e Manutenção</a><ul>
+<li><a href="#51-tecnologias-centrais">5.1. Tecnologias Centrais</a></li>
+<li><a href="#52-pré-requisitos">5.2. Pré-requisitos</a></li>
+<li><a href="#53-primeiros-passos-clonagem-e-configuração-do-ambiente">5.3. Primeiros Passos: Clonagem e Configuração do Ambiente</a></li>
+<li><a href="#54-fluxos-de-trabalho-de-manutenção-detalhados">5.4. Fluxos de Trabalho de Manutenção Detalhados</a></li>
+<li><a href="#55-comandos-comuns-do-terminal-para-manutenção-do-repositório">5.5. Comandos Comuns do Terminal para Manutenção do Repositório</a></li>
+<li><a href="#56-contribuição-e-a-licença-cc-by-40">5.6. Contribuição e a Licença CC BY 4.0</a></li>
+<li><a href="#57-repositórios-com-estruturas-tecnológicas-similares-para-inspiração">5.7. Repositórios com Estruturas Tecnológicas Similares (Para Inspiração)</a></li>
+</ul>
+</li>
+<li><a href="#seção-6-apêndice-técnico-análise-detalhada-do-script-create_vector_storepy">Seção 6: Apêndice Técnico: Análise Detalhada do Script <code>create_vector_store.py</code></a><ul>
+<li><a href="#61-objetivo-do-script">6.1. Objetivo do Script</a></li>
+<li><a href="#62-o-fluxo-de-trabalho-uma-jornada-em-6-etapas">6.2. O Fluxo de Trabalho: Uma Jornada em 6 Etapas</a></li>
+<li><a href="#63-destrinchando-o-código">6.3. Destrinchando o Código</a></li>
+</ul>
+</li>
+<li><a href="#seção-7-glossário-técnico-essencial-do-projeto">Seção 7: Glossário Técnico Essencial do Projeto</a><ul>
+<li><a href="#71-introdução">7.1. Introdução</a></li>
+<li><a href="#72-mapa-do-projeto-estrutura-de-pastas-simplificada">7.2. Mapa do Projeto (Estrutura de Pastas Simplificada)</a></li>
+<li><a href="#73-glossário-de-componentes-chave">7.3. Glossário de Componentes Chave</a></li>
+<li><a href="#74-o-que-acontece-no-site-ao-mudar-um-componente-exemplos">7.4. O que Acontece no Site ao Mudar um Componente (Exemplos)</a></li>
+</ul>
+</li>
+<li><a href="#seção-8-referências-e-links">Seção 8: Referências e Links</a></li>
+</ul>
+<h2 id="secao-1-visao-geral-da-plataforma-no-github">Seção 1: Visão Geral da Plataforma no GitHub</h2>
+<p>O portal do projeto Takwara-Tech, hospedado no GitHub Pages (<a href="https://resck.github.io/Takwara-Tech/">https://resck.github.io/Takwara-Tech/</a>), representa uma plataforma de documentação e interação focada em soluções sustentáveis com bambu. A plataforma combina um site estático com uma API de Inteligência Artificial para fornecer informações e ferramentas aos usuários.</p>
+<h3 id="11-componentes-principais">1.1. Componentes Principais</h3>
+<p>O ecossistema técnico é composto por três elementos principais:</p>
+<ul>
+<li><strong>Frontend:</strong> O site estático, gerado utilizando o MkDocs e o tema Material for MkDocs. Contém a documentação do projeto em arquivos Markdown e implementa a interface do usuário, incluindo a integração com a Assistente Virtual (AVT) e outras ferramentas.</li>
+<li><strong>Backend/API:</strong> Uma API desenvolvida em Python 3.11 e implantada como uma Google Cloud Function (Geração 2) na região <code>southamerica-east1</code>. Esta API utiliza uma stack de IA (Langchain, Google Generative AI, ChromaDB) para processar as consultas da Assistente Virtual, realizando busca de similaridade em uma base de conhecimento vetorial gerada a partir do conteúdo do site.</li>
+<li><strong>Base de Conhecimento da IA (<code>chroma_db</code>):</strong> Uma base de dados vetorial local, gerada a partir do conteúdo textual (Markdown, Python, TXT) do repositório do site. Esta base de dados é utilizada pela API backend para responder a perguntas contextuais.</li>
+</ul>
+<h3 id="12-visao-estrategica-da-interface">1.2. Visão Estratégica da Interface</h3>
+<p>O objetivo final da interface do portal é evoluir para além de um simples repositório de documentos estáticos, transformando-o numa plataforma de interação e dados em tempo real. A visão estratégica para o layout e funcionalidade inclui:</p>
+<ul>
+<li><strong>Arquitetura da Interface:</strong> Um layout que apresente de forma clara e persistente uma navegação principal do site (índice geral), uma área central focada no conteúdo (artigos) e uma "Tool Box Interativa" sempre acessível, contendo as ferramentas da plataforma (Assistente Virtual, Grafo de Conhecimento, Calculadoras). Um índice de conteúdo para a página que está a ser lida (TOC - Table of Contents) também deve estar presente.</li>
+<li><strong>Painel de Impacto (Cabeçalho e Rodapé):</strong> O cabeçalho e o rodapé devem ser customizados para incluir "instrumentos indicadores" — APIs que exibem dados ambientais e sociais em tempo real (ex: "Climate Clock", níveis de CO₂, dados de queimadas, etc.).</li>
+<li><strong>Comportamento da AVT:</strong> A Assistente Virtual Takwara (AVT) deve ter uma busca contextual, priorizando a pesquisa na página em que o utilizador se encontra antes de realizar uma busca global no repositório.</li>
+</ul>
+<h2 id="secao-2-historico-de-desenvolvimento-e-depuracao-jornada-para-a-estabilidade">Seção 2: Histórico de Desenvolvimento e Depuração (Jornada para a Estabilidade)</h2>
+<p>O desenvolvimento da plataforma envolveu a superação de diversos desafios técnicos complexos, desde a configuração inicial da infraestrutura na nuvem até o refinamento da inteligência da Assistente Virtual e os desafios de customização da interface. Esta seção documenta o percurso de depuração e evolução, consolidando informações de diferentes relatórios cronológicos.</p>
+<h3 id="21-estabilizacao-inicial-da-infraestrutura-e-api-backend">2.1. Estabilização Inicial da Infraestrutura e API Backend</h3>
+<p>O processo de colocar a API backend em funcionamento e garantir que se comunicasse corretamente com o frontend e os serviços de IA do Google envolveu a depuração de uma série de problemas interligados.</p>
+<h4 id="fase-1-erros-iniciais-no-frontend">Fase 1: Erros Iniciais no Frontend</h4>
+<ul>
+<li><strong>Sintomas:</strong> Erros 404 ao tentar carregar imagens (logo), layout quebrado no site publicado, e erros de <code>SyntaxError</code> em arquivos JavaScript que impediam a renderização do chatbot e da calculadora no navegador do usuário.</li>
+<li><strong>Diagnóstico:</strong> Caminhos de arquivos incorretos referenciados no <code>mkdocs.yml</code> e conteúdo inválido (texto não-código) introduzido acidentalmente na primeira linha de alguns arquivos JavaScript.</li>
+<li><strong>Solução:</strong> Limpeza dos arquivos JavaScript corrompidos e correção dos caminhos de arquivos (links para imagens, scripts) no <code>mkdocs.yml</code>.</li>
+<li><strong>Resultado:</strong> A interface visual do site foi restaurada no navegador, mas a área do chatbot ainda apresentava um "erro de comunicação" com o backend.</li>
+</ul>
+<h4 id="fase-2-problema-de-cors">Fase 2: Problema de CORS</h4>
+<ul>
+<li><strong>Sintomas:</strong> A consola do navegador exibia consistentemente o erro de segurança <code>blocked by CORS policy</code> (Política CORS bloqueou a requisição). Não havia registros de atividade nos logs da Google Cloud Function para essas requisições bloqueadas pelo navegador.</li>
+<li><strong>Diagnóstico:</strong> O navegador estava bloqueando as requisições do site estático (frontend) para a API backend porque a API não retornava os cabeçalhos de permissão <code>Access-Control-Allow-Origin</code> necessários.</li>
+<li><strong>Solução:</strong> Tentativa inicial de implementar a lógica de CORS no código da API utilizando a biblioteca <code>Flask-Cors</code>.</li>
+<li><strong>Resultado:</strong> O problema de CORS no navegador persistiu, indicando que a função na nuvem sequer estava conseguindo iniciar e executar o código de configuração do CORS antes de colapsar.</li>
+</ul>
+<h4 id="fase-3-colapso-por-falta-de-memoria">Fase 3: Colapso por Falta de Memória</h4>
+<ul>
+<li><strong>Sintomas:</strong> O erro de CORS não era a causa raiz, mas um sintoma de um problema mais profundo. Uma análise detalhada dos logs da Google Cloud Function revelou o erro fatal: <code>Memory limit... exceeded</code> (Limite de memória excedido).</li>
+<li><strong>Diagnóstico:</strong> A Google Cloud Function, com sua configuração padrão de 256MB de memória, era insuficiente para carregar e inicializar as bibliotecas de Inteligência Artificial (<code>Langchain</code>, <code>ChromaDB</code>, etc.) necessárias para a API. Isso causava o "colapso" imediato da função ao tentar iniciar.</li>
+<li><strong>Solução:</strong> A memória alocada para a função foi aumentada para 512MiB utilizando o parâmetro <code>--memory=512MiB</code> no comando de deploy (<code>gcloud functions deploy</code>).</li>
+<li><strong>Resultado:</strong> A função na nuvem tornou-se estável, deixou de colapsar no arranque e começou a responder aos pedidos iniciais (<code>OPTIONS</code>) com status <code>200 OK</code>. No entanto, o erro de CORS no navegador, de forma inesperada, continuou a ocorrer para as requisições principais (<code>POST</code>).</li>
+</ul>
+<h4 id="fase-4-timeout-e-permissoes-de-iam">Fase 4: Timeout e Permissões de IAM</h4>
+<ul>
+<li><strong>Sintomas:</strong> Testes diretos à API utilizando ferramentas como <code>curl</code> (que ignoram as políticas de CORS do navegador) mostraram que as requisições eram enviadas com sucesso, mas a API nunca respondia com o resultado da consulta, causando um timeout após o tempo limite configurado (300 segundos).</li>
+<li><strong>Diagnóstico:</strong> O "congelamento" da execução estava ocorrendo <em>dentro</em> do código da função após o seu início bem-sucedido. A principal suspeita recaiu sobre a chamada a serviços externos, especificamente a API de IA do Google (Gemini-Pro), provavelmente devido à falta de permissões de acesso para a conta de serviço da função.</li>
+<li><strong>Solução:</strong> Foram adicionados manualmente os papéis de IAM (Identity and Access Management) necessários à conta de serviço associada à Cloud Function (<code>...-compute@developer.gserviceaccount.com</code>) através da consola do Google Cloud: "Usuário do Vertex AI" (para permitir o uso dos modelos de IA do Google) e "Cloud Build Builder" (para resolver um problema secundário identificado no processo de build/deploy).</li>
+<li><strong>Resultado:</strong> Todas as permissões de infraestrutura e acesso foram corrigidas, mas o timeout de 300 segundos durante as requisições principais persistiu.</li>
+</ul>
+<h4 id="fase-5-ponto-de-falha-final-busca-na-base-de-dados">Fase 5: Ponto de Falha Final - Busca na Base de Dados</h4>
+<ul>
+<li><strong>Sintomas:</strong> O timeout de 300 segundos persistia mesmo com todas as configurações de infraestrutura e permissões aparentemente corretas.</li>
+<li><strong>Diagnóstico:</strong> Foi implantada uma versão da API com logs de depuração detalhados no código Python ("PASSO 1", "PASSO 2", etc.). Os logs provaram inequivocamente que a execução iniciava, carregava as bibliotecas e a base de dados, imprimia "PASSO 1" (antes da busca), mas depois "congelava" indefinidamente na chamada específica responsável por fazer a busca de similaridade na base de dados vetorial ChromaDB: <code>qa_chain.retriever.get_relevant_documents(query)</code>.</li>
+<li><strong>Solução:</strong> A hipótese levantada foi que a própria base de dados <code>chroma_db</code> estava corrompida ou ineficiente para o ambiente de execução, ou havia uma incompatibilidade entre a versão da base de dados e as bibliotecas no ambiente da Cloud Function. A solução aplicada foi apagar o diretório <code>chroma_db</code> local, recriá-lo do zero executando novamente o script <code>create_vector_store.py</code> (garantindo que salvava na pasta correta para o deploy) e realizar um novo deploy completo da função.</li>
+<li><strong>Resultado:</strong> Esta etapa <strong>resolveu o bloqueio principal</strong>. A execução da busca na base de dados deixou de congelar, e a API passou a responder com os resultados da busca (embora as respostas iniciais ainda fossem genéricas, o que levou à próxima fase de depuração).</li>
+</ul>
+<h3 id="22-refinamento-da-inteligencia-da-assistente-virtual-avt">2.2. Refinamento da Inteligência da Assistente Virtual (AVT)</h3>
+<p>Com a API estável e respondendo, a próxima fase foi melhorar a qualidade e relevância das respostas da Assistente Virtual (AVT), que ainda parecia não utilizar plenamente o conteúdo disponível.</p>
+<ul>
+<li><strong>Desafio:</strong> A AVT estava funcional, mas suas respostas eram genéricas, frequentemente afirmando não encontrar informação que sabíamos existir na base de conhecimento.</li>
+<li><strong>Soluções Implementadas:</strong><ul>
+<li><strong>Otimização da Quebra de Documentos:</strong> O script <code>create_vector_store.py</code> foi aprimorado para utilizar o <code>MarkdownHeaderTextSplitter</code>. Esta ferramenta divide os documentos Markdown com base em sua estrutura de títulos (<code>#</code>, <code>##</code>, etc.), criando "pedaços" de conhecimento ("chunks") mais curtos, mais ricos em contexto (cada pedaço contém o título e subtítulos que o precedem) e, consequentemente, mais fáceis para a IA encontrar informações relevantes durante a busca.</li>
+<li><strong>Upgrade do Retriever:</strong> Implementamos o <code>MultiQueryRetriever</code> na API backend. Esta técnica permite que a IA reformule a pergunta original do usuário de várias formas diferentes antes de realizar a busca na base de dados vetorial. Isso aumenta a chance de encontrar documentos relevantes, mesmo que a formulação inicial do usuário não seja perfeita. Os parâmetros do retriever foram ajustados (afinados) para aumentar a quantidade de resultados retornados e a tolerância da busca por similaridade.</li>
+<li><strong>Engenharia de Prompt:</strong> Criamos um <code>PromptTemplate</code> customizado. Este template define a "persona" da AVT (uma assistente virtual informativa da Takwara-Tech), estabelece seu tom de comunicação (cordial, prestativa), define suas regras de comportamento (sempre citar as fontes/documentos que utilizou para gerar a resposta, responder no idioma do usuário que enviou a pergunta, lidar graciosamente com erros de digitação) e fornece contexto adicional para a IA gerar respostas mais úteis e direcionadas.</li>
+</ul>
+</li>
+</ul>
+<h3 id="23-implementacao-e-desafios-de-layout-da-interface">2.3. Implementação e Desafios de Layout da Interface</h3>
+<p>Em paralelo à estabilização e refinamento da API, foram realizadas diversas tentativas para implementar a visão estratégica do layout do portal, focando na "Tool Box Interativa".</p>
+<h4 id="historico-de-implementacao-e-diagnostico-tentativas">Histórico de Implementação e Diagnóstico (Tentativas)</h4>
+<p>Para alcançar a visão de uma interface com "Tool Box Interativa" utilizando o tema Material for MkDocs, que possui uma estrutura de layout própria baseada em CSS Grid, foram testadas várias abordagens de customização com diferentes resultados:</p>
+<ul>
+<li><strong>Tentativa 1: Abordagem com CSS Grid Diretamente:</strong> Aplicação direta de regras CSS <code>display: grid</code> e <code>grid-template-columns</code>. Funcionou apenas na página inicial, quebrando nas páginas de artigos devido a inconsistências na estrutura HTML gerada pelo tema.</li>
+<li><strong>Tentativa 2: Abordagem com Template Override (<code>main.html</code>):</strong> Tentativa de substituir o conteúdo do arquivo <code>overrides/main.html</code> por uma estrutura de colunas customizada. Resultou em conflitos de layout severos, perda da coluna de conteúdo e duplicação de elementos de navegação. O diagnóstico foi que a substituição completa do bloco de conteúdo principal quebra a lógica interna do tema.</li>
+<li><strong>Diagnóstico do Problema:</strong> As tentativas de forçar um layout de múltiplas colunas fixas através de manipulação direta do CSS ou override completo do template de conteúdo entram em conflito fundamental com a arquitetura e o CSS do tema Material for MkDocs, que gerencia dinamicamente a posição dos componentes principais (navegação, conteúdo, TOC).</li>
+</ul>
+<h4 id="implementacao-da-solucao-com-web-components">Implementação da Solução com Web Components</h4>
+<p>Diante da resiliência do tema padrão à manipulação direta do layout, a estratégia foi pivotada para uma solução mais robusta e isolada tecnologicamente, baseada em Web Components.</p>
+<ul>
+<li><strong>Solução Definida:</strong> Implementar a "Tool Box Interativa" utilizando a tecnologia de <strong>Web Components</strong>.</li>
+<li><strong>Ação:</strong> Criação de um elemento HTML customizado (<code>&lt;takwara-toolbox&gt;</code>), utilização do <strong>Shadow DOM</strong> para encapsulamento e isolamento de estilos, e implementação da lógica de posicionamento em JavaScript (<code>toolbox.js</code>) para calcular e ajustar dinamicamente a altura da Tool Box, fixando-a à esquerda e gerenciando seu comportamento de scroll.</li>
+<li><strong>Resultado:</strong> Esta abordagem com Web Components <strong>resolveu os conflitos de layout</strong>. A "Takwara Tool Box" é renderizada com sucesso como um componente isolado, fixo à esquerda, com altura dinâmica e comportamento de scroll correto, sem quebras ou sobreposições com o tema principal. A estrutura HTML para as ferramentas (AVT, Grafo, Calculadora) é carregada corretamente dentro dela.</li>
+</ul>
+<h2 id="secao-3-ciclo-padrao-de-desenvolvimento-e-publicacao-sop-atual">Seção 3: Ciclo Padrão de Desenvolvimento e Publicação (SOP Atual)</h2>
+<p>Manter a plataforma atualizada com novo conteúdo e funcionalidades requer um fluxo de trabalho bem definido, que integra a gestão de código, a atualização da base de conhecimento da IA e a publicação do site estático e da API backend. Este fluxo, consolidado após a fase de depuração, é o Procedimento Operacional Padrão (SOP) para realizar atualizações.</p>
+<h3 id="31-preparacao-inicial-realizar-apenas-uma-vez">3.1. Preparação Inicial (Realizar Apenas Uma Vez)</h3>
+<ul>
+<li><strong>Clonar o Repositório:</strong> Baixe uma cópia local do repositório do GitHub.</li>
+<li><strong>Configurar Ambiente Python:</strong> Crie e ative um ambiente virtual, instalando as dependências do <code>requirements.txt</code>.</li>
+<li><strong>Configurar Chave da API do Google:</strong> Crie um arquivo <code>.env</code> com <code>GOOGLE_API_KEY="SUA_CHAVE_AQUI"</code> na raiz do repositório (para execução local do script de vetorização). Configure a chave também no ambiente da Google Cloud Function.</li>
+<li><strong>Limpar <code>.gitignore</code>:</strong> Garanta que <code>site/</code>, <code>temp_repo/</code> e <code>backend-api/chroma_db/</code> estão incluídos no <code>.gitignore</code> para evitar versionamento indesejado.</li>
+</ul>
+<h3 id="32-o-ciclo-de-atualizacao-realizar-para-cada-alteracao">3.2. O Ciclo de Atualização (Realizar Para Cada Alteração)</h3>
+<p>Este é o checklist a ser seguido sempre que houver modificações no conteúdo, frontend ou backend.</p>
+<ul>
+<li><strong>Passo 1: Edição e Conteúdo</strong><ul>
+<li>Crie ou edite os seus ficheiros de artigos (<code>.md</code>) dentro da pasta <code>docs/</code>.</li>
+<li><strong>CRÍTICO:</strong> Se criou um novo artigo ou alterou o caminho de um, "matricule-o" na secção <code>nav:</code> do ficheiro <code>mkdocs.yml</code>. Sem este passo, o artigo não será incluído na navegação do site.</li>
+</ul>
+</li>
+<li><strong>Passo 2: Atualização da Inteligência Artificial (Backend)</strong><ul>
+<li>Gere a nova base de dados da IA: Abra o terminal na pasta <code>Chatbot - Takwara</code> e execute o script <code>create_vector_store.py</code>. Ele lerá o conteúdo atualizado e salvará a nova base de dados em <code>./backend-api/chroma_db</code>.
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>Chatbot<span class="w"> </span>-<span class="w"> </span>Takwara
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>create_vector_store.py
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">cd</span><span class="w"> </span>..<span class="w"> </span><span class="c1"># Volte para a raiz do repositório</span>
+</code></pre></div></li>
+<li>Envie a nova API e base de dados para a nuvem: Certifique-se que o ambiente virtual está ativo na pasta que contém <code>backend-api</code> (ou navegue para <code>backend-api</code> e use <code>--source=.</code>) e execute o comando de deploy.
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>gcloud<span class="w"> </span>functions<span class="w"> </span>deploy<span class="w"> </span>chatbot-api<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>--gen2<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>--runtime<span class="o">=</span>python311<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>--region<span class="o">=</span>southamerica-east1<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>--source<span class="o">=</span>./backend-api<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>--entry-point<span class="o">=</span>chatbot_api<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>--trigger-http<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>--allow-unauthenticated<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>--memory<span class="o">=</span>512MiB<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>--timeout<span class="o">=</span>300s
+</code></pre></div></li>
+</ul>
+</li>
+<li><strong>Passo 3: Salve as Alterações Oficialmente (Git)</strong><ul>
+<li>Prepare todas as suas alterações locais (arquivos de conteúdo, <code>mkdocs.yml</code>, arquivos do backend <em>com a nova base de dados</em>):
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div></li>
+<li>Crie um commit para registrar as alterações com uma mensagem descritiva:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Sua mensagem descritiva aqui (ex: Adiciona novo artigo sobre X, atualiza base da AVT e corrige layout Y)&quot;</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li><strong>Passo 4: Publique o Site Visual (Frontend)</strong><ul>
+<li>Na raiz do repositório, com o ambiente virtual ativo, execute o comando que constrói o site estático e o publica no GitHub Pages:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div></li>
+</ul>
+</li>
+<li><strong>Passo 5: Verificação Final</strong><ul>
+<li>Aguarde 2-3 minutos para que os deploys se propaguem.</li>
+<li>Abra o seu site online (<a href="https://resck.github.io/Takwara-Tech/">https://resck.github.io/Takwara-Tech/</a>) numa janela anónima ou limpe o cache do navegador para garantir que não está a ver uma versão antiga e que todas as alterações (conteúdo, layout, funcionalidade da AVT) estão corretas.</li>
+</ul>
+</li>
+</ul>
+<h2 id="secao-4-estado-atual-do-projeto-pendencias-e-proximas-etapas">Seção 4: Estado Atual do Projeto, Pendências e Próximas Etapas</h2>
+<p>Com base no trabalho realizado até Junho de 2025, a plataforma atingiu um estado de estabilidade funcional e estrutural, mas ainda possui pendências que requerem desenvolvimento.</p>
+<h3 id="41-estado-atual-implementado-junho-de-2025">4.1. Estado Atual Implementado (Junho de 2025)</h3>
+<ul>
+<li><strong>Infraestrutura e API:</strong> A API backend está implantada, estável e acessível na Google Cloud Function (Geração 2, <code>southamerica-east1</code>). Problemas de deploy, memória, permissões de IAM e o bloqueio na busca da base de dados foram resolvidos. A comunicação básica entre frontend e backend está funcional.</li>
+<li><strong>Base de Conhecimento da IA:</strong> O script <code>create_vector_store.py</code> está otimizado para quebrar documentos de forma contextual (usando <code>MarkdownHeaderTextSplitter</code>) e gerar a base de dados <code>chroma_db</code> corretamente dentro do diretório da API.</li>
+<li><strong>Inteligência da AVT (Respostas Base):</strong> A Assistente Virtual utiliza o <code>MultiQueryRetriever</code> e um <code>PromptTemplate</code> customizado para gerar respostas razoavelmente relevantes e contextualizadas a partir da base de conhecimento. Ela cita as fontes encontradas nos documentos processados.</li>
+<li><strong>Layout Básico da Tool Box:</strong> A estrutura visual da "Takwara Tool Box" está implementada como um Web Component isolado e fixo à esquerda, com posicionamento e comportamento de scroll dinâmicos, sem conflitos de layout com o tema principal Material for MkDocs. O HTML básico das ferramentas (AVT, Grafo, Calculadora) é carregado corretamente dentro dela.</li>
+<li><strong>Customização Básica do Tema:</strong> O menu de navegação principal está configurado como barra lateral fixa. Um rodapé customizado, incluindo um widget de relógio climático (<code>Climate Clock</code>), foi implementado com sucesso via override de template.</li>
+</ul>
+<h3 id="42-pendencias-criticas">4.2. Pendências Críticas</h3>
+<ul>
+<li><strong>Ativação da Lógica das Ferramentas na Tool Box:</strong> Embora a estrutura HTML das ferramentas (AVT, Grafo de Conhecimento, Calculadoras) esteja presente dentro da Tool Box, os scripts JavaScript que controlam a lógica e a interatividade de cada ferramenta (por exemplo, o script que gerencia o formulário de chat, o grafo interativo, as calculadoras) <strong>não estão a conseguir inicializar corretamente</strong> devido a uma "race condition" (os scripts tentam agir antes do HTML estar completamente disponível no Shadow DOM do Web Component).</li>
+<li><strong>Implementação Completa das APIs de Monitoramento:</strong> A integração dos "Painéis de Impacto" (dados em tempo real como CO₂, temperatura global, dados de queimadas) no cabeçalho e rodapé customizados ainda <strong>não foi iniciada</strong>.</li>
+<li><strong>Ajustes Finos de Design:</strong> Polimento final de elementos visuais, como o rodapé padrão do tema (que apresentou resistência a algumas customizações CSS) e a revisão geral da UI/UX após a implementação das funcionalidades.</li>
+<li><strong>Busca Contextual da AVT (Nível de Página):</strong> A lógica para a AVT priorizar a busca por informações relacionadas especificamente à página que o usuário está visualizando (usando a URL atual como contexto) antes de fazer uma busca global na base de conhecimento <strong>ainda precisa ser implementada</strong> no código da API backend.</li>
+<li><strong>Grafo de Conhecimento:</strong> A lógica para carregar dados dinâmicos ou permitir interatividade além da navegação básica no Grafo de Conhecimento <strong>não está ativa</strong>.</li>
+<li><strong>Calculadoras:</strong> A lógica backend e/ou frontend para as calculadoras (ex: Cálculo de Domos) <strong>não está completamente ativa ou integrada</strong>.</li>
+</ul>
+<h3 id="43-plano-de-acao-e-roadmap">4.3. Plano de Ação e Roadmap</h3>
+<p>As próximas etapas de desenvolvimento focarão em resolver as pendências críticas e realizar a visão completa da plataforma.</p>
+<ol>
+<li><strong>Ativação da Tool Box (Prioridade Máxima):</strong> Implementar um sistema de eventos customizados no script <code>toolbox.js</code>. Este script irá disparar um evento (<code>takwara:tools-ready</code>) após injetar o HTML das ferramentas no Shadow DOM. Os scripts individuais das ferramentas (<code>script.js</code>, <code>graph.js</code>, <code>calculadora.js</code>) serão modificados para "escutar" este evento e só iniciar sua lógica após recebê-lo, garantindo que o HTML necessário já esteja disponível.</li>
+<li><strong>Implementação do "Painel de Impacto":</strong> Iniciar a integração de APIs de dados para popular o painel customizado no cabeçalho e rodapé, começando pela definição e implementação do primeiro indicador (ex: Níveis de CO₂).</li>
+<li><strong>Refinamento da Inteligência da AVT (Busca Contextual):</strong> Modificar o código da API backend (<code>main.py</code>) para receber a URL da página atual como um parâmetro na requisição do frontend. Utilizar esta URL para carregar o conteúdo específico da página e dar maior peso a este texto durante a busca por similaridade na base de dados vetorial.</li>
+<li><strong>Implementação Completa das Ferramentas:</strong> Finalizar a lógica e a integração completa das demais ferramentas planejadas (Grafo de Conhecimento, Calculadoras) dentro da Tool Box, garantindo que seus scripts funcionem corretamente após a ativação via evento customizado.</li>
+<li><strong>Polimento Final e UI/UX:</strong> Realizar ajustes de design e uma revisão geral da interface e experiência do usuário.</li>
+</ol>
+<h2 id="secao-5-manual-tecnico-de-operacao-e-manutencao">Seção 5: Manual Técnico de Operação e Manutenção</h2>
+<p>Este manual serve como guia operacional e de manutenção para colaboradores e interessados no projeto Takwara-Tech, explicando como configurar o ambiente, realizar atualizações e contribuir sob a licença Creative Commons.</p>
+<h3 id="51-tecnologias-centrais">5.1. Tecnologias Centrais</h3>
+<p>O projeto é construído sobre a combinação das seguintes tecnologias:</p>
+<ul>
+<li><strong>MkDocs + Material for MkDocs:</strong> Gerador de site estático e tema para a documentação e frontend.</li>
+<li><strong>Web Components:</strong> Tecnologia para encapsular a "Tool Box Interativa" no frontend.</li>
+<li><strong>Python 3.11 + Flask:</strong> Linguagem de programação e microframework para a API backend.</li>
+<li><strong>Google Cloud Functions (Geração 2):</strong> Ambiente serverless para hospedar a API backend.</li>
+<li><strong>Langchain, Google Generative AI, ChromaDB:</strong> Bibliotecas e modelos para a funcionalidade RAG (Retrieval Augmented Generation) da AVT e Embeddings.</li>
+<li><strong>Vis.js Network:</strong> Biblioteca JavaScript para visualização interativa do Grafo de Conhecimento.</li>
+<li><strong>Marked.js:</strong> Biblioteca JavaScript para renderizar Markdown nas respostas da AVT.</li>
+<li><strong>Git + GitHub:</strong> Sistema de controle de versão e plataforma de hospedagem do código.</li>
+</ul>
+<h3 id="52-pre-requisitos">5.2. Pré-requisitos</h3>
+<p>Para operar e manter o sistema, é necessário ter instalado e configurado:</p>
+<ul>
+<li><strong>Git:</strong> Para clonar o repositório e gerenciar versões.</li>
+<li><strong>Python 3.11:</strong> Com um ambiente virtual (<code>venv</code> recomendado).</li>
+<li><strong>Pip:</strong> Gerenciador de pacotes do Python.</li>
+<li><strong>MkDocs e Material for MkDocs:</strong> Instalados via pip.</li>
+<li><strong>Google Cloud SDK (<code>gcloud</code> CLI):</strong> Configurado e autenticado com a sua conta Google Cloud (necessário apenas para deploy do backend).</li>
+<li><strong>Chave da API do Google (<code>GOOGLE_API_KEY</code>):</strong> Para acesso aos modelos de Embedding e LLM. Deve ser configurada como variável de ambiente (localmente via arquivo <code>.env</code> e no ambiente da Google Cloud Function).</li>
+<li><strong>Editor de Texto ou IDE:</strong> Para modificar os arquivos de código e documentação.</li>
+</ul>
+<h3 id="53-primeiros-passos-clonagem-e-configuracao-do-ambiente">5.3. Primeiros Passos: Clonagem e Configuração do Ambiente</h3>
+<ol>
+<li><strong>Clonar o Repositório:</strong>
+    Abra o terminal e execute:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Resck/Takwara-Tech.git
+</code></pre></div>
+    Navegue para a raiz do repositório clonado:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>Takwara-Tech
+</code></pre></div></li>
+<li><strong>Configurar Ambiente Python:</strong>
+    Crie um ambiente virtual (recomendado):
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+</code></pre></div>
+    Ative o ambiente virtual:<ul>
+<li>No Windows: <code>.venv\Scripts\activate</code></li>
+<li>No macOS/Linux: <code>source .venv/bin/activate</code>
+Instale as dependências do projeto (frontend e backend):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div></li>
+</ul>
+</li>
+<li><strong>Configurar Chave da API do Google:</strong>
+    Crie um arquivo chamado <code>.env</code> na raiz do repositório com o seguinte conteúdo (substitua <code>SUA_CHAVE_AQUI</code> pela sua chave real):
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>GOOGLE_API_KEY=&quot;SUA_CHAVE_AQUI&quot;
+</code></pre></div>
+    <em>Nota:</em> Esta chave também precisará ser configurada diretamente no ambiente da Google Cloud Function para o deploy do backend.</li>
+</ol>
+<h3 id="54-fluxos-de-trabalho-de-manutencao-detalhados">5.4. Fluxos de Trabalho de Manutenção Detalhados</h3>
+<p>A manutenção da plataforma envolve diferentes fluxos, dependendo do componente a ser atualizado. Estes fluxos seguem os passos do Ciclo de Atualização (SOP) detalhado na Seção 3.2, com foco nas ações específicas para cada tipo de componente.</p>
+<h4 id="541-atualizacao-de-conteudo-arquivos-markdown">5.4.1. Atualização de Conteúdo (Arquivos Markdown)</h4>
+<p>Este fluxo abrange a adição ou edição de artigos, documentação e outras informações que aparecem no site estático e alimentam a base de conhecimento da AVT.</p>
+<ol>
+<li><strong>Localize a Pasta de Documentos:</strong> Os arquivos Markdown (<code>.md</code>) estão localizados na pasta <code>docs/</code> na raiz do repositório.</li>
+<li><strong>Adicione ou Edite Arquivos <code>.md</code>:</strong> Use seu editor para criar novos arquivos ou modificar os existentes dentro da estrutura de pastas em <code>docs/</code>.</li>
+<li><strong>Atualize a Navegação do Site (Obrigatório para Novos Arquivos):</strong> Se você adicionou um novo arquivo ou moveu um arquivo existente, é <strong>essencial</strong> "matricular" este arquivo na estrutura de navegação no arquivo de configuração do MkDocs: <code>mkdocs.yml</code> (na raiz do repositório).<ul>
+<li>Abra <code>mkdocs.yml</code>.</li>
+<li>Encontre a seção <code>nav:</code>.</li>
+<li>Adicione uma entrada para o seu novo arquivo, seguindo a estrutura hierárquica desejada. Exemplo:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">nav</span><span class="p">:</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Início&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;index.md&#39;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="c1"># ... outras entradas ...</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Nova</span><span class="nv"> </span><span class="s">Seção&#39;</span><span class="p p-Indicator">:</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Meu</span><span class="nv"> </span><span class="s">Novo</span><span class="nv"> </span><span class="s">Artigo&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;caminho/para/meu-novo-artigo.md&#39;</span><span class="w"> </span><span class="c1"># &lt;-- Adicione a entrada aqui</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">  </span><span class="c1"># ...</span>
+</code></pre></div></li>
+<li>Salve <code>mkdocs.yml</code>.</li>
+</ul>
+</li>
+<li><strong>Pré-visualize as Alterações (Opcional, mas Recomendado):</strong> Para ver como as suas alterações de conteúdo e navegação aparecem no site, rode o servidor local do MkDocs (<code>mkdocs serve</code> na raiz do repositório com ambiente virtual ativo) e navegue em <code>http://127.0.0.1:8000/</code>.</li>
+<li><strong>Atualize a Base de Conhecimento da AVT:</strong> Navegue para a pasta <code>Chatbot - Takwara</code>, certifique-se que o ambiente virtual está ativo e execute <code>python create_vector_store.py</code>. Este script processará os arquivos <code>.md</code> atualizados e salvará a base de dados em <code>./backend-api/chroma_db</code>.</li>
+<li><strong>Deploy do Backend da AVT:</strong> Navegue para a pasta do backend (<code>backend-api</code> ou pasta pai), certifique-se que o ambiente virtual está ativo e execute o comando <code>gcloud functions deploy...</code> para enviar a API com a nova base de dados.</li>
+<li><strong>Salve e Versiona as Alterações (Git):</strong> Navegue de volta para a <strong>raiz do repositório</strong>, adicione todas as suas alterações (<code>git add .</code>), crie um commit (<code>git commit -m "..."</code>) e envie para o GitHub (<code>git push origin main</code>).</li>
+<li><strong>Publique o Site Frontend (GitHub Pages):</strong> Na <strong>raiz do repositório</strong>, com o ambiente virtual ativo, execute <code>mkdocs gh-deploy</code>.</li>
+<li><strong>Verifique Online:</strong> Acesse o site publicado em uma janela anônima ou limpe o cache para ver a versão mais recente e testar o conteúdo e a AVT.</li>
+</ol>
+<h4 id="542-atualizacao-de-layout-e-funcionalidades-do-frontend-html-css-javascript">5.4.2. Atualização de Layout e Funcionalidades do Frontend (HTML, CSS, JavaScript)</h4>
+<p>Este fluxo abrange modificações na aparência do site, Tool Box e na lógica das ferramentas que rodam no navegador.</p>
+<ol>
+<li><strong>Localize os Arquivos:</strong> Os arquivos de customização estão em <code>overrides/</code> (templates HTML) e <code>docs/assets/js/</code>, <code>docs/assets/css/</code> (scripts e estilos customizados). O script principal da Tool Box é <code>docs/assets/js/toolbox.js</code>.</li>
+<li><strong>Edite Arquivos:</strong> Modifique os arquivos <code>.html</code>, <code>.css</code> ou <code>.js</code> conforme necessário. Ao modificar JavaScripts das ferramentas (AVT, Calculadora, Grafo), lembre-se que elas rodam no Shadow DOM da Tool Box e são inicializadas pelo evento <code>takwara:tools-ready</code>.</li>
+<li><strong>Pré-visualize as Alterações:</strong> Utilize <code>mkdocs serve</code> (na raiz do repositório) para visualizar as alterações localmente no navegador antes de publicar.</li>
+<li><strong>Salve e Versiona as Alterações (Git):</strong> Navegue para a <strong>raiz do repositório</strong>, adicione todas as suas alterações (<code>git add .</code>), crie um commit (<code>git commit -m "..."</code>) e envie para o GitHub (<code>git push origin main</code>).</li>
+<li><strong>Publique o Site Frontend (GitHub Pages):</strong> Na <strong>raiz do repositório</strong>, com o ambiente virtual ativo, execute <code>mkdocs gh-deploy</code>.</li>
+<li><strong>Verifique Online:</strong> Acesse o site publicado em uma janela anônima ou limpe o cache.</li>
+</ol>
+<h4 id="543-atualizacao-da-logica-do-backend-api-da-calculadora-logica-rag-da-avt-em-mainpy">5.4.3. Atualização da Lógica do Backend (API da Calculadora, Lógica RAG da AVT em <code>main.py</code>)</h4>
+<p>Este fluxo abrange modificações no código Python que roda na Google Cloud Function.</p>
+<ol>
+<li><strong>Localize os Arquivos:</strong> O código principal do backend está na pasta <code>Chatbot - Takwara/backend-api/</code> (ex: <code>main.py</code>).</li>
+<li><strong>Edite Arquivos:</strong> Modifique os arquivos Python em <code>backend-api/</code>. Por exemplo, para ajustar o prompt ou o retriever da AVT no <code>main.py</code>, ou corrigir a lógica da API da Calculadora.</li>
+<li><strong>Salve as Alterações:</strong> Salve os arquivos Python modificados.</li>
+<li><strong>Prepare e Versiona as Alterações (Git):</strong> Navegue para a <strong>raiz do repositório</strong>, adicione todas as suas alterações (<code>git add .</code>), crie um commit (<code>git commit -m "..."</code>) e envie para o GitHub (<code>git push origin main</code>).</li>
+<li><strong>Deploy do Backend (Obrigatório para Aplicar Alterações na Lógica):</strong> Navegue para a pasta que contém a pasta do backend (<code>Chatbot - Takwara</code> ou pasta pai), certifique-se que o ambiente virtual está ativo e execute o comando <code>gcloud functions deploy...</code> (ajuste região, memória, timeout se necessário, e o caminho <code>--source</code> se <code>backend-api</code> não estiver diretamente nesta pasta).</li>
+<li><strong>Verifique Online:</strong> Acesse o site publicado e teste a funcionalidade da AVT ou da Calculadora (se a API dela foi modificada).</li>
+</ol>
+<h3 id="55-comandos-comuns-do-terminal-para-manutencao-do-repositorio">5.5. Comandos Comuns do Terminal para Manutenção do Repositório</h3>
+<p>Execute estes comandos no terminal na <strong>raiz do seu repositório</strong> (<code>Takwara-Tech</code>), com o ambiente virtual ativo.</p>
+<ul>
+<li><strong>Clonar o Repositório:</strong> <code>git clone &lt;repo_url&gt;</code></li>
+<li><strong>Verificar Status dos Arquivos:</strong> <code>git status</code> (Mostra quais arquivos foram modificados, adicionados ou removidos)</li>
+<li><strong>Adicionar Arquivos Modificados para Commit:</strong> <code>git add .</code> (Adiciona todos os arquivos modificados/novos no diretório atual e subdiretórios)</li>
+<li><strong>Criar um Commit:</strong> <code>git commit -m "Mensagem descritiva das alterações"</code> (Salve as alterações localmente com uma mensagem)</li>
+<li><strong>Enviar Commits para o GitHub:</strong> <code>git push origin main</code> (Envia os commits locais para o branch 'main' no GitHub)</li>
+<li><strong>Baixar Últimas Alterações do GitHub:</strong> <code>git pull origin main</code> (Baixa as alterações do branch 'main' no GitHub para o seu repositório local)</li>
+<li><strong>Criar um Novo Branch (para desenvolver uma feature isoladamente):</strong> <code>git branch minha-nova-feature</code></li>
+<li><strong>Mudar para um Branch:</strong> <code>git checkout minha-nova-feature</code></li>
+<li><strong>Construir Site Localmente:</strong> <code>mkdocs build</code> (Cria a pasta <code>site/</code> com o site estático)</li>
+<li><strong>Servir Site Localmente para Pré-visualizar:</strong> <code>mkdocs serve</code> (Inicia um servidor web local)</li>
+<li><strong>Publicar Site no GitHub Pages:</strong> <code>mkdocs gh-deploy</code> (Construí e envia para o branch <code>gh-pages</code>)</li>
+<li><strong>Atualizar Base de Conhecimento da AVT:</strong> Navegue para <code>Chatbot - Takwara</code> e execute <code>python create_vector_store.py</code>.</li>
+<li><strong>Deploy da Google Cloud Function:</strong> Navegue para <code>Chatbot - Takwara/backend-api</code> e execute <code>gcloud functions deploy...</code>.</li>
+</ul>
+<h3 id="56-contribuicao-e-a-licenca-cc-by-40">5.6. Contribuição e a Licença CC BY 4.0</h3>
+<p>O projeto Takwara-Tech é licenciado sob a <a href="https://creativecommons.org/licenses/by/4.0/deed.pt">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>. Isso significa que você é livre para:</p>
+<ul>
+<li><strong>Compartilhar:</strong> Copiar e redistribuir o material em qualquer suporte ou formato.</li>
+<li><strong>Adaptar:</strong> Remixar, transformar, e criar a partir do material para quaisquer fins, mesmo que comerciais.</li>
+</ul>
+<p>Desde que você <strong>atribua o devido crédito</strong>, forneça um link para a licença e indique se foram feitas alterações. Você pode fazê-lo de qualquer forma razoável, mas não de forma a sugerir que o licenciante o endossa ou aprova o seu uso.</p>
+<p><img alt="Licença CC BY 4.0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /> Este trabalho está licenciado sob a Creative Commons Atribuição 4.0 Internacional.</p>
+<p>Encorajamos ativamente a colaboração e a multiplicação desta tecnologia e conhecimento. Se você deseja contribuir com código, documentação ou dados, siga o fluxo de trabalho padrão do GitHub:</p>
+<ol>
+<li><strong>Fork</strong> o repositório para a sua conta GitHub.</li>
+<li><strong>Clone</strong> o seu fork para o seu computador local.</li>
+<li><strong>Crie um novo branch</strong> para as suas alterações (<code>git checkout -b nome-da-sua-feature</code>).</li>
+<li><strong>Faça as suas modificações</strong> (código, documentação, dados).</li>
+<li><strong>Salve e versiona</strong> as suas alterações (<code>git add .</code>, <code>git commit -m "Sua mensagem"</code>).</li>
+<li><strong>Envie</strong> suas alterações para o seu fork no GitHub (<code>git push origin nome-da-sua-feature</code>).</li>
+<li><strong>Crie um Pull Request (PR)</strong> da sua branch no seu fork para a branch <code>main</code> do repositório original Takwara-Tech.</li>
+<li>Descreva claramente as suas alterações no Pull Request.</li>
+</ol>
+<h3 id="57-repositorios-com-estruturas-tecnologicas-similares-para-inspiracao">5.7. Repositórios com Estruturas Tecnológicas Similares (Para Inspiração)</h3>
+<p>Projetos que combinam geradores de sites estáticos com APIs e ferramentas de dados/IA são cada vez mais comuns. Embora a combinação exata de MkDocs + Cloud Functions + ChromaDB + vis.js + Web Components possa ser específica, exemplos de aplicação destes componentes podem ser encontrados em:</p>
+<ul>
+<li><strong>Documentação como Código:</strong> Projetos que utilizam MkDocs, Sphinx, Jekyll ou Hugo para gerar documentação a partir de arquivos de texto versionados em Git. O próprio <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs Documentation</a> é um excelente exemplo do uso avançado do tema e suas funcionalidades.</li>
+<li><strong>Projetos de Visualização de Dados com JavaScript:</strong> Repositórios que utilizam bibliotecas como <code>vis.js</code>, <code>Cytoscape.js</code>, <code>D3.js</code> para criar visualizações interativas baseadas em dados estruturados (que poderiam, por exemplo, vir de um arquivo JSON gerado por um script).</li>
+<li><strong>Exemplos de RAG com LangChain/LlamaIndex:</strong> Muitos repositórios no GitHub demonstram o uso de LangChain ou LlamaIndex para criar pipelines de Question Answering com base em documentos, frequentemente integrando bases de dados vetoriais como ChromaDB e modelos de LLM/Embeddings. Buscar por "Langchain RAG example github" ou "LlamaIndex ChromaDB tutorial" pode fornecer insights sobre a parte backend da AVT.</li>
+<li><strong>Projetos Serverless com Python:</strong> Repositórios demonstrando o uso de Google Cloud Functions, AWS Lambda ou Azure Functions com Python para criar APIs RESTful que interagem com outros serviços (como bases de dados ou APIs de IA).</li>
+</ul>
+<h2 id="secao-6-apendice-tecnico-analise-detalhada-do-script-create_vector_storepy">Seção 6: Apêndice Técnico: Análise Detalhada do Script <code>create_vector_store.py</code></h2>
+<p>Este apêndice fornece uma análise aprofundada do script Python responsável por gerar a base de conhecimento da Assistente Virtual.</p>
+<h3 id="61-objetivo-do-script">6.1. Objetivo do Script</h3>
+<p>O <code>create_vector_store.py</code> funciona como um "indexador" ou "construtor de memória" para a Assistente Virtual. Sua missão principal é:</p>
+<ol>
+<li>Acessar o conteúdo textual de um repositório Git (especificamente o repositório do site Takwara-Tech).</li>
+<li>Processar esse conteúdo utilizando modelos de Embedding (IA).</li>
+<li>Salvar o texto original e seus vetores correspondentes em uma base de dados vetorial local.</li>
+</ol>
+<p>Esta base de dados (ChromaDB) é o que a API backend utiliza para realizar buscas rápidas de similaridade semântica, permitindo que a Assistente Virtual encontre informações relevantes para responder às perguntas dos usuários, mesmo que as palavras exatas da pergunta não estejam presentes no texto original.</p>
+<h3 id="62-o-fluxo-de-trabalho-uma-jornada-em-6-etapas">6.2. O Fluxo de Trabalho: Uma Jornada em 6 Etapas</h3>
+<p>Antes de analisar o código, é útil entender a sequência lógica de operações realizadas pelo script:</p>
+<ol>
+<li><strong>Clonar:</strong> O script inicia baixando uma cópia local do repositório Git alvo (definido pela <code>REPO_URL</code>) para um diretório temporário (<code>./temp_repo</code>).</li>
+<li><strong>Carregar:</strong> Ele lê os arquivos de texto baixados que correspondem a um filtro especificado (por exemplo, apenas arquivos <code>.py</code>, <code>.md</code>, <code>.txt</code>).</li>
+<li><strong>Dividir:</strong> Como modelos de Embedding geralmente têm um limite no tamanho do texto que podem processar de uma vez, e para garantir que os resultados da busca sejam granulars e contextuais, o script quebra os documentos lidos em pedaços menores (chunks) com alguma sobreposição entre eles. Ferramentas como <code>RecursiveCharacterTextSplitter</code> ou <code>MarkdownHeaderTextSplitter</code> são usadas para essa divisão inteligente.</li>
+<li><strong>Vetorizar (ou "Embed"):</strong> Para cada pedaço de texto resultante da divisão, o script envia este texto para uma API de modelo de Embedding (neste caso, a API do Google, <code>GoogleGenerativeAIEmbeddings</code>). O modelo de IA processa o texto e o converte em um vetor numérico de alta dimensão (um "embedding") que captura seu significado semântico. Textos com significados similares terão vetores próximos no espaço multidimensional.</li>
+<li><strong>Armazenar:</strong> O script armazena cada pedaço de texto original juntamente com seu vetor correspondente em uma base de dados vetorial (ChromaDB). Esta base de dados é otimizada para realizar buscas rápidas de vizinhos mais próximos (ou seja, encontrar vetores - e, portanto, textos - semanticamente similares a um vetor de consulta).</li>
+<li><strong>Salvar:</strong> Finalmente, o script salva a base de dados ChromaDB criada no disco, em um diretório persistente (definido por <code>PERSIST_DIRECTORY</code>, configurado para ser <code>./backend-api/chroma_db</code>). Isso permite que a API backend carregue a base de dados rapidamente sem ter que refazer todo o processo de clonagem, carregamento, divisão e vetorização a cada vez.</li>
+</ol>
+<h3 id="63-destrinchando-o-codigo">6.3. Destrinchando o Código</h3>
+<p>Vamos analisar os blocos de código Python que implementam este fluxo:</p>
+<h4 id="1-as-importacoes-as-ferramentas-necessarias">1. As Importações (As Ferramentas Necessárias)</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain_community.document_loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">GitLoader</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain.text_splitter</span><span class="w"> </span><span class="kn">import</span> <span class="n">RecursiveCharacterTextSplitter</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain_community.vectorstores</span><span class="w"> </span><span class="kn">import</span> <span class="n">Chroma</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain_google_genai</span><span class="w"> </span><span class="kn">import</span> <span class="n">GoogleGenerativeAIEmbeddings</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="c1"># Pode incluir outras importações se o script usar MarkdownHeaderTextSplitter, etc.</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="c1"># from langchain.text_splitter import MarkdownHeaderTextSplitter</span>
+</code></pre></div>
+<ul>
+<li><code>import os</code>: Fornece funções para interagir com o sistema operacional, útil para manipular caminhos de arquivos e diretórios.</li>
+<li><code>from dotenv import load_dotenv</code>: Importa a função para carregar variáveis de ambiente a partir de um arquivo <code>.env</code>, usado para carregar a chave da API do Google sem expô-la no código.</li>
+<li><code>from langchain_community.document_loaders import GitLoader</code>: Importa a classe <code>GitLoader</code> da biblioteca LangChain, especializada em clonar repositórios Git e carregar seu conteúdo como documentos.</li>
+<li><code>from langchain.text_splitter import RecursiveCharacterTextSplitter</code>: Importa uma classe para dividir textos longos de forma recursiva, tentando manter a coerência contextual. (Outros splitters como <code>MarkdownHeaderTextSplitter</code> podem ser usados, dependendo da versão do script).</li>
+<li><code>from langchain_community.vectorstores import Chroma</code>: Importa a classe <code>Chroma</code> da biblioteca LangChain, que fornece a interface para a base de dados vetorial ChromaDB.</li>
+<li><code>from langchain_google_genai import GoogleGenerativeAIEmbeddings</code>: Importa a classe para criar embeddings usando a API Generative AI do Google (Gemini/Vertex AI).</li>
+</ul>
+<h4 id="2-as-configuracoes-globais-definindo-o-alvo">2. As Configurações Globais (Definindo o Alvo)</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">load_dotenv</span><span class="p">()</span> <span class="c1"># Carrega variáveis do .env</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c1"># Configurações do Repositório e Diretório de Persistência</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">REPO_URL</span> <span class="o">=</span> <span class="s2">&quot;URL_DO_SEU_REPOSITORIO_AQUI&quot;</span> <span class="c1"># Ex: &quot;https://github.com/resck/Takwara-Tech.git&quot;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">PERSIST_DIRECTORY</span> <span class="o">=</span> <span class="s2">&quot;./backend-api/chroma_db&quot;</span> <span class="c1"># Diretório onde a base de dados ChromaDB será salva (dentro da pasta da API)</span>
+</code></pre></div>
+<ul>
+<li><code>load_dotenv()</code>: Executa a função para ler o arquivo <code>.env</code> (que deve conter <code>GOOGLE_API_KEY="SUA_CHAVE_AQUI"</code>) e carregar as variáveis para o ambiente do script.</li>
+<li><code>REPO_URL</code>: Uma variável string que define a URL do repositório Git a ser clonado e processado pelo script.</li>
+<li><code>PERSIST_DIRECTORY</code>: Define o caminho do diretório onde a base de dados ChromaDB persistirá (será salva). É configurado para apontar para um subdiretório dentro da pasta que será incluída no deploy da API backend, garantindo que a base de dados correta seja enviada.</li>
+</ul>
+<h4 id="3-a-funcao-principal-build_and_save_vector_store">3. A Função Principal (<code>build_and_save_vector_store</code>)</h4>
+<p>Este é o bloco de código que orquestra as etapas do fluxo de trabalho.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">build_and_save_vector_store</span><span class="p">():</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="c1"># 1. e 2. Clonar e Carregar Documentos</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Clonando repositório de </span><span class="si">{</span><span class="n">REPO_URL</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    <span class="n">loader</span> <span class="o">=</span> <span class="n">GitLoader</span><span class="p">(</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>        <span class="n">clone_url</span><span class="o">=</span><span class="n">REPO_URL</span><span class="p">,</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        <span class="n">repo_path</span><span class="o">=</span><span class="s2">&quot;./temp_repo&quot;</span><span class="p">,</span> <span class="c1"># Clona para um diretório temporário</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>        <span class="n">file_filter</span><span class="o">=</span><span class="k">lambda</span> <span class="n">file_path</span><span class="p">:</span> <span class="n">file_path</span><span class="o">.</span><span class="n">endswith</span><span class="p">((</span><span class="s2">&quot;.py&quot;</span><span class="p">,</span> <span class="s2">&quot;.md&quot;</span><span class="p">,</span> <span class="s2">&quot;.txt&quot;</span><span class="p">))</span> <span class="c1"># Filtra por tipos de arquivo</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    <span class="p">)</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>    <span class="n">docs</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">load</span><span class="p">()</span> <span class="c1"># Carrega os documentos filtrados</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Carregados </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span><span class="si">}</span><span class="s2"> documentos.&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>    <span class="c1"># 3. Dividir Documentos em Pedaços (Chunks)</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dividindo documentos em pedaços (chunks)...&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>    <span class="c1"># Configuração do divisor (pode variar, MarkdownHeaderTextSplitter seria usado para estrutura MD)</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>    <span class="n">text_splitter</span> <span class="o">=</span> <span class="n">RecursiveCharacterTextSplitter</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">chunk_overlap</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>    <span class="c1"># Se usar MarkdownHeaderTextSplitter, seria algo como:</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>    <span class="c1"># headers_to_split_on = [(&quot;#&quot;, &quot;Header 1&quot;), (&quot;##&quot;, &quot;Header 2&quot;), ...]</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>    <span class="c1"># text_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>    <span class="n">chunks</span> <span class="o">=</span> <span class="n">text_splitter</span><span class="o">.</span><span class="n">split_documents</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Criados </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span><span class="si">}</span><span class="s2"> pedaços de texto.&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>    <span class="c1"># 4. Vetorizar (Embed) os Pedaços</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gerando embeddings para os pedaços (chunks)...&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>    <span class="c1"># Inicializa o modelo de Embedding do Google</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>    <span class="n">embeddings</span> <span class="o">=</span> <span class="n">GoogleGenerativeAIEmbeddings</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;models/embedding-001&quot;</span><span class="p">)</span> <span class="c1"># Modelo recomendado para embeddings</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>
+<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a>    <span class="c1"># 5. e 6. Armazenar e Salvar na Base de Dados Vetorial (ChromaDB)</span>
+<a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Criando e salvando a base de dados vetorial em </span><span class="si">{</span><span class="n">PERSIST_DIRECTORY</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a>    <span class="c1"># Cria uma nova base de dados ChromaDB a partir dos chunks e embeddings, persistindo no diretório especificado</span>
+<a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a>    <span class="n">vectorstore</span> <span class="o">=</span> <span class="n">Chroma</span><span class="o">.</span><span class="n">from_documents</span><span class="p">(</span>
+<a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a>        <span class="n">documents</span><span class="o">=</span><span class="n">chunks</span><span class="p">,</span>
+<a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a>        <span class="n">embedding</span><span class="o">=</span><span class="n">embeddings</span><span class="p">,</span>
+<a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a>        <span class="n">persist_directory</span><span class="o">=</span><span class="n">PERSIST_DIRECTORY</span>
+<a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a>    <span class="p">)</span>
+<a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a>
+<a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a>    <span class="c1"># O método from_documents já salva a base de dados no disco</span>
+<a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a>    <span class="c1"># vectorstore.persist() # Este método pode ser chamado explicitamente dependendo da versão da biblioteca</span>
+<a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a>
+<a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Base de dados vetorial criada e salva com sucesso.&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a>
+<a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a>    <span class="c1"># Opcional: Limpar o diretório temporário clonado</span>
+<a id="__codelineno-13-44" name="__codelineno-13-44" href="#__codelineno-13-44"></a>    <span class="c1"># import shutil</span>
+<a id="__codelineno-13-45" name="__codelineno-13-45" href="#__codelineno-13-45"></a>    <span class="c1"># if os.path.exists(&quot;./temp_repo&quot;):</span>
+<a id="__codelineno-13-46" name="__codelineno-13-46" href="#__codelineno-13-46"></a>    <span class="c1">#     shutil.rmtree(&quot;./temp_repo&quot;)</span>
+<a id="__codelineno-13-47" name="__codelineno-13-47" href="#__codelineno-13-47"></a>    <span class="c1">#     print(&quot;Diretório temporário ./temp_repo removido.&quot;)</span>
+<a id="__codelineno-13-48" name="__codelineno-13-48" href="#__codelineno-13-48"></a>
+<a id="__codelineno-13-49" name="__codelineno-13-49" href="#__codelineno-13-49"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-13-50" name="__codelineno-13-50" href="#__codelineno-13-50"></a>    <span class="n">build_and_save_vector_store</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li><code>def build_and_save_vector_store():</code>: Define a função principal que contém a lógica de processamento.</li>
+<li><code>loader = GitLoader(...)</code>: Inicializa o <code>GitLoader</code> com a URL do repositório, um caminho temporário para clonagem (<code>./temp_repo</code>) e um filtro (<code>file_filter</code>) para carregar apenas arquivos de texto relevantes (Python, Markdown, TXT).</li>
+<li><code>docs = loader.load()</code>: Executa a operação de clonagem e carregamento, armazenando os documentos lidos em uma lista chamada <code>docs</code>.</li>
+<li><code>text_splitter = RecursiveCharacterTextSplitter(...)</code>: Inicializa um objeto divisor de texto (<code>text_splitter</code>) com parâmetros para definir o tamanho dos pedaços (<code>chunk_size</code>) e a sobreposição entre eles (<code>chunk_overlap</code>). O <code>MarkdownHeaderTextSplitter</code> seria uma alternativa específica para documentos Markdown.</li>
+<li><code>chunks = text_splitter.split_documents(docs)</code>: Aplica o divisor aos documentos carregados, gerando uma lista de pedaços menores.</li>
+<li><code>embeddings = GoogleGenerativeAIEmbeddings(...)</code>: Inicializa o modelo de Embedding do Google a ser utilizado para converter texto em vetores. <code>models/embedding-001</code> é um modelo comum para essa tarefa.</li>
+<li><code>vectorstore = Chroma.from_documents(...)</code>: Este é um passo crucial. Ele cria (ou carrega, se já existir) uma base de dados ChromaDB (<code>vectorstore</code>). O método <code>from_documents</code> recebe a lista de pedaços (<code>chunks</code>), o modelo de embedding (<code>embeddings</code>) e o diretório onde a base de dados deve ser persistida (<code>PERSIST_DIRECTORY</code>). Ele gera os embeddings para cada chunk usando o modelo fornecido e os armazena na base de dados, salvando tudo no disco automaticamente.</li>
+<li><code>if __name__ == "__main__":</code>: Este bloco garante que a função <code>build_and_save_vector_store()</code> seja executada apenas quando o script for rodado diretamente (e não quando importado como um módulo em outro script).</li>
+<li>(Comentários adicionais no código): Incluem opções para limpeza de arquivos temporários e a alternativa de usar <code>MarkdownHeaderTextSplitter</code>, que foi aprimorada durante a fase de refinamento da AVT.</li>
+</ul>
+<p>Este script encapsula o processo de transformar conteúdo textual em uma base de conhecimento vetorial pronta para ser utilizada por um sistema de Busca Aumentada por Recuperação (RAG - Retrieval Augmented Generation), que é a base do funcionamento da Assistente Virtual.</p>
+<h2 id="secao-7-glossario-tecnico-essencial-do-projeto">Seção 7: Glossário Técnico Essencial do Projeto</h2>
+<p>Este glossário oferece um guia técnico simplificado para navegar na estrutura de arquivos e componentes do projeto web Takwara-Tech, hospedado no GitHub. Ele explica o propósito dos principais arquivos e diretórios, as tecnologias associadas e como eles se relacionam com as funcionalidades visíveis no site (especialmente a Tool Box Interativa). O objetivo é fornecer um "mapa" do esqueleto do projeto, facilitando a compreensão para ajustes e contribuições.</p>
+<h3 id="71-introducao">7.1. Introdução</h3>
+<p>Este documento oferece um guia técnico simplificado para navegar na estrutura de arquivos do projeto web Takwara-Tech, hospedado no GitHub. Ele explica o propósito dos principais arquivos e diretórios, as tecnologias associadas e como eles se relacionam com as funcionalidades visíveis no site (especialmente a Tool Box Interativa). O objetivo é fornecer um "mapa" do esqueleto do projeto, facilitando a compreensão para ajustes e contribuições.</p>
+<h3 id="72-mapa-do-projeto-estrutura-de-pastas-simplificada">7.2. Mapa do Projeto (Estrutura de Pastas Simplificada)</h3>
+<p>Ao abrir o projeto em um editor como o VS Code, você verá uma estrutura de pastas e arquivos similar a esta (focando nos mais relevantes que trabalhamos):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Takwara-Tech/
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>├── .env                  # Configuração: Chave da API do Google (localmente)
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>├── mkdocs.yml            # Configuração: Define a estrutura do site MkDocs, tema, menus, scripts, etc.
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>├── docs/                 # Conteúdo: Onde ficam seus arquivos Markdown (.md) e assets do frontend.
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>│   ├── Artigos/          # Seus artigos e documentação organizada em pastas.
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>│   │   └── ...todos os seus arquivos .md...
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>│   ├── assets/           # Assets do frontend (imagens, css, js).
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>│   │   ├── css/          # Arquivos CSS customizados (.css).
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>│   │   ├── images/       # Imagens do site (.png, .jpg, etc.).
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>│   │   └── js/           # Arquivos JavaScript customizados (.js).
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>│   │       ├── script.js       # Lógica JavaScript da AVT (frontend).
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>│   │       ├── calculadora.js    # Lógica JavaScript da Calculadora (frontend).
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>│   │       ├── graph.js          # Lógica JavaScript do Grafo (frontend, vis.js).
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>│   │       ├── toolbox.js        # Lógica JavaScript do Web Component da Tool Box.
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>│   │       └── ...outros arquivos js...
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>│   ├── index.md          # Conteúdo: Página inicial do site.
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>│   └── ...outros arquivos .md na raiz de docs...
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>├── overrides/            # Frontend: Customizações dos templates HTML do tema Material for MkDocs.
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>│   └── partials/         # Partes reutilizáveis de HTML.
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>│       ├── widget-chatbot.html     # Frontend: HTML da interface da AVT.
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>│       ├── widget-calculadora.html # Frontend: HTML da interface da Calculadora.
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>│       ├── widget-grafo.html       # Frontend: HTML da interface do Grafo.
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>│       ├── widget-tools.html       # Frontend: HTML que inclui as interfaces das ferramentas (AVT, Grafo, Calc) para a Tool Box.
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>│       ├── main.html             # Frontend: Template principal da página (inclui o template da Tool Box).
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>│       ├── header.html           # Frontend: Template do cabeçalho (botão abrir Tool Box?).
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>│       ├── footer.html           # Frontend: Template do rodapé (Climate Clock?).
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>│       └── ...outros arquivos html...
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>├── Chatbot - Takwara/    # Backend + Build: Pasta relacionada ao sistema da AVT.
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>│   ├── backend-api/      # Backend: Código da Google Cloud Function da API da AVT.
+<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>│   │   ├── main.py             # Backend: Código Python da API da AVT (Lógica RAG, Prompt, Retriever).
+<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a>│   │   ├── requirements.txt    # Backend: Dependências Python da API.
+<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a>│   │   └── chroma_db/          # Backend/Dados: Base de dados vetorial da AVT (gerada pelo script).
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>│   └── create_vector_store.py    # Build: Script Python para criar/atualizar a base de dados chroma_db.
+<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a>├── requirements.txt      # Build: Dependências Python gerais do projeto (inclui mkdocs, langchains, etc.).
+<a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a>└── ...outros arquivos...
+</code></pre></div>
+<h3 id="73-glossario-de-componentes-chave">7.3. Glossário de Componentes Chave</h3>
+<p>Vamos detalhar os componentes principais, o que eles fazem e como você pode acessá-los para ajustes.</p>
+<ul>
+<li><strong><code>.env</code> (Configuração Local)</strong><ul>
+<li><strong>O que é:</strong> Arquivo simples de texto para armazenar variáveis de ambiente sensíveis, como chaves de API, localmente.</li>
+<li><strong>Para que serve:</strong> Mantém segredos fora do código fonte versionado. O script <code>create_vector_store.py</code> lê este arquivo para obter a <code>GOOGLE_API_KEY</code>.</li>
+<li><strong>Ajustes aqui:</strong> Configurar sua <code>GOOGLE_API_KEY="SUA_CHAVE"</code>.</li>
+</ul>
+</li>
+<li><strong><code>mkdocs.yml</code> (Configuração Central do Site)</strong><ul>
+<li><strong>O que é:</strong> O arquivo de configuração principal do MkDocs. Ele define a estrutura, o tema, o menu de navegação, quais arquivos JavaScript e CSS adicionais carregar, etc.</li>
+<li><strong>Para que serve:</strong> Controla a aparência e a estrutura GERAL do site estático.</li>
+<li><strong>Ajustes aqui:</strong><ul>
+<li><code>site_name</code>, <code>repo_url</code>, <code>repo_name</code>: Informações básicas do site.</li>
+<li><code>theme</code>: Configura o tema Material for MkDocs (cores, fontes, features). <code>custom_dir: overrides</code> indica que suas customizações de template estão na pasta <code>overrides/</code>.</li>
+<li><code>nav</code>: <strong>Crucial para a navegação!</strong> É uma lista que define o menu lateral do site e associa um texto de menu a um caminho de arquivo <code>.md</code> (ex: <code>'Início': 'index.md'</code>). <strong>Quando você adiciona um novo arquivo Markdown (<code>.md</code>) em <code>docs/</code>, precisa adicioná-lo aqui para que apareça no menu.</strong></li>
+<li><code>markdown_extensions</code>: Habilita funcionalidades extras no Markdown (títulos fixos, notas, etc.).</li>
+<li><code>extra_css</code>: Lista de arquivos CSS customizados a serem carregados no site.</li>
+<li><code>extra_javascript</code>: Lista de arquivos JavaScript customizados a serem carregados no site. <strong>Aqui você lista os scripts que dão vida às ferramentas (AVT, Calculadora, Grafo, Tool Box) e bibliotecas como <code>vis.js</code> e <code>marked.js</code>.</strong></li>
+</ul>
+</li>
+<li><strong>Como acessar:</strong> Use seu editor de texto para abrir <code>mkdocs.yml</code> na raiz do projeto.</li>
+</ul>
+</li>
+<li><strong><code>.gitignore</code> (Controle de Versão)</strong><ul>
+<li><strong>O que é:</strong> Arquivo de texto que lista arquivos e diretórios que o Git deve ignorar e não incluir no controle de versão.</li>
+<li><strong>Para que serve:</strong> Essencial para excluir arquivos temporários, de build, de configuração local (<code>.env</code>) e a base de dados binária (<code>chroma_db</code>) do repositório fonte, mantendo-o limpo e seguro.</li>
+<li><strong>Ajustes aqui:</strong> Garantir que as pastas de build (<code>/site/</code>), temporárias (<code>/Chatbot - Takwara/temp_repo/</code>) e a base de dados (<code>/Chatbot - Takwara/backend-api/chroma_db/</code>) estão listadas.</li>
+</ul>
+</li>
+<li><strong><code>requirements.txt</code> (Raiz do Repositório) (Dependências Python Gerais)</strong><ul>
+<li><strong>O que é:</strong> Lista de bibliotecas Python necessárias para rodar o <em>projeto como um todo</em>, incluindo MkDocs e as bibliotecas usadas localmente pelo script <code>create_vector_store.py</code>.</li>
+<li><strong>Para que serve:</strong> Permite instalar facilmente todas as dependências Python do ambiente de desenvolvimento/build local com <code>pip install -r requirements.txt</code>.</li>
+<li><strong>Ajustes aqui:</strong> Adicionar ou remover bibliotecas Python que não são exclusivas do backend da API, mas são usadas no processo de build ou pelo script local.</li>
+</ul>
+</li>
+<li><strong><code>docs/</code> (Conteúdo do Site)</strong><ul>
+<li><strong>O que é:</strong> A pasta onde residem todos os seus arquivos Markdown (<code>.md</code>) que formam o conteúdo textual do site.</li>
+<li><strong>Para que serve:</strong> É a FONTE de todo o conhecimento e documentação do projeto que é exibido no site e que alimenta a base da AVT.</li>
+<li><strong>Ajustes aqui:</strong> Escrever, editar e organizar seus artigos e documentação em arquivos <code>.md</code>.</li>
+<li><strong>Como acessar:</strong> Navegue até a pasta <code>docs/</code> no seu sistema de arquivos.</li>
+</ul>
+</li>
+<li><strong><code>overrides/partials/</code> (Componentes HTML da Interface)</strong><ul>
+<li><strong>O que é:</strong> Uma pasta dentro de <code>overrides/</code> que contém pequenos arquivos <code>.html</code> que representam "pedaços" da interface ou "widgets" (como a UI de cada ferramenta). Estes arquivos são incluídos em outros templates (<code>widget-tools.html</code>, <code>main.html</code>, etc.) usando a sintaxe <code>{% include "partials/nome-do-arquivo.html" %}</code>.</li>
+<li><strong>Para que serve:</strong> Permite reutilizar blocos de HTML e manter a estrutura da interface organizada.</li>
+<li><strong><code>widget-chatbot.html</code>:</strong> Contém o HTML da interface visual da AVT: a caixa onde as mensagens aparecem (<code>#chat-box</code>), o campo de input (<code>#user-input</code>), o botão enviar (<code>#chat-form .submit-button</code>) e o botão Copiar Conversa (<code>#copy-chat-button</code>). <strong>Ajustes aqui afetam a aparência (estrutura HTML) da interface da AVT.</strong></li>
+<li><strong><code>widget-calculadora.html</code>:</strong> Contém o HTML da interface da Calculadora: o formulário com os selects e inputs (<code>#calculator-form-widget</code>) e as áreas onde os resultados e materiais são exibidos (<code>#results-container-widget</code>, <code>#results-table-widget</code>, <code>#material-costs-widget</code>, <code>#footer-notes</code>), e o botão Baixar Resultados (<code>#download-results-button</code>). <strong>Ajustes aqui afetam a aparência (estrutura HTML) da interface da Calculadora.</strong></li>
+<li><strong><code>widget-grafo.html</code>:</strong> Contém o HTML da interface do Grafo: um contêiner (<code>#knowledge-graph</code>) onde a biblioteca <code>vis.js</code> irá "desenhar" a visualização do grafo. <strong>Ajustes aqui afetam a área visual onde o Grafo aparece.</strong></li>
+<li><strong><code>widget-tools.html</code>:</strong> Contém a estrutura HTML da Tool Box em si. Ela define as seções para AVT, Grafo e Calculadora (<code>&lt;div class="tool-section" id="..."&gt;</code>) e inclui os respectivos arquivos <code>widget-*.html</code> usando <code>{% include ... %}</code>. É este arquivo que o script <code>toolbox.js</code> carrega para dentro do Shadow DOM. <strong>Ajustes aqui afetam a estrutura geral da Tool Box e quais ferramentas aparecem nela.</strong></li>
+<li><strong><code>main.html</code>, <code>header.html</code>, <code>footer.html</code>:</strong> Templates principais do tema Material for MkDocs. Podem ser customizados para incluir os widgets da Tool Box, Painéis de Impacto, etc., usando a técnica de override de templates e incluindo os arquivos parciais. <strong>Ajustes aqui afetam a estrutura principal das páginas, cabeçalho e rodapé FORA do Shadow DOM da Tool Box.</strong></li>
+<li><strong>Como acessar:</strong> Navegue até <code>overrides/partials/</code> (e <code>overrides/</code> para os principais) no seu sistema de arquivos. Use seu editor.</li>
+</ul>
+</li>
+<li><strong><code>docs/assets/js/</code> (Lógica Frontend)</strong><ul>
+<li><strong>O que é:</strong> A pasta que contém os arquivos JavaScript que adicionam interatividade e lógica às ferramentas no frontend.</li>
+<li><strong>Para que serve:</strong> Controlam o COMPORTAMENTO das ferramentas no navegador (o que acontece quando você clica, digita, rola, etc.). São listados em <code>mkdocs.yml</code> (<code>extra_javascript</code>).</li>
+<li><strong><code>toolbox.js</code>:</strong> O script que cria o Web Component <code>&lt;takwara-toolbox&gt;</code>. Ele define o Shadow DOM (<code>&lt;style&gt;</code> para o CSS interno) e anexa o HTML do <code>widget-tools.html</code> dentro dele. Crucialmente, ele dispara o evento <code>takwara:tools-ready</code> <em>após</em> renderizar o conteúdo. <strong>Ajustes aqui afetam o posicionamento e o layout GERAL da Tool Box lateral (fixo, altura, scroll, encavalamento) e o seu encapsulamento.</strong></li>
+<li><strong><code>script.js</code>:</strong> O script JavaScript que gerencia a interface da AVT. Ele "escuta" o evento <code>takwara:tools-ready</code>, busca os elementos da AVT (<code>#chat-box</code>, <code>#chat-form</code>, etc.) <em>dentro do Shadow DOM</em>, adiciona listeners de evento (ex: ao formulário para enviar a pergunta), chama a API backend e atualiza a UI do chat com as respostas (incluindo renderização Markdown com <code>marked.js</code>). <strong>Ajustes aqui afetam como a AVT se comporta no navegador, a comunicação com a API, e como as mensagens são exibidas.</strong></li>
+<li><strong><code>calculadora.js</code>:</strong> O script JavaScript que gerencia a interface da Calculadora. Similar ao <code>script.js</code>, escuta <code>takwara:tools-ready</code>, busca elementos <em>no Shadow DOM</em>, popula os selects (usando base de dados JS), adiciona listeners de evento ao formulário e ao botão de download, chama a API backend da calculadora e exibe os resultados. <strong>Ajustes aqui afetam o comportamento da Calculadora no navegador, a chamada da API e a exibição/download dos resultados.</strong></li>
+<li><strong><code>graph.js</code>:</strong> O script JavaScript que gerencia a visualização do Grafo. Escuta <code>takwara:tools-ready</code>, busca o contêiner <code>#knowledge-graph</code> <em>no Shadow DOM</em>, usa a biblioteca <code>vis.js</code> para desenhar o grafo (de dados JS ou API), configura a simulação física e a interatividade, e lida com a navegação ao clicar nos nós. <strong>Ajustes aqui afetam como o Grafo é desenhado e como você interage com ele.</strong></li>
+<li><strong>Como acessar:</strong> Navegue até <code>docs/assets/js/</code> no seu sistema de arquivos. Use seu editor.</li>
+</ul>
+</li>
+<li><strong><code>Chatbot - Takwara/backend-api/</code> (Backend da API da AVT)</strong><ul>
+<li><strong>O que é:</strong> A pasta que contém o código Python da Google Cloud Function que atua como o "cérebro" da AVT.</li>
+<li><strong>Para que serve:</strong> É o ambiente onde a API backend roda. Contém o código principal (<code>main.py</code>), as dependências Python específicas do backend (<code>requirements.txt</code>) e a base de dados vetorial (<code>chroma_db</code>).</li>
+<li><strong><code>main.py</code>:</strong> O código Python que roda na Google Cloud Function. Recebe as perguntas do frontend, carrega a base de conhecimento (<code>chroma_db</code>), usa modelos de IA (embeddings, LLM), encontra documentos relevantes (Retriever), usa o prompt template para formular a resposta e a devolve ao frontend. <strong>É aqui que reside a inteligência da AVT e a lógica de busca contextual.</strong></li>
+<li><strong><code>requirements.txt</code>:</strong> Lista de bibliotecas Python <em>específicas</em> necessárias para rodar o código da Google Cloud Function. <strong>É CRUCIAL que esta lista seja minimalista</strong> e contenha APENAS as bibliotecas usadas pelo código da API, para evitar conflitos no ambiente serverless.</li>
+<li><strong><code>chroma_db/</code>:</strong> Uma pasta contendo arquivos binários que representam a base de dados vetorial da AVT. É a "memória" da AVT. <strong>Não edite esses arquivos diretamente!</strong> Esta pasta é gerada e atualizada <strong>apenas</strong> pelo script <code>create_vector_store.py</code>.</li>
+<li><strong>Como acessar:</strong> Navegue até <code>Chatbot - Takwara/backend-api/</code> no seu sistema de arquivos. Use seu editor.</li>
+</ul>
+</li>
+<li><strong><code>Chatbot - Takwara/create_vector_store.py</code> (Build da Base de Conhecimento)</strong><ul>
+<li><strong>O que é:</strong> Um script Python que você executa localmente no seu terminal.</li>
+<li><strong>Para que serve:</strong> Ele lê os arquivos Markdown do seu repositório, processa o texto (divide em pedaços, cria embeddings usando a API do Google) e SALVA a base de dados vetorial <code>chroma_db</code> na pasta <code>backend-api/</code>. <strong>É essencial rodar este script SEMPRE que atualizar o conteúdo (<code>.md</code>) para que a AVT "aprenda" sobre as mudanças, antes de fazer o deploy do backend.</strong></li>
+<li><strong>Ajustes aqui:</strong> Configurar qual repositório clonar, onde estão os arquivos de origem (<code>docs</code>), como dividir o texto (splitters, <code>chunk_size</code>, <code>chunk_overlap</code>, <code>headers_to_split_on</code>), e onde salvar a base de dados (<code>PERSIST_DIRECTORY</code>).</li>
+<li><strong>Como acessar:</strong> Navegue até <code>Chatbot - Takwara/create_vector_store.py</code> no seu sistema de arquivos. Use seu editor. Execute no terminal a partir da pasta <code>Chatbot - Takwara</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="74-o-que-acontece-no-site-ao-mudar-um-componente-exemplos">7.4. O que Acontece no Site ao Mudar um Componente (Exemplos)</h3>
+<ul>
+<li><strong>Mudar texto em <code>docs/artigo.md</code>:</strong> O texto da página naquele artigo muda quando você roda <code>mkdocs gh-deploy</code>. A AVT <em>só</em> saberá do novo texto após rodar <code>create_vector_store.py</code>, deployar o backend (<code>main.py</code>), e o MkDocs servir o site atualizado.</li>
+<li><strong>Adicionar entrada em <code>mkdocs.yml</code> (<code>nav:</code>):</strong> Um novo item aparece no menu lateral do site após <code>mkdocs gh-deploy</code>.</li>
+<li><strong>Mudar CSS em <code>docs/assets/css/custom.css</code>:</strong> Cores, fontes, espaçamentos do site (FORA da Tool Box) mudam após <code>mkdocs gh-deploy</code>.</li>
+<li><strong>Mudar CSS em <code>&lt;style&gt;</code> dentro de <code>docs/assets/js/toolbox.js</code> (ou em um arquivo <code>.css</code> incluído pelo Shadow DOM):</strong> Cores, fontes, espaçamentos DENTRO da Tool Box mudam após <code>mkdocs gh-deploy</code>.</li>
+<li><strong>Mudar HTML em <code>overrides/partials/widget-chatbot.html</code>:</strong> A estrutura visual da interface da AVT (onde estão os botões, caixas) muda <em>dentro da Tool Box</em> após <code>mkdocs gh-deploy</code>. (Lembre-se, este HTML é incluído pelo <code>toolbox.js</code> no Shadow DOM).</li>
+<li><strong>Mudar lógica em <code>docs/assets/js/script.js</code>:</strong> O comportamento da AVT no navegador (como ela envia a pergunta, como exibe a resposta, como funciona o botão copiar) muda após <code>mkdocs gh-deploy</code>. Se mudar a comunicação com a API, pode precisar de deploy do backend também.</li>
+<li><strong>Mudar lógica em <code>Chatbot - Takwara/backend-api/main.py</code>:</strong> Como a AVT pensa, busca e formula respostas (usando a base de dados e IA) muda após o <strong>deploy da Google Cloud Function</strong>. O frontend (<code>script.js</code>) continua chamando a API, mas a resposta vinda do "cérebro" é diferente.</li>
+<li><strong>Rodar <code>create_vector_store.py</code>:</strong> A base de dados <code>chroma_db</code> é atualizada ou recriada localmente. <strong>NADA MUDARÁ no site online ou na AVT até que você faça o deploy do backend com esta nova base de dados.</strong></li>
+</ul>
+<h2 id="secao-8-referencias-e-links">Seção 8: Referências e Links</h2>
+<ul>
+<li>GitHub Pages: <a href="https://pages.github.com/">https://pages.github.com/</a></li>
+<li>Repositório Takwara-Tech no GitHub: <a href="https://resck.github.io/Takwara-Tech/">https://resck.github.io/Takwara-Tech/</a> (URL do site publicado)</li>
+<li>GitHub Docs - About branches: <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches">https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches</a></li>
+<li>GitHub Docs - About pull requests: <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests</a></li>
+<li>GitHub Docs - Diretrizes da comunidade: <a href="https://docs.github.com/pt/site-policy/github-terms/github-community-guidelines">https://docs.github.com/pt/site-policy/github-terms/github-community-guidelines</a></li>
+<li>GitHub Docs - Políticas de uso aceitável: <a href="https://docs.github.com/pt/site-policy/acceptable-use-policies/github-acceptable-use-policies">https://docs.github.com/pt/site-policy/acceptable-use-policies/github-acceptable-use-policies</a></li>
+<li>GitHub Docs - Termos de Serviço: <a href="https://docs.github.com/pt/site-policy/github-terms/github-terms-of-service">https://docs.github.com/pt/site-policy/github-terms/github-terms-of-service</a></li>
+<li>Material for MkDocs: <a href="https://squidfunk.github.io/mkdocs-material/">https://squidfunk.github.io/mkdocs-material/</a></li>
+<li>Google Cloud Functions: <a href="https://cloud.google.com/functions">https://cloud.google.com/functions</a></li>
+<li>Langchain: <a href="https://www.langchain.com/">https://www.langchain.com/</a></li>
+<li>Google Generative AI (Gemini/Vertex AI): <a href="https://cloud.google.com/vertex-ai/generative">https://cloud.google.com/vertex-ai/generative</a></li>
+<li>ChromaDB: <a href="https://www.trychroma.com/">https://www.trychroma.com/</a></li>
+<li>Vis.js Network: <a href="https://visjs.github.io/vis-network/docs/network/">https://visjs.github.io/vis-network/docs/network/</a></li>
+<li>Marked.js: <a href="https://marked.js.org/">https://marked.js.org/</a></li>
+<li>Web Components: <a href="https://developer.mozilla.org/pt-BR/docs/Web/Web_Components">https://developer.mozilla.org/pt-BR/docs/Web/Web_Components</a></li>
+<li>Shadow DOM: <a href="https://developer.mozilla.org/pt-BR/docs/Web/Web_Components/Using_shadow_DOM">https://developer.mozilla.org/pt-BR/docs/Web/Web_Components/Using_shadow_DOM</a></li>
+<li>MkDocs - Template Override: <a href="https://www.mkdocs.org/user-guide/customizing-your-theme/#overriding-template-blocks">https://www.mkdocs.org/user-guide/customizing-your-theme/#overriding-template-blocks</a></li>
+<li>MarkdownHeaderTextSplitter: <a href="https://python.langchain.com/v0.1/docs/modules/data_connection/document_loaders/markdown.html">https://python.langchain.com/v0.1/docs/modules/data_connection/document_loaders/markdown.html</a></li>
+<li>MultiQueryRetriever: <a href="https://python.langchain.com/v0.1/docs/use_cases/question_answering/how_to/multiquery_retriever/">https://python.langchain.com/v0.1/docs/use_cases/question_answering/how_to/multiquery_retriever/</a></li>
+<li>Prompt Engineering: <a href="https://www.promptingguide.ai/pt">https://www.promptingguide.ai/pt</a></li>
+<li>Widget Climate Clock: (Referência não específica, mas pode ser um link para o projeto global <a href="https://climateclock.world/">https://climateclock.world/</a> ou uma implementação específica)</li>
+<li>Licença Creative Commons Attribution 4.0 International: <a href="https://creativecommons.org/licenses/by/4.0/deed.pt">https://creativecommons.org/licenses/by/4.0/deed.pt</a></li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", {"navigation.instant": true}, "navigation.expand", "content.code.annotate", "search.suggest", "search.highlight", "navigation.sticky"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+  
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js" defer></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+      
+        <script src="../../assets/js/script.js" defer></script>
+      
+    
+  <template id="takwara-chatbot-template">
+      <div id="chatbot-container" class="takwara-chatbot">
+  <div id="chat-box" class="chat-box">
+    <div class="message bot-message">
+      Olá! Sou a assistente virtual Takwara. Como posso ajudar?
+    </div>
+  </div>
+  <form id="chat-form" class="chat-form">
+    <input 
+      type="text" 
+      id="user-input" 
+      class="user-input" 
+      placeholder="Faça uma pergunta..." 
+      autocomplete="off"
+    >
+    <button type="submit" class="submit-button" title="Enviar">Enviar</button>
+  </form>
+</div>
+  </template>
+
+  </body>
+</html>

@@ -1,0 +1,20 @@
+/* extra.css */
+
+/* Alvo: Os títulos das seções principais no menu de navegação lateral */
+.md-nav__item--nested > .md-nav__link {
+  
+  /* Deixa o texto em negrito */
+  font-weight: bold;
+
+  /* Aumenta o tamanho da fonte (1em = tamanho normal) */
+  font-size: 1.5em; /* Aumenta a fonte em 5% */
+  
+  /* Transforma o texto em maiúsculas (ex: "O Bambu" -> "O BAMBU") */
+  /* text-transform: uppercase; */
+
+  /* Adiciona um pequeno espaçamento entre as letras */
+  /* letter-spacing: 0.05em; */
+  
+  /* Você pode até mudar a cor se quiser! */
+  color: #228B22; */ /* Um tom de azul */
+}
