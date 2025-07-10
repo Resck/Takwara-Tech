@@ -50,7 +50,7 @@ nav:
   - Simon Velez.md: A2.a Personalidades/a2.a5 Simon Velez
 - O PU Vegetal:
   - A Imperveg Polímeros Vegetais.md: A3. O PU Vegetal/a4.1 A Imperveg Polímeros Vegetais
-  - Orgânicos X Sintéticos .md: A3. O PU Vegetal/a4.2 Orgânicos X Sintéticos
+  - Orgânicos X Sintéticos .md: 'A3. O PU Vegetal/a4.2 Orgânicos X Sintéticos '
 - Domos Geodésicos:
   - Dados Estruturais.md: A4. Domos Geodésicos/a3.1 Dados Estruturais
   - Especificações Tecnicas.md: A4. Domos Geodésicos/a3.2 Especificações Tecnicas
@@ -64,8 +64,10 @@ nav:
 - Como  Contribuir:
   - Colaboração.md: A7. Como  Contribuir/a6.2 Colaboração
   - O Github.md: A7. Como  Contribuir/a6.3 O Github
+- assets: assets
 - grafo: grafo
 - index: index
+- raedme-md: raedme-md
 repo_name: Resck/Takwara-Tech
 repo_url: https://github.com/Resck/Takwara-Tech
 site_name: Tecnologia Takwara
