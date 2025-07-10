@@ -52,7 +52,7 @@ body.toolbox-is-open .md-main {
 /* Aumenta o espaço entre os itens do menu lateral */
 .md-nav__item > .md-nav__link {
     padding-bottom: 10px !important; /* Adiciona um padding inferior para espaçar */
-    margin-bottom: 10px !important;  /* Adiciona uma margem inferior para separar os blocos */
+    margin-bottom: 5px !important;  /* Adiciona uma margem inferior para separar os blocos */
 }
 
 /* Ajustes específicos para itens de menu com subitens (pastas) */
@@ -64,7 +64,7 @@ body.toolbox-is-open .md-main {
 
 /* Ajuste fino para garantir que o conteúdo não seja empacotado contra o título */
 .md-content__inner {
-    padding-top: 25px; /* Adiciona um padding superior ao conteúdo principal */
+    padding-top: 20px; /* Adiciona um padding superior ao conteúdo principal */
 }
 
 /* Se houver algum problema com a barra lateral de navegação em si */
