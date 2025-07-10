@@ -40,6 +40,7 @@ nav:
   - O Bambu na Ásia.md: A2.  O Bambu/a2.5 O Bambu na Ásia.md
   - O Broto de Bambu.md: A2.  O Bambu/a2.6 O Broto de Bambu.md
   - O carvão e o Pirolenhoso.md: A2.  O Bambu/a2.7 O carvão e o Pirolenhoso.md
+  - Carvão de Bambu = 0 => CO2.md: A2.  O Bambu/a5.4 Carvão de Bambu = 0 => CO2.md
 - Personalidades:
   - Jayme Gonçalves.md: A2.a Personalidades/a2.a1 Jayme Gonçalves.md
   - Khorow Ghavami.md: A2.a Personalidades/a2.a2 Khorow Ghavami.md
@@ -55,15 +56,14 @@ nav:
   - Especificações Tecnicas.md: A4. Domos Geodésicos/a3.2 Especificações Tecnicas.md
   - Ferramentas para Layout.md: A4. Domos Geodésicos/a3.3 Ferramentas para Layout.md
 - COP30:
-  - Brasil Paradoxo da Sustentabilidade.md: A6. COP30/a5.1 Brasil Paradoxo da Sustentabilidade.md
+  - O Paradoxo da Sustentabilidade.md: A6. COP30/a5.1 O Paradoxo da Sustentabilidade.md
   - Deficit Habitacional.md: A6. COP30/a5.2 Deficit Habitacional.md
-  - Resposta a Crise Habitacional.md: A6. COP30/a5.3 Resposta a Crise Habitacional.md
-  - Carvão de Bambu = CO2 0.md: A6. COP30/a5.4 Carvão de Bambu = CO2 0.md
   - O Paradoxo do Bambu.md: A6. COP30/a6.1 O Paradoxo do Bambu.md
+  - Arquitetura das Inflências.md: A6. COP30/a6.2 Arquitetura das Inflências.md
   - A Maloca de Concreto.md: A6. COP30/a6.4 A Maloca de Concreto.md
-- Contribuir:
-  - Colaboração.md: A7. Contribuir/a6.2 Colaboração.md
-  - O Github.md: A7. Contribuir/a6.3 O Github.md
+- Como  Contribuir:
+  - Colaboração.md: A7. Como  Contribuir/a6.2 Colaboração.md
+  - O Github.md: A7. Como  Contribuir/a6.3 O Github.md
 - ? ''
   : grafo.md
 - ? ''
