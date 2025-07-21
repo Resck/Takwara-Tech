@@ -1,0 +1,48 @@
+/* extra.css */
+
+/* Alvo: Os títulos das seções principais no menu de navegação lateral */
+.md-nav__item--nested > .md-nav__link {
+  
+  /* Deixa o texto em negrito */
+  font-weight: bold;
+
+  /* Aumenta o tamanho da fonte (1em = tamanho normal) */
+  font-size: 1.5em; /* Aumenta a fonte em 5% */
+  
+  /* Transforma o texto em maiúsculas (ex: "O Bambu" -> "O BAMBU") */
+  /* text-transform: uppercase; */
+
+  /* Adiciona um pequeno espaçamento entre as letras */
+  /* letter-spacing: 0.05em; */
+  
+  /* Você pode até mudar a cor se quiser! */
+  color: #228B22; */ /* Um tom de azul */
+}
+
+/* Estilo para a galeria de imagens na nova grid */
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Container para tornar vídeos responsivos (este código pode continuar) */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}

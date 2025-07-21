@@ -1,0 +1,24 @@
+# Ambientes virtuais e ficheiros de sistema
+.venv/
+venv/
+.DS_Store
+
+# Caches do Python
+__pycache__/
+*.pyc
+
+# Pasta de build do MkDocs
+site/
+
+# Ficheiros e pastas gerados pelos seus scripts
+Chatbot_Takwara/backend-api/temp_repo/
+Chatbot_Takwara/backend-api/chroma_db/
+
+/Removidos/
+# Ignorar a pasta com documentos privados
+/fontes-privadas/
+
+Chatbot_Takwara/backend-api/chroma_db/chroma.sqlite3
+
+# Ficheiros de configuração do VS Code
+.vscode/

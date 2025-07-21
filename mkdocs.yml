@@ -1,0 +1,132 @@
+edit_uri: ''
+extra_css:
+- assets/css/style.css
+- assets/css/custom.css
+- assets/css/extra.css
+extra_javascript:
+- defer: true
+  path: https://unpkg.com/vis-network/standalone/umd/vis-network.min.js
+- defer: true
+  path: https://cdn.jsdelivr.net/npm/marked/marked.min.js
+- defer: true
+  path: assets/js/script.js
+markdown_extensions:
+- pymdownx.highlight:
+    anchor_linenums: true
+- pymdownx.inlinehilite
+- pymdownx.snippets
+- admonition
+- pymdownx.details
+- pymdownx.superfences
+- pymdownx.mark
+- attr_list
+- md_in_html
+nav:
+- 'Tecnologias ':
+  - Forno Ecológico: A1. Tecnologias /a1.2 Forno Ecológico.md
+  - Sistema de Reforço: A1. Tecnologias /a1.3 Sistema de Reforço.md
+  - Conexões Geodésicos: A1. Tecnologias /a1.4 Conexões Geodésicos.md
+  - PU + Bambu: A1. Tecnologias /a1.5 PU + Bambu.md
+  - Painéis de Bambu: A1. Tecnologias /a1.6 Painéis de Bambu.md
+  - Tijolos e Briquetes: A1. Tecnologias /a1.7 Tijolos e Briquetes.md
+  - Roteiro para Ensaios: A1. Tecnologias /a1.8 Roteiro para Ensaios.md
+- O Bambu:
+  - O Papel do Bambu nas Queimadas: A2.  O Bambu/a1.0 O Papel do Bambu nas Queimadas.md
+  - O Paradoxo do Bambu no Brasil: A2.  O Bambu/a1.1 O Paradoxo do Bambu no Brasil.md
+  - Visão Geral: A2.  O Bambu/a2.1 Visão Geral.md
+  - Caracterização Física: A2.  O Bambu/a2.2 Caracterização Física.md
+  - Mercado Global: A2.  O Bambu/a2.4 Mercado Global.md
+  - O Bambu na Ásia: A2.  O Bambu/a2.5 O Bambu na Ásia.md
+  - Fitorremediação: A2.  O Bambu/a2.6 Fitorremediação.md
+  - O carvão e o Pirolenhoso: A2.  O Bambu/a2.7 O carvão e o Pirolenhoso.md
+  - O Tratamento Químico do Bambu: A2.  O Bambu/a2.8 O Tratamento Químico do Bambu.md
+- Personalidades:
+  - Jayme Gonçalves: A2.a Personalidades/a2.a1 Jayme Gonçalves.md
+  - Khorow Ghavami: A2.a Personalidades/a2.a2 Khorow Ghavami.md
+  - Ludovico Beraldo e Reis Pereira: A2.a Personalidades/a2.a3 Ludovico Beraldo e
+      Reis Pereira.md
+  - Oscar Hidalgo: A2.a Personalidades/a2.a4 Oscar Hidalgo.md
+  - Simon Velez: A2.a Personalidades/a2.a5 Simon Velez.md
+- O PU Vegetal:
+  - '- Estudos Acadêmicos ': A3. O PU Vegetal/PUVEG - Estudos Acadêmicos .md
+  - A Imperveg Polímeros Vegetais: A3. O PU Vegetal/a4.1 A Imperveg Polímeros Vegetais.md
+  - 'Orgânicos X Sintéticos ': A3. O PU Vegetal/a4.2 Orgânicos X Sintéticos .md
+- Como  Contribuir:
+  - Anais Técnicos: A7. Como  Contribuir/a6.1 Anais Técnicos.md
+  - Colaboração: A7. Como  Contribuir/a6.2 Colaboração.md
+  - O Github: A7. Como  Contribuir/a6.3 O Github.md
+- Anais da pesquisa:
+  - '- Jan -19 Relatório de atividades LaPeCFaS': A8. Anais da pesquisa/10 - Jan
+      -19 Relatório de atividades LaPeCFaS.pdf
+  - '- AGO-19 Relatorio final (PEAC 60224)Educacao e Trabalho': A8. Anais da pesquisa/12
+      - AGO-19 Relatorio final (PEAC 60224)Educacao e Trabalho.pdf
+  - '- JAN-20 - Certificado de Competência-IFB': A8. Anais da pesquisa/16 - JAN-20
+      - Certificado de Competência-IFB.pdf
+  - '- JUL-20 - RESPOSTA DA PRAD': A8. Anais da pesquisa/18 - JUL-20 - RESPOSTA DA
+      PRAD.pdf
+  - '- Relatório -PIBIT_Barreira Acustica de Baixo Custo - CEUB_2021': A8. Anais da
+      pesquisa/19 - Relatório -PIBIT_Barreira Acustica de Baixo Custo - CEUB_2021.pdf
+  - '- Nature-Awards-2024': A8. Anais da pesquisa/2023 - Nature-Awards-2024.pdf
+  - 01- ABR-18 Oficina FUP: A8. Anais da pesquisa/01- ABR-18 Oficina FUP.pdf
+  - ? 01a- Mai18-Relatório Curso de Capacitação Básica do Manuseio do Bambu e
+      Criação de Estruturas Arquitetônicas e Mobiliárias.docx - Documentos Google
+    : A8. Anais da pesquisa/01a- Mai18-Relatório Curso de Capacitação Básica do
+      Manuseio do Bambu e Criação de Estruturas Arquitetônicas e Mobiliárias.docx
+      - Documentos Google.pdf
+  - 02-MAI-18 SIEX-60015: A8. Anais da pesquisa/02-MAI-18 SIEX-60015.pdf
+  - 03- JUL-18 - PEAC 60224: A8. Anais da pesquisa/03- JUL-18 - PEAC 60224.pdf
+  - 04- JUL-18 Relatório de atividades: A8. Anais da pesquisa/04- JUL-18 Relatório
+      de atividades.pdf
+  - 05- SET-18 - Memorando-IBRAM: A8. Anais da pesquisa/05- SET-18 - Memorando-IBRAM.pdf
+  - 06a- OUT-18 Edital CFDD: A8. Anais da pesquisa/06a- OUT-18 Edital CFDD.pdf
+  - 07- NOV-18 Relatório de atividades: A8. Anais da pesquisa/07- NOV-18 Relatório
+      de atividades.pdf
+  - 08- NOV-18 Projeto Geração de Autonomia sustentável - IFB: A8. Anais da pesquisa/08-
+      NOV-18 Projeto Geração de Autonomia sustentável - IFB.pdf
+  - 08a- NOV-18 Projeto Geração de Autonomia sustentável - IFB: A8. Anais da pesquisa/08a-
+      NOV-18 Projeto Geração de Autonomia sustentável - IFB.pdf
+  - 08b-NOV2018 - IFB Edital pró grupos usina de bambu ANEXO I: A8. Anais da pesquisa/08b-NOV2018
+      - IFB Edital pró grupos usina de bambu ANEXO I.pdf
+  - 09- DEZ-18 - Ementa do curso-PEAC60224: A8. Anais da pesquisa/09- DEZ-18 - Ementa
+      do curso-PEAC60224.pdf
+  - 10- ABR-19 Cartaz oficina IFB: A8. Anais da pesquisa/10- ABR-19 Cartaz oficina
+      IFB.pdf
+  - 10a- MAR-19 - DEP FABIO FELIX: A8. Anais da pesquisa/10a- MAR-19 - DEP FABIO FELIX.pdf
+  - 13- SET-19 ARTIGO Relato Popular: A8. Anais da pesquisa/13- SET-19 ARTIGO Relato
+      Popular.pdf
+  - 14- SET-19 Mutiráo Tecnologico: A8. Anais da pesquisa/14- SET-19 Mutiráo Tecnologico.pdf
+  - 17- ABR-20 - ENAP DESAFIOS - 2020-2022: A8. Anais da pesquisa/17- ABR-20 - ENAP
+      DESAFIOS - 2020-2022.pdf
+- README: README.md
+- grafo: grafo.md
+- index: index.md
+repo_name: Resck/Takwara-Tech
+repo_url: https://github.com/Resck/Takwara-Tech
+site_name: Tecnologia Takwara
+theme:
+  custom_dir: overrides
+  favicon: assets/images/favicon.png
+  features:
+  - navigation.tabs
+  - navigation.instant: true
+  - navigation.expand
+  - content.code.annotate
+  - search.suggest
+  - search.highlight
+  - navigation.sticky
+  language: pt-BR
+  logo: assets/images/logo.png
+  name: material
+  palette:
+  - accent: indigo
+    primary: green
+    scheme: slate
+    toggle:
+      icon: material/toggle-switch
+      name: Mudar para o modo claro
+  - accent: indigo
+    primary: green
+    scheme: default
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: Mudar para o modo escuro
