@@ -14,7 +14,7 @@ site/
 Chatbot_Takwara/backend-api/temp_repo/
 Chatbot_Takwara/backend-api/chroma_db/
 
-/Removidos/
+Chatbot_Takwara/Removidos
 # Ignorar a pasta com documentos privados
 /fontes-privadas/
 

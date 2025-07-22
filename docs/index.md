@@ -11,7 +11,7 @@ This platform, born from a autodidactic journey and a commitment to ecological i
 ![Licença CC BY 4.0](https://i.creativecommons.org/l/by/4.0/88x31.png)
 *Este trabalho está licenciado sob a Creative Commons Atribuição 4.0 Internacional.*
 
-![inicial](../docs/assets/images/ferramentas_inicial.jpg)
+![inicial](../docs/assets/images/ferramentas_inicial.jpeg)
 
 
 **1. A Chama da Autodeterminação: Bem-vindo à Revolução Takwara!**
