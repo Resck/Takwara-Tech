@@ -1,5 +1,3 @@
-
-
 **Takwara: O Código Aberto da Autodeterminação, Inovação com Bambu e uma Convocação à Transformação Socioambiental**
 
 **---**
@@ -11,7 +9,7 @@ This platform, born from a autodidactic journey and a commitment to ecological i
 ![Licença CC BY 4.0](https://i.creativecommons.org/l/by/4.0/88x31.png)
 *Este trabalho está licenciado sob a Creative Commons Atribuição 4.0 Internacional.*
 
-![inicial](../docs/assets/images/ferramentas_inicial.jpeg)
+![inicial](../assets/images/ferramentas_inicial.jpeg)
 
 
 **1. A Chama da Autodeterminação: Bem-vindo à Revolução Takwara!**
@@ -75,8 +73,7 @@ Nossa metodologia é um sistema integrado que supera os desafios tradicionais do
 
 **A Tecnologia Takwara é mais que inovação material; é uma ferramenta de transformação social, econômica e ambiental.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/INgteu2UZGQ?si=y_6DJJEiuSHxZSKa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+![2013 - Domo de Bambu 10m](../assets/images/Pesquisa_img/Geo-10m-cobertura-papelão_Jun-2014.gif)
 
 **Nosso Potencial de Impacto:**
 
@@ -103,6 +100,10 @@ Esta tecnologia é fruto de mais de uma década de pesquisa independente, paixã
 
 Essa jornada, com seus altos e baixos, reforçou uma crença inabalável: o conhecimento que gera bem-estar coletivo e regeneração ambiental deve fluir livremente.
 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OGeVIEGZfb0?si=rLv2LtlGvqx_KIsr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 **6. O Contexto Essencial: Pré-COP30 e a Urgência da Mensagem**
 
 À medida que nos aproximamos da COP30, a urgência da ação climática e da justiça social se intensifica. Este repositório, a **Tecnologia Takwara** e nossa **Assistente Virtual** são mais do que dados; são um testemunho da engenhosidade humana e da resiliência frente aos desafios globais. O espírito Takwara – que abraça a inovação, a independência e a conexão profunda com a natureza – oferece um modelo poderoso.
@@ -112,6 +113,527 @@ Essa jornada, com seus altos e baixos, reforçou uma crença inabalável: o conh
 
 This platform, born from a autodidactic journey and a commitment to ecological innovation, is more than a repository of knowledge; it is a testament to human ingenuity and resilience. As we approach COP30, the urgency of climate action and social justice demands that we embrace unconventional solutions and diverse voices. The Takwara ethos – embodying innovation, independence, and a deep connection to nature – offers a powerful model for tackling global challenges. We urge all Brazilians and international allies who share these principles to **become TAKWARA**: actively participate, amplify your voice, and collaborate to build a sustainable future. Your learning, your action, and your unique perspective are vital in this critical fight.
 **---**
+<div class="carousel-container">
+  <h4 class="carousel-title">Férias com Bambu - IFB Planaltina -2019/20</h4>
+  <div id="carrossel-ifb-dez-19" class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20191209-WA0018.jpg" alt="Img 20191209 wa0018">
+          <p class="splide-caption">Img 20191209 wa0018</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20191213-WA0038.jpg" alt="Img 20191213 wa0038">
+          <p class="splide-caption">Img 20191213 wa0038</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20191213-WA0059.jpg" alt="Img 20191213 wa0059">
+          <p class="splide-caption">Img 20191213 wa0059</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20191216-WA0020.jpg" alt="Img 20191216 wa0020">
+          <p class="splide-caption">Img 20191216 wa0020</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20191216-WA0021.jpg" alt="Img 20191216 wa0021">
+          <p class="splide-caption">Img 20191216 wa0021</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20191216-WA0022.jpg" alt="Img 20191216 wa0022">
+          <p class="splide-caption">Img 20191216 wa0022</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20191216-WA0023.jpg" alt="Img 20191216 wa0023">
+          <p class="splide-caption">Img 20191216 wa0023</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20191216-WA0024.jpg" alt="Img 20191216 wa0024">
+          <p class="splide-caption">Img 20191216 wa0024</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20191217-WA0001.jpg" alt="Img 20191217 wa0001">
+          <p class="splide-caption">Img 20191217 wa0001</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20191217-WA0002.jpg" alt="Img 20191217 wa0002">
+          <p class="splide-caption">Img 20191217 wa0002</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20191217-WA0003.jpg" alt="Img 20191217 wa0003">
+          <p class="splide-caption">Img 20191217 wa0003</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20191217-WA0004.jpg" alt="Img 20191217 wa0004">
+          <p class="splide-caption">Img 20191217 wa0004</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20200107-WA0000.jpg" alt="Img 20200107 wa0000">
+          <p class="splide-caption">Img 20200107 wa0000</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20200107-WA0001.jpg" alt="Img 20200107 wa0001">
+          <p class="splide-caption">Img 20200107 wa0001</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20200107-WA0002.jpg" alt="Img 20200107 wa0002">
+          <p class="splide-caption">Img 20200107 wa0002</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20200107-WA0003.jpg" alt="Img 20200107 wa0003">
+          <p class="splide-caption">Img 20200107 wa0003</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20200107-WA0005.jpg" alt="Img 20200107 wa0005">
+          <p class="splide-caption">Img 20200107 wa0005</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20200107-WA0006.jpg" alt="Img 20200107 wa0006">
+          <p class="splide-caption">Img 20200107 wa0006</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20200107-WA0008.jpg" alt="Img 20200107 wa0008">
+          <p class="splide-caption">Img 20200107 wa0008</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20200107-WA0009.jpg" alt="Img 20200107 wa0009">
+          <p class="splide-caption">Img 20200107 wa0009</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20200107-WA0010.jpg" alt="Img 20200107 wa0010">
+          <p class="splide-caption">Img 20200107 wa0010</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20200107-WA0013.jpg" alt="Img 20200107 wa0013">
+          <p class="splide-caption">Img 20200107 wa0013</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20200107-WA0014.jpg" alt="Img 20200107 wa0014">
+          <p class="splide-caption">Img 20200107 wa0014</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20200107-WA0015.jpg" alt="Img 20200107 wa0015">
+          <p class="splide-caption">Img 20200107 wa0015</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20200107-WA0016.jpg" alt="Img 20200107 wa0016">
+          <p class="splide-caption">Img 20200107 wa0016</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG-20200107-WA0017.jpg" alt="Img 20200107 wa0017">
+          <p class="splide-caption">Img 20200107 wa0017</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191211_113911.jpg" alt="Img 20191211 113911">
+          <p class="splide-caption">Img 20191211 113911</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191211_113930.jpg" alt="Img 20191211 113930">
+          <p class="splide-caption">Img 20191211 113930</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191211_113949.jpg" alt="Img 20191211 113949">
+          <p class="splide-caption">Img 20191211 113949</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191211_114007.jpg" alt="Img 20191211 114007">
+          <p class="splide-caption">Img 20191211 114007</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_093611.jpg" alt="Img 20191213 093611">
+          <p class="splide-caption">Img 20191213 093611</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_094040.jpg" alt="Img 20191213 094040">
+          <p class="splide-caption">Img 20191213 094040</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_105235.jpg" alt="Img 20191213 105235">
+          <p class="splide-caption">Img 20191213 105235</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_110719.jpg" alt="Img 20191213 110719">
+          <p class="splide-caption">Img 20191213 110719</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_110829.jpg" alt="Img 20191213 110829">
+          <p class="splide-caption">Img 20191213 110829</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_110841.jpg" alt="Img 20191213 110841">
+          <p class="splide-caption">Img 20191213 110841</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_111341.jpg" alt="Img 20191213 111341">
+          <p class="splide-caption">Img 20191213 111341</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_111601.jpg" alt="Img 20191213 111601">
+          <p class="splide-caption">Img 20191213 111601</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_111756.jpg" alt="Img 20191213 111756">
+          <p class="splide-caption">Img 20191213 111756</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_112252.jpg" alt="Img 20191213 112252">
+          <p class="splide-caption">Img 20191213 112252</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_113144.jpg" alt="Img 20191213 113144">
+          <p class="splide-caption">Img 20191213 113144</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_115515.jpg" alt="Img 20191213 115515">
+          <p class="splide-caption">Img 20191213 115515</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_115526.jpg" alt="Img 20191213 115526">
+          <p class="splide-caption">Img 20191213 115526</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_115554.jpg" alt="Img 20191213 115554">
+          <p class="splide-caption">Img 20191213 115554</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_125420.jpg" alt="Img 20191213 125420">
+          <p class="splide-caption">Img 20191213 125420</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_125422.jpg" alt="Img 20191213 125422">
+          <p class="splide-caption">Img 20191213 125422</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_125424.jpg" alt="Img 20191213 125424">
+          <p class="splide-caption">Img 20191213 125424</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_125435.jpg" alt="Img 20191213 125435">
+          <p class="splide-caption">Img 20191213 125435</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_125455.jpg" alt="Img 20191213 125455">
+          <p class="splide-caption">Img 20191213 125455</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_125514.jpg" alt="Img 20191213 125514">
+          <p class="splide-caption">Img 20191213 125514</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_125532.jpg" alt="Img 20191213 125532">
+          <p class="splide-caption">Img 20191213 125532</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_125534.jpg" alt="Img 20191213 125534">
+          <p class="splide-caption">Img 20191213 125534</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_125547.jpg" alt="Img 20191213 125547">
+          <p class="splide-caption">Img 20191213 125547</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_125557.jpg" alt="Img 20191213 125557">
+          <p class="splide-caption">Img 20191213 125557</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_130017_PANO.jpg" alt="Img 20191213 130017 pano">
+          <p class="splide-caption">Img 20191213 130017 pano</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_130103.jpg" alt="Img 20191213 130103">
+          <p class="splide-caption">Img 20191213 130103</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_130444.jpg" alt="Img 20191213 130444">
+          <p class="splide-caption">Img 20191213 130444</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_130453.jpg" alt="Img 20191213 130453">
+          <p class="splide-caption">Img 20191213 130453</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_130458.jpg" alt="Img 20191213 130458">
+          <p class="splide-caption">Img 20191213 130458</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_130515.jpg" alt="Img 20191213 130515">
+          <p class="splide-caption">Img 20191213 130515</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_130546.jpg" alt="Img 20191213 130546">
+          <p class="splide-caption">Img 20191213 130546</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_130553.jpg" alt="Img 20191213 130553">
+          <p class="splide-caption">Img 20191213 130553</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_130602.jpg" alt="Img 20191213 130602">
+          <p class="splide-caption">Img 20191213 130602</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191213_150218.jpg" alt="Img 20191213 150218">
+          <p class="splide-caption">Img 20191213 150218</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191214_100406.jpg" alt="Img 20191214 100406">
+          <p class="splide-caption">Img 20191214 100406</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191214_124017.jpg" alt="Img 20191214 124017">
+          <p class="splide-caption">Img 20191214 124017</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191214_135216.jpg" alt="Img 20191214 135216">
+          <p class="splide-caption">Img 20191214 135216</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191214_135222.jpg" alt="Img 20191214 135222">
+          <p class="splide-caption">Img 20191214 135222</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191214_145807.jpg" alt="Img 20191214 145807">
+          <p class="splide-caption">Img 20191214 145807</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191215_110640.jpg" alt="Img 20191215 110640">
+          <p class="splide-caption">Img 20191215 110640</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191215_183751.jpg" alt="Img 20191215 183751">
+          <p class="splide-caption">Img 20191215 183751</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191215_184551.jpg" alt="Img 20191215 184551">
+          <p class="splide-caption">Img 20191215 184551</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191215_184606.jpg" alt="Img 20191215 184606">
+          <p class="splide-caption">Img 20191215 184606</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191215_184647.jpg" alt="Img 20191215 184647">
+          <p class="splide-caption">Img 20191215 184647</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191215_184800.jpg" alt="Img 20191215 184800">
+          <p class="splide-caption">Img 20191215 184800</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191215_184840.jpg" alt="Img 20191215 184840">
+          <p class="splide-caption">Img 20191215 184840</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191216_111532.jpg" alt="Img 20191216 111532">
+          <p class="splide-caption">Img 20191216 111532</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191216_111646.jpg" alt="Img 20191216 111646">
+          <p class="splide-caption">Img 20191216 111646</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191216_124358.jpg" alt="Img 20191216 124358">
+          <p class="splide-caption">Img 20191216 124358</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191216_124416.jpg" alt="Img 20191216 124416">
+          <p class="splide-caption">Img 20191216 124416</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191216_124429.jpg" alt="Img 20191216 124429">
+          <p class="splide-caption">Img 20191216 124429</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191218_123321.jpg" alt="Img 20191218 123321">
+          <p class="splide-caption">Img 20191218 123321</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191218_123401.jpg" alt="Img 20191218 123401">
+          <p class="splide-caption">Img 20191218 123401</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191218_123417.jpg" alt="Img 20191218 123417">
+          <p class="splide-caption">Img 20191218 123417</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191218_123426.jpg" alt="Img 20191218 123426">
+          <p class="splide-caption">Img 20191218 123426</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191218_124333.jpg" alt="Img 20191218 124333">
+          <p class="splide-caption">Img 20191218 124333</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191218_124449.jpg" alt="Img 20191218 124449">
+          <p class="splide-caption">Img 20191218 124449</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191218_125009.jpg" alt="Img 20191218 125009">
+          <p class="splide-caption">Img 20191218 125009</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191218_153221.jpg" alt="Img 20191218 153221">
+          <p class="splide-caption">Img 20191218 153221</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191218_153229.jpg" alt="Img 20191218 153229">
+          <p class="splide-caption">Img 20191218 153229</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191218_185122.jpg" alt="Img 20191218 185122">
+          <p class="splide-caption">Img 20191218 185122</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191218_185133.jpg" alt="Img 20191218 185133">
+          <p class="splide-caption">Img 20191218 185133</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191218_185151.jpg" alt="Img 20191218 185151">
+          <p class="splide-caption">Img 20191218 185151</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191218_185218.jpg" alt="Img 20191218 185218">
+          <p class="splide-caption">Img 20191218 185218</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191218_185228.jpg" alt="Img 20191218 185228">
+          <p class="splide-caption">Img 20191218 185228</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191218_185428.jpg" alt="Img 20191218 185428">
+          <p class="splide-caption">Img 20191218 185428</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191218_185455.jpg" alt="Img 20191218 185455">
+          <p class="splide-caption">Img 20191218 185455</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191229_171844.jpg" alt="Img 20191229 171844">
+          <p class="splide-caption">Img 20191229 171844</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191231_162318.jpg" alt="Img 20191231 162318">
+          <p class="splide-caption">Img 20191231 162318</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191231_162404.jpg" alt="Img 20191231 162404">
+          <p class="splide-caption">Img 20191231 162404</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191231_162455.jpg" alt="Img 20191231 162455">
+          <p class="splide-caption">Img 20191231 162455</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20191231_162548.jpg" alt="Img 20191231 162548">
+          <p class="splide-caption">Img 20191231 162548</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200104_142413.jpg" alt="Img 20200104 142413">
+          <p class="splide-caption">Img 20200104 142413</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200104_142427.jpg" alt="Img 20200104 142427">
+          <p class="splide-caption">Img 20200104 142427</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200104_142435.jpg" alt="Img 20200104 142435">
+          <p class="splide-caption">Img 20200104 142435</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200104_142525.jpg" alt="Img 20200104 142525">
+          <p class="splide-caption">Img 20200104 142525</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200104_142549.jpg" alt="Img 20200104 142549">
+          <p class="splide-caption">Img 20200104 142549</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200106_095043.jpg" alt="Img 20200106 095043">
+          <p class="splide-caption">Img 20200106 095043</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200106_095109.jpg" alt="Img 20200106 095109">
+          <p class="splide-caption">Img 20200106 095109</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200106_095133.jpg" alt="Img 20200106 095133">
+          <p class="splide-caption">Img 20200106 095133</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200106_095144.jpg" alt="Img 20200106 095144">
+          <p class="splide-caption">Img 20200106 095144</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200106_133329.jpg" alt="Img 20200106 133329">
+          <p class="splide-caption">Img 20200106 133329</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200106_133336.jpg" alt="Img 20200106 133336">
+          <p class="splide-caption">Img 20200106 133336</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200106_144357.jpg" alt="Img 20200106 144357">
+          <p class="splide-caption">Img 20200106 144357</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200106_165909.jpg" alt="Img 20200106 165909">
+          <p class="splide-caption">Img 20200106 165909</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200111_160300.jpg" alt="Img 20200111 160300">
+          <p class="splide-caption">Img 20200111 160300</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200111_160310.jpg" alt="Img 20200111 160310">
+          <p class="splide-caption">Img 20200111 160310</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200111_162627.jpg" alt="Img 20200111 162627">
+          <p class="splide-caption">Img 20200111 162627</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200112_135114.jpg" alt="Img 20200112 135114">
+          <p class="splide-caption">Img 20200112 135114</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200112_135200.jpg" alt="Img 20200112 135200">
+          <p class="splide-caption">Img 20200112 135200</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200112_172454.jpg" alt="Img 20200112 172454">
+          <p class="splide-caption">Img 20200112 172454</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200112_181607.jpg" alt="Img 20200112 181607">
+          <p class="splide-caption">Img 20200112 181607</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200112_181643.jpg" alt="Img 20200112 181643">
+          <p class="splide-caption">Img 20200112 181643</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200113_150528.jpg" alt="Img 20200113 150528">
+          <p class="splide-caption">Img 20200113 150528</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200113_160938.jpg" alt="Img 20200113 160938">
+          <p class="splide-caption">Img 20200113 160938</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200113_164512.jpg" alt="Img 20200113 164512">
+          <p class="splide-caption">Img 20200113 164512</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200113_164524.jpg" alt="Img 20200113 164524">
+          <p class="splide-caption">Img 20200113 164524</p>
+        </li>
+        <li class="splide__slide">
+          <img src="../../assets/images/carrosseis-otimizados/ifb-dez-19/IMG_20200113_165035.jpg" alt="Img 20200113 165035">
+          <p class="splide-caption">Img 20200113 165035</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 **7. Junte-se a Nós: O Xeque Mate Necessário!**
 

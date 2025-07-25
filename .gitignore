@@ -22,3 +22,6 @@ Chatbot_Takwara/backend-api/chroma_db/chroma.sqlite3
 
 # Ficheiros de configuração do VS Code
 .vscode/
+
+# Imagens em alta resolução
+docs/assets/images/originais

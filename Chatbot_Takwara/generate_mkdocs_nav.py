@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Script para gerar automaticamente a seção 'nav' do mkdocs.yml
+Script final para gerar a navegação, tratando o index.md de forma especial.
 """
 import os
 import yaml
@@ -15,27 +15,16 @@ MKDOCS_YML_PATH = 'mkdocs.yml'
 
 def extract_prefix_and_name(entry_name: str) -> Tuple[Optional[str], str]:
     match = re.match(r'^([a-zA-Z0-9\.]+)\s+(.*)', entry_name)
-    if match:
-        return match.group(1), match.group(2)
+    if match: return match.group(1), match.group(2)
     return None, entry_name
 
-# ####################################################################
-# ALTERAÇÃO PRINCIPAL: Função de ordenação corrigida para evitar TypeError
-# ####################################################################
 def parse_prefix_for_sort(prefix: str) -> Tuple:
-    """
-    Converte um prefixo de string em uma tupla para ordenação correta,
-    prevenindo TypeError entre int e str.
-    """
     parts = prefix.split('.')
     sort_key_parts = []
     for part in parts:
-        # Trata tudo como string, preenchendo números com zeros para ordenação correta
         if part.isdigit():
-            # zfill(8) lida com números até 99.999.999
             sort_key_parts.append(part.zfill(8))
         else:
-            # Para partes mistas como 'A1', também preenche a parte numérica
             sub_parts = re.findall(r'(\d+|\D+)', part)
             for sub_part in sub_parts:
                 if sub_part.isdigit():
@@ -45,23 +34,25 @@ def parse_prefix_for_sort(prefix: str) -> Tuple:
     return tuple(sort_key_parts)
 
 def get_display_name(raw_name: str) -> str:
-    """
-    Limpa o nome bruto para ser usado como título no menu de navegação.
-    """
     name, ext = os.path.splitext(raw_name)
-    if ext.lower() in ['.md', '.pdf']:
-        return name
+    if ext.lower() in ['.md', '.pdf']: return name
     return raw_name
 
 def build_nav_structure(current_dir: str, relative_path: str = '') -> List[Dict[str, Any]]:
     items_to_sort = []
+    home_item = None # Variável para guardar o item da página inicial
+
     try:
         entries = os.listdir(current_dir)
     except FileNotFoundError:
-        print(f"AVISO: Diretório não encontrado: {current_dir}")
         return []
 
     for entry_name in entries:
+        # --- LÓGICA NOVA: Tratar o index.md separadamente ---
+        if entry_name.lower() == 'index.md' and relative_path == '':
+            home_item = {'Bem vind@!': 'index.md'}
+            continue # Pula para o próximo ficheiro
+
         if entry_name.startswith('.') or entry_name.startswith('#') or entry_name == 'assets':
             continue
 
@@ -97,22 +88,29 @@ def build_nav_structure(current_dir: str, relative_path: str = '') -> List[Dict[
             items_to_sort.append((sort_key, nav_item))
 
     items_to_sort.sort(key=lambda x: x[0])
-    return [item[1] for item in items_to_sort]
+    
+    # Constrói a lista final, colocando o home_item no início
+    final_nav = []
+    if home_item:
+        final_nav.append(home_item)
+    
+    final_nav.extend([item[1] for item in items_to_sort])
+    
+    return final_nav
 
 # --- Execução Principal ---
 if __name__ == "__main__":
     if not os.path.isdir(DOCS_DIR):
-        print(f"ERRO: Diretório '{DOCS_DIR}' não encontrado. Certifique-se de executar este script a partir da pasta raiz do projeto (Takwara-Tech).")
+        print(f"ERRO: Diretório '{DOCS_DIR}' não encontrado.")
         exit(1)
 
     try:
         with open(MKDOCS_YML_PATH, 'r', encoding='utf-8') as f:
             mkdocs_config = yaml.safe_load(f) or {}
     except FileNotFoundError:
-        print(f"AVISO: '{MKDOCS_YML_PATH}' não encontrado na raiz. Um novo arquivo será criado.")
         mkdocs_config = {}
 
-    print(f"Gerando estrutura de navegação a partir de '{DOCS_DIR}'...")
+    print("Gerando estrutura de navegação...")
     nav_structure = build_nav_structure(DOCS_DIR, '')
 
     if not nav_structure:
