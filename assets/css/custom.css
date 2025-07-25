@@ -71,3 +71,30 @@ body.toolbox-is-open .md-main {
 .md-sidebar--secondary {
     padding-top: 10px;
 }
+
+/* ============================================== */
+/* Correção para o Layout do Carrossel Splide     */
+/* ============================================== */
+
+/* Garante que a "pista" onde os slides correm está corretamente configurada */
+.splide__track {
+  overflow: hidden;
+}
+
+/* A regra mais importante: Força a lista de imagens a ser horizontal */
+.splide__list {
+  display: flex !important;
+}
+
+/* Garante que cada imagem (slide) não encolha e ocupe o seu espaço */
+.splide__slide {
+  flex-shrink: 0;
+  width: 100%;    /* Garante que cada slide ocupe a largura do container */
+  list-style-type: none !important; /* Remove os "pontos" da lista */
+}
+
+/* Garante que as imagens não fiquem maiores que o slide */
+.splide__slide img {
+  width: 100%;
+  height: auto;
+}

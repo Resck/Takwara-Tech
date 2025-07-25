@@ -46,3 +46,47 @@
     height: 100%;
     border: 0;
 }
+
+/* Estilos para o container do carrossel */
+.carousel-container {
+  margin: 2em 0;
+}
+.carousel-title {
+  text-align: center;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+.splide__slide img {
+  max-height: 200px;
+  width: auto;
+  margin: 0 auto;
+}
+.splide-caption {
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: 0.5em;
+  color: grey;
+}
+/* Torna a regra do título mais específica para anular estilos do tema */
+.md-content .carousel-title {
+  display: block !important; /* O !important força a visibilidade */
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  color: var(--md-default-fg-color);
+  font-size: 1.2em;
+}
+/* ============================================== */
+/* Estilos para o Rodapé Minimalista e Centralizado */
+/* ============================================== */
+.takwara-footer-panel .footer-section-simple {
+  width: 100%;
+  text-align: center; /* Centraliza todo o texto e links */
+  padding: 1.5em 0;   /* Adiciona um espaçamento vertical */
+  font-size: 0.8em;   /* Deixa a fonte um pouco menor */
+}
+/* Esconde a aba 'Início' com um seletor super-específico para garantir a vitória */
+header .md-tabs__list .md-tabs__item:first-child {
+  display: none !important;
+}
