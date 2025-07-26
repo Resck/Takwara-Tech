@@ -17,7 +17,7 @@ extra_javascript:
   defer: true
 - path: assets/js/custom.js
   defer: true
-- https://unpkg.com/leaflet@1.9.4/dist/leaflet.js  
+- https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
 defer: true
 markdown_extensions:
 - pymdownx.highlight:
@@ -39,14 +39,13 @@ theme:
   features:
   - navigation.tabs
   - navigation.instant: true
- # - navigation.expand
   - content.code.annotate
   - search.suggest
   - search.highlight
   - navigation.sticky
   - navigation.tabs.sticky
   - navigation.tracking
-  - navigation.collapse  # <-- Adicione esta linha aqui
+  - navigation.collapse
   language: pt-BR
   logo: assets/images/logo.png
   name: material
@@ -65,8 +64,7 @@ theme:
       name: Mudar para o modo escuro
 nav:
 - Bem vind@!: index.md
-- Ultimato Climático!: Ultimato-Climático.md
-
+- Ultimato-Climático: Ultimato-Climático.md
 - 'Tecnologias ':
   - Forno Ecológico: A1. Tecnologias /a1.2 Forno Ecológico.md
   - Sistema de Reforço: A1. Tecnologias /a1.3 Sistema de Reforço.md
@@ -103,9 +101,8 @@ nav:
   - Ferramentas para Layout: A4. Domos Geodésicos/a3.3 Ferramentas para Layout.md
   - a3.0José Luiz Mendes Ripper: A4. Domos Geodésicos/a3.0José Luiz Mendes Ripper.md
 - COP30:
-  - Trajetória da Degradação Nacional_ Das Promessas: A6. COP30/A Trajetória da Degradação
-      Nacional_ Das Promessas.md
-  - O Paradoxo da Sustentabilidade: A6. COP30/a5.1 O Paradoxo da Sustentabilidade.md
+  - Dossiê COP30: A6. COP30/a5.0 Dossiê COP30.md
+  - Reforma Agrária: A6. COP30/a5.1 Reforma Agrária.md
   - Deficit Habitacional: A6. COP30/a5.2 Deficit Habitacional.md
   - O Paradoxo do Bambu: A6. COP30/a6.1 O Paradoxo do Bambu.md
   - A Arquitetura das Influências: A6. COP30/a6.2 A Arquitetura das Influências.md
@@ -156,5 +153,5 @@ nav:
   - 13- SET-19 ARTIGO Relato Popular: A8. Anais da pesquisa/13- SET-19 ARTIGO Relato
       Popular.pdf
   - 14- SET-19 Mutiráo Tecnologico: A8. Anais da pesquisa/14- SET-19 Mutiráo Tecnologico.pdf
-  
 
+- LICENSE: LICENSE.md
