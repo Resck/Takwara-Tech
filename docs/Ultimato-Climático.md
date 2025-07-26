@@ -41,8 +41,6 @@ A crise climática e a crise da desigualdade não são, portanto, problemas sepa
 |40% do meio|3,1 bilhões|44,3%|5|50%|
 |50% mais pobres|3,9 bilhões|7,7%|0,7|- (já abaixo da meta)|
 
-Exportar para as Planilhas
-
 Fonte: Elaborado com base em dados da Oxfam (2025).  
 
 A tabela acima quantifica a crítica de Wolff. Ela demonstra que a responsabilidade pela crise climática é imensamente diferenciada. A narrativa de que "somos todos culpados" obscurece o fato de que o sistema é projetado para beneficiar desproporcionalmente uma pequena elite, cujos padrões de consumo e investimento são o principal motor das emissões, enquanto os custos são impostos àqueles que mal contribuem para o problema.
@@ -98,8 +96,6 @@ Como contraponto a esta arquitetura de inação, uma onda crescente de litígios
 |BNP Paribas|França|15,1|16,5|+9,3%|7,0|
 |SMBC|Japão|28,1|27,9|-0,7%|14,0|
 
-Exportar para as Planilhas
-
 Fonte: Elaborado com base em dados do relatório Banking on Climate Chaos 2025 (Rainforest Action Network et al., 2025). Os valores de 2023 são baseados em dados do relatório de 2024, que utilizou uma metodologia expandida.  
 
 ## Capítulo 3: O Impasse das Soluções de Mercado: "Crescimento Verde" e a Falácia da Decuplagem Absoluta
@@ -138,8 +134,6 @@ O debate entre crescimento verde e decrescimento é, portanto, a batalha ideoló
 |Compromissos (NDCs) Condicionais|2,6|53|29|11%|
 |Caminho para 2,0°C|< 2,0|41|17|28%|
 |Caminho para 1,5°C|< 1,5|24|0|42%|
-
-Exportar para as Planilhas
 
 Fonte: Elaborado com base em dados do UNEP Emissions Gap Report (2024) e World Resources Institute (WRI).  
 
