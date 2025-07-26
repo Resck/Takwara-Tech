@@ -1,128 +1,98 @@
-# -*- coding: utf-8 -*-
-"""
-Script final para gerar a navegação, tratando o index.md de forma especial.
-"""
+# generate_carousel.py (versão 7.0 - Sem Legendas)
 import os
-import yaml
+import sys
 import re
-from typing import List, Dict, Any, Tuple, Optional
+from PIL import Image
 
-# --- Configurações Simplificadas ---
-DOCS_DIR = 'docs'
-MKDOCS_YML_PATH = 'mkdocs.yml'
+# --- CONFIGURAÇÕES ---
+DESTINO_BASE = "assets/images/carrosseis-otimizados" 
+MAX_WIDTH = 800
+JPEG_QUALITY = 80
 
-# --- Funções Auxiliares ---
+def sanitize_for_id(text):
+    s = text.lower()
+    s = re.sub(r'\s+', '-', s)
+    s = re.sub(r'[^a-z0-9\-]', '', s)
+    return s
 
-def extract_prefix_and_name(entry_name: str) -> Tuple[Optional[str], str]:
-    match = re.match(r'^([a-zA-Z0-9\.]+)\s+(.*)', entry_name)
-    if match: return match.group(1), match.group(2)
-    return None, entry_name
+def create_caption_from_filename(filename):
+    """Cria uma legenda legível a partir do nome do ficheiro para o atributo 'alt'."""
+    name_without_ext = os.path.splitext(filename)[0]
+    caption = name_without_ext.replace('_', ' ').replace('-', ' ')
+    return caption.capitalize()
 
-def parse_prefix_for_sort(prefix: str) -> Tuple:
-    parts = prefix.split('.')
-    sort_key_parts = []
-    for part in parts:
-        if part.isdigit():
-            sort_key_parts.append(part.zfill(8))
-        else:
-            sub_parts = re.findall(r'(\d+|\D+)', part)
-            for sub_part in sub_parts:
-                if sub_part.isdigit():
-                    sort_key_parts.append(sub_part.zfill(8))
-                else:
-                    sort_key_parts.append(sub_part)
-    return tuple(sort_key_parts)
+def process_images_and_generate_html(source_dir, depth, title=""):
+    if not os.path.isdir(source_dir):
+        print(f"ERRO: A pasta de origem '{source_dir}' não foi encontrada.")
+        return
 
-def get_display_name(raw_name: str) -> str:
-    name, ext = os.path.splitext(raw_name)
-    if ext.lower() in ['.md', '.pdf']: return name
-    return raw_name
-
-def build_nav_structure(current_dir: str, relative_path: str = '') -> List[Dict[str, Any]]:
-    items_to_sort = []
-    home_item = None # Variável para guardar o item da página inicial
-
-    try:
-        entries = os.listdir(current_dir)
-    except FileNotFoundError:
-        return []
-
-    for entry_name in entries:
-        # --- LÓGICA NOVA: Tratar o index.md separadamente ---
-        if entry_name.lower() == 'index.md' and relative_path == '':
-            home_item = {'Bem vind@!': 'index.md'}
-            continue # Pula para o próximo ficheiro
-
-        if entry_name.startswith('.') or entry_name.startswith('#') or entry_name == 'assets':
-            continue
-
-        full_path = os.path.join(current_dir, entry_name)
-        is_dir = os.path.isdir(full_path)
-
-        if not is_dir and not (entry_name.lower().endswith('.md') or entry_name.lower().endswith('.pdf')):
-            continue
-
-        prefix, raw_name = extract_prefix_and_name(entry_name)
-        display_name = get_display_name(raw_name)
-
-        if is_dir and not display_name:
-            display_name = get_display_name(entry_name)
-
-        sort_key: Tuple
-        if prefix:
-            sort_key = parse_prefix_for_sort(prefix)
-        else:
-            sort_key = ('~', entry_name)
-
-        nav_item = None
-        if is_dir:
-            sub_nav = build_nav_structure(full_path, os.path.join(relative_path, entry_name))
-            if sub_nav:
-                nav_item = {display_name: sub_nav}
-        else:
-            link_path = os.path.join(relative_path, entry_name)
-            link_path = link_path.replace('\\', '/')
-            nav_item = {display_name: link_path}
-
-        if nav_item:
-            items_to_sort.append((sort_key, nav_item))
-
-    items_to_sort.sort(key=lambda x: x[0])
+    gallery_name = os.path.basename(os.path.normpath(source_dir))
+    full_dest_dir = os.path.join('docs', DESTINO_BASE, gallery_name)
     
-    # Constrói a lista final, colocando o home_item no início
-    final_nav = []
-    if home_item:
-        final_nav.append(home_item)
-    
-    final_nav.extend([item[1] for item in items_to_sort])
-    
-    return final_nav
+    os.makedirs(full_dest_dir, exist_ok=True)
+    print(f"A processar imagens de '{source_dir}'...")
 
-# --- Execução Principal ---
+    image_files = []
+    for filename in sorted(os.listdir(source_dir)):
+        if filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+            source_path = os.path.join(source_dir, filename)
+            new_filename = sanitize_filename(filename) # Usar a função de limpeza que criámos
+            dest_path = os.path.join(full_dest_dir, new_filename)
+            
+            with Image.open(source_path) as img:
+                if img.width > MAX_WIDTH:
+                    aspect_ratio = img.height / img.width
+                    new_height = int(MAX_WIDTH * aspect_ratio)
+                    img = img.resize((MAX_WIDTH, new_height), Image.Resampling.LANCZOS)
+                if img.mode != 'RGB': img = img.convert('RGB')
+                img.save(dest_path, "JPEG", quality=JPEG_QUALITY, optimize=True)
+            image_files.append(new_filename)
+            print(f"  -> Imagem '{filename}' otimizada e renomeada para '{new_filename}'.")
+
+    carousel_id = f"carrossel-{sanitize_for_id(gallery_name)}"
+    
+    print("\n--- CÓDIGO HTML DO CARROSSEL (Copie e cole no seu ficheiro .md) ---")
+    
+    html_output = f'<div class="carousel-container">\n'
+    if title:
+        html_output += f'  <h4 class="carousel-title">{title}</h4>\n'
+    
+    html_output += f'  <div id="{carousel_id}" class="splide">\n    <div class="splide__track">\n      <ul class="splide__list">\n'
+    
+    path_prefix = '../' * depth
+    
+    for filename in image_files:
+        relative_image_path = f"{path_prefix}{DESTINO_BASE}/{gallery_name}/{filename}".replace("\\", "/")
+        caption = create_caption_from_filename(filename)
+        
+        html_output += f'        <li class="splide__slide">\n'
+        html_output += f'          <img src="{relative_image_path}" alt="{caption}">\n'
+        # --- LINHA REMOVIDA --- A linha abaixo que criava a legenda foi comentada.
+        # html_output += f'          <p class="splide-caption">{caption}</p>\n'
+        html_output += f'        </li>\n'
+
+    html_output += '      </ul>\n    </div>\n  </div>\n</div>\n'
+    print(html_output)
+    print("--------------------------------------------------------------------")
+
+# Adiciona a função sanitize_filename que estava na v6.0
+def sanitize_filename(filename):
+    name, ext = os.path.splitext(filename)
+    name = name.lower()
+    name = re.sub(r'[\s_]+', '-', name)
+    name = re.sub(r'[^a-z0-9\-]', '', name)
+    name = re.sub(r'--+', '-', name)
+    name = name.strip('-')
+    return f"{name}{ext.lower()}"
+
 if __name__ == "__main__":
-    if not os.path.isdir(DOCS_DIR):
-        print(f"ERRO: Diretório '{DOCS_DIR}' não encontrado.")
-        exit(1)
-
-    try:
-        with open(MKDOCS_YML_PATH, 'r', encoding='utf-8') as f:
-            mkdocs_config = yaml.safe_load(f) or {}
-    except FileNotFoundError:
-        mkdocs_config = {}
-
-    print("Gerando estrutura de navegação...")
-    nav_structure = build_nav_structure(DOCS_DIR, '')
-
-    if not nav_structure:
-        print("AVISO: Nenhuma estrutura de navegação foi gerada.")
-        exit(0)
-
-    mkdocs_config['nav'] = nav_structure
-
-    try:
-        with open(MKDOCS_YML_PATH, 'w', encoding='utf-8') as f:
-            yaml.dump(mkdocs_config, f, default_flow_style=False, sort_keys=False, indent=2, allow_unicode=True)
-        print(f"SUCESSO: Seção 'nav' atualizada em '{MKDOCS_YML_PATH}'.")
-    except IOError as e:
-        print(f"ERRO ao escrever no arquivo '{MKDOCS_YML_PATH}': {e}")
-        exit(1)
+    if len(sys.argv) < 3:
+        print("Uso: python <script> <pasta_das_imagens> <profundidade> \"[Título Opcional]\"")
+    else:
+        source_dir = sys.argv[1]
+        try:
+            depth = int(sys.argv[2])
+            title = sys.argv[3] if len(sys.argv) > 3 else ""
+            process_images_and_generate_html(source_dir, depth, title)
+        except ValueError:
+            print("ERRO: A profundidade deve ser um número inteiro (0, 1, 2, etc.).")

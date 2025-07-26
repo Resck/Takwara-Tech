@@ -1,4 +1,4 @@
-# generate_carousel.py (versão 5.0 - Com Títulos e Legendas)
+# generate_carousel.py (versão 6.0 - Com Renomeação Automática)
 import os
 import sys
 import re
@@ -15,10 +15,36 @@ def sanitize_for_id(text):
     s = re.sub(r'[^a-z0-9\-]', '', s)
     return s
 
+# --- NOVA FUNÇÃO PARA LIMPAR NOMES DE FICHEIROS ---
+def sanitize_filename(filename):
+    """
+    Limpa um nome de ficheiro para ser seguro para a web.
+    Exemplo: 'Foto de Teste (1).JPG' -> 'foto-de-teste-1.jpg'
+    """
+    # Separa o nome da extensão
+    name, ext = os.path.splitext(filename)
+    
+    # Converte para minúsculas
+    name = name.lower()
+    
+    # Substitui espaços, underscores e outros separadores comuns por hífens
+    name = re.sub(r'[\s_]+', '-', name)
+    
+    # Remove todos os caracteres que não sejam letras, números ou hífens
+    name = re.sub(r'[^a-z0-9\-]', '', name)
+    
+    # Remove hífens duplicados que possam ter sido criados
+    name = re.sub(r'--+', '-', name)
+    
+    # Remove hífens no início ou no fim do nome
+    name = name.strip('-')
+    
+    # Junta o nome limpo com a extensão original (também em minúsculas)
+    return f"{name}{ext.lower()}"
+# --- FIM DA NOVA FUNÇÃO ---
+
 def create_caption_from_filename(filename):
-    """Cria uma legenda legível a partir do nome do ficheiro."""
     name_without_ext = os.path.splitext(filename)[0]
-    # Substitui hífens e underscores por espaços
     caption = name_without_ext.replace('_', ' ').replace('-', ' ')
     return caption.capitalize()
 
@@ -36,8 +62,12 @@ def process_images_and_generate_html(source_dir, depth, title=""):
     image_files = []
     for filename in sorted(os.listdir(source_dir)):
         if filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+            # --- ALTERAÇÃO AQUI: GERA O NOVO NOME SEGURO ---
+            new_filename = sanitize_filename(filename)
+            
             source_path = os.path.join(source_dir, filename)
-            dest_path = os.path.join(full_dest_dir, filename)
+            # O caminho de destino agora usa o novo nome de ficheiro
+            dest_path = os.path.join(full_dest_dir, new_filename)
             
             with Image.open(source_path) as img:
                 if img.width > MAX_WIDTH:
@@ -46,15 +76,16 @@ def process_images_and_generate_html(source_dir, depth, title=""):
                     img = img.resize((MAX_WIDTH, new_height), Image.Resampling.LANCZOS)
                 if img.mode != 'RGB': img = img.convert('RGB')
                 img.save(dest_path, "JPEG", quality=JPEG_QUALITY, optimize=True)
-            image_files.append(filename)
+            
+            # Adiciona o novo nome de ficheiro à lista
+            image_files.append(new_filename)
+            print(f"  -> Imagem '{filename}' otimizada e renomeada para '{new_filename}'.")
 
     carousel_id = f"carrossel-{sanitize_for_id(gallery_name)}"
     
     print("\n--- CÓDIGO HTML DO CARROSSEL (Copie e cole no seu ficheiro .md) ---")
     
-    # Inicia o container geral
     html_output = f'<div class="carousel-container">\n'
-    # Adiciona o título se ele for fornecido
     if title:
         html_output += f'  <h4 class="carousel-title">{title}</h4>\n'
     
@@ -68,7 +99,6 @@ def process_images_and_generate_html(source_dir, depth, title=""):
         
         html_output += f'        <li class="splide__slide">\n'
         html_output += f'          <img src="{relative_image_path}" alt="{caption}">\n'
-        # Adiciona a legenda abaixo da imagem
         html_output += f'          <p class="splide-caption">{caption}</p>\n'
         html_output += f'        </li>\n'
 
@@ -80,12 +110,10 @@ def process_images_and_generate_html(source_dir, depth, title=""):
 if __name__ == "__main__":
     if len(sys.argv) < 3:
         print("Uso: python <script> <pasta_das_imagens> <profundidade> \"[Título Opcional]\"")
-        print("Profundidade é o número de pastas dentro de 'docs'. Ex: 'docs/artigo.md' = 0, 'docs/tech/artigo.md' = 1.")
     else:
         source_dir = sys.argv[1]
         try:
             depth = int(sys.argv[2])
-            # O título é opcional
             title = sys.argv[3] if len(sys.argv) > 3 else ""
             process_images_and_generate_html(source_dir, depth, title)
         except ValueError:
