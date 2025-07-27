@@ -64,10 +64,12 @@ theme:
       name: Mudar para o modo escuro
 nav:
 - Bem vind@!: index.md
-- Ultimato-Climático: Ultimato-Climático.md
+- ULTIMATO CIMÁTICO: Ultimato-Climático.md
 - O Tecnofeudalismo no Brasil: O Tecnofeudalismo no Brasil.md
 - HÁ SOLUÇÃO !!!: ha-solucao.md
-- Arando com um Rolls-Royce: Arando-Rolls-Royce.md  
+- A Tornozeleira de Troia: tornozeleira~troia.md
+- A REVOLUÇÃO DA MAMONA: Arando-Rolls-Royce.md
+- ATHIS - Bambu X Concreto: athis-concreto-bambu.md
 - 'Tecnologias ':
   - Forno Ecológico: A1. Tecnologias /a1.2 Forno Ecológico.md
   - Sistema de Reforço: A1. Tecnologias /a1.3 Sistema de Reforço.md
@@ -95,7 +97,6 @@ nav:
   - Oscar Hidalgo: A2.a Personalidades/a2.a4 Oscar Hidalgo.md
   - Simon Velez: A2.a Personalidades/a2.a5 Simon Velez.md
 - O PU Vegetal:
-  - Orivaldo Chierice: A3. O PU Vegetal/Gilberto Orivaldo Chierice.md
   - A Imperveg Polímeros Vegetais: A3. O PU Vegetal/a4.1 A Imperveg Polímeros Vegetais.md
   - 'Orgânicos X Sintéticos ': A3. O PU Vegetal/a4.2 Orgânicos X Sintéticos .md
 - Domos Geodésicos:
@@ -110,7 +111,6 @@ nav:
   - O Paradoxo do Bambu: A6. COP30/a6.1 O Paradoxo do Bambu.md
   - A Arquitetura das Influências: A6. COP30/a6.2 A Arquitetura das Influências.md
   - Colômbia X Brasil: A6. COP30/a6.3 Colômbia X Brasil.md
-  - A Maloca de Concreto: A6. COP30/a6.4 A Maloca de Concreto.md
 - Como  Contribuir:
   - Anais Técnicos: A7. Como  Contribuir/a6.1 Anais Técnicos.md
   - Colaboração: A7. Como  Contribuir/a6.2 Colaboração.md
