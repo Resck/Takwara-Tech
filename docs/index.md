@@ -9,7 +9,7 @@ This platform, born from a autodidactic journey and a commitment to ecological i
 ![Licença CC BY 4.0](https://i.creativecommons.org/l/by/4.0/88x31.png)
 *Este trabalho está licenciado sob a Creative Commons Atribuição 4.0 Internacional.*
 
-![inicial](../assets/images/Pesquisa_img/ferramentas_inicial.jpg)
+![inicial](assets/images/Pesquisa_img/ferramentas_inicial.jpg)
 
 
 **1. A Chama da Autodeterminação: Bem-vindo à Revolução Takwara!**
@@ -74,42 +74,42 @@ Nossa metodologia é um sistema integrado que supera os desafios tradicionais do
 **A Tecnologia Takwara é mais que inovação material; é uma ferramenta de transformação social, econômica e ambiental.**
 
 <div class="carousel-container">
-  <h4 class="carousel-title">Domo 10m - Cobertura papelão - 2014/17</h4>
+  <h4 class="carousel-title">Domo 10m Cobertura de papelão - 2014/17 </h4>
   <div id="carrossel-sitio-geranium-2017" class="splide">
     <div class="splide__track">
       <ul class="splide__list">
         <li class="splide__slide">
-          <img src="../../assets/images/carrosseis-otimizados/sitio-geranium-2017/dsc-2342.jpg" alt="Dsc 2342">
+          <img src="assets/images/carrosseis-otimizados/sitio-geranium-2017/dsc-2342.jpg" alt="Dsc 2342">
         </li>
         <li class="splide__slide">
-          <img src="../../assets/images/carrosseis-otimizados/sitio-geranium-2017/dsc-2344.jpg" alt="Dsc 2344">
+          <img src="assets/images/carrosseis-otimizados/sitio-geranium-2017/dsc-2344.jpg" alt="Dsc 2344">
         </li>
         <li class="splide__slide">
-          <img src="../../assets/images/carrosseis-otimizados/sitio-geranium-2017/dsc-2345.jpg" alt="Dsc 2345">
+          <img src="assets/images/carrosseis-otimizados/sitio-geranium-2017/dsc-2345.jpg" alt="Dsc 2345">
         </li>
         <li class="splide__slide">
-          <img src="../../assets/images/carrosseis-otimizados/sitio-geranium-2017/dsc-2346.jpg" alt="Dsc 2346">
+          <img src="assets/images/carrosseis-otimizados/sitio-geranium-2017/dsc-2346.jpg" alt="Dsc 2346">
         </li>
         <li class="splide__slide">
-          <img src="../../assets/images/carrosseis-otimizados/sitio-geranium-2017/dsc-2365.jpg" alt="Dsc 2365">
+          <img src="assets/images/carrosseis-otimizados/sitio-geranium-2017/dsc-2365.jpg" alt="Dsc 2365">
         </li>
         <li class="splide__slide">
-          <img src="../../assets/images/carrosseis-otimizados/sitio-geranium-2017/dsc-2370.jpg" alt="Dsc 2370">
+          <img src="assets/images/carrosseis-otimizados/sitio-geranium-2017/dsc-2370.jpg" alt="Dsc 2370">
         </li>
         <li class="splide__slide">
-          <img src="../../assets/images/carrosseis-otimizados/sitio-geranium-2017/geo-10m-jun-20142.jpg" alt="Geo 10m jun 20142">
+          <img src="assets/images/carrosseis-otimizados/sitio-geranium-2017/geo-10m-jun-20142.jpg" alt="Geo 10m jun 20142">
         </li>
         <li class="splide__slide">
-          <img src="../../assets/images/carrosseis-otimizados/sitio-geranium-2017/geo-10m-jun-20143.jpg" alt="Geo 10m jun 20143">
+          <img src="assets/images/carrosseis-otimizados/sitio-geranium-2017/geo-10m-jun-20143.jpg" alt="Geo 10m jun 20143">
         </li>
         <li class="splide__slide">
-          <img src="../../assets/images/carrosseis-otimizados/sitio-geranium-2017/geo-10m-jun-20144.jpg" alt="Geo 10m jun 20144">
+          <img src="assets/images/carrosseis-otimizados/sitio-geranium-2017/geo-10m-jun-20144.jpg" alt="Geo 10m jun 20144">
         </li>
         <li class="splide__slide">
-          <img src="../../assets/images/carrosseis-otimizados/sitio-geranium-2017/geo-10m-jun-20145.jpg" alt="Geo 10m jun 20145">
+          <img src="assets/images/carrosseis-otimizados/sitio-geranium-2017/geo-10m-jun-20145.jpg" alt="Geo 10m jun 20145">
         </li>
         <li class="splide__slide">
-          <img src="../../assets/images/carrosseis-otimizados/sitio-geranium-2017/geo-10m-jun-2014.jpg" alt="Geo 10m jun 2014">
+          <img src="assets/images/carrosseis-otimizados/sitio-geranium-2017/geo-10m-jun-2014.jpg" alt="Geo 10m jun 2014">
         </li>
       </ul>
     </div>
