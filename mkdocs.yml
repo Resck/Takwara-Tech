@@ -4,7 +4,6 @@ extra_css:
 - assets/css/custom.css
 - assets/css/extra.css
 - https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
-- assets/css/extra.css
 - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
 extra_javascript:
 - path: https://unpkg.com/vis-network/standalone/umd/vis-network.min.js
@@ -17,8 +16,8 @@ extra_javascript:
   defer: true
 - path: assets/js/custom.js
   defer: true
-- https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
-defer: true
+- path: https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
+  defer: true
 markdown_extensions:
 - pymdownx.highlight:
     anchor_linenums: true
@@ -67,11 +66,11 @@ nav:
 - ULTIMATO CIMÁTICO: Ultimato-Climático.md
 - O Tecnofeudalismo no Brasil: O Tecnofeudalismo no Brasil.md
 - A Maloca de Concreto: maloca-concreto.md
-- Bio-Revolução Verde e Amarela: ha-solucao.md
-- O Mapa da Mina: Arando-Rolls-Royce.md
 - ATHIS-Colonialismo e Resistência: athis-concreto-bambu.md
 - A Vanguarda da Arquitetura Circular: arquitetura-resistencia.md
-- BAMBU URGENTE !!! : bambu-urgente.md
+- Bio-Revolução Verde e Amarela: ha-solucao.md
+- O Mapa da Mina: Arando-Rolls-Royce.md
+- Bambu Urgente!!!: bambu-urgente.md
 - 'Tecnologias ':
   - Forno Ecológico: A1. Tecnologias /a1.2 Forno Ecológico.md
   - Sistema de Reforço: A1. Tecnologias /a1.3 Sistema de Reforço.md
