@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://resck.github.io/Takwara-Tech/grafo-dialog/">
+      
       
       
       
@@ -16,7 +18,7 @@
     
     
       
-        <title>Grafo dialog - Tecnologia Takwara</title>
+        <title>Grafo da Bioeconomia do Brasil: Arquitetura, Bambu e Desenvolvimento - Tecnologia Takwara</title>
       
     
     
@@ -77,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#grafo-da-bioeconomia-do-brasil-arquitetura-bambu-e-desenvolvimento" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Grafo dialog
+              Grafo da Bioeconomia do Brasil: Arquitetura, Bambu e Desenvolvimento
             
           </span>
         </div>
@@ -254,13 +261,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../O%20Tecnofeudalismo%20no%20Brasil/" class="md-tabs__link">
+      <a href="../a-rota-do-bambu/" class="md-tabs__link">
         
   
   
     
   
-  O Tecnofeudalismo no Brasil
+  A Rota do Bambu
 
       </a>
     </li>
@@ -432,6 +439,25 @@
     
   
   Colômbia X Brasil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../O%20Tecnofeudalismo%20no%20Brasil/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  O Tecnofeudalismo no Brasil
 
       </a>
     </li>
@@ -624,9 +650,45 @@
   
 </header>
     
-  <button data-md-dialog="grafo-dialog" style="position: absolute; left: 1.5rem; top: 2.5rem; z-index: 999; background: #388e3c; color: #fff; border-radius: 50%; width: 48px; height: 48px; border: none; font-size: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+  
+  <button id="open-grafo-btn">
     <span title="Abrir Grafo">🗺️</span>
   </button>
+
+  <dialog id="grafo-dialog">
+    <div class="grafo-dialog-header">
+      <strong>Grafo da Bioeconomia</strong>
+      <button id="close-grafo-btn" title="Fechar">&times;</button>
+    </div>
+    <div class="grafo-dialog-content">
+      
+      <iframe src="/grafo-bioeconomia/" style="width: 100%; height: 100%; border: none;"></iframe>
+
+    </div>
+  </dialog>
+
+  <script>
+    const openBtn = document.getElementById('open-grafo-btn');
+    const closeBtn = document.getElementById('close-grafo-btn');
+    const dialog = document.getElementById('grafo-dialog');
+
+    // Abre o modal
+    openBtn.onclick = function() {
+      dialog.showModal();
+    };
+
+    // Fecha o modal
+    closeBtn.onclick = function() {
+      dialog.close();
+    };
+
+    // (Opcional) Fecha o modal se o usuário clicar fora dele
+    dialog.addEventListener('click', function(event) {
+      if (event.target === dialog) {
+        dialog.close();
+      }
+    });
+  </script>
 
     <div class="md-container" data-md-component="container">
       
@@ -664,8 +726,8 @@
     
     
   <li class="md-nav__item">
-    <a href="../O%20Tecnofeudalismo%20no%20Brasil/" class="md-nav__link">
-      O Tecnofeudalismo no Brasil
+    <a href="../a-rota-do-bambu/" class="md-nav__link">
+      A Rota do Bambu
     </a>
   </li>
 
@@ -753,6 +815,15 @@
   
     
     
+  <li class="md-nav__item">
+    <a href="../O%20Tecnofeudalismo%20no%20Brasil/" class="md-nav__link">
+      O Tecnofeudalismo no Brasil
+    </a>
+  </li>
+
+  
+    
+    
   <li class="md-nav__item md-nav__item--nested">
     
     <input class="md-nav__toggle md-toggle" type="checkbox" id="cop30" >
@@ -778,18 +849,12 @@
         
           
           
-        
-          
-          
   <li class="md-nav__item">
     <a href="../A6.%20COP30/a5.2%20Deficit%20Habitacional/" class="md-nav__link">
       Deficit Habitacional
     </a>
   </li>
 
-        
-          
-          
         
       </ul>
     </nav>
@@ -1563,9 +1628,25 @@
 
 
 
-  <h1>Grafo dialog</h1>
-
-
+<h1 id="grafo-da-bioeconomia-do-brasil-arquitetura-bambu-e-desenvolvimento">Grafo da Bioeconomia do Brasil: Arquitetura, Bambu e Desenvolvimento</h1>
+<pre class="mermaid"><code>graph TD
+    M[Arquitetura Moderna&lt;br&gt;Alta Pegada de Carbono] --&gt;|Comparação| O[Arquitetura Orgânica&lt;br&gt;PU+Bambu]
+    M --&gt; MC[Crise Habitacional&lt;br&gt;e Emissões]
+    O --&gt; RE[Redução de Emissões]
+    O --&gt; RS[Restauração Ecológica]
+    O --&gt; DS[Desenvolvimento Socioeconômico]
+    DS --&gt; IN[Inclusão Produtiva]
+    DS --&gt; BE[Bioeconomia Regenerativa]
+    BE --&gt; CB[Com Bambu]
+    BE --&gt; SB[Sem Bambu]
+    CB --&gt;|Ecossistema| EC[Ecossistema do Bambu]
+    EC --&gt; EV[Eventos e Redes]
+    EC --&gt; OR[Organizações e Articuladores]
+    click M "https://resck.github.io/Takwara-Tech/maloca-concreto/"
+    click O "https://resck.github.io/Takwara-Tech/athis-concreto-bambu/"
+    click CB "https://resck.github.io/Takwara-Tech/bambu-urgente/"
+    click SB "https://resck.github.io/Takwara-Tech/A6.%20COP30/a5.0%20Dossi%C3%AA%20COP30/"
+    click EC "https://resck.github.io/Takwara-Tech/A2.%20%20O%20Bambu/%23%20a2.3%20O%20Ecossistema%20do%20Bambu%20no%20Brasil/"</code></pre>
 
 
 
@@ -1618,11 +1699,13 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", {"navigation.instant": true}, "content.code.annotate", "search.suggest", "search.highlight", "navigation.sticky", "navigation.tabs.sticky", "navigation.tracking", "navigation.collapse"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant", "content.code.annotate", "search.suggest", "search.highlight", "navigation.sticky", "navigation.tabs.sticky", "navigation.tracking", "navigation.collapse"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
   
       <script src="../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       
         <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js" defer></script>
       

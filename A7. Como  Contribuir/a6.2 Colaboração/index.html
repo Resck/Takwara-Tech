@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://resck.github.io/Takwara-Tech/A7.%20Como%20%20Contribuir/a6.2%20Colabora%C3%A7%C3%A3o/">
+      
       
         <link rel="prev" href="../a6.1%20Anais%20T%C3%A9cnicos/">
       
@@ -263,13 +265,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../O%20Tecnofeudalismo%20no%20Brasil/" class="md-tabs__link">
+      <a href="../../a-rota-do-bambu/" class="md-tabs__link">
         
   
   
     
   
-  O Tecnofeudalismo no Brasil
+  A Rota do Bambu
 
       </a>
     </li>
@@ -441,6 +443,25 @@
     
   
   Colômbia X Brasil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../O%20Tecnofeudalismo%20no%20Brasil/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  O Tecnofeudalismo no Brasil
 
       </a>
     </li>
@@ -635,9 +656,45 @@
   
 </header>
     
-  <button data-md-dialog="grafo-dialog" style="position: absolute; left: 1.5rem; top: 2.5rem; z-index: 999; background: #388e3c; color: #fff; border-radius: 50%; width: 48px; height: 48px; border: none; font-size: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+  
+  <button id="open-grafo-btn">
     <span title="Abrir Grafo">🗺️</span>
   </button>
+
+  <dialog id="grafo-dialog">
+    <div class="grafo-dialog-header">
+      <strong>Grafo da Bioeconomia</strong>
+      <button id="close-grafo-btn" title="Fechar">&times;</button>
+    </div>
+    <div class="grafo-dialog-content">
+      
+      <iframe src="/grafo-bioeconomia/" style="width: 100%; height: 100%; border: none;"></iframe>
+
+    </div>
+  </dialog>
+
+  <script>
+    const openBtn = document.getElementById('open-grafo-btn');
+    const closeBtn = document.getElementById('close-grafo-btn');
+    const dialog = document.getElementById('grafo-dialog');
+
+    // Abre o modal
+    openBtn.onclick = function() {
+      dialog.showModal();
+    };
+
+    // Fecha o modal
+    closeBtn.onclick = function() {
+      dialog.close();
+    };
+
+    // (Opcional) Fecha o modal se o usuário clicar fora dele
+    dialog.addEventListener('click', function(event) {
+      if (event.target === dialog) {
+        dialog.close();
+      }
+    });
+  </script>
 
     <div class="md-container" data-md-component="container">
       
@@ -675,8 +732,8 @@
     
     
   <li class="md-nav__item">
-    <a href="../../O%20Tecnofeudalismo%20no%20Brasil/" class="md-nav__link">
-      O Tecnofeudalismo no Brasil
+    <a href="../../a-rota-do-bambu/" class="md-nav__link">
+      A Rota do Bambu
     </a>
   </li>
 
@@ -764,6 +821,15 @@
   
     
     
+  <li class="md-nav__item">
+    <a href="../../O%20Tecnofeudalismo%20no%20Brasil/" class="md-nav__link">
+      O Tecnofeudalismo no Brasil
+    </a>
+  </li>
+
+  
+    
+    
   <li class="md-nav__item md-nav__item--nested">
     
     <input class="md-nav__toggle md-toggle" type="checkbox" id="cop30" >
@@ -789,18 +855,12 @@
         
           
           
-        
-          
-          
   <li class="md-nav__item">
     <a href="../../A6.%20COP30/a5.2%20Deficit%20Habitacional/" class="md-nav__link">
       Deficit Habitacional
     </a>
   </li>
 
-        
-          
-          
         
       </ul>
     </nav>
@@ -1671,9 +1731,9 @@ pesquisa compartilhada e a contribuição voluntária, ajude a manter este princ
 <li><strong>Use o Script de Navegação (se necessário):</strong> Se você adicionou ou renomeou arquivos/pastas, vá para a raiz do repositório, execute <code>python Chatbot - Takwara/generate_mkdocs_nav.py</code> e salve as mudanças no <code>mkdocs.yml</code>.</li>
 <li><strong>Valide Localmente (Opcional, mas Recomendado):</strong> Na raiz do repositório, rode <code>mkdocs serve</code> e confira se tudo está como esperado no navegador local.</li>
 <li><strong>Commit e Push:</strong>
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;feat: Adiciona artigo sobre X por [Nome do Colaborador]&quot;</span><span class="w"> </span><span class="c1"># Mensagem clara e informativa</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>sua-contrib-nome-funcionalidade
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;feat: Adiciona artigo sobre X por [Nome do Colaborador]&quot;</span><span class="w"> </span><span class="c1"># Mensagem clara e informativa</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>sua-contrib-nome-funcionalidade
 </code></pre></div></li>
 <li><strong>Crie um Pull Request (PR):</strong> Vá até o seu fork no GitHub, clique em "Pull requests" e crie um novo PR, apontando do seu branch (<code>sua-contrib-nome-funcionalidade</code>) para o branch <code>main</code> do repositório original (<code>Resck/Takwara-Tech</code>).</li>
 <li><strong>Descreva Sua Contribuição:</strong> No campo de descrição do PR, explique claramente o que você adicionou/modificou, sua relevância para o projeto e, se aplicável, como você gostaria de ser reconhecido na seção de colaboradores. Mencione as APIs utilizadas ou custos incorridos, se for o caso (como contribuição financeira).</li>
@@ -1732,11 +1792,13 @@ pesquisa compartilhada e a contribuição voluntária, ajude a manter este princ
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", {"navigation.instant": true}, "content.code.annotate", "search.suggest", "search.highlight", "navigation.sticky", "navigation.tabs.sticky", "navigation.tracking", "navigation.collapse"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "content.code.annotate", "search.suggest", "search.highlight", "navigation.sticky", "navigation.tabs.sticky", "navigation.tracking", "navigation.collapse"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
   
       <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       
         <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js" defer></script>
       

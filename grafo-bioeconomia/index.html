@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://resck.github.io/Takwara-Tech/grafo-bioeconomia/">
+      
       
       
       
@@ -16,7 +18,7 @@
     
     
       
-        <title>Grafo bioeconomia - Tecnologia Takwara</title>
+        <title>Grafo da Bioeconomia do Brasil: Arquitetura, Bambu e Desenvolvimento - Tecnologia Takwara</title>
       
     
     
@@ -77,557 +79,17 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#grafo-da-bioeconomia-do-brasil-arquitetura-bambu-e-desenvolvimento" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
     </div>
     
     
-  
-      
-
-  
-
-<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href=".." title="Tecnologia Takwara" class="md-header__button md-logo" aria-label="Tecnologia Takwara" data-md-component="logo">
-      
-  <img src="../assets/images/logo.png" alt="logo">
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Tecnologia Takwara
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              Grafo bioeconomia
-            
-          </span>
-        </div>
-      </div>
-    </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="indigo"  aria-label="Mudar para o modo claro"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Mudar para o modo claro" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="indigo"  aria-label="Mudar para o modo escuro"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Mudar para o modo escuro" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Pesquisar">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Inicializando busca
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
-    
-    
-      <div class="md-header__source">
-        <a href="https://github.com/Resck/Takwara-Tech" title="Ir para repositório" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
-  </div>
-  <div class="md-source__repository">
-    Resck/Takwara-Tech
-  </div>
-</a>
-      </div>
-    
-  </nav>
-  
-    
-      
-<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
-        
-  
-  
-    
-  
-  Bem vind@!
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Ultimato-Clim%C3%A1tico/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  ULTIMATO CLIMÁTICO
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../O%20Tecnofeudalismo%20no%20Brasil/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  O Tecnofeudalismo no Brasil
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../maloca-concreto/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  A Maloca de Concreto
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../athis-concreto-bambu/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  ATHIS-Colonialismo e Resistência
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../arquitetura-resistencia/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  A Vanguarda da Arquitetura Circular
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../ha-solucao/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Bio-Revolução Verde e Amarela
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Arando-Rolls-Royce/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  O Mapa da Mina
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../bambu-urgente/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Bambu Urgente!!!
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../reforma-agraria/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Reforma Agrária
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../o-pl-da-devastacao/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  O PL da Devastação
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../A6.%20COP30/a6.3%20Col%C3%B4mbia%20X%20Brasil/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Colômbia X Brasil
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../A6.%20COP30/a5.0%20Dossi%C3%AA%20COP30/" class="md-tabs__link">
-          
-  
-  
-  COP30
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../A1.%20Tecnologias%20/a1.2%20Forno%20Ecol%C3%B3gico/" class="md-tabs__link">
-          
-  
-  
-  Tecnologias 
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../A2.%20%20O%20Bambu/a1.0%20O%20Papel%20do%20Bambu%20nas%20Queimadas/" class="md-tabs__link">
-          
-  
-  
-  O Bambu
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../A2.a%20Personalidades/a2.a1%20Jayme%20Gon%C3%A7alves/" class="md-tabs__link">
-          
-  
-  
-  Personalidades
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../A3.%20O%20PU%20Vegetal/a4.1%20A%20Imperveg%20Pol%C3%ADmeros%20Vegetais/" class="md-tabs__link">
-          
-  
-  
-  O PU Vegetal
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../A4.%20Domos%20Geod%C3%A9sicos/a3.1%20Dados%20Estruturais/" class="md-tabs__link">
-          
-  
-  
-  Domos Geodésicos
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../A7.%20Como%20%20Contribuir/a6.1%20Anais%20T%C3%A9cnicos/" class="md-tabs__link">
-          
-  
-  
-  Como  Contribuir
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../A8.%20Anais%20da%20pesquisa/10%20-%20Jan%20-19%20Relato%CC%81rio%20de%20atividades%20LaPeCFaS.pdf" class="md-tabs__link">
-          
-  
-  
-  Anais da pesquisa
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../LICENSE/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  LICENSE
-
-      </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
-    
-  
-</header>
-    
-  <button data-md-dialog="grafo-dialog" style="position: absolute; left: 1.5rem; top: 2.5rem; z-index: 999; background: #388e3c; color: #fff; border-radius: 50%; width: 48px; height: 48px; border: none; font-size: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
-    <span title="Abrir Grafo">🗺️</span>
-  </button>
-
     <div class="md-container" data-md-component="container">
       
       
@@ -664,8 +126,8 @@
     
     
   <li class="md-nav__item">
-    <a href="../O%20Tecnofeudalismo%20no%20Brasil/" class="md-nav__link">
-      O Tecnofeudalismo no Brasil
+    <a href="../a-rota-do-bambu/" class="md-nav__link">
+      A Rota do Bambu
     </a>
   </li>
 
@@ -753,6 +215,15 @@
   
     
     
+  <li class="md-nav__item">
+    <a href="../O%20Tecnofeudalismo%20no%20Brasil/" class="md-nav__link">
+      O Tecnofeudalismo no Brasil
+    </a>
+  </li>
+
+  
+    
+    
   <li class="md-nav__item md-nav__item--nested">
     
     <input class="md-nav__toggle md-toggle" type="checkbox" id="cop30" >
@@ -778,18 +249,12 @@
         
           
           
-        
-          
-          
   <li class="md-nav__item">
     <a href="../A6.%20COP30/a5.2%20Deficit%20Habitacional/" class="md-nav__link">
       Deficit Habitacional
     </a>
   </li>
 
-        
-          
-          
         
       </ul>
     </nav>
@@ -1556,59 +1021,36 @@
             
           
           
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
+  <div style="margin: 1rem;">
+    <h1 id="grafo-da-bioeconomia-do-brasil-arquitetura-bambu-e-desenvolvimento">Grafo da Bioeconomia do Brasil: Arquitetura, Bambu e Desenvolvimento</h1>
+<p>```mermaid
+graph TD
+    M[Arquitetura Moderna<br>Alta Pegada de Carbono] --&gt;|Comparação| O[Arquitetura Orgânica<br>PU+Bambu]
+    M --&gt; MC[Crise Habitacional<br>e Emissões]
+    O --&gt; RE[Redução de Emissões]
+    O --&gt; RS[Restauração Ecológica]
+    O --&gt; DS[Desenvolvimento Socioeconômico]
+    DS --&gt; IN[Inclusão Produtiva]
+    DS --&gt; BE[Bioeconomia Regenerativa]
+    BE --&gt; CB[Com Bambu]
+    BE --&gt; SB[Sem Bambu]
+    CB --&gt;|Ecossistema| EC[Ecossistema do Bambu]
+    EC --&gt; EV[Eventos e Redes]
+    EC --&gt; OR[Organizações e Articuladores]</p>
+<pre><code>%% --- LINKS CORRIGIDOS COM CAMINHOS RELATIVOS ---
+click M "/maloca-concreto/"
+click O "/athis-concreto-bambu/"
+click CB "/bambu-urgente/"
+click SB "/A6. COP30/a5.0 Dossiê COP30/"
+click EC "/A2. O Bambu/a2.3 O Ecossistema do Bambu no Brasil/"
+</code></pre>
+  </div>
 
-
-
-  <h1>Grafo bioeconomia</h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
-      
-        <div class="takwara-impact-panel takwara-footer-panel">
-    <div class="takwara-panel-content">
-    
-        <div class="footer-section-simple">
-            <p>
-                Email: <a href="mailto:fabiotakwara@gmail.com" target="_blank">fabiotakwara@gmail.com</a>
-                &nbsp;&nbsp;|&nbsp;&nbsp;
-                Conteúdo sob <a href="https://creativecommons.org/licenses/by/4.0/deed.pt" target="_blank">Licença CC BY 4.0</a>
-                &nbsp;&nbsp;|&nbsp;&nbsp;
-                <p>Leia mais sobre <a href="/license/">nos termos de licença</a>.</p>
-            </p>
-        </div>
-
-    </div>
-</div>
-
-<template id="takwara-tools-template">
-    <h4>Ferramentas</h4>
-<p>Conteúdo das ferramentas aparecerá aqui.</p>
-<hr>
-</template>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -1618,11 +1060,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", {"navigation.instant": true}, "content.code.annotate", "search.suggest", "search.highlight", "navigation.sticky", "navigation.tabs.sticky", "navigation.tracking", "navigation.collapse"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant", "content.code.annotate", "search.suggest", "search.highlight", "navigation.sticky", "navigation.tabs.sticky", "navigation.tracking", "navigation.collapse"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-  
       <script src="../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       
         <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js" defer></script>
       
@@ -1637,25 +1080,5 @@
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
       
     
-  <template id="takwara-chatbot-template">
-      <div id="chatbot-container" class="takwara-chatbot">
-  <div id="chat-box" class="chat-box">
-    <div class="message bot-message">
-      Olá! Sou a assistente virtual Takwara. Como posso ajudar?
-    </div>
-  </div>
-  <form id="chat-form" class="chat-form">
-    <input 
-      type="text" 
-      id="user-input" 
-      class="user-input" 
-      placeholder="Faça uma pergunta..." 
-      autocomplete="off"
-    >
-    <button type="submit" class="submit-button" title="Enviar">Enviar</button>
-  </form>
-</div>
-  </template>
-
   </body>
 </html>

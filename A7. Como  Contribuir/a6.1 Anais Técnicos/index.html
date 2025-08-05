@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://resck.github.io/Takwara-Tech/A7.%20Como%20%20Contribuir/a6.1%20Anais%20T%C3%A9cnicos/">
+      
       
         <link rel="prev" href="../../A4.%20Domos%20Geod%C3%A9sicos/a3.0Jos%C3%A9%20Luiz%20Mendes%20Ripper/">
       
@@ -263,13 +265,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../O%20Tecnofeudalismo%20no%20Brasil/" class="md-tabs__link">
+      <a href="../../a-rota-do-bambu/" class="md-tabs__link">
         
   
   
     
   
-  O Tecnofeudalismo no Brasil
+  A Rota do Bambu
 
       </a>
     </li>
@@ -441,6 +443,25 @@
     
   
   Colômbia X Brasil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../O%20Tecnofeudalismo%20no%20Brasil/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  O Tecnofeudalismo no Brasil
 
       </a>
     </li>
@@ -635,9 +656,45 @@
   
 </header>
     
-  <button data-md-dialog="grafo-dialog" style="position: absolute; left: 1.5rem; top: 2.5rem; z-index: 999; background: #388e3c; color: #fff; border-radius: 50%; width: 48px; height: 48px; border: none; font-size: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+  
+  <button id="open-grafo-btn">
     <span title="Abrir Grafo">🗺️</span>
   </button>
+
+  <dialog id="grafo-dialog">
+    <div class="grafo-dialog-header">
+      <strong>Grafo da Bioeconomia</strong>
+      <button id="close-grafo-btn" title="Fechar">&times;</button>
+    </div>
+    <div class="grafo-dialog-content">
+      
+      <iframe src="/grafo-bioeconomia/" style="width: 100%; height: 100%; border: none;"></iframe>
+
+    </div>
+  </dialog>
+
+  <script>
+    const openBtn = document.getElementById('open-grafo-btn');
+    const closeBtn = document.getElementById('close-grafo-btn');
+    const dialog = document.getElementById('grafo-dialog');
+
+    // Abre o modal
+    openBtn.onclick = function() {
+      dialog.showModal();
+    };
+
+    // Fecha o modal
+    closeBtn.onclick = function() {
+      dialog.close();
+    };
+
+    // (Opcional) Fecha o modal se o usuário clicar fora dele
+    dialog.addEventListener('click', function(event) {
+      if (event.target === dialog) {
+        dialog.close();
+      }
+    });
+  </script>
 
     <div class="md-container" data-md-component="container">
       
@@ -675,8 +732,8 @@
     
     
   <li class="md-nav__item">
-    <a href="../../O%20Tecnofeudalismo%20no%20Brasil/" class="md-nav__link">
-      O Tecnofeudalismo no Brasil
+    <a href="../../a-rota-do-bambu/" class="md-nav__link">
+      A Rota do Bambu
     </a>
   </li>
 
@@ -764,6 +821,15 @@
   
     
     
+  <li class="md-nav__item">
+    <a href="../../O%20Tecnofeudalismo%20no%20Brasil/" class="md-nav__link">
+      O Tecnofeudalismo no Brasil
+    </a>
+  </li>
+
+  
+    
+    
   <li class="md-nav__item md-nav__item--nested">
     
     <input class="md-nav__toggle md-toggle" type="checkbox" id="cop30" >
@@ -789,18 +855,12 @@
         
           
           
-        
-          
-          
   <li class="md-nav__item">
     <a href="../../A6.%20COP30/a5.2%20Deficit%20Habitacional/" class="md-nav__link">
       Deficit Habitacional
     </a>
   </li>
 
-        
-          
-          
         
       </ul>
     </nav>
@@ -1736,36 +1796,36 @@
 </li>
 <li><strong>Passo 2: Atualização da Inteligência Artificial (Backend)</strong><ul>
 <li>Gere a nova base de dados da IA: Abra o terminal na pasta <code>Chatbot - Takwara</code> e execute o script <code>create_vector_store.py</code>. Ele lerá o conteúdo atualizado e salvará a nova base de dados em <code>./backend-api/chroma_db</code>.
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>Chatbot<span class="w"> </span>-<span class="w"> </span>Takwara
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>create_vector_store.py
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">cd</span><span class="w"> </span>..<span class="w"> </span><span class="c1"># Volte para a raiz do repositório</span>
+    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>Chatbot<span class="w"> </span>-<span class="w"> </span>Takwara
+python<span class="w"> </span>create_vector_store.py
+<span class="nb">cd</span><span class="w"> </span>..<span class="w"> </span><span class="c1"># Volte para a raiz do repositório</span>
 </code></pre></div></li>
 <li>Envie a nova API e base de dados para a nuvem: Certifique-se que o ambiente virtual está ativo na pasta que contém <code>backend-api</code> (ou navegue para <code>backend-api</code> e use <code>--source=.</code>) e execute o comando de deploy.
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>gcloud<span class="w"> </span>functions<span class="w"> </span>deploy<span class="w"> </span>chatbot-api<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>--gen2<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>--runtime<span class="o">=</span>python311<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>--region<span class="o">=</span>southamerica-east1<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>--source<span class="o">=</span>./backend-api<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>--entry-point<span class="o">=</span>chatbot_api<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>--trigger-http<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>--allow-unauthenticated<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>--memory<span class="o">=</span>512MiB<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>--timeout<span class="o">=</span>300s
+    <div class="highlight"><pre><span></span><code>gcloud<span class="w"> </span>functions<span class="w"> </span>deploy<span class="w"> </span>chatbot-api<span class="w"> </span><span class="se">\</span>
+--gen2<span class="w"> </span><span class="se">\</span>
+--runtime<span class="o">=</span>python311<span class="w"> </span><span class="se">\</span>
+--region<span class="o">=</span>southamerica-east1<span class="w"> </span><span class="se">\</span>
+--source<span class="o">=</span>./backend-api<span class="w"> </span><span class="se">\</span>
+--entry-point<span class="o">=</span>chatbot_api<span class="w"> </span><span class="se">\</span>
+--trigger-http<span class="w"> </span><span class="se">\</span>
+--allow-unauthenticated<span class="w"> </span><span class="se">\</span>
+--memory<span class="o">=</span>512MiB<span class="w"> </span><span class="se">\</span>
+--timeout<span class="o">=</span>300s
 </code></pre></div></li>
 </ul>
 </li>
 <li><strong>Passo 3: Salve as Alterações Oficialmente (Git)</strong><ul>
 <li>Prepare todas as suas alterações locais (arquivos de conteúdo, <code>mkdocs.yml</code>, arquivos do backend <em>com a nova base de dados</em>):
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
 </code></pre></div></li>
 <li>Crie um commit para registrar as alterações com uma mensagem descritiva:
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Sua mensagem descritiva aqui (ex: Adiciona novo artigo sobre X, atualiza base da AVT e corrige layout Y)&quot;</span>
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Sua mensagem descritiva aqui (ex: Adiciona novo artigo sobre X, atualiza base da AVT e corrige layout Y)&quot;</span>
 </code></pre></div></li>
 </ul>
 </li>
 <li><strong>Passo 4: Publique o Site Visual (Frontend)</strong><ul>
 <li>Na raiz do repositório, com o ambiente virtual ativo, execute o comando que constrói o site estático e o publica no GitHub Pages:
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mkdocs<span class="w"> </span>gh-deploy
+    <div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>gh-deploy
 </code></pre></div></li>
 </ul>
 </li>
@@ -1832,26 +1892,26 @@
 <ol>
 <li><strong>Clonar o Repositório:</strong>
     Abra o terminal e execute:
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Resck/Takwara-Tech.git
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Resck/Takwara-Tech.git
 </code></pre></div>
     Navegue para a raiz do repositório clonado:
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>Takwara-Tech
+    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>Takwara-Tech
 </code></pre></div></li>
 <li><strong>Configurar Ambiente Python:</strong>
     Crie um ambiente virtual (recomendado):
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+    <div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
 </code></pre></div>
     Ative o ambiente virtual:<ul>
 <li>No Windows: <code>.venv\Scripts\activate</code></li>
 <li>No macOS/Linux: <code>source .venv/bin/activate</code>
 Instale as dependências do projeto (frontend e backend):
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </code></pre></div></li>
 </ul>
 </li>
 <li><strong>Configurar Chave da API do Google:</strong>
     Crie um arquivo chamado <code>.env</code> na raiz do repositório com o seguinte conteúdo (substitua <code>SUA_CHAVE_AQUI</code> pela sua chave real):
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>GOOGLE_API_KEY=&quot;SUA_CHAVE_AQUI&quot;
+    <div class="highlight"><pre><span></span><code>GOOGLE_API_KEY=&quot;SUA_CHAVE_AQUI&quot;
 </code></pre></div>
     <em>Nota:</em> Esta chave também precisará ser configurada diretamente no ambiente da Google Cloud Function para o deploy do backend.</li>
 </ol>
@@ -1866,12 +1926,12 @@ Instale as dependências do projeto (frontend e backend):
 <li>Abra <code>mkdocs.yml</code>.</li>
 <li>Encontre a seção <code>nav:</code>.</li>
 <li>Adicione uma entrada para o seu novo arquivo, seguindo a estrutura hierárquica desejada. Exemplo:
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">nav</span><span class="p">:</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Início&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;index.md&#39;</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="c1"># ... outras entradas ...</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Nova</span><span class="nv"> </span><span class="s">Seção&#39;</span><span class="p p-Indicator">:</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Meu</span><span class="nv"> </span><span class="s">Novo</span><span class="nv"> </span><span class="s">Artigo&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;caminho/para/meu-novo-artigo.md&#39;</span><span class="w"> </span><span class="c1"># &lt;-- Adicione a entrada aqui</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">  </span><span class="c1"># ...</span>
+    <div class="highlight"><pre><span></span><code><span class="nt">nav</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Início&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;index.md&#39;</span>
+<span class="w">  </span><span class="c1"># ... outras entradas ...</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Nova</span><span class="nv"> </span><span class="s">Seção&#39;</span><span class="p p-Indicator">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Meu</span><span class="nv"> </span><span class="s">Novo</span><span class="nv"> </span><span class="s">Artigo&#39;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;caminho/para/meu-novo-artigo.md&#39;</span><span class="w"> </span><span class="c1"># &lt;-- Adicione a entrada aqui</span>
+<span class="w">  </span><span class="c1"># ...</span>
 </code></pre></div></li>
 <li>Salve <code>mkdocs.yml</code>.</li>
 </ul>
@@ -1970,14 +2030,14 @@ Instale as dependências do projeto (frontend e backend):
 <h3 id="63-destrinchando-o-codigo">6.3. Destrinchando o Código</h3>
 <p>Vamos analisar os blocos de código Python que implementam este fluxo:</p>
 <h4 id="1-as-importacoes-as-ferramentas-necessarias">1. As Importações (As Ferramentas Necessárias)</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain_community.document_loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">GitLoader</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain.text_splitter</span><span class="w"> </span><span class="kn">import</span> <span class="n">RecursiveCharacterTextSplitter</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain_community.vectorstores</span><span class="w"> </span><span class="kn">import</span> <span class="n">Chroma</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">langchain_google_genai</span><span class="w"> </span><span class="kn">import</span> <span class="n">GoogleGenerativeAIEmbeddings</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="c1"># Pode incluir outras importações se o script usar MarkdownHeaderTextSplitter, etc.</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="c1"># from langchain.text_splitter import MarkdownHeaderTextSplitter</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_community.document_loaders</span><span class="w"> </span><span class="kn">import</span> <span class="n">GitLoader</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain.text_splitter</span><span class="w"> </span><span class="kn">import</span> <span class="n">RecursiveCharacterTextSplitter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_community.vectorstores</span><span class="w"> </span><span class="kn">import</span> <span class="n">Chroma</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_google_genai</span><span class="w"> </span><span class="kn">import</span> <span class="n">GoogleGenerativeAIEmbeddings</span>
+<span class="c1"># Pode incluir outras importações se o script usar MarkdownHeaderTextSplitter, etc.</span>
+<span class="c1"># from langchain.text_splitter import MarkdownHeaderTextSplitter</span>
 </code></pre></div>
 <ul>
 <li><code>import os</code>: Fornece funções para interagir com o sistema operacional, útil para manipular caminhos de arquivos e diretórios.</li>
@@ -1988,11 +2048,11 @@ Instale as dependências do projeto (frontend e backend):
 <li><code>from langchain_google_genai import GoogleGenerativeAIEmbeddings</code>: Importa a classe para criar embeddings usando a API Generative AI do Google (Gemini/Vertex AI).</li>
 </ul>
 <h4 id="2-as-configuracoes-globais-definindo-o-alvo">2. As Configurações Globais (Definindo o Alvo)</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">load_dotenv</span><span class="p">()</span> <span class="c1"># Carrega variáveis do .env</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c1"># Configurações do Repositório e Diretório de Persistência</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">REPO_URL</span> <span class="o">=</span> <span class="s2">&quot;URL_DO_SEU_REPOSITORIO_AQUI&quot;</span> <span class="c1"># Ex: &quot;https://github.com/resck/Takwara-Tech.git&quot;</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">PERSIST_DIRECTORY</span> <span class="o">=</span> <span class="s2">&quot;./backend-api/chroma_db&quot;</span> <span class="c1"># Diretório onde a base de dados ChromaDB será salva (dentro da pasta da API)</span>
+<div class="highlight"><pre><span></span><code><span class="n">load_dotenv</span><span class="p">()</span> <span class="c1"># Carrega variáveis do .env</span>
+
+<span class="c1"># Configurações do Repositório e Diretório de Persistência</span>
+<span class="n">REPO_URL</span> <span class="o">=</span> <span class="s2">&quot;URL_DO_SEU_REPOSITORIO_AQUI&quot;</span> <span class="c1"># Ex: &quot;https://github.com/resck/Takwara-Tech.git&quot;</span>
+<span class="n">PERSIST_DIRECTORY</span> <span class="o">=</span> <span class="s2">&quot;./backend-api/chroma_db&quot;</span> <span class="c1"># Diretório onde a base de dados ChromaDB será salva (dentro da pasta da API)</span>
 </code></pre></div>
 <ul>
 <li><code>load_dotenv()</code>: Executa a função para ler o arquivo <code>.env</code> (que deve conter <code>GOOGLE_API_KEY="SUA_CHAVE_AQUI"</code>) e carregar as variáveis para o ambiente do script.</li>
@@ -2001,56 +2061,56 @@ Instale as dependências do projeto (frontend e backend):
 </ul>
 <h4 id="3-a-funcao-principal-build_and_save_vector_store">3. A Função Principal (<code>build_and_save_vector_store</code>)</h4>
 <p>Este é o bloco de código que orquestra as etapas do fluxo de trabalho.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">build_and_save_vector_store</span><span class="p">():</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="c1"># 1. e 2. Clonar e Carregar Documentos</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Clonando repositório de </span><span class="si">{</span><span class="n">REPO_URL</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    <span class="n">loader</span> <span class="o">=</span> <span class="n">GitLoader</span><span class="p">(</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>        <span class="n">clone_url</span><span class="o">=</span><span class="n">REPO_URL</span><span class="p">,</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        <span class="n">repo_path</span><span class="o">=</span><span class="s2">&quot;./temp_repo&quot;</span><span class="p">,</span> <span class="c1"># Clona para um diretório temporário</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>        <span class="n">file_filter</span><span class="o">=</span><span class="k">lambda</span> <span class="n">file_path</span><span class="p">:</span> <span class="n">file_path</span><span class="o">.</span><span class="n">endswith</span><span class="p">((</span><span class="s2">&quot;.py&quot;</span><span class="p">,</span> <span class="s2">&quot;.md&quot;</span><span class="p">,</span> <span class="s2">&quot;.txt&quot;</span><span class="p">))</span> <span class="c1"># Filtra por tipos de arquivo</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    <span class="p">)</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>    <span class="n">docs</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">load</span><span class="p">()</span> <span class="c1"># Carrega os documentos filtrados</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Carregados </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span><span class="si">}</span><span class="s2"> documentos.&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
-<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>    <span class="c1"># 3. Dividir Documentos em Pedaços (Chunks)</span>
-<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dividindo documentos em pedaços (chunks)...&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>    <span class="c1"># Configuração do divisor (pode variar, MarkdownHeaderTextSplitter seria usado para estrutura MD)</span>
-<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>    <span class="n">text_splitter</span> <span class="o">=</span> <span class="n">RecursiveCharacterTextSplitter</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">chunk_overlap</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>    <span class="c1"># Se usar MarkdownHeaderTextSplitter, seria algo como:</span>
-<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>    <span class="c1"># headers_to_split_on = [(&quot;#&quot;, &quot;Header 1&quot;), (&quot;##&quot;, &quot;Header 2&quot;), ...]</span>
-<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>    <span class="c1"># text_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)</span>
-<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>
-<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>    <span class="n">chunks</span> <span class="o">=</span> <span class="n">text_splitter</span><span class="o">.</span><span class="n">split_documents</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span>
-<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Criados </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span><span class="si">}</span><span class="s2"> pedaços de texto.&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>
-<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>    <span class="c1"># 4. Vetorizar (Embed) os Pedaços</span>
-<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gerando embeddings para os pedaços (chunks)...&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>    <span class="c1"># Inicializa o modelo de Embedding do Google</span>
-<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>    <span class="n">embeddings</span> <span class="o">=</span> <span class="n">GoogleGenerativeAIEmbeddings</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;models/embedding-001&quot;</span><span class="p">)</span> <span class="c1"># Modelo recomendado para embeddings</span>
-<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>
-<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a>    <span class="c1"># 5. e 6. Armazenar e Salvar na Base de Dados Vetorial (ChromaDB)</span>
-<a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Criando e salvando a base de dados vetorial em </span><span class="si">{</span><span class="n">PERSIST_DIRECTORY</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a>    <span class="c1"># Cria uma nova base de dados ChromaDB a partir dos chunks e embeddings, persistindo no diretório especificado</span>
-<a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a>    <span class="n">vectorstore</span> <span class="o">=</span> <span class="n">Chroma</span><span class="o">.</span><span class="n">from_documents</span><span class="p">(</span>
-<a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a>        <span class="n">documents</span><span class="o">=</span><span class="n">chunks</span><span class="p">,</span>
-<a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a>        <span class="n">embedding</span><span class="o">=</span><span class="n">embeddings</span><span class="p">,</span>
-<a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a>        <span class="n">persist_directory</span><span class="o">=</span><span class="n">PERSIST_DIRECTORY</span>
-<a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a>    <span class="p">)</span>
-<a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a>
-<a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a>    <span class="c1"># O método from_documents já salva a base de dados no disco</span>
-<a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a>    <span class="c1"># vectorstore.persist() # Este método pode ser chamado explicitamente dependendo da versão da biblioteca</span>
-<a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a>
-<a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Base de dados vetorial criada e salva com sucesso.&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a>
-<a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a>    <span class="c1"># Opcional: Limpar o diretório temporário clonado</span>
-<a id="__codelineno-13-44" name="__codelineno-13-44" href="#__codelineno-13-44"></a>    <span class="c1"># import shutil</span>
-<a id="__codelineno-13-45" name="__codelineno-13-45" href="#__codelineno-13-45"></a>    <span class="c1"># if os.path.exists(&quot;./temp_repo&quot;):</span>
-<a id="__codelineno-13-46" name="__codelineno-13-46" href="#__codelineno-13-46"></a>    <span class="c1">#     shutil.rmtree(&quot;./temp_repo&quot;)</span>
-<a id="__codelineno-13-47" name="__codelineno-13-47" href="#__codelineno-13-47"></a>    <span class="c1">#     print(&quot;Diretório temporário ./temp_repo removido.&quot;)</span>
-<a id="__codelineno-13-48" name="__codelineno-13-48" href="#__codelineno-13-48"></a>
-<a id="__codelineno-13-49" name="__codelineno-13-49" href="#__codelineno-13-49"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-13-50" name="__codelineno-13-50" href="#__codelineno-13-50"></a>    <span class="n">build_and_save_vector_store</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">build_and_save_vector_store</span><span class="p">():</span>
+    <span class="c1"># 1. e 2. Clonar e Carregar Documentos</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Clonando repositório de </span><span class="si">{</span><span class="n">REPO_URL</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+    <span class="n">loader</span> <span class="o">=</span> <span class="n">GitLoader</span><span class="p">(</span>
+        <span class="n">clone_url</span><span class="o">=</span><span class="n">REPO_URL</span><span class="p">,</span>
+        <span class="n">repo_path</span><span class="o">=</span><span class="s2">&quot;./temp_repo&quot;</span><span class="p">,</span> <span class="c1"># Clona para um diretório temporário</span>
+        <span class="n">file_filter</span><span class="o">=</span><span class="k">lambda</span> <span class="n">file_path</span><span class="p">:</span> <span class="n">file_path</span><span class="o">.</span><span class="n">endswith</span><span class="p">((</span><span class="s2">&quot;.py&quot;</span><span class="p">,</span> <span class="s2">&quot;.md&quot;</span><span class="p">,</span> <span class="s2">&quot;.txt&quot;</span><span class="p">))</span> <span class="c1"># Filtra por tipos de arquivo</span>
+    <span class="p">)</span>
+    <span class="n">docs</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">load</span><span class="p">()</span> <span class="c1"># Carrega os documentos filtrados</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Carregados </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span><span class="si">}</span><span class="s2"> documentos.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># 3. Dividir Documentos em Pedaços (Chunks)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dividindo documentos em pedaços (chunks)...&quot;</span><span class="p">)</span>
+    <span class="c1"># Configuração do divisor (pode variar, MarkdownHeaderTextSplitter seria usado para estrutura MD)</span>
+    <span class="n">text_splitter</span> <span class="o">=</span> <span class="n">RecursiveCharacterTextSplitter</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">chunk_overlap</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+    <span class="c1"># Se usar MarkdownHeaderTextSplitter, seria algo como:</span>
+    <span class="c1"># headers_to_split_on = [(&quot;#&quot;, &quot;Header 1&quot;), (&quot;##&quot;, &quot;Header 2&quot;), ...]</span>
+    <span class="c1"># text_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)</span>
+
+    <span class="n">chunks</span> <span class="o">=</span> <span class="n">text_splitter</span><span class="o">.</span><span class="n">split_documents</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Criados </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">chunks</span><span class="p">)</span><span class="si">}</span><span class="s2"> pedaços de texto.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># 4. Vetorizar (Embed) os Pedaços</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gerando embeddings para os pedaços (chunks)...&quot;</span><span class="p">)</span>
+    <span class="c1"># Inicializa o modelo de Embedding do Google</span>
+    <span class="n">embeddings</span> <span class="o">=</span> <span class="n">GoogleGenerativeAIEmbeddings</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;models/embedding-001&quot;</span><span class="p">)</span> <span class="c1"># Modelo recomendado para embeddings</span>
+
+    <span class="c1"># 5. e 6. Armazenar e Salvar na Base de Dados Vetorial (ChromaDB)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Criando e salvando a base de dados vetorial em </span><span class="si">{</span><span class="n">PERSIST_DIRECTORY</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+    <span class="c1"># Cria uma nova base de dados ChromaDB a partir dos chunks e embeddings, persistindo no diretório especificado</span>
+    <span class="n">vectorstore</span> <span class="o">=</span> <span class="n">Chroma</span><span class="o">.</span><span class="n">from_documents</span><span class="p">(</span>
+        <span class="n">documents</span><span class="o">=</span><span class="n">chunks</span><span class="p">,</span>
+        <span class="n">embedding</span><span class="o">=</span><span class="n">embeddings</span><span class="p">,</span>
+        <span class="n">persist_directory</span><span class="o">=</span><span class="n">PERSIST_DIRECTORY</span>
+    <span class="p">)</span>
+
+    <span class="c1"># O método from_documents já salva a base de dados no disco</span>
+    <span class="c1"># vectorstore.persist() # Este método pode ser chamado explicitamente dependendo da versão da biblioteca</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Base de dados vetorial criada e salva com sucesso.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Opcional: Limpar o diretório temporário clonado</span>
+    <span class="c1"># import shutil</span>
+    <span class="c1"># if os.path.exists(&quot;./temp_repo&quot;):</span>
+    <span class="c1">#     shutil.rmtree(&quot;./temp_repo&quot;)</span>
+    <span class="c1">#     print(&quot;Diretório temporário ./temp_repo removido.&quot;)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">build_and_save_vector_store</span><span class="p">()</span>
 </code></pre></div>
 <ul>
 <li><code>def build_and_save_vector_store():</code>: Define a função principal que contém a lógica de processamento.</li>
@@ -2070,41 +2130,41 @@ Instale as dependências do projeto (frontend e backend):
 <p>Este documento oferece um guia técnico simplificado para navegar na estrutura de arquivos do projeto web Takwara-Tech, hospedado no GitHub. Ele explica o propósito dos principais arquivos e diretórios, as tecnologias associadas e como eles se relacionam com as funcionalidades visíveis no site (especialmente a Tool Box Interativa). O objetivo é fornecer um "mapa" do esqueleto do projeto, facilitando a compreensão para ajustes e contribuições.</p>
 <h3 id="72-mapa-do-projeto-estrutura-de-pastas-simplificada">7.2. Mapa do Projeto (Estrutura de Pastas Simplificada)</h3>
 <p>Ao abrir o projeto em um editor como o VS Code, você verá uma estrutura de pastas e arquivos similar a esta (focando nos mais relevantes que trabalhamos):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Takwara-Tech/
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>├── .env                  # Configuração: Chave da API do Google (localmente)
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>├── mkdocs.yml            # Configuração: Define a estrutura do site MkDocs, tema, menus, scripts, etc.
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>├── docs/                 # Conteúdo: Onde ficam seus arquivos Markdown (.md) e assets do frontend.
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>│   ├── Artigos/          # Seus artigos e documentação organizada em pastas.
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>│   │   └── ...todos os seus arquivos .md...
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>│   ├── assets/           # Assets do frontend (imagens, css, js).
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>│   │   ├── css/          # Arquivos CSS customizados (.css).
-<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>│   │   ├── images/       # Imagens do site (.png, .jpg, etc.).
-<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>│   │   └── js/           # Arquivos JavaScript customizados (.js).
-<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>│   │       ├── script.js       # Lógica JavaScript da AVT (frontend).
-<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>│   │       ├── calculadora.js    # Lógica JavaScript da Calculadora (frontend).
-<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>│   │       ├── graph.js          # Lógica JavaScript do Grafo (frontend, vis.js).
-<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>│   │       ├── toolbox.js        # Lógica JavaScript do Web Component da Tool Box.
-<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>│   │       └── ...outros arquivos js...
-<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>│   ├── index.md          # Conteúdo: Página inicial do site.
-<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>│   └── ...outros arquivos .md na raiz de docs...
-<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>├── overrides/            # Frontend: Customizações dos templates HTML do tema Material for MkDocs.
-<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>│   └── partials/         # Partes reutilizáveis de HTML.
-<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>│       ├── widget-chatbot.html     # Frontend: HTML da interface da AVT.
-<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>│       ├── widget-calculadora.html # Frontend: HTML da interface da Calculadora.
-<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>│       ├── widget-grafo.html       # Frontend: HTML da interface do Grafo.
-<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>│       ├── widget-tools.html       # Frontend: HTML que inclui as interfaces das ferramentas (AVT, Grafo, Calc) para a Tool Box.
-<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>│       ├── main.html             # Frontend: Template principal da página (inclui o template da Tool Box).
-<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>│       ├── header.html           # Frontend: Template do cabeçalho (botão abrir Tool Box?).
-<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>│       ├── footer.html           # Frontend: Template do rodapé (Climate Clock?).
-<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>│       └── ...outros arquivos html...
-<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>├── Chatbot - Takwara/    # Backend + Build: Pasta relacionada ao sistema da AVT.
-<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>│   ├── backend-api/      # Backend: Código da Google Cloud Function da API da AVT.
-<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>│   │   ├── main.py             # Backend: Código Python da API da AVT (Lógica RAG, Prompt, Retriever).
-<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a>│   │   ├── requirements.txt    # Backend: Dependências Python da API.
-<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a>│   │   └── chroma_db/          # Backend/Dados: Base de dados vetorial da AVT (gerada pelo script).
-<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>│   └── create_vector_store.py    # Build: Script Python para criar/atualizar a base de dados chroma_db.
-<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a>├── requirements.txt      # Build: Dependências Python gerais do projeto (inclui mkdocs, langchains, etc.).
-<a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a>└── ...outros arquivos...
+<div class="highlight"><pre><span></span><code>Takwara-Tech/
+├── .env                  # Configuração: Chave da API do Google (localmente)
+├── mkdocs.yml            # Configuração: Define a estrutura do site MkDocs, tema, menus, scripts, etc.
+├── docs/                 # Conteúdo: Onde ficam seus arquivos Markdown (.md) e assets do frontend.
+│   ├── Artigos/          # Seus artigos e documentação organizada em pastas.
+│   │   └── ...todos os seus arquivos .md...
+│   ├── assets/           # Assets do frontend (imagens, css, js).
+│   │   ├── css/          # Arquivos CSS customizados (.css).
+│   │   ├── images/       # Imagens do site (.png, .jpg, etc.).
+│   │   └── js/           # Arquivos JavaScript customizados (.js).
+│   │       ├── script.js       # Lógica JavaScript da AVT (frontend).
+│   │       ├── calculadora.js    # Lógica JavaScript da Calculadora (frontend).
+│   │       ├── graph.js          # Lógica JavaScript do Grafo (frontend, vis.js).
+│   │       ├── toolbox.js        # Lógica JavaScript do Web Component da Tool Box.
+│   │       └── ...outros arquivos js...
+│   ├── index.md          # Conteúdo: Página inicial do site.
+│   └── ...outros arquivos .md na raiz de docs...
+├── overrides/            # Frontend: Customizações dos templates HTML do tema Material for MkDocs.
+│   └── partials/         # Partes reutilizáveis de HTML.
+│       ├── widget-chatbot.html     # Frontend: HTML da interface da AVT.
+│       ├── widget-calculadora.html # Frontend: HTML da interface da Calculadora.
+│       ├── widget-grafo.html       # Frontend: HTML da interface do Grafo.
+│       ├── widget-tools.html       # Frontend: HTML que inclui as interfaces das ferramentas (AVT, Grafo, Calc) para a Tool Box.
+│       ├── main.html             # Frontend: Template principal da página (inclui o template da Tool Box).
+│       ├── header.html           # Frontend: Template do cabeçalho (botão abrir Tool Box?).
+│       ├── footer.html           # Frontend: Template do rodapé (Climate Clock?).
+│       └── ...outros arquivos html...
+├── Chatbot - Takwara/    # Backend + Build: Pasta relacionada ao sistema da AVT.
+│   ├── backend-api/      # Backend: Código da Google Cloud Function da API da AVT.
+│   │   ├── main.py             # Backend: Código Python da API da AVT (Lógica RAG, Prompt, Retriever).
+│   │   ├── requirements.txt    # Backend: Dependências Python da API.
+│   │   └── chroma_db/          # Backend/Dados: Base de dados vetorial da AVT (gerada pelo script).
+│   └── create_vector_store.py    # Build: Script Python para criar/atualizar a base de dados chroma_db.
+├── requirements.txt      # Build: Dependências Python gerais do projeto (inclui mkdocs, langchains, etc.).
+└── ...outros arquivos...
 </code></pre></div>
 <h3 id="73-glossario-de-componentes-chave">7.3. Glossário de Componentes Chave</h3>
 <p>Vamos detalhar os componentes principais, o que eles fazem e como você pode acessá-los para ajustes.</p>
@@ -2276,11 +2336,13 @@ Instale as dependências do projeto (frontend e backend):
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", {"navigation.instant": true}, "content.code.annotate", "search.suggest", "search.highlight", "navigation.sticky", "navigation.tabs.sticky", "navigation.tracking", "navigation.collapse"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "content.code.annotate", "search.suggest", "search.highlight", "navigation.sticky", "navigation.tabs.sticky", "navigation.tracking", "navigation.collapse"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
   
       <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       
         <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js" defer></script>
       
