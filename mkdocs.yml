@@ -1,70 +1,78 @@
-edit_uri: ''
-extra_css:
-- assets/css/style.css
-- assets/css/custom.css
-- assets/css/extra.css
-- https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
-- https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
-extra_javascript:
-- path: https://unpkg.com/vis-network/standalone/umd/vis-network.min.js
-  defer: true
-- path: https://cdn.jsdelivr.net/npm/marked/marked.min.js
-  defer: true
-- path: assets/js/script.js
-  defer: true
-- path: https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
-  defer: true
-- path: assets/js/custom.js
-  defer: true
-- path: https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
-  defer: true
-markdown_extensions:
-- pymdownx.highlight:
-    anchor_linenums: true
-- pymdownx.inlinehilite
-- pymdownx.snippets
-- admonition
-- pymdownx.details
-- pymdownx.superfences
-- pymdownx.mark
-- attr_list
-- md_in_html
+# ===================================================================
+#          MKDOCS.YML - VERSÃO FINAL E CORRIGIDA
+# ===================================================================
+
+site_name: Tecnologia Takwara
+site_url: https://resck.github.io/Takwara-Tech/
 repo_name: Resck/Takwara-Tech
 repo_url: https://github.com/Resck/Takwara-Tech
-site_name: Tecnologia Takwara
+edit_uri: ''
+
 theme:
+  name: material
   custom_dir: overrides
-  favicon: assets/images/favicon.png
-  features:
-  - navigation.tabs
-  - navigation.instant: true
-  - content.code.annotate
-  - search.suggest
-  - search.highlight
-  - navigation.sticky
-  - navigation.tabs.sticky
-  - navigation.tracking
-  - navigation.collapse
   language: pt-BR
   logo: assets/images/logo.png
-  name: material
+  favicon: assets/images/favicon.png
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+    - navigation.sticky
+    - navigation.tabs.sticky
+    - navigation.tracking
+    - navigation.collapse
   palette:
-  - accent: indigo
-    primary: green
-    scheme: slate
-    toggle:
-      icon: material/toggle-switch
-      name: Mudar para o modo claro
-  - accent: indigo
-    primary: green
-    scheme: default
-    toggle:
-      icon: material/toggle-switch-off-outline
-      name: Mudar para o modo escuro
+    - scheme: slate
+      primary: green
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Mudar para o modo claro
+    - scheme: default
+      primary: green
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Mudar para o modo escuro
+
+extra_css:
+  - assets/css/style.css
+  - assets/css/custom.css
+  - assets/css/extra.css
+  - https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+  - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js
+  - path: https://unpkg.com/vis-network/standalone/umd/vis-network.min.js
+    defer: true
+  - path: https://cdn.jsdelivr.net/npm/marked/marked.min.js
+    defer: true
+  - path: assets/js/script.js
+    defer: true
+  - path: https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+    defer: true
+  - path: assets/js/custom.js
+    defer: true
+  - path: https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
+    defer: true
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - md_in_html
+  - admonition
 nav:
 - Bem vind@!: index.md
 - ULTIMATO CLIMÁTICO: Ultimato-Climático.md
-- O Tecnofeudalismo no Brasil: O Tecnofeudalismo no Brasil.md
+- A Rota do Bambu: a-rota-do-bambu.md
 - A Maloca de Concreto: maloca-concreto.md
 - ATHIS-Colonialismo e Resistência: athis-concreto-bambu.md
 - A Vanguarda da Arquitetura Circular: arquitetura-resistencia.md
@@ -74,11 +82,10 @@ nav:
 - Reforma Agrária: reforma-agraria.md
 - O PL da Devastação: o-pl-da-devastacao.md
 - Colômbia X Brasil: A6. COP30/a6.3 Colômbia X Brasil.md
+- O Tecnofeudalismo no Brasil: O Tecnofeudalismo no Brasil.md
 - COP30:
   - Dossiê COP30: A6. COP30/a5.0 Dossiê COP30.md
-  - A Encruzilhada do MST: a5.1 mst-na-encruzilhada.md
   - Deficit Habitacional: A6. COP30/a5.2 Deficit Habitacional.md
-  - A Arquitetura das Influências: A6. COP30/a6.2 A Arquitetura das Influências.md
 - 'Tecnologias ':
   - Forno Ecológico: A1. Tecnologias /a1.2 Forno Ecológico.md
   - Sistema de Reforço: A1. Tecnologias /a1.3 Sistema de Reforço.md

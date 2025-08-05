@@ -1,0 +1,15 @@
+{#- Ficheiro: overrides/main-blank.html -#}
+{% extends "base.html" %}
+
+{# Apaga o cabeçalho #}
+{% block header %}{% endblock %}
+
+{# Apaga o rodapé #}
+{% block footer %}{% endblock %}
+
+{# Substitui o container principal apenas pelo conteúdo da página #}
+{% block container %}
+  <div style="margin: 1rem;">
+    {{ page.content }}
+  </div>
+{% endblock %}

@@ -90,3 +90,60 @@
 header .md-tabs__list .md-tabs__item:first-child {
   display: none !important;
 }
+
+/* Estilos para o botão e modal do Grafo */
+
+#open-grafo-btn {
+  position: fixed; /* Posição fixa na tela */
+  left: 1.5rem;
+  top: 5.5rem; /* Ajuste a posição vertical conforme necessário */
+  z-index: 100;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  border: none;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#grafo-dialog {
+  width: 90vw; /* 90% da largura da tela */
+  max-width: 1200px; /* Mas no máximo 1200px de largura */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  padding: 0; /* Remove padding padrão */
+}
+
+/* Fundo escurecido atrás do modal */
+#grafo-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.grafo-dialog-header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+#close-grafo-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.grafo-dialog-content {
+  padding: 0; /* Remove o padding para o iframe ocupar todo o espaço */
+  height: 80vh; /* Define a altura para 80% da altura da tela */
+  display: flex; /* Ajuda o iframe a preencher o espaço */
+}
