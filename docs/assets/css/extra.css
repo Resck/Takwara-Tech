@@ -147,3 +147,35 @@ header .md-tabs__list .md-tabs__item:first-child {
   height: 80vh; /* Define a altura para 80% da altura da tela */
   display: flex; /* Ajuda o iframe a preencher o espaço */
 }
+/* ============================================== */
+/* Ajustes Personalizados para o Cabeçalho     */
+/* ============================================== */
+
+/* Esconde o nome do site ("Tecnologia Takwara") ao lado do logótipo */
+.md-header__topic {
+  display: none;
+}
+
+/* Aumenta o tamanho do logótipo com uma regra mais específica e forte */
+.md-header__button.md-logo img {
+  height: 2.5rem !important; /* O !important força este estilo a ser aplicado */
+  width: auto; /* Garante que a largura se ajuste para manter a proporção */
+}
+
+/* Aumenta e coloca em negrito os itens de primeiro nível do menu lateral */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
+  font-size: 1.05em !important; /* Aumenta o tamanho da fonte em 5% */
+  font-weight: bold !important; /* Coloca o texto em negrito */
+}
+
+/* ================================================= */
+/* Estilos para posicionar o Climate Clock no header */
+/* ================================================= */
+
+/* Transforma a área de navegação num container flexível */
+.md-header__nav {
+  display: flex;
+  justify-content: space-between; /* Empurra o logo/título para a esquerda e a busca para a direita */
+  align-items: center;
+  width: 100%; /* Ocupa toda a largura */
+}

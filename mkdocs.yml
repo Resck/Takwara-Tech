@@ -12,7 +12,7 @@ theme:
   name: material
   custom_dir: overrides
   language: pt-BR
-  logo: assets/images/logo.png
+  logo: assets/images/takwara_logo.png
   favicon: assets/images/favicon.png
   features:
     - navigation.tabs
