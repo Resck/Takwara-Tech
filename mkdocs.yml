@@ -30,7 +30,7 @@ theme:
       accent: indigo
       toggle:
         icon: material/toggle-switch
-        name: Mudar para o modo claro
+        name: Mudar para o modo escuro
     - scheme: default
       primary: green
       accent: indigo
@@ -70,7 +70,8 @@ markdown_extensions:
   - md_in_html
   - admonition
 nav:
-- Bem vind@!: index.md
+- Decreto Presidencial: index.md
+- Bem Vind@!: bem-vindo.md
 - ULTIMATO CLIMÁTICO: Ultimato-Climático.md
 - A Rota do Bambu: a-rota-do-bambu.md
 - A Maloca de Concreto: maloca-concreto.md
