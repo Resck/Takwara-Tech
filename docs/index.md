@@ -1,4 +1,4 @@
-# Brazil's Environmental Crossroads: Official Greenwashing at COP30
+# Brazil's Environmental Crossroads: Official Greenwashing at COP30.
 
 
 ### Executive Summary
@@ -17,16 +17,12 @@ Finally, the report juxtaposes this evidence against the official discourse of M
 
 The report concludes that Brazil's environmental challenges are systemic. It recommends a multi-pronged strategy to restore policy coherence, including judicial challenges to the new laws, the urgent regulation of the PNRS and PNMCB, a critical revision of national GHG accounting methodologies, and the strategic integration of the bamboo paradox into a revitalized, science-based bioeconomy plan.
 
-**
-
 ---
 
-# Encruzilhadas Ambientais do Brasil: O Greenwashing Oficial na COP30  
-### _**Uma Análise de Retrocessos Legislativos, Pontos de Inflexão Ecológica e Contradições Políticas_**
+# **Encruzilhadas Ambientais do Brasil: O Greenwashing Oficial na COP30.**
+## **_Uma Análise de Retrocessos Legislativos, Pontos de Inflexão Ecológica e Contradições Políticas_**
 
-  
 
-**
 
 ### Introdução: Uma Realidade Dissonante - A Política Ambiental do Brasil Sob Escrutínio
 
@@ -382,13 +378,14 @@ O forte discurso de proteção ambiental do governo (Silva, 2023 1) foi sistemat
 
 A crise ambiental brasileira é um desafio monumental. As soluções exigem vontade política, ação coordenada e o reconhecimento de que a integridade dos biomas brasileiros é a base para a segurança climática, hídrica e econômica da nação.
 
-**
+---
 
-# **PROJETO DE LEI Nº______, DE 2025**
 
-**Ementa:** Regulamenta a Lei nº 12.484, de 8 de setembro de 2011, que institui a Política Nacional de Incentivo ao Manejo Sustentado e ao Cultivo do Bambu (PNMCB), estabelece sua estrutura de governança e dá outras providências.
+# **PROJETO DE LEI Nº13.333 NOVEMBRO DE 2025**
 
-O Congresso Nacional decreta:
+### **Ementa:** Regulamenta a Lei nº 12.484, de 8 de setembro de 2011, que institui a Política Nacional de Incentivo ao Manejo Sustentado e ao Cultivo do Bambu (PNMCB), estabelece sua estrutura de governança e dá outras providências.
+
+### **O Congresso Nacional decreta:**
 
 **CAPÍTULO I** **DISPOSIÇÕES GERAIS**
 
@@ -443,8 +440,6 @@ Sala das Sessões, em ___ de ___________ de 2025.
 ### Referências
 
   
-
-A lista de referências foi consolidada e formatada em ABNT a partir de todos os documentos fornecidos e pesquisas realizadas.
 
 ABREMA - ASSOCIAÇÃO BRASILEIRA DE RESÍDUOS E MEIO AMBIENTE. Panorama dos Resíduos Sólidos no Brasil 2023. São Paulo: ABREMA, 2023.
 
