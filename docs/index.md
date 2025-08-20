@@ -1,8 +1,9 @@
-
-
 # Brazil's Environmental Crossroads: Official Greenwashing at COP30
 
+
 ### Executive Summary
+
+  
 
 This report presents a critical analysis of Brazil's current environmental policy landscape, framed within the alarming context of a potential global civilizational collapse driven by resource depletion. It reveals a profound dissonance between the government's pro-environment international discourse and a domestic reality marked by legislative setbacks, accelerating ecological crises, and significant policy blind spots. By synthesizing evidence from a quantitative global collapse model, recent legislative changes, scientific reports on escalating wildfires, and an in-depth analysis of political rhetoric, this study argues that Brazil is at a critical crossroads, where a permissive legal framework and a persistent regulatory vacuum are enabling irreversible socio-environmental damage that mirrors, on a national scale, the dynamics threatening global stability.
 
@@ -16,6 +17,8 @@ Finally, the report juxtaposes this evidence against the official discourse of M
 
 The report concludes that Brazil's environmental challenges are systemic. It recommends a multi-pronged strategy to restore policy coherence, including judicial challenges to the new laws, the urgent regulation of the PNRS and PNMCB, a critical revision of national GHG accounting methodologies, and the strategic integration of the bamboo paradox into a revitalized, science-based bioeconomy plan.
 
+**
+
 ---
 
 # Encruzilhadas Ambientais do Brasil: O Greenwashing Oficial na COP30  
@@ -23,54 +26,54 @@ The report concludes that Brazil's environmental challenges are systemic. It rec
 
   
 
+**
+
 ### Introdução: Uma Realidade Dissonante - A Política Ambiental do Brasil Sob Escrutínio
 
   
+
 Apesar de uma retórica pró-ambiente renovada no cenário internacional sob a atual administração, o Brasil enfrenta uma realidade doméstica onde derrotas legislativas, vácuos regulatórios e crises ecológicas aceleradas revelam profundas contradições. Este relatório enquadra-se neste contexto de disjunção, argumentando que o conflito central reside entre um modelo de desenvolvimento predatório, agora legalmente entrincheirado pelo Congresso, e os limites ecológicos dos biomas brasileiros, que estão sendo catastroficamente violados.
 
 A análise se apoia em quatro pilares interconectados. O primeiro é o ultimato global, baseado em modelos quantitativos que projetam um colapso civilizacional iminente devido ao consumo de recursos, fornecendo um pano de fundo de urgência existencial. O segundo é a "tríade" legislativa da desregulamentação: o Marco Temporal, a nova Lei dos Agrotóxicos e a Lei Geral do Licenciamento Ambiental. O terceiro pilar é a evidência biofísica da crise, manifestada nos incêndios florestais e no "paradoxo do bambu" na Amazônia. Finalmente, o quarto pilar expõe um vácuo regulatório crônico, com a não regulamentação de políticas-chave como a Política Nacional de Resíduos Sólidos (PNRS) e a Política Nacional de Incentivo ao Manejo do Bambu (PNMCB). Ao tecer essas quatro vertentes, este relatório busca oferecer um diagnóstico crítico e integrado, revelando a arquitetura de uma crise sistêmica.
 
 ---
 
-  
-  
-
 ## Seção 1: O Ultimato Global - A Sustentabilidade da Civilização em Xeque
 
   
 
-Antes de analisar as crises ambientais específicas do Brasil, é imperativo contextualizá-las dentro de um quadro mais amplo e alarmante: a sustentabilidade da própria civilização humana diante do consumo de recursos planetários. Um estudo quantitativo publicado na prestigiada revista Scientific Reports por Bologna e Aquino (2020) oferece um modelo matemático para avaliar a probabilidade de a humanidade evitar um colapso catastrófico, com base na interação entre o crescimento populacional e o desmatamento global. As conclusões são um alerta contundente e servem como um ultimato científico que enquadra a urgência de todas as discussões subsequentes.
+Antes de analisar as crises ambientais específicas do Brasil, é imperativo contextualizá-las dentro de um quadro mais amplo e alarmante: a sustentabilidade da própria civilização humana diante do consumo de recursos planetários. Um estudo quantitativo publicado na revista Scientific Reports por Bologna e Aquino (2020) oferece um modelo matemático para avaliar a probabilidade de a humanidade evitar um colapso catastrófico, com base na interação entre o crescimento populacional e o desmatamento global. As conclusões são um alerta contundente e servem como um ultimato científico que enquadra a urgência de todas as discussões subsequentes.
 
-O modelo de Bologna e Aquino (2020) utiliza uma dinâmica logística para descrever a interação entre a população humana (N) e a cobertura florestal do planeta (R). A premissa é que a capacidade de suporte da Terra para a população humana está diretamente ligada à saúde de seus ecossistemas, representados aqui pelas florestas. À medida que a população cresce, o consumo de recursos (desmatamento) se acelera, diminuindo a capacidade do planeta de sustentar essa mesma população.
+O modelo de Bologna e Aquino (2020) utiliza uma dinâmica logística para descrever a interação entre a população humana (N) e a cobertura florestal do planeta (R). A premissa é que a capacidade de suporte da Terra está diretamente ligada à saúde de seus ecossistemas, representados aqui pelas florestas. À medida que a população cresce, o consumo de recursos (desmatamento) se acelera, diminuindo a capacidade do planeta de sustentar essa mesma população. Este processo leva a um "ponto sem retorno": um pico populacional a partir do qual a degradação ambiental é tão severa que um colapso rápido e desastroso se torna inevitável.
 
-Este processo dinâmico leva a um "ponto sem retorno": um pico populacional a partir do qual a degradação ambiental é tão severa que um colapso rápido e desastroso da população se torna inevitável. A única variável que poderia alterar esse destino, segundo o modelo, é um crescimento tecnológico exponencial que permitiria à civilização acessar novas fontes de energia e recursos (por exemplo, tornando-se uma civilização de Tipo I na escala de Kardashev) antes de atingir o ponto de colapso ecológico.
+O modelo se baseia em um conjunto de parâmetros constantes, com a distinção crucial entre os cenários pessimista e otimista residindo na estimativa do parâmetro β, que representa a relação de capacidade de suporte do planeta.
 
 As tabelas a seguir detalham os parâmetros do modelo e suas projeções sombrias.
 
 Tabela 1: Parâmetros do Modelo de Interação População-Floresta
 
-|   |   |   |   |   |
-|---|---|---|---|---|
-|Parâmetro|Símbolo|Descrição|Valor Estimado (Cenário Realista/Pessimista)|Valor Estimado (Cenário Otimista)|
-|Cobertura Florestal Inicial|Rc​|Área florestal do planeta antes da civilização humana.|60 milhões de km²|60 milhões de km²|
-|Cobertura Florestal Atual|R|Área florestal remanescente no planeta.|< 40 milhões de km²|< 40 milhões de km²|
-|Taxa de Crescimento Populacional|r|Taxa de crescimento da população humana.|~0.01 ano⁻¹|~0.01 ano⁻¹|
-|Capacidade de Regeneração Florestal|r'|Taxa de regeneração natural das florestas.|~0.001 ano⁻¹|~0.001 ano⁻¹|
-|Parâmetro Tecnológico de Consumo|a0​|Mede a taxa com que os humanos extraem recursos (florestas).|~10−12 ano⁻¹|~10−12 ano⁻¹|
-|Relação de Capacidade de Suporte|β|Constante que relaciona a cobertura florestal à capacidade de suporte populacional.|~170|~700-900|
+|   |   |   |   |
+|---|---|---|---|
+|Parâmetro|Símbolo|Descrição|Valor Estimado|
+|Cobertura Florestal Inicial|Rc​|Área florestal do planeta antes da civilização humana.|60 milhões de km²|
+|Cobertura Florestal Atual|R|Área florestal remanescente no planeta.|< 40 milhões de km²|
+|Taxa de Crescimento Populacional|r|Taxa de crescimento da população humana.|~0.01 ano⁻¹|
+|Capacidade de Regeneração Florestal|r'|Taxa de regeneração natural das florestas.|~0.001 ano⁻¹|
+|Parâmetro Tecnológico de Consumo|a0​|Mede a taxa com que os humanos extraem recursos (florestas).|~10−12 ano⁻¹|
+|Relação de Capacidade de Suporte|β|Constante que relaciona a cobertura florestal à capacidade de suporte populacional.|~170 (Cenário Realista/Pessimista) ~700-900 (Cenário Otimista)|
 
 Fonte: Elaborado a partir de Bologna e Aquino (2020).1
 
   
 
-Table 1 Summary (English): This table outlines the key parameters used in the human-forest interaction model developed by Bologna & Aquino (2020). It details the variables representing forest cover, population growth, resource consumption, and the planet's carrying capacity under both a realistic/pessimistic scenario (β=170) and a more optimistic one (β=700), providing the foundational data for their collapse projections. Source: Bologna & Aquino (2020).
+Table 1 Summary (English): This table outlines the key parameters used in the human-forest interaction model developed by Bologna & Aquino (2020). It details the variables representing forest cover, population growth, and resource consumption. The crucial distinction between the realistic/pessimistic and optimistic scenarios lies in the β parameter, which reflects different assumptions about the planet's carrying capacity. Source: Bologna & Aquino (2020).
 
 Tabela 2: Projeções do Colapso: A Linha do Tempo para o "Ponto Sem Retorno"
 
 |   |   |   |
 |---|---|---|
 |Métrica|Cenário Realista (β=170)|Cenário Otimista (β=700)|
-|Pico Populacional (Ponto Sem Retorno)|Atingido entre 20 e 40 anos a partir de 2020.|Atingido em aproximadamente 80 anos a partir de 2020.|
+|Pico Populacional (Ponto Sem Retorno)|Atingido entre 20 e 40 anos a partir de 2020.|Atingido em aproximadamente 130 anos a partir de 2020.|
 |Dinâmica Pós-Pico|Colapso populacional rápido e desastroso.|Colapso populacional rápido e desastroso.|
 |Conclusão do Modelo|A civilização entra em um estado de declínio irreversível.|A civilização entra em um estado de declínio irreversível.|
 
@@ -78,9 +81,9 @@ Fonte: Elaborado a partir de Bologna e Aquino (2020).1
 
   
 
-Table 2 Summary (English): This table presents the timeline projections for civilizational collapse based on the model by Bologna & Aquino (2020). It contrasts the realistic scenario, which predicts reaching an irreversible "no-return point" within 20-40 years from 2020, with an optimistic scenario that postpones this peak by several decades. Both scenarios, however, culminate in a rapid and disastrous population collapse. Source: Bologna & Aquino (2020).
+Table 2 Summary (English): This table presents the timeline projections for civilizational collapse based on the model by Bologna & Aquino (2020). It contrasts the realistic scenario, which predicts reaching an irreversible "no-return point" within 20-40 years from 2020, with an optimistic scenario that postpones this peak to approximately 130 years. Both scenarios, however, culminate in a rapid and disastrous population collapse. Source: Bologna & Aquino (2020).
 
-A conclusão mais alarmante do estudo está na probabilidade de a humanidade conseguir escapar desse destino. Ao simular milhares de trajetórias, o modelo calcula as chances de o nosso desenvolvimento tecnológico atingir um nível de autossuficiência energética (o "limite de Dyson") antes que o colapso ecológico se torne inevitável.
+A conclusão mais alarmante do estudo está na probabilidade de a humanidade conseguir escapar desse destino. Ao simular milhares de trajetórias, o modelo calcula as chances de o nosso desenvolvimento tecnológico atingir um nível de autossuficiência energética antes que o colapso ecológico se torne inevitável.
 
 Tabela 3: Probabilidade de Sobrevivência Civilizacional
 
@@ -121,7 +124,7 @@ A Lei 14.701/2023, sancionada após a derrubada de vetos presidenciais, represen
 
   
 
-O cerne da lei é a tese do "marco temporal", que restringe o direito à demarcação de Terras Indígenas (TIs) apenas àquelas que estavam fisicamente ocupadas ou sob disputa comprovada em 5 de outubro de 1988, data da promulgação da Constituição Federal (Brasil, 2023 4; Mundo Educação, 2024 5). Essa interpretação ignora deliberadamente o histórico de violência, expulsões e deslocamentos forçados que marcaram a relação do Estado brasileiro com os povos originários, especialmente durante o século XX e a ditadura militar (Santos e Gonçalves, 2024 6; Rosa-Luxemburgo, 2023 7). Ao fixar uma data arbitrária, a tese efetivamente legaliza a expropriação histórica (FUNAI, 2024 8).
+O cerne da lei é a tese do "marco temporal", que restringe o direito à demarcação de Terras Indígenas (TIs) apenas àquelas que estavam fisicamente ocupadas ou sob disputa comprovada em 5 de outubro de 1988, data da promulgação da Constituição Federal (Brasil, 2023 4; Mundo Educação, 2024 5). Essa interpretação ignora deliberadamente o histórico de violência, expulsões e deslocamentos forçados que marcaram a relação do Estado brasileiro com os povos originários (Santos e Gonçalves, 2024 6; Rosa-Luxemburgo, 2023 7). Ao fixar uma data arbitrária, a tese efetivamente legaliza a expropriação histórica (FUNAI, 2024 8).
 
 A trajetória da lei evidencia um confronto direto entre o Legislativo e o Judiciário. Em setembro de 2023, o STF declarou a tese do marco temporal inconstitucional (APIB, 2023 9). Em reação, o Congresso Nacional, em 14 de dezembro de 2023, derrubou o veto do Presidente Lula ao dispositivo, transformando-o em lei (Câmara dos Deputados, 2023 10; Senado Federal, 2023 11).
 
@@ -131,9 +134,9 @@ A trajetória da lei evidencia um confronto direto entre o Legislativo e o Judic
 
   
 
-A promulgação da Lei 14.701/2023 intensificou a insegurança jurídica e a violência no campo, com aumento nos conflitos fundiários e ataques a comunidades indígenas ao longo de 2024 (CIMI, 2025 12; ICL Notícias, 2025 13; ADUFMAT, 2025 14). O impacto ambiental é imenso, pois as TIs são reconhecidas como as áreas mais preservadas do Brasil, funcionando como barreiras eficazes contra o desmatamento e os incêndios (IPAM, 2015 15; MapBiomas, 2024 16; ISA, 2023 17).
+A promulgação da Lei 14.701/2023 intensificou a insegurança jurídica e a violência no campo, com aumento nos conflitos fundiários e ataques a comunidades indígenas ao longo de 2024 (CIMI, 2025 12; ICL Notícias, 2025 13; ADUFMAT, 2025 14). O impacto ambiental é imenso, pois as TIs são reconhecidas como as áreas mais preservadas do Brasil, funcionando como barreiras eficazes contra o desmatamento e os incêndios (IPAM, 2015 15; MapBiomas, 2024 16; ISA, 2023).
 
-A derrubada dos vetos presidenciais foi abrangente, reincorporando à lei dispositivos que permitem grandes obras de infraestrutura sem consulta prévia, proíbem a ampliação de terras já demarcadas e abrem a porta para a anulação de demarcações (Câmara dos Deputados, 2023 18; IPEA, 2022 19; ISA, 2023 20). Os poucos vetos mantidos, como a proibição do plantio de transgênicos e regras sobre o contato com povos isolados, foram insuficientes para mitigar o impacto devastador do núcleo da lei (CIMI, 2023 2).
+A derrubada dos vetos presidenciais foi abrangente, reincorporando à lei dispositivos que permitem grandes obras de infraestrutura sem consulta prévia, proíbem a ampliação de terras já demarcadas e abrem a porta para a anulação de demarcações (Câmara dos Deputados, 2023 17; IPEA, 2022 18; ISA, 2023 19). Os poucos vetos mantidos, como a proibição do plantio de transgênicos e regras sobre o contato com povos isolados, foram insuficientes para mitigar o impacto devastador do núcleo da lei (CIMI, 2023 2).
 
   
 
@@ -141,7 +144,7 @@ A derrubada dos vetos presidenciais foi abrangente, reincorporando à lei dispos
 
   
 
-O Projeto de Lei 2.159/2021, que institui a nova Lei Geral do Licenciamento Ambiental, foi sancionado com 63 vetos presidenciais que buscaram conter os retrocessos mais explícitos (Agência GOV, 2025 21; CNN Brasil, 2025 22). A Tabela 4 (anteriormente Tabela 1) sistematiza os principais vetos, ilustrando a tentativa do Executivo de preservar um mínimo de rigor técnico e proteção socioambiental (Agência GOV, 2025 23).
+O Projeto de Lei 2.159/2021, que institui a nova Lei Geral do Licenciamento Ambiental, foi sancionado com 63 vetos presidenciais que buscaram conter os retrocessos mais explícitos (Agência GOV, 2025 20; CNN Brasil, 2025 21). A Tabela 4 sistematiza os principais vetos, ilustrando a tentativa do Executivo de preservar um mínimo de rigor técnico e proteção socioambiental (Agência GOV, 2025 22).
 
 Tabela 4: Análise de Vetos Presidenciais Chave ao PL 2159/21 (Lei Geral do Licenciamento Ambiental)
 
@@ -153,7 +156,7 @@ Tabela 4: Análise de Vetos Presidenciais Chave ao PL 2159/21 (Lei Geral do Lice
 |3. Dar segurança jurídica a empreendimentos e investidores|Prorrogação automática de licenças caso o órgão ambiental não se manifeste no prazo.|A "licença tácita" por decurso de prazo é inconstitucional, pois substitui a análise técnica por uma omissão administrativa.|Criaria um incentivo perverso para a sobrecarga dos órgãos ambientais e para a judicialização.|
 |4. Incorporar inovações ágeis sem comprometer a qualidade|Centralização de todas as outorgas e autorizações (água, supressão de vegetação) no órgão licenciador.|Fere a autonomia e a competência técnica de órgãos especializados, sobrecarregando o órgão licenciador.|Levaria a análises de menor qualidade técnica em áreas críticas como gestão hídrica e florestal.|
 
-Fonte: Elaborado a partir de Agência GOV (2025).21
+Fonte: Elaborado a partir de Agência GOV (2025).20
 
   
 
@@ -165,7 +168,7 @@ Table 4 Summary (English): This table outlines key presidential vetoes to Brazil
 
   
 
-A sanção da Lei 14.785/2023, conhecida como "Pacote do Veneno", reestruturou o marco regulatório de agrotóxicos, centralizando poder no Ministério da Agricultura e Pecuária (MAPA) (Brasil, 2023 24; Terra de Direitos, 2024 25). A nova lei subverteu o modelo tripartite anterior, onde MAPA, ANVISA (saúde) e IBAMA (meio ambiente) possuíam poder de veto equivalente (Fiocruz, 2023 26). A derrubada de vetos cruciais pelo Congresso em 9 de maio de 2024 consolidou o MAPA como o órgão centralizador (Congresso Nacional, 2024 27; Agência Brasil, 2024 28). Além disso, a lei substituiu a proibição de produtos com características carcinogênicas por um critério mais vago de "risco inaceitável" (Grupo GEN, 2023 29).
+A sanção da Lei 14.785/2023, conhecida como "Pacote do Veneno", reestruturou o marco regulatório de agrotóxicos, centralizando poder no Ministério da Agricultura e Pecuária (MAPA) (Brasil, 2023 23; Terra de Direitos, 2024 24). A nova lei subverteu o modelo tripartite anterior, onde MAPA, ANVISA (saúde) e IBAMA (meio ambiente) possuíam poder de veto equivalente (Fiocruz, 2023 25). A derrubada de vetos cruciais pelo Congresso em 9 de maio de 2024 consolidou o MAPA como o órgão centralizador (Congresso Nacional, 2024 26; Agência Brasil, 2024 27). Além disso, a lei substituiu a proibição de produtos com características carcinogênicas por um critério mais vago de "risco inaceitável" (Grupo GEN, 2023 28).
 
 ---
 
@@ -186,7 +189,7 @@ Enquanto o arcabouço legal ambiental do Brasil é sistematicamente enfraquecido
 
   
 
-Entre 1985 e 2024, o fogo afetou 206 milhões de hectares, 24% do território nacional (MapBiomas, 2025 30; ClimaInfo, 2025 31). Deste total, 43% queimaram apenas nos últimos dez anos (2014-2024), indicando uma aceleração dramática (Soluções Industriais, 2025 32).
+Entre 1985 e 2024, o fogo afetou 206 milhões de hectares, 24% do território nacional (MapBiomas, 2025 29; ClimaInfo, 2025 30). Deste total, 43% queimaram apenas nos últimos dez anos (2014-2024), indicando uma aceleração dramática (Soluções Industriais, 2025 31).
 
   
 
@@ -194,7 +197,7 @@ Entre 1985 e 2024, o fogo afetou 206 milhões de hectares, 24% do território na
 
   
 
-Em 2024, a área queimada aumentou 79% em relação a 2023, atingindo um recorde de 30,8 milhões de hectares (MapBiomas, 2025 33). A Amazônia e o Cerrado concentraram 86% de toda a área queimada nos últimos 40 anos (VEJA, 2025 34). Na Amazônia, 17,9 milhões de hectares foram queimados, com uma proporção crescente ocorrendo em florestas primárias, intactas (WWF-Brasil, 2024 35).
+Em 2024, a área queimada aumentou 79% em relação a 2023, atingindo um recorde de 30,8 milhões de hectares (MapBiomas, 2025 32). A Amazônia e o Cerrado concentraram 86% de toda a área queimada nos últimos 40 anos (VEJA, 2025 33). Na Amazônia, 17,9 milhões de hectares foram queimados, com uma proporção crescente ocorrendo em florestas primárias, intactas (WWF-Brasil, 2024 34).
 
 Tabela 5: Panorama dos Incêndios no Brasil por Bioma (2023-2024)
 
@@ -209,7 +212,7 @@ Tabela 5: Panorama dos Incêndios no Brasil por Bioma (2023-2024)
 |Pampa|N/A|0,003|N/A|N/A|N/A|N/A|
 |Total Brasil|17,2|30,8|+79,1%|N/A|N/A|N/A|
 
-Fontes: Elaborado a partir de dados do MapBiomas (2025) 1 e INPE/WWF-Brasil (2024).36 "N/A" indica dados não disponíveis.
+Fontes: Elaborado a partir de dados do MapBiomas (2025) 1 e INPE/WWF-Brasil (2024).35 "N/A" indica dados não disponíveis.
 
   
 
@@ -226,11 +229,9 @@ Table 5 Summary (English): This table provides a comparative overview of wildfir
 
   
 
-Em 2024, os incêndios no Brasil liberaram um recorde de 180 megatoneladas de carbono (CNN Brasil, 2024 37). Apenas na Amazônia, entre junho e agosto, foram emitidas 31,5 milhões de toneladas de
+Em 2024, os incêndios no Brasil liberaram um recorde de 180 megatoneladas de carbono (CNN Brasil, 2024 36). Apenas na Amazônia, entre junho e agosto, foram emitidas 31,5 milhões de toneladas de
 
-CO2​e, um aumento de 60% em relação a 2023 (CNN Brasil, 2024 38; ClimaInfo, 2024 39; Agência Brasil, 2024 4). A isso se soma o "legado de carbono" da decomposição de árvores mortas, que continuará a liberar
-
-CO2​e por até 10 anos (IPAM, 2024 1).
+CO2​e, um aumento de 60% em relação a 2023 (CNN Brasil, 2024 37; ClimaInfo, 2024 38; Agência Brasil, 2024 39). A isso se soma o "legado de carbono" da decomposição de árvores mortas (IPAM, 2024 1).
 
 Tabela 6: Estimativa de Emissões de GEE por Incêndios no Brasil (MtCO2​e)
 
@@ -243,7 +244,7 @@ Tabela 6: Estimativa de Emissões de GEE por Incêndios no Brasil (MtCO2​e)
 |Outros Biomas|~30|>50|N/A|N/A|
 |Total Brasil (Aproximado)|~750|>1.250|2-4|N/A|
 
-Fontes: Elaborado a partir de dados e proporções do SEEG (2023) 40, IPAM (2024) 1 e Cams (2024).37
+Fontes: Elaborado a partir de dados e proporções do SEEG (2023) 40, IPAM (2024) 1 e Cams (2024).36
 
   
 
@@ -263,7 +264,7 @@ As emissões reais do Brasil são sistematicamente subnotificadas nos inventári
 
   
 
-Na Amazônia, 90% das espécies de plantas e animais vertebrados foram impactadas por queimadas (UFMG, 2021 42). No Pantanal, os incêndios de 2020 mataram cerca de 17 milhões de animais vertebrados (WWF-Brasil, s.d. 1; ICMBio, 2024 43). A degradação do Cerrado ameaça a segurança hídrica do país (Capital Reset, 2024 44), e a fumaça gera uma crise de saúde pública de escala continental (Fiocruz, 2024 45; Educação e Território, 2024 46).
+Na Amazônia, 90% das espécies de plantas e animais vertebrados foram impactadas por queimadas (UFMG, 2021 42). No Pantanal, os incêndios de 2020 mataram cerca de 17 milhões de animais vertebrados (WWF-Brasil, s.d. 1; ICMBio, 2024 6). A degradação do Cerrado ameaça a segurança hídrica do país (Capital Reset, 2024 43), e a fumaça gera uma crise de saúde pública de escala continental (Fiocruz, 2024 44; Educação e Território, 2024 45).
 
 ---
 
@@ -271,7 +272,7 @@ Na Amazônia, 90% das espécies de plantas e animais vertebrados foram impactada
 
   
 
-A pesquisa da Dra. Sonaira Silva (UFAC) desvenda um ciclo de retroalimentação onde incêndios, intensificados por secas, causam mortalidade em massa de árvores, permitindo a expansão explosiva do bambu nativo Guadua. Este, por sua vez, aumenta a inflamabilidade da floresta e suprime a regeneração de outras espécies, aprisionando o ecossistema em um estado degradado (Silva et al., 2020 47; Silva et al., 2021 48; UFAC, 2020 49).
+A pesquisa da Dra. Sonaira Silva (UFAC) desvenda um ciclo de retroalimentação onde incêndios, intensificados por secas, causam mortalidade em massa de árvores, permitindo a expansão explosiva do bambu nativo Guadua. Este, por sua vez, aumenta a inflamabilidade da floresta e suprime a regeneração de outras espécies, aprisionando o ecossistema em um estado degradado (Silva et al., 2020 1; Silva et al., 2021 1; UFAC, 2020 46).
 
 Tabela 7: Impacto Ecológico do Fogo em Florestas de Bambu na Amazônia (Dados de Silva et al.)
 
@@ -283,7 +284,7 @@ Tabela 7: Impacto Ecológico do Fogo em Florestas de Bambu na Amazônia (Dados d
 |Redução da Biomassa Acima do Solo (AGB)|0%|-27% a -49%|-27% a -49%|N/A|
 |Contribuição do Bambu para a AGB Remanescente|1%|N/A|27%|+2600%|
 
-Fontes: Elaborado a partir de dados da pesquisa da Dra. Sonaira Silva (UFAC, 2020 49; Silva et al., 2021 48).
+Fontes: Elaborado a partir de dados da pesquisa da Dra. Sonaira Silva (UFAC, 2020 46; Silva et al., 2021 47).
 
   
 
@@ -311,7 +312,7 @@ Promulgada em 2010, a Lei nº 12.305 (PNRS) é um "fantasma regulatório" (O Eco
 
   
 
-De forma similar, a Lei nº 12.484 de 2011, que instituiu a Política Nacional de Incentivo ao Manejo do Bambu (PNMCB), permanece sem regulamentação efetiva (Governo Federal, 2011). A ausência de políticas de fomento cria um paradoxo: o Brasil, detentor da maior diversidade de bambus das Américas, importa milhões de dólares em produtos da planta (Vida Rural MT, 2024), enquanto o bambu não manejado na Amazônia se torna um vetor de degradação florestal. A não implementação da PNMCB impede o desenvolvimento de uma cadeia produtiva nacional e ignora a necessidade urgente de manejar as florestas de bambu para mitigar o risco de incêndios.
+De forma similar, a Lei nº 12.484 de 2011, que instituiu a Política Nacional de Incentivo ao Manejo do Bambu (PNMCB), permanece sem regulamentação efetiva (Governo Federal, 2011). A ausência de políticas de fomento cria um paradoxo: o Brasil, detentor da maior diversidade de bambus das Américas, importa milhões de dólares em produtos da planta (Vida Rural MT, 2024), enquanto o bambu não manejado na Amazônia se torna um vetor de degradação florestal.
 
 ---
 
@@ -342,7 +343,7 @@ A visão do governo para uma bioeconomia na Amazônia, focada em produtos como a
 
   
 
-O forte discurso de proteção ambiental do governo (Silva, 2023 1) foi sistematicamente derrotado no campo legislativo, com a aprovação da Lei do Marco Temporal, da nova Lei dos Agrotóxicos e de uma Lei de Licenciamento Ambiental enfraquecida. O esvaziamento das atribuições do Ministério do Meio Ambiente e do Ministério dos Povos Indígenas (Agência Brasil, 2023 50; Senado Federal, 2023 51) expõe os limites do poder do Executivo diante de um Congresso hostil.
+O forte discurso de proteção ambiental do governo (Silva, 2023 1) foi sistematicamente derrotado no campo legislativo, com a aprovação da Lei do Marco Temporal, da nova Lei dos Agrotóxicos e de uma Lei de Licenciamento Ambiental enfraquecida. O esvaziamento das atribuições do Ministério do Meio Ambiente e do Ministério dos Povos Indígenas (Agência Brasil, 2023 48; Senado Federal, 2023 49) expõe os limites do poder do Executivo diante de um Congresso hostil.
 
 ---
 
@@ -381,6 +382,7 @@ O forte discurso de proteção ambiental do governo (Silva, 2023 1) foi sistemat
 
 A crise ambiental brasileira é um desafio monumental. As soluções exigem vontade política, ação coordenada e o reconhecimento de que a integridade dos biomas brasileiros é a base para a segurança climática, hídrica e econômica da nação.
 
+**
 
 # **PROJETO DE LEI Nº______, DE 2025**
 
