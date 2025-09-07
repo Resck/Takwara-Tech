@@ -66,12 +66,12 @@ Nossa metodologia é um sistema integrado que supera os desafios tradicionais do
     Em contraste com impermeabilizantes sintéticos, honramos o legado do Prof. Dr. Gilberto Orivaldo Chierice, utilizando o **Poliuretano (PU) Vegetal da Imperveg** (www.imperveg.com.br), um aliado fundamental. O PU Vegetal é atóxico, sua origem renovável alinha-se à bioeconomia e sua aplicação em duas a três demãos confere proteção superior e duradoura ao bambu. (Análise comparativa e detalhes: *Sintéticos X Orgânicos* e *Tratamento e Comercialização de Varas de Bambu*)
 
 *   **4.4. Ecompósitos com PU Vegetal: Transformando Resíduos em Recursos e Oportunidades**
-    Acreditamos que resíduos são apenas matérias-primas esperando para serem redescobertas. Nossos ecocompósitos, utilizando o PU Vegetal como aglomerante, transformam sobras de bambu e outros resíduos em materiais duráveis e seguros. (Mais em: *Ecoprojeto*) A fórmula é simples e poderosa: **Resíduos Selecionados + 20-25% de PU Vegetal + Prensagem/Moldagem = Ecompósitos Sustentáveis**. As possibilidades são infinitas: painéis, chapas, tijolos ecológicos, componentes para tiny houses. (Detalhes em: *Tijolos e Briquetes* e *Habitação de Interesse Social e Briquetes*)
+    Acreditamos que resíduos são apenas matérias-primas esperando para serem redescobertas. Nossos ecocompósitos, utilizando o PU Vegetal como aglomerante, transformam sobras de bambu e outros resíduos em materiais duráveis e seguros. (Mais em: Bio-revolução verde e amarela) A fórmula é simples e poderosa: **Resíduos Selecionados + 20-25% de PU Vegetal + Prensagem/Moldagem = Ecompósitos Sustentáveis**. As possibilidades são infinitas: painéis, chapas, tijolos ecológicos, componentes para tiny houses. (Detalhes em: *Tijolos e Briquetes* e *Habitação de Interesse Social e Briquetes*)
 
 **A Tecnologia Takwara é mais que inovação material; é uma ferramenta de transformação social, econômica e ambiental.**
 
 <div class="carousel-container">
-  <h4 class="carousel-title">Geodésica V3 10m - Cobertura de Papelão Resinado - 2013</h4>
+  <h4 class="carousel-title">Domo 10m Cobertura de papelão - 2014/17 </h4>
   <div id="carrossel-sitio-geranium-2017" class="splide">
     <div class="splide__track">
       <ul class="splide__list">
@@ -112,7 +112,6 @@ Nossa metodologia é um sistema integrado que supera os desafios tradicionais do
     </div>
   </div>
 </div>
-
 
 **Nosso Potencial de Impacto:**
 

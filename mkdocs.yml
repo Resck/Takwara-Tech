@@ -38,6 +38,9 @@ theme:
         icon: material/toggle-switch-off-outline
         name: Mudar para o modo escuro
 
+extra:
+  csp_nonce: "a-random-string-of-your-choice"
+
 extra_css:
   - assets/css/style.css
   - assets/css/custom.css
