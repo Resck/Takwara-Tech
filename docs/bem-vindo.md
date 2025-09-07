@@ -1,15 +1,11 @@
-**Takwara: O Código Aberto da Autodeterminação, Inovação com Bambu e uma Convocação à Transformação Socioambiental**
-
-**---**
-**A Call to Action: Embracing the Takwara Spirit for COP30**
-
-This platform, born from a autodidactic journey and a commitment to ecological innovation, is more than a repository of knowledge; it is a testament to human ingenuity and resilience. As we approach COP30, the urgency of climate action and social justice demands that we embrace unconventional solutions and diverse voices. The Takwara ethos – embodying innovation, independence, and a deep connection to nature – offers a powerful model for tackling global challenges. We urge all Brazilians and international allies who share these principles to **become TAKWARA**: actively participate, amplify your voice, and collaborate to build a sustainable future. Your learning, your action, and your unique perspective are vital in this critical fight.
-**---**
+# Takwara: Uma Abordagem Autoral e Irreverente para a Sustentabilidade com Bambu
 
 ![Licença CC BY 4.0](https://i.creativecommons.org/l/by/4.0/88x31.png)
 *Este trabalho está licenciado sob a Creative Commons Atribuição 4.0 Internacional.*
 
-![inicial](assets/images/Pesquisa_img/ferramentas_inicial.jpg)
+## Bem-vindo ao Repositório Takwara: O Seu Portal para a Inovação Aberta em Construção Sustentável
+
+![inicial](../assets/images/Pesquisa_img/ferramentas_inicial.jpg)
 
 
 **1. A Chama da Autodeterminação: Bem-vindo à Revolução Takwara!**
