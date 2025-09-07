@@ -1,32 +1,24 @@
-// docs/assets/js/custom.js
+// docs/assets/js/custom.js (Versão Final e Limpa)
 
-document.addEventListener('DOMContentLoaded', function() {
-  initializeSplide();
-});
-
-if (typeof app !== 'undefined') {
-  app.events.on('page:loaded', function() {
-    initializeSplide();
-  });
-}
-
+// A função que inicializa todos os carrosséis que encontrar na página
 function initializeSplide() {
   var splides = document.querySelectorAll('.splide');
-  
-  // Objeto de opções para personalizar o carrossel
-  var options = {
-    type       : 'loop',      // Continua em loop
-    perPage    : 4,           // MOSTRA 3 IMAGENS DE UMA VEZ
-    perMove    : 1,           // MOVE 1 IMAGEM DE CADA VEZ
-    gap        : '0px',      // ADICIONA UM ESPAÇO ENTRE AS IMAGENS
-    autoplay   : true,        // Mantém o autoplay
-    interval   : 3000,        // Intervalo de 3 segundos
-    arrows     : true,        // Mantém as setas
-    pagination : false,       // ESCONDE OS PONTOS, para um visual mais limpo
-  };
-
-  for ( var i = 0; i < splides.length; i++ ) {
-    new Splide( splides[ i ], options ).mount();
+  if (splides.length) {
+    for (var i = 0; i < splides.length; i++) {
+      // Verifica se o carrossel já foi inicializado para evitar erros
+      if (!splides[i].classList.contains('is-initialized')) {
+        new Splide(splides[i], {
+          type       : 'loop',
+          perPage    : 4,
+          perMove    : 1,
+          gap        : '0px',
+          autoplay   : true,
+          interval   : 3000,
+          arrows     : true,
+          pagination : false,
+        }).mount();
+      }
+    }
   }
 }
 
