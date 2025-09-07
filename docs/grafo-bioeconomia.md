@@ -26,4 +26,4 @@ graph TD
     click CB "/bambu-urgente/"
     click SB "/A6. COP30/a5.0 Dossiê COP30/"
     click EC "/A2. O Bambu/a2.3 O Ecossistema do Bambu no Brasil/"
-    
+    ```

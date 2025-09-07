@@ -1,7 +1,6 @@
 
 # **PROJETO DE LEI Nº______, DE 2025**
 
-**(de  Fabio Takwara e Outros Cidadãos)**
 
 **Ementa:** Regulamenta a Lei nº 12.484, de 8 de setembro de 2011, que institui a Política Nacional de Incentivo ao Manejo Sustentado e ao Cultivo do Bambu (PNMCB), estabelece sua estrutura de governança e dá outras providências.
 

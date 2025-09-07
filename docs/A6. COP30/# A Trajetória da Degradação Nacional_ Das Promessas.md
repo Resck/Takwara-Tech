@@ -1,4 +1,4 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
+
 
 # A Trajetória da Degradação Nacional: Das Promessas Constitucionais à Falência Tecnológica (1988-2025)
 
@@ -6,9 +6,6 @@
 
 Este relatório documenta a trajetória crítica do Brasil nas últimas duas décadas, demonstrando como a aceleração da extração de recursos naturais, combinada com a desindustrialização progressiva, conduziu o país a uma situação de dependência estrutural extrema em relação a China e Estados Unidos. A análise revela um padrão de degradação institucional que culminou na tentativa parlamentar, ocorrida na madrugada de 18 de julho de 2025, de aniquilar completamente o Código Florestal brasileiro [1][2][3][4][5].
 
-![Linha do Tempo dos Marcos Legais Ambientais no Brasil (1799-2025)](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/1d2dafd53c6cd351dc96f6876eb0de4c/185727a6-5256-4875-9de7-61ac38b7c2aa/27fb931c.png)
-
-Linha do Tempo dos Marcos Legais Ambientais no Brasil (1799-2025)
 
 A pesquisa demonstra que o Brasil passou de uma economia com aspirações industriais para uma condição de fornecedor primário de commodities, criando um círculo vicioso de dependência tecnológica e vulnerabilidade ambiental que compromete gravemente sua soberania nacional. Esta trajetória não é acidental, mas resultado de escolhas políticas deliberadas que privilegiaram interesses de curto prazo em detrimento da construção de um projeto nacional sustentável.
 
