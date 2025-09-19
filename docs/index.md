@@ -1,3 +1,9 @@
+# *ASSINE A PETIÇÃO QUE PEDE AO SENADO A REGULAMENTAÇÃO DA LEI DO BAMBU!*
+[Ideia Legislativa - Senado Federal - Clque no link e assine agora!](https://www12.senado.leg.br/ecidadania/visualizacaoideia?id=205855) 
+
+
+
+
 # Brazil's Environmental Crossroads: Official Greenwashing at COP30.
 
 
@@ -33,6 +39,8 @@ Apesar de uma retórica pró-ambiente renovada no cenário internacional sob a a
 A análise se apoia em quatro pilares interconectados. O primeiro é o ultimato global, baseado em modelos quantitativos que projetam um colapso civilizacional iminente devido ao consumo de recursos, fornecendo um pano de fundo de urgência existencial. O segundo é a "tríade" legislativa da desregulamentação: o Marco Temporal, a nova Lei dos Agrotóxicos e a Lei Geral do Licenciamento Ambiental. O terceiro pilar é a evidência biofísica da crise, manifestada nos incêndios florestais e no "paradoxo do bambu" na Amazônia. Finalmente, o quarto pilar expõe um vácuo regulatório crônico, com a não regulamentação de políticas-chave como a Política Nacional de Resíduos Sólidos (PNRS) e a Política Nacional de Incentivo ao Manejo do Bambu (PNMCB). Ao tecer essas quatro vertentes, este relatório busca oferecer um diagnóstico crítico e integrado, revelando a arquitetura de uma crise sistêmica.
 
 ---
+# *ASSINE A PETIÇÃO QUE PEDE AO SENADO A REGULAMENTAÇÃO DA LEI DO BAMBU!*
+[Ideia Legislativa - Senado Federal - Clque no link e assine agora!](https://www12.senado.leg.br/ecidadania/visualizacaoideia?id=205855) 
 
 ## Seção 1: O Ultimato Global - A Sustentabilidade da Civilização em Xeque
 
@@ -264,6 +272,9 @@ Na Amazônia, 90% das espécies de plantas e animais vertebrados foram impactada
 
 ---
 
+# *ASSINE A PETIÇÃO QUE PEDE AO SENADO A REGULAMENTAÇÃO DA LEI DO BAMBU!*
+[Ideia Legislativa - Senado Federal - Clque no link e assine agora!](https://www12.senado.leg.br/ecidadania/visualizacaoideia?id=205855) 
+
 ## Seção 4: Estudo de Caso em Degradação Ecológica: O Paradoxo do Bambu na Amazônia
 
   
@@ -379,7 +390,8 @@ O forte discurso de proteção ambiental do governo (Silva, 2023 1) foi sistemat
 A crise ambiental brasileira é um desafio monumental. As soluções exigem vontade política, ação coordenada e o reconhecimento de que a integridade dos biomas brasileiros é a base para a segurança climática, hídrica e econômica da nação.
 
 ---
-
+# *ASSINE A PETIÇÃO QUE PEDE AO SENADO A REGULAMENTAÇÃO DA LEI DO BAMBU!*
+[Ideia Legislativa - Senado Federal - Clque no link e assine agora!](https://www12.senado.leg.br/ecidadania/visualizacaoideia?id=205855) 
 
 # **PROJETO DE LEI Nº13.333 NOVEMBRO DE 2025**
 
