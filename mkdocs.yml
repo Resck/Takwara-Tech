@@ -73,7 +73,7 @@ markdown_extensions:
   - md_in_html
   - admonition
 nav:
-- Decreto Presidencial: index.md
+- Decreto Presidencial: decreto-presidencial.md
 - Bem Vind@!: bem-vindo.md
 - ULTIMATO CLIMÁTICO: Ultimato-Climático.md
 - A Rota do Bambu: a-rota-do-bambu.md
@@ -110,7 +110,7 @@ nav:
   - Fitorremediação: A2.  O Bambu/a2.6 Fitorremediação.md
   - O carvão e o Pirolenhoso: A2.  O Bambu/a2.7 O carvão e o Pirolenhoso.md
   - O Tratamento Químico do Bambu: A2.  O Bambu/a2.8 O Tratamento Químico do Bambu.md
-  - Prejuízos do Tratamento Químico: A2.  O Bambu/a2.9 impactos_do_tratamento_quimico.md
+  - Prejuízos do Tratamento Químico: A2.  O Bambu/a2.9 impactos_do_tratamento_quimico.mdxs
 - Personalidades:
   - Jayme Gonçalves: A2.a Personalidades/a2.a1 Jayme Gonçalves.md
   - Khorow Ghavami: A2.a Personalidades/a2.a2 Khorow Ghavami.md

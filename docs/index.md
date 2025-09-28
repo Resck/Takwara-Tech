@@ -582,7 +582,7 @@ O **Ministério do Meio Ambiente** desenvolve **arcabouços regulatórios sof
 |**Investimento Público**|**R$ 1,2 bilhão (BNDES 2024)**|**Zero**|
 |**Política Ministerial**|**Ativamente promovida**|**Completamente ignorada**|
 
-**Fontes**: CONAMA 406/2009, BNDES (2024), Dossiê COP30 (2025).[](https://www.bbc.com/portuguese/noticias/2015/02/150210_sono_idade_lgb)
+**Fontes**: CONAMA 406/2009, BNDES (2024), Dossiê COP30 (2025).
 
 **Table 17 Summary (English)**: This table exposes the regulatory hypocrisy where Brazil creates sophisticated frameworks to legitimize cutting millennial trees with impossible recovery cycles while completely ignoring truly sustainable native bamboo that regenerates naturally in 3-5 years. The government invests R$1.2 billion in "sustainable" logging while bamboo receives zero support, revealing deliberate policy choices favoring destruction over regeneration. **Sources**: CONAMA 406/2009, BNDES (2024), COP30 Dossier (2025).[](https://www.bbc.com/portuguese/noticias/2015/02/150210_sono_idade_lgb)
 
@@ -657,7 +657,7 @@ A **ciência cidadã** representada neste repositório é um convite à **ree
 
 **[Assine a Petição: Regulamentação da Lei do Bambu](https://www12.senado.leg.br/ecidadania/visualizacaoideia?id=205855)**
 
-**[Repositório Takwara: https://resck.github.io/Takwara-Tech/](https://resck.github.io/Takwara-Tech/)**
+**[A Bio-revolução é Verde e Amarela: O Bambu e a Mamona](https://resck.github.io/Takwara-Tech/ha-solucao/)**
 
 _Esta peça se encerra, mas a ação começa. O palco agora é seu._
 

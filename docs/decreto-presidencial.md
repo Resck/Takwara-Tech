@@ -1,55 +1,129 @@
+# JUSTIFICATIVA
 
-# **PROJETO DE LEI Nº______, DE 2025**
+Este Projeto de Lei consolida 14 anos de omissão governamental sobre uma das políticas mais estratégicas para o desenvolvimento sustentável brasileiro. A regulamentação da PNMCB não é apenas uma questão ambiental, mas de **soberania nacional, justiça social e segurança sanitária**.
 
+A inclusão da **ANVISA como órgão central na regulamentação** responde diretamente aos achados científicos de Araújo et al. (2025), que demonstraram que 93% do impacto carcinogênico do bambu industrializado deriva da má gestão de resíduos tóxicos. A criação do **Sistema Nacional de Controle Toxicológico** (Art. 3º) estabelece mecanismos rigorosos de monitoramento que protegerão tanto trabalhadores quanto consumidores finais.
 
-**Ementa:** Regulamenta a Lei nº 12.484, de 8 de setembro de 2011, que institui a Política Nacional de Incentivo ao Manejo Sustentado e ao Cultivo do Bambu (PNMCB), estabelece sua estrutura de governança e dá outras providências.
+O **regime de transição de 24 meses** (Art. 4º) permite adequação gradual do setor, enquanto o **apoio técnico e financeiro** para conversão tecnológica garante que pequenos produtores não sejam penalizados pela mudança de paradigma.
 
-O Congresso Nacional decreta:
+A criação do **Selo "Bambu Limpo Brasil"** (Art. 7º) e do **Sistema Nacional de Rastreabilidade** (Art. 8º) posicionará o país como líder mundial em bambu sustentável, criando vantagem competitiva baseada em qualidade e responsabilidade socioambiental.
 
-**CAPÍTULO I** **DISPOSIÇÕES GERAIS**
+Mais importante: este projeto quebra o ciclo de **dependência química** que custou ao país US$ 68,5 milhões em importações desnecessárias em 2024, ao mesmo tempo em que gerou 59.014 toneladas de resíduos tóxicos em 25 anos.
 
-**Art. 1º** Esta Lei regulamenta a Lei nº 12.484, de 8 de setembro de 2011, para estabelecer os mecanismos, as estruturas de governança e os programas necessários à execução da Política Nacional de Incentivo ao Manejo Sustentado e ao Cultivo do Bambu - PNMCB.
+A **meta de redução de 50% nas importações químicas** (Art. 9º) em 5 anos é técnica e economicamente viável, considerando que o tratamento por vapor saturado pode substituir praticamente todos os compostos importados.
 
-**CAPÍTULO II** **DA GOVERNANÇA DA POLÍTICA NACIONAL DO BAMBU**
+Senhoras e Senhores Parlamentares, este não é apenas um projeto sobre bambu — é sobre que tipo de país queremos ser. Um país **tecnologicamente soberano** ou dependente? **Ambientalmente responsável** ou poluidor? **Socialmente inclusivo** ou excludente?
 
-**Art. 2º** Fica instituído o Comitê Gestor da Política Nacional de Incentivo ao Manejo Sustentado e ao Cultivo do Bambu (CG-PNMCB), órgão colegiado de caráter consultivo e deliberativo, vinculado à Casa Civil da Presidência da República, com o objetivo de coordenar, acompanhar e avaliar a implementação da PNMCB.
+A resposta está em nossas mãos. E o tempo para agir é agora.# **PROJETO DE LEI Nº 13.333/2025**
 
-§ 1º O CG-PNMCB terá composição paritária entre o Poder Público e a sociedade civil, garantindo a representação de: I - Um representante de cada um dos seguintes órgãos do Poder Executivo Federal: a) Ministério da Agricultura e Pecuária; b) Ministério do Desenvolvimento Agrário e Agricultura Familiar; c) Ministério do Meio Ambiente e Mudança do Clima; d) Ministério da Ciência, Tecnologia e Inovação; e) Ministério do Desenvolvimento, Indústria, Comércio e Serviços. II - Um representante da Empresa Brasileira de Pesquisa Agropecuária - Embrapa; III - Representantes da sociedade civil, assegurando-se assento para: a) Instituições de ensino superior e pesquisa com notório saber na área; b) Entidades representativas da agricultura familiar e de comunidades extrativistas com atuação nacional; c) Entidades representativas do setor empresarial e industrial do bambu, com comprovada base de associados e atuação democrática; d) Organizações não governamentais com atuação comprovada na área ambiental e de bioeconomia.
+## **Ementa:** Regulamenta a Lei nº 12.484, de 8 de setembro de 2011, que institui a Política Nacional de Incentivo ao Manejo Sustentado e ao Cultivo do Bambu (PNMCB), estabelece sua estrutura de governança, normas de segurança toxicológica e controle de ciclo de vida, e dá outras providências.
 
-§ 2º A seleção dos representantes da sociedade civil, conforme o inciso III do § 1º, dar-se-á por meio de processo de chamada pública a ser conduzido pela Secretaria-Geral da Presidência da República, garantindo transparência, pluralidade e rotatividade dos mandatos.
+## **O Congresso Nacional decreta:**
 
-**CAPÍTULO III** **DOS INSTRUMENTOS DE FOMENTO E DESENVOLVIMENTO**
+**CAPÍTULO I - DISPOSIÇÕES GERAIS**
 
-**Art. 3º** As instituições financeiras oficiais, incluindo o Banco Nacional de Desenvolvimento Econômico e Social (BNDES) e os bancos operadores do Programa Nacional de Fortalecimento da Agricultura Familiar (PRONAF), estabelecerão, no prazo de 180 (cento e oitenta) dias a contar da publicação desta Lei, linhas de crédito e fomento em conformidade com o art. 4º, inciso I, da Lei nº 12.484, de 2011, com modalidades distintas para: I - **Agricultura Familiar e Manejo Sustentável:** Condições especiais de juros, carência e prazos para o manejo de bambus nativos, plantios em pequena escala, implementação de sistemas agroflorestais com bambu, e aquisição de equipamentos de beneficiamento de baixo custo por cooperativas e associações; II - **Produção em Média e Larga Escala:** Financiamento para implantação de cultivos comerciais e aquisição de maquinário, condicionado à apresentação de planos de integração com a indústria local, desenvolvimento tecnológico nacional e conformidade com as diretrizes de manejo sustentável a serem estabelecidas pelo CG-PNMCB.
+**Art. 1º** Esta Lei regulamenta a Lei nº 12.484, de 8 de setembro de 2011, para estabelecer os mecanismos, as estruturas de governança, os programas de fomento, as normas de segurança toxicológica e os sistemas de monitoramento necessários à execução da Política Nacional de Incentivo ao Manejo Sustentado e ao Cultivo do Bambu - PNMCB.
 
-**Art. 4º** Fica instituído o Programa Nacional de Soberania Tecnológica e Inovação em Bambu (PNSTI-Bambu), sob a coordenação do Ministério da Ciência, Tecnologia e Inovação e execução técnica prioritária pela Embrapa, com os seguintes eixos: I - **Domesticação e Melhoramento de Espécies Nativas:** Fomentar e financiar pesquisas para o mapeamento, a caracterização e o aproveitamento sustentável das espécies de bambu brasileiras, visando à soberania genética e à adaptação regional; II - **Desenvolvimento de Maquinário Nacional:** Criar programas de incentivo, via editais e parcerias público-privadas, para o desenvolvimento de tecnologia de processamento (máquinas e equipamentos) adaptada à realidade brasileira, em parceria com universidades e a indústria metalmecânica nacional; III - **Cooperação Sul-Sul:** Incentivar o intercâmbio tecnológico com países da América Latina, como Colômbia e Equador, que possuem expertise em espécies e aplicações similares às do Brasil, como as do gênero _Guadua_, fortalecendo a autonomia regional.
+**CAPÍTULO II - DA GOVERNANÇA DA POLÍTICA NACIONAL DO BAMBU**
 
-**Art. 5º** Fica instituído o Programa Nacional de Capacitação e Extensão Técnica (Pro-Bambu), sob a articulação do Ministério do Desenvolvimento Agrário e Agricultura Familiar, voltado para a difusão de conhecimento em todos os níveis da cadeia produtiva, desde técnicas de manejo para agricultores familiares até processos industriais avançados para técnicos e empresários.
+**Art. 2º** Fica instituído o Comitê Gestor da Política Nacional de Incentivo ao Manejo Sustentado e ao Cultivo do Bambu (CG-PNMCB), órgão colegiado de caráter consultivo e deliberativo, vinculado à Casa Civil da Presidência da República, com o objetivo de coordenar, acompanhar e avaliar a implementação da PNMCB.
 
-**Art. 6º** O CG-PNMCB, em articulação com a Associação Brasileira de Normas Técnicas (ABNT), deverá coordenar a criação e atualização de um conjunto de normas técnicas brasileiras que contemple a diversidade de espécies e sistemas construtivos do país, garantindo a participação ampla de especialistas e evitando a simples transposição de normas estrangeiras que possam criar barreiras de mercado para produtores nacionais.
+§ 1º O CG-PNMCB terá composição paritária entre o Poder Público e a sociedade civil, garantindo a representação de:  
+I - Um representante de cada um dos seguintes órgãos do Poder Executivo Federal:  
+a) Ministério da Agricultura e Pecuária;  
+b) Ministério do Desenvolvimento Agrário e Agricultura Familiar;  
+c) Ministério do Meio Ambiente e Mudança do Clima;  
+d) Ministério da Ciência, Tecnologia e Inovação;  
+e) Ministério do Desenvolvimento, Indústria, Comércio e Serviços;  
+f) **Agência Nacional de Vigilância Sanitária - ANVISA**.
 
-**Art. 7º** Fica criado o Selo "Bambu do Brasil", de titularidade da União, a ser gerido pelo CG-PNMCB. O selo certificará produtos que atendam a critérios de sustentabilidade ambiental (manejo sustentável, recuperação de áreas), justiça social (participação da agricultura familiar, condições de trabalho dignas) e desenvolvimento tecnológico nacional.
+II - Um representante da Empresa Brasileira de Pesquisa Agropecuária - Embrapa;
 
-**CAPÍTULO IV** **DISPOSIÇÕES FINAIS**
+III - Representantes da sociedade civil, assegurando-se assento para:  
+a) Instituições de ensino superior e pesquisa com notório saber na área;  
+b) Entidades representativas da agricultura familiar e de comunidades extrativistas;  
+c) Entidades representativas do setor empresarial com base democrática comprovada;  
+d) Organizações não governamentais com atuação na área ambiental e de bioeconomia.
 
-**Art. 8º** Esta Lei entra em vigor na data de sua publicação.
+**CAPÍTULO III - DA SEGURANÇA TOXICOLÓGICA E CONTROLE DE QUALIDADE**
+
+**Art. 3º** **Fica instituído o Sistema Nacional de Controle Toxicológico do Bambu (SNCT-Bambu)**, sob coordenação conjunta da ANVISA e do IBAMA, com os seguintes objetivos:
+
+I - **Regulamentar e fiscalizar** todos os tratamentos químicos aplicados ao bambu, estabelecendo limites máximos de resíduos tóxicos em produtos finais;
+
+II - **Monitorar o ciclo de vida completo** dos compostos químicos utilizados, desde a aplicação até a destinação final dos resíduos;
+
+III - **Estabelecer protocolos obrigatórios** para tratamentos alternativos não-químicos, priorizando vapor saturado e outros métodos limpos;
+
+IV - **Criar sistema de rastreabilidade** que permita identificar origem, tratamentos aplicados e destinação de resíduos em toda cadeia produtiva.
+
+§ 1º Todos os produtos químicos utilizados em tratamento de bambu deverão ter **registro específico na ANVISA** para essa finalidade, com estudos de impacto em saúde humana e ambiental.
+
+§ 2º É **vedado o uso de compostos classificados como carcinogênicos** (categorias 1A e 1B da classificação EU-CLP) em tratamentos de bambu destinado a produtos de contato humano direto.
+
+§ 3º **Os resíduos contaminados** (aparas, serragem, colmos descartados) deverão ter **destinação controlada**, sendo vedado seu uso em compostagem comum, queima a céu aberto ou disposição inadequada.
+
+**Art. 4º** **Tratamentos Químicos - Regime de Transição:**
+
+I - Estabelece-se prazo de **24 meses** para adequação das atividades existentes às normas deste Sistema;
+
+II - Durante o período de transição, produtores deverão **declarar** à ANVISA todos os compostos utilizados, quantidades e destinação de resíduos;
+
+III - **Apoio técnico e financeiro** será disponibilizado para migração para métodos não-químicos ou de baixo impacto.
+
+**CAPÍTULO IV - DOS INSTRUMENTOS DE FOMENTO E DESENVOLVIMENTO**
+
+**Art. 5º** As instituições financeiras oficiais estabelecerão, no prazo de 180 dias, linhas de crédito em conformidade com o art. 4º, inciso I, da Lei nº 12.484/2011, priorizando:
+
+I - **Agricultura Familiar e Manejo Sustentável:** Juros subsidiados para manejo de bambus nativos, sistemas agroflorestais, equipamentos de beneficiamento limpo;
+
+II - **Conversão Tecnológica:** Financiamento especial para substituição de tratamentos químicos por métodos sustentáveis;
+
+III - **Cooperativas e Associações:** Crédito coletivo para implementação de centrais de tratamento a vapor saturado.
+
+**Art. 6º** Fica instituído o **Programa Nacional de Soberania Tecnológica e Inovação em Bambu (PNSTI-Bambu)**, com os seguintes eixos:
+
+I - **Domesticação e Melhoramento de Espécies Nativas:** Mapeamento e caracterização das 258 espécies brasileiras;
+
+II - **Desenvolvimento de Tecnologias Limpas:** Pesquisa e desenvolvimento de métodos de tratamento não-químicos e equipamentos nacionais;
+
+III - **Tratamento por Vapor Saturado:** Estabelecimento de centros regionais de demonstração e capacitação;
+
+IV - **Cooperação Sul-Sul:** Intercâmbio tecnológico com países da América Latina especialistas em _Guadua_ e outras espécies nativas.
+
+**CAPÍTULO V - DA CERTIFICAÇÃO E RASTREABILIDADE**
+
+**Art. 7º** Fica criado o **Selo "Bambu Limpo Brasil"**, certificando produtos que atendam cumulativamente:
+
+I - **Origem controlada:** Manejo sustentável ou cultivo responsável;  
+II - **Tratamento seguro:** Métodos não-químicos ou químicos de baixo impacto registrados;  
+III - **Destinação adequada:** Resíduos com disposição ambientalmente correta;  
+IV - **Justiça social:** Participação da agricultura familiar e condições dignas de trabalho.
+
+**Art. 8º** **Sistema Nacional de Rastreabilidade do Bambu:**
+
+I - Todo bambu comercializado deverá portar **identificação de origem** e métodos de tratamento utilizados;  
+II - Produtos importados deverão comprovar conformidade com padrões toxicológicos brasileiros;  
+III - **Banco de dados público** permitirá consulta de informações por consumidores e órgãos fiscalizadores.
+
+**CAPÍTULO VI - DO CONTROLE DE IMPORTAÇÕES E SOBERANIA TECNOLÓGICA**
+
+**Art. 9º** **Substituição Progressiva de Importações:**
+
+I - Meta de **redução de 50%** nas importações de produtos químicos para tratamento de bambu em 5 anos;  
+II - **Incentivos fiscais** para produção nacional de equipamentos de processamento limpo;  
+III - **Reserva de mercado** para tecnologias nacionais em compras governamentais.
+
+**CAPÍTULO VII - DISPOSIÇÕES FINAIS E TRANSITÓRIAS**
+
+**Art. 10º** O CG-PNMCB será instalado em **90 dias** da publicação desta Lei, devendo apresentar **Plano Nacional de Implementação** em 180 dias.
+
+**Art. 11º** Os recursos para implementação desta Lei serão assegurados mediante:  
+I - Dotações orçamentárias específicas nos órgãos envolvidos;  
+II - **Taxa de Controle Toxicológico** sobre importações de produtos químicos para bambu;  
+III - Percentual da arrecadação da **CFEM** destinado a projetos de bioeconomia.
+
+**Art. 12º** Esta Lei entra em vigor **90 dias** após sua publicação.
 
 ---
 
-**JUSTIFICATIVA**
-
-O presente Projeto de Lei tem por objetivo sanar uma das mais notórias e danosas omissões do Estado brasileiro na última década: a ausência de regulamentação da Lei nº 12.484, de 2011, que instituiu a Política Nacional de Incentivo ao Manejo Sustentado e ao Cultivo do Bambu (PNMCB). Sancionada com amplo consenso interministerial, a lei representou a promessa de um futuro onde o "ouro verde" do Brasil — detentor da maior biodiversidade de bambus das Américas — seria um pilar para uma nova bioeconomia, inclusiva e regenerativa.
-
-Contudo, a promessa se tornou letra morta. Por mais de doze anos, a inércia governamental transformou um marco legislativo de vanguarda em um "tigre de papel", impedindo o acesso a crédito, desestimulando investimentos e mantendo uma cadeia produtiva de imenso potencial em um limbo de informalidade e subdesenvolvimento.
-
-Pior que a inércia, foi a captura. Conforme denunciado por múltiplos atores da sociedade civil, o vácuo regulatório abriu espaço para que uma aliança restrita entre entidades com representatividade questionável e uma Frente Parlamentar instrumentalizada buscasse moldar a regulamentação a portas fechadas. A agenda proposta por este grupo favorece um modelo de agronegócio excludente, focado na comoditização da matéria-prima e na perpetuação da dependência tecnológica, em flagrante desrespeito ao espírito da Lei 12.484, que prioriza a agricultura familiar e o manejo de nossas vastas riquezas nativas.
-
-Este Projeto de Lei é a resposta direta e democrática a essa captura. Ele não se limita a denunciar, mas apresenta uma alternativa estruturada, soberana e verdadeiramente sustentável. A criação de um Comitê Gestor paritário e transparente (Art. 2º) é o antídoto contra o monopólio da representação, garantindo que todas as vozes — do artesão ao industrial, do extrativista ao pesquisador — sejam ouvidas. A instituição de linhas de crédito específicas (Art. 3º) assegura que o fomento chegue à agricultura familiar, o coração da lei, sem negligenciar o necessário ganho de escala da indústria.
-
-Mais crucialmente, esta proposta estabelece uma rota para a soberania nacional. Ao instituir um Programa de Soberania Tecnológica (Art. 4º) focado em nossas espécies nativas e no desenvolvimento de maquinário nacional, contrapomos o modelo de dependência que nos condenaria a ser meros exportadores de matéria-prima bruta para importar produtos de alto valor agregado.
-
-Senhoras e Senhores Parlamentares, a nação se prepara para sediar a COP30. Enquanto o Ministério do Meio Ambiente se contradiz ao legitimar um "manejo sustentável" de árvores milenares na Amazônia e se omitir sobre o potencial regenerativo do bambu que hoje ocupa as clareiras do desmatamento, o Brasil perde uma oportunidade histórica.
-
-Aprovar este Projeto de Lei é mais do que um ato administrativo. É uma escolha estratégica pelo futuro que queremos: um futuro de desenvolvimento distribuído, de inovação local, de justiça social e de soberania ambiental. É o momento de transformar o paradoxo em práxis e a promessa de 2011 em uma realidade concreta e próspera para todo o povo brasileiro.
-
-Sala das Sessões, em ___ de ___________ de 2025.
