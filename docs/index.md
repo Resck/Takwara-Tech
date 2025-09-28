@@ -30,7 +30,9 @@ The future is not written—it is being written, and your action is part of the 
 
 [**Repository Takwara**](https://resck.github.io/Takwara-Tech/bem-vindo/)
 
-[**Petition Congress**](https://www12.senado.leg.br/ecidadania/visualizacaoideia?id=205855)
+[**Congress Petition**](https://www12.senado.leg.br/ecidadania/visualizacaoideia?id=205855)
+
+[**Regulamentary Proposition**](http://127.0.0.1:8000/Takwara-Tech/decreto-presidencial/)
 
 # Encruzilhadas Ambientais do Brasil: O Greenwashing Oficial na COP30
 
@@ -62,6 +64,9 @@ Esta peça documental se estrutura em **"Atos" rigorosamente fundamentados** p
 **📝 [ASSINE A PETIÇÃO → Regulamentação Urgente da Lei do Bambu](https://www12.senado.leg.br/ecidadania/visualizacaoideia?id=205855)**
 
 **🌐 Repositório Takwara:** [https://resck.github.io/Takwara-Tech/bem-vindo/](https://resck.github.io/Takwara-Tech/bem-vindo/)
+
+[**Leia a proposta do decreto de regulamentação**](http://127.0.0.1:8000/Takwara-Tech/decreto-presidencial/)
+
 
 **📢 Compartilhe:** Use #RegulamentaBambu #EconomiaCircular #COP30DaVerdade
 
