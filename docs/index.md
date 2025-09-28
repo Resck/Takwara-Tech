@@ -1,6 +1,6 @@
 ### Executive Summary
 
-Brazil at a Crossroads: Science, Greenwashing, and the Battle for True Sustainability Ahead of COP30
+## Brazil at a Crossroads: Science, Greenwashing, and the Battle for True Sustainability Ahead of COP30
 
 On September 23, 2025, Brazilian President Luiz Inácio Lula da Silva stood before the United Nations General Assembly to promise "the COP of truth." Yet, behind this uplifting rhetoric, the real story is a complex mix of progress, contradiction, and untapped potential.
 
@@ -565,7 +565,7 @@ O **"manejo florestal sustentável"** da Amazônia é um **crime científico 
 
 A própria terminologia revela a farsa: chamar de **"descanso"** um período que equivale a **menos de 5%** do tempo de vida natural dessas espécies é **perversão semântica** que esconde **devastação sistemática**. Uma castanheira cortada em 2025 deveria teoricamente ser "substituída" por outra em 2060 — mas a árvore original levou 400-600 anos para atingir seu porte e capacidade reprodutiva.[](https://www.gov.br/florestal/pt-br/assuntos/concessoes-e-monitoramento/planos-de-manejo-e-poas)
 
-## A Hipocrisie Ministerial Documentada
+## A Hipocrisia Ministerial Documentada
 
 O **Ministério do Meio Ambiente** desenvolve **arcabouços regulatórios sofisticados** para legitimar esta destruição, enquanto mantém **omissão total** sobre o potencial do bambu nativo amazônico. A mesma Marina Silva que promove **"manejo sustentável"** de árvores milenares ignora completamente os **4,5 milhões de hectares de tabocais nativos** que poderiam ser verdadeiramente manejados de forma sustentável.
 
