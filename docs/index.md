@@ -28,9 +28,9 @@ Conclusion: Brazil finds itself posing as a global leader in "green" diplomacy, 
 
 The future is not written—it is being written, and your action is part of the story.
 
-Repository: https://resck.github.io/Takwara-Tech/
+[**Repository Takwara**](https://resck.github.io/Takwara-Tech/bem-vindo/)
 
-Petition: https://www12.senado.leg.br/ecidadania/visualizacaoideia?id=205855
+[**Petition Congress**](https://www12.senado.leg.br/ecidadania/visualizacaoideia?id=205855)
 
 # Encruzilhadas Ambientais do Brasil: O Greenwashing Oficial na COP30
 
@@ -61,7 +61,7 @@ Esta peça documental se estrutura em **"Atos" rigorosamente fundamentados** p
 
 **📝 [ASSINE A PETIÇÃO → Regulamentação Urgente da Lei do Bambu](https://www12.senado.leg.br/ecidadania/visualizacaoideia?id=205855)**
 
-**🌐 Repositório Takwara:** [https://resck.github.io/Takwara-Tech/](https://resck.github.io/Takwara-Tech/)
+**🌐 Repositório Takwara:** [https://resck.github.io/Takwara-Tech/bem-vindo/](https://resck.github.io/Takwara-Tech/bem-vindo/)
 
 **📢 Compartilhe:** Use #RegulamentaBambu #EconomiaCircular #COP30DaVerdade
 
@@ -137,7 +137,7 @@ Este ultimato científico global fornece o enquadramento necessário para a aná
 
 ## INTERLÚDIO I: Entre a Ciência e a Política
 
-O modelo de Bologna e Aquino não é ficção científica — é matemática aplicada à realidade. Enquanto os números revelam probabilidades de sobrevivência abaixo de 10%, o Brasil se prepara para sediar a COP30 prometendo soluções que suas próprias políticas internas contradizem. A ironia é devastadora: o país que poderia liderar a bioeconomia global mantém suas ferramentas mais poderosas (PNMCB e PNRS) paralisadas por mais de uma década.
+O modelo de Bologna e Aquino não é ficção científica — é matemática aplicada à realidade. Enquanto os números revelam probabilidades de sobrevivência abaixo de 10%, o Brasil se prepara para sediar a COP30 prometendo soluções que suas próprias políticas internas contradizem. A ironia é devastadora: o país que poderia liderar a bioeconomia global mantém suas ferramentas mais poderosas (PNMCB e PNRS) paralisadas por mais de uma década. [Saiba mais...](https://resck.github.io/Takwara-Tech/Ultimato-Clim%C3%A1tico/)
 
 ___
 ## ATO II: A Desconstrução de Salvaguardas — A Tríade Legislativa da Devastação
@@ -187,7 +187,7 @@ A derrubada de vetos cruciais pelo Congresso em 9 de maio de 2024 consolidou est
 
 Estes três marcos não são legislações isoladas — são peças de um **projeto político coordenado**. Enquanto o Marco Temporal desestrutura a proteção de territórios tradicionais, a Lei do Licenciamento facilita a aprovação de projetos impactantes, e o Pacote do Veneno elimina barreiras sanitárias. Juntas, formam um **sistema legal de devastação institucionalizada**.
 
-O padrão é sistemático: projetos aprovados com amplas maiorias, vetos presidenciais derrubados pelo Congresso, e a neutralização progressiva de órgãos técnicos em favor de critérios puramente econômicos. Esta é a **democracia a serviço da anti-democracia ambiental**.
+O padrão é sistemático: projetos aprovados com amplas maiorias, vetos presidenciais derrubados pelo Congresso, e a neutralização progressiva de órgãos técnicos em favor de critérios puramente econômicos. Esta é a **democracia a serviço da anti-democracia ambiental**. [Saiba mais...)(https://resck.github.io/Takwara-Tech/o-pl-da-devastacao/)
 
 ___
 ## ATO III: A Resposta Biofísica — Uma Nação Incendiada
@@ -226,7 +226,7 @@ Na Amazônia, **17,9 milhões de hectares foram carbonizados**, com uma propor�
 
 ## A Quantificação do Apocalipse Atmosférico
 
-Em 2024, os incêndios brasileiros liberaram um **recorde de 180 megatoneladas de carbono** na atmosfera. Apenas na Amazônia, entre junho e agosto, foram **31,5 milhões de toneladas de CO₂e** — aumento de 60% sobre 2023. Mas os números oficiais escondem o verdadeiro horror: o "legado de carbono" da decomposição de bilhões de árvores mortas, que continuará envenenando a atmosfera por décadas.[](https://agenciagov.ebc.com.br/noticias/202508/em-12-meses-desmatamento-na-amazonia-registra-segunda-menor-taxa-da-serie-historica-e-menor-indice-de-corte-raso-da-floresta)
+Em 2024, os incêndios brasileiros liberaram um **recorde de 180 megatoneladas de carbono** na atmosfera. Apenas na Amazônia, entre junho e agosto, foram **31,5 milhões de toneladas de CO₂e** — aumento de 60% sobre 2023. Mas os números oficiais escondem o verdadeiro horror: o "legado de carbono" da decomposição de bilhões de árvores mortas, que continuará envenenando a atmosfera por décadas.
 
 **Tabela 6: Estimativa de Emissões de GEE por Incêndios no Brasil (MtCO₂e)**
 
@@ -240,7 +240,7 @@ Em 2024, os incêndios brasileiros liberaram um **recorde de 180 megatoneladas 
 
 **Fontes**: Elaborado a partir de SEEG (2023), IPAM (2024) e CAMS (2024).[](https://www.poder360.com.br/poder-sustentavel/degradacao-na-amazonia-legal-bate-recorde-e-cresce-482-em-2025/)
 
-**Table 6 Summary (English)**: This table presents estimated GHG emissions from Brazilian wildfires, revealing the true scale of the climate catastrophe. Beyond immediate emissions (which increased 67% in 2024), "legacy emissions" from decomposing dead trees will continue poisoning the atmosphere for decades, potentially adding 2.6-5.2 billion tons of CO₂e over the coming decade. **Sources**: SEEG (2023), IPAM (2024), CAMS (2024).[](https://agenciagov.ebc.com.br/noticias/202508/em-12-meses-desmatamento-na-amazonia-registra-segunda-menor-taxa-da-serie-historica-e-menor-indice-de-corte-raso-da-floresta)
+**Table 6 Summary (English)**: This table presents estimated GHG emissions from [Brazilian wildfires](https://agenciagov.ebc.com.br/noticias/202508/em-12-meses-desmatamento-na-amazonia-registra-segunda-menor-taxa-da-serie-historica-e-menor-indice-de-corte-raso-da-floresta), revealing the true scale of the climate catastrophe. Beyond immediate emissions (which increased 67% in 2024), "legacy emissions" from decomposing dead trees will continue poisoning the atmosphere for decades, potentially adding 2.6-5.2 billion tons of CO₂e over the coming decade. **Sources**: SEEG (2023), IPAM (2024), CAMS (2024).
 
 ## O Escândalo da Contabilidade de Carbono
 
@@ -250,29 +250,28 @@ As emissões reais do Brasil são **sistematicamente subnotificadas** nos inve
 
 ## O Genocídio da Biodiversidade
 
-Na Amazônia, **90% das espécies de plantas e animais vertebrados foram impactadas** por queimadas. No Pantanal, os incêndios de 2020 **assassinaram 17 milhões de animais vertebrados** — um holocausto biológico sem paralelos na história documentada.[](https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/discursos-e-pronunciamentos/2025/09/discurso-do-presidente-lula-na-abertura-do-debate-geral-da-80a-assembleia-geral-das-nacoes-unidas)
+Na Amazônia, **90% das espécies de plantas e animais vertebrados foram impactadas** por queimadas. No Pantanal, os incêndios de 2020 **assassinaram 17 milhões de animais vertebrados** — um holocausto biológico sem paralelos na história documentada.
 
 ## O Colapso dos Serviços Ecossistêmicos
 
-A degradação do Cerrado ameaça **a segurança hídrica nacional**: oito das doze regiões hidrográficas brasileiras nascem no bioma. Enquanto isso, a fumaça dos incêndios provoca uma **crise de saúde pública continental**, com hospitalizações disparando e sistemas de saúde colapsando.[](https://g1.globo.com/politica/noticia/2025/09/23/veja-integra-do-discurso-de-lula-na-assembleia-geral-da-onu.ghtml)
+A degradação do Cerrado ameaça **a segurança hídrica nacional**: oito das doze regiões hidrográficas brasileiras nascem no bioma. Enquanto isso, a fumaça dos incêndios provoca uma **crise de saúde pública continental**, com hospitalizações disparando e sistemas de saúde colapsando.
 
 ## INTERLÚDIO III: Quando a Natureza Declara Guerra ao Homem
 
 Os números não mentem: o Brasil não está apenas pegando fogo — está sendo **sistematicamente incendiado**. Cada hectare queimado representa o fracasso de um modelo de desenvolvimento que trata a natureza como inimigo a ser vencido.
 
 O fogo que devasta nossos biomas é apenas o sintoma mais visível de uma doença mais profunda: a **ruptura completa entre sociedade e natureza**. Enquanto parlamentares derrubam vetos e empresários celebram lucros, a Terra brasileira arde — e sua fumaça sobe aos céus como um grito de socorro que nossas instituições se recusam a ouvir.
-
 ___
 
 ## ATO IV: O Paradoxo do Bambu — O Ouro Verde que Virou Combustível da Destruição
 
-A pesquisa groundbreaking da Dra. Sonaira Silva (UFAC) desvenda um dos mais perversos ciclos de retroalimentação ecológica já documentados na Amazônia. Incêndios intensificados por secas extremas causam mortalidade em massa de árvores, permitindo a **expansão explosiva do bambu nativo _Guadua_**. Este, ironicamente, aumenta a inflamabilidade da floresta e suprime a regeneração de outras espécies, **aprisionando o ecossistema em um estado permanentemente degradado**. O bambu — tradicionalmente visto como solução sustentável — torna-se agente de perpetuação da devastação.[](https://g1.globo.com/politica/noticia/2025/09/23/veja-integra-do-discurso-de-lula-na-assembleia-geral-da-onu.ghtml)
+A [pesquisa groundbreaking](https://www.sciencedirect.com/science/article/abs/pii/S0378112721002279?via%3Dihub) da Dra. Sonaira Silva (UFAC) desvenda um dos mais perversos ciclos de retroalimentação ecológica já documentados na Amazônia. Incêndios intensificados por secas extremas causam mortalidade em massa de árvores, permitindo a **expansão explosiva do bambu nativo _Guadua_**. Este, ironicamente, aumenta a inflamabilidade da floresta e suprime a regeneração de outras espécies, **aprisionando o ecossistema em um estado permanentemente degradado**. O bambu — tradicionalmente visto como solução sustentável — torna-se agente de perpetuação da devastação.
 
 ## Cena I: Quando a Natureza se Volta Contra Si Mesma
 
 ## A Ciência do Colapso Ecológico
 
-Os dados de Silva et al. revelam uma transformação radical na estrutura florestal amazônica. Florestas que sofreram queimadas experimentam uma **inversão completa de dominância ecológica**: as árvores, que deveriam dominar o dossel, são substituídas por densas touceiras de bambu que impedem qualquer regeneração arbórea futura.[](https://news.un.org/pt/story/2025/09/1851063)
+Os dados de Silva et al. revelam uma transformação radical na estrutura florestal amazônica. Florestas que sofreram queimadas experimentam uma **inversão completa de dominância ecológica**: as árvores, que deveriam dominar o dossel, são substituídas por densas touceiras de bambu que impedem qualquer regeneração arbórea futura.
 
 **Tabela 7: Impacto Ecológico do Fogo em Florestas de Bambu na Amazônia**
 
@@ -283,9 +282,9 @@ Os dados de Silva et al. revelam uma transformação radical na estrutura flores
 |**Redução da Biomassa Acima do Solo**|0%|-27% a -49%|-27% a -49%|**Até -49%**|
 |**Contribuição do Bambu para AGB**|1%|N/A|**27%**|**+2.600%**|
 
-**Fontes**: Elaborado a partir de dados da Dra. Sonaira Silva (UFAC, 2020; Silva et al., 2021).[](https://g1.globo.com/politica/noticia/2025/09/23/veja-integra-do-discurso-de-lula-na-assembleia-geral-da-onu.ghtml)
+**Fontes**: Elaborado a partir de dados da Dra. Sonaira Silva (UFAC, 2020; Silva et al., 2021).
 
-**Table 7 Summary (English)**: This table quantifies the ecological catastrophe where fire transforms Amazon forests into bamboo-dominated wastelands. It documents how repeated fires reduce tree density by 74% while causing an explosive 733% increase in bamboo density, creating a degraded ecosystem trapped in permanent inflammability. The bamboo contribution to remaining biomass jumps from 1% to 27%, illustrating complete ecological dominance reversal. **Source**: Research by Dr. Sonaira Silva (UFAC, 2020; Silva et al., 2021).[](https://news.un.org/pt/story/2025/09/1851063)
+**Table 7 Summary (English)**: This table quantifies the ecological catastrophe where fire transforms Amazon forests into bamboo-dominated wastelands. It documents how repeated fires reduce tree density by 74% while causing an explosive 733% increase in bamboo density, creating a degraded ecosystem trapped in permanent inflammability. The bamboo contribution to remaining biomass jumps from 1% to 27%, illustrating complete ecological dominance reversal. **Source**: Research by Dr. Sonaira Silva (UFAC, 2020; Silva et al., 2021).
 
 ## O Mecanismo da Armadilha Ecológica
 
@@ -375,7 +374,7 @@ A crise ambiental brasileira é agravada por uma **inação governamental crôn
 
 ## Cena I: A PNRS — 15 Anos de Promessas que Viraram Lixo
 
-Promulgada em 2010, a Lei nº 12.305 (Política Nacional de Resíduos Sólidos) tornou-se um **"fantasma regulatório"**. Quinze anos depois, o Brasil ainda **despeja 39% de seu lixo em destinos inadequados**, enquanto a logística reversa permanece **letra morta na Constituição**.[](https://www.bbc.com/portuguese/articles/crkjl61z056o)
+Promulgada em 2010, a Lei nº 12.305 (Política Nacional de Resíduos Sólidos) tornou-se um **"fantasma regulatório"**. Quinze anos depois, o Brasil ainda **despeja 39% de seu lixo em destinos inadequados**, enquanto a logística reversa permanece **letra morta na Constituição**.
 
 **Tabela 10: O Fracasso Sistêmico da PNRS (2010-2025)**
 
@@ -387,9 +386,9 @@ Promulgada em 2010, a Lei nº 12.305 (Política Nacional de Resíduos Sólidos) 
 |**Compostagem Orgânica**|30% resíduos orgânicos|**< 2% nacional**|**93% desperdício**|
 |**Cooperativas Integradas**|Sistema nacional|**Marginalização total**|**Exclusão sistêmica**|
 
-**Fontes**: ABREMA (2023), Mayer Brown (2022), O Eco (2024).[](https://www.bbc.com/portuguese/articles/crkjl61z056o)
+**Fontes**: ABREMA (2023), Mayer Brown (2022), O Eco (2024).
 
-**Table 10 Summary (English)**: This table documents the systematic failure of Brazil's National Solid Waste Policy (PNRS) over 15 years, showing how ambitious environmental targets became legal fiction. Despite setting clear deadlines, Brazil still dumps 39% of waste inappropriately, maintains only 13% recycling rates versus 50% targets, and has virtually abandoned organic composting, exposing the complete institutional abandonment of sustainable development. **Sources**: ABREMA (2023), Mayer Brown (2022), O Eco (2024).[](https://www.bbc.com/portuguese/articles/crkjl61z056o)
+**Table 10 Summary (English)**: This table documents the systematic failure of Brazil's National Solid Waste Policy (PNRS) over 15 years, showing how ambitious environmental targets became legal fiction. Despite setting clear deadlines, Brazil still dumps 39% of waste inappropriately, maintains only 13% recycling rates versus 50% targets, and has virtually abandoned organic composting, exposing the complete institutional abandonment of sustainable development. **Sources**: ABREMA (2023), Mayer Brown (2022), O Eco (2024).
 
 ## O Caso Sérgio Prado e Márcia Macul: Inovadores no Limbo
 
@@ -449,7 +448,8 @@ Este ato final expõe a **arquitetura da desinformação institucional**: como 
 
 ## O Truque das Métricas Seletivas
 
-Em entrevista ao Flow Podcast (2023), a Ministra Marina Silva enfatizou a **redução de 49,5% no desmatamento por corte raso** como principal métrica de sucesso. Contudo, essa narrativa é **sistematicamente destruída** pelo aumento de **79% na área total queimada** no mesmo período. A estratégia é evidente: **usar uma métrica favorável para obscurecer uma crise muito maior** de degradação florestal pelo fogo.[](https://g1.globo.com/meio-ambiente/noticia/2025/07/11/inpe-alertas-de-desmatamento-na-amazonia-1o-semestre.ghtml)
+Em entrevista ao Flow Podcast (2023), a Ministra Marina Silva enfatizou a **redução de 49,5% no desmatamento por corte raso** como principal métrica de sucesso. Contudo, essa narrativa é **sistematicamente destruída** pelo aumento de **79% na área total queimada** no mesmo período. A estratégia é evidente: **usar uma métrica favorável para obscurecer uma crise muito maior** de degradação florestal pelo fogo.
+
 
 **Tabela 13: A Manipulação das Métricas — Desmatamento vs. Queimadas (2023-2024)**
 
@@ -461,9 +461,9 @@ Em entrevista ao Flow Podcast (2023), a Ministra Marina Silva enfatizou a **red
 |**Degradação vs. Regeneração**|"Florestas se recuperando"|**163% aumento degradação**|**Inversão completa dos fatos**|
 |**Bambu como Solução**|"Bioeconomia promissora"|**Bambu vira combustível**|**Omissão do paradoxo central**|
 
-**Fontes**: Flow Podcast (2023), MapBiomas (2025), IPAM (2024), Fapesp (2023).[](https://g1.globo.com/meio-ambiente/noticia/2025/07/11/inpe-alertas-de-desmatamento-na-amazonia-1o-semestre.ghtml)
+**Fontes**: Flow Podcast (2023), MapBiomas (2025), IPAM (2024), Fapesp (2023).
 
-**Table 13 Summary (English)**: This table exposes the systematic manipulation of environmental metrics by Brazilian government, showing how selective focus on "deforestation reduction" (49.5%) conceals catastrophic increases in total burned area (79%), carbon emissions (67% increase), and forest degradation (163% increase). This represents institutional gaslighting where environmental agencies promote success narratives while environmental catastrophe accelerates. **Sources**: Flow Podcast (2023), MapBiomas (2025), IPAM (2024), Fapesp (2023).[](https://g1.globo.com/meio-ambiente/noticia/2025/07/11/inpe-alertas-de-desmatamento-na-amazonia-1o-semestre.ghtml)
+**Table 13 Summary (English)**: This table exposes the systematic manipulation of environmental metrics by Brazilian government, showing how selective focus on "deforestation reduction" (49.5%) conceals catastrophic increases in total burned area (79%), carbon emissions (67% increase), and forest degradation (163% increase). This represents institutional gaslighting where environmental agencies promote success narratives while environmental catastrophe accelerates. **Sources**: Flow Podcast (2023), MapBiomas (2025), IPAM (2024), Fapesp (2023).
 
 ## A Anatomia da Desinformação Institucional
 
@@ -512,9 +512,10 @@ O **discurso robusto de proteção ambiental** foi **sistematicamente massacr
 |**Orçamento Ambiental**|**Aumento proposto**|**Cortes aprovados**|**Irrelevante**|**MMA desfinanciado**|
 |**SNUC Modificações**|**Resistência**|**Aprovadas**|**N/A**|**Unidades de conservação vulneráveis**|
 
-**Fontes**: Câmara dos Deputados (2023), Senado Federal (2023), Congresso Nacional (2024), Agência Brasil (2023).[](https://www.ideassonline.org/public/pdf/BrazilBeatsHunger-ENG.pdf)
+**Fontes**: Câmara dos Deputados (2023), Senado Federal (2023), Congresso Nacional (2024), Agência Brasil (2023).
 
-**Table 15 Summary (English)**: This table documents the systematic legislative massacre of Lula government's environmental agenda, showing complete defeat on Indigenous Land Temporal Framework (100% of vetoes overturned), significant losses on pesticide regulation (14% of vetoes overturned), and systematic defunding of environmental agencies. The Executive's environmental discourse was systematically destroyed by a hostile Congress, exposing the complete powerlessness of environmental protection in Brazilian democracy. **Sources**: Câmara dos Deputados (2023), Senado Federal (2023), Congresso Nacional (2024), Agência Brasil (2023).[](https://foodtank.com/news/2025/07/hunger-is-a-choice-brazil-just-proved-it/)
+**Table 15 Summary (English)**: This table documents the systematic legislative massacre of Lula government's environmental agenda, showing complete defeat on Indigenous Land Temporal Framework (100% of vetoes overturned), significant losses on pesticide regulation (14% of vetoes overturned), and systematic defunding of environmental agencies. The Executive's environmental discourse was systematically destroyed by a hostile Congress, exposing the complete powerlessness of environmental protection in Brazilian democracy. **Sources**: Câmara dos Deputados (2023), Senado Federal (2023), Congresso Nacional (2024), Agência Brasil (2023).
+
 
 ## O Esvaziamento Institucional Documentado
 
@@ -541,7 +542,7 @@ A **esquizofrenia política atinge seu clímax**: enquanto o Presidente promete
 
 ## A Matemática da Insustentabilidade
 
-Enquanto o governo brasileiro promete na COP30 ser líder mundial da bioeconomia, mantém uma **política de "manejo sustentável" de florestas** que autoriza a derrubada de **árvores centenárias e potencialmente milenares** com ciclos de "recuperação" de apenas **25 a 35 anos**. Esta é a **contradição mais brutal** da política ambiental brasileira: chamar de sustentável um sistema que destrói em décadas o que a natureza levou séculos ou milênios para construir.[](https://conama.mma.gov.br/?option=com_sisconama&task=arquivo.download&id=794)
+Enquanto o governo brasileiro promete na COP30 ser líder mundial da bioeconomia, mantém uma **política de "manejo sustentável" de florestas** que autoriza a derrubada de **árvores centenárias e potencialmente milenares** com ciclos de "recuperação" de apenas **25 a 35 anos**. Esta é a **contradição mais brutal** da política ambiental brasileira: chamar de sustentável um sistema que destrói em décadas o que a natureza levou séculos ou milênios para construir.
 
 A Resolução CONAMA 406/2009 estabelece que **árvores gigantescas da Amazônia** — algumas com mais de 500 anos de idade — podem ser cortadas com a promessa de que a área se "recuperará" em 35 anos. A matemática é simples: **cortar uma árvore de 500 anos e esperar 35 anos para "recuperação"** não é manejo sustentável — é **devastação programada**.[](https://conama.mma.gov.br/?option=com_sisconama&task=arquivo.download&id=578)
 
@@ -794,7 +795,7 @@ A resposta está em nossas mãos. E o tempo para agir é agora.
 
 ## REFERÊNCIAS PRINCIPAIS
 
-ARAÚJO, Carlos Eduardo Santos et al. Life cycle assessment of the artisanal bamboo pole (_Guadua angustifolia_) production in the Brazilian Amazon. **Brazilian Journal of Science**, v. 4, n. 4, p. 13-28, 2025.
+ARAÚJO, Carlos Eduardo Santos et al. Life cycle assessment of the artisanal bamboo pole (_Guadua angustifolia_) production in the Brazilian Amazon. **Brazilian Journal of Science**, v. 4, n. 4, p. 13-28, 2025. [https://periodicos.cerradopub.com.br/bjs/article/view/719](https://periodicos.cerradopub.com.br/bjs/article/view/719)
 
 ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **NBR 6023**: informação e documentação – referências – elaboração. Rio de Janeiro: ABNT, 2018.
 
@@ -881,8 +882,6 @@ FEARNSIDE, Philip Martin. As reais emissões de carbono do Brasil associadas a f
 PORTELA, Romualdo Corrêa; MENEZES JÚNIOR, Euler Esteves; SILVA, Silvana Dolores. A lei do marco temporal e a história da ocupação fundiária no Brasil. **Serviço Social & Sociedade**, São Paulo, v. 147, n. 3, e-6628418, 2024. DOI: [https://doi.org/10.1590/0101-6628418](https://doi.org/10.1590/0101-6628418).
 
 SANTOS, Rafael Silva; GONÇALVES, Ana Luiza. A nova lei do marco temporal e seus impactos na demarcação de terras indígenas. **Revista Jurídica**, v. 12, n. 1, p. 45-62, 2024.
-
-SILVA, Sonaira Souza da et al. Impact of fires on an open bamboo forest in years of extreme drought in southwestern Amazonia. **Regional Environmental Change**, v. 20, n. 4, p. 127, 2020. DOI: [https://doi.org/10.1007/s10113-020-01703-4](https://doi.org/10.1007/s10113-020-01703-4).
 
 SILVA, Sonaira Souza da et al. Increasing bamboo dominance in southwestern Amazon forests following intensification of drought-mediated fires. **Forest Ecology and Management**, v. 490, p. 119139, 2021. DOI: [https://doi.org/10.1016/j.foreco.2021.119139](https://doi.org/10.1016/j.foreco.2021.119139).
 
