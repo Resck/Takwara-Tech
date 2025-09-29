@@ -82,7 +82,6 @@ Essa jornada, com seus altos e baixos, reforçou uma crença inabalável: o conh
 
 À medida que nos aproximamos da COP30, a urgência da ação climática e da justiça social se intensifica. Este repositório, a **Tecnologia Takwara** e nossa **Assistente Virtual** são mais do que dados; são um testemunho da engenhosidade humana e da resiliência frente aos desafios globais. O espírito Takwara – que abraça a inovação, a independência e a conexão profunda com a natureza – oferece um modelo poderoso.
 
-**[INSERIR AQUI O RESUMO EM INGLÊS UK SOLICITADO NO SEU FEEDBACK ANTERIOR]**
 ---
 **A Call to Action: Embracing the Takwara Spirit for COP30**
 
