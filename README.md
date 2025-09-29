@@ -5,6 +5,8 @@
 ![Licença CC BY 4.0](https://i.creativecommons.org/l/by/4.0/88x31.png)
 *Este trabalho está licenciado sob a Creative Commons Atribuição 4.0 Internacional.*
 
+[![DOI](https://zenodo.org/badge/993477628.svg)](https://doi.org/10.5281/zenodo.17225867)
+
 **1. A Chama da Autodeterminação: Bem-vindo à Revolução Takwara!**
 
 Olá! Seja muito bem-vindo ao repositório da **Tecnologia Takwara**. Aqui, não apenas compartilhamos soluções de ponta em construção sustentável com bambu, mas também celebramos uma jornada de aprendizado autêntico e de enfrentamento direto às crises que definem nosso tempo: a crise habitacional, a urgência climática e a necessidade de um futuro socioambientalmente responsável.
