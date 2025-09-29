@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/993477628.svg)](https://doi.org/10.5281/zenodo.17225867)
+
 ### Executive Summary
 
 ## Brazil at a Crossroads: Science, Greenwashing, and the Battle for True Sustainability Ahead of COP30
