@@ -1,6 +1,6 @@
 # Climate Ultimatum: Beyond Capitalism, Towards a Just and Democratic Transition
 
-[![DOI](https://zenodo.org/badge/993477628.svg)](https://doi.org/10.5281/zenodo.17225867) [![Licença: CC BY 4.0](https://img.shields.io/badge/Licen%C3%A7a-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![🇧🇷 PT](https://img.shields.io/badge/🇧🇷-Português-green)](./Ultimato-Climático.md) [![🇺🇸 EN](https://img.shields.io/badge/🇺🇸-English-blue)](./ultimato-climatico-EN.md) ![Status](https://img.shields.io/badge/status-Pesquisa%20Ativa-green)
+[![DOI](https://zenodo.org/badge/993477628.svg)](https://doi.org/10.5281/zenodo.17225867) [![Licença: CC BY 4.0](https://img.shields.io/badge/Licen%C3%A7a-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![🇧🇷 PT](https://img.shields.io/badge/🇧🇷-Português-green)](./Ultimato-Climático.md) [![🇺🇸 EN](https://img.shields.io/badge/🇺🇸-English-blue)](./utimato-climatico-EN.md) ![Status](https://img.shields.io/badge/status-Pesquisa%20Ativa-green)
 
 ## Introduction: The Scientific Ultimatum and the Paradigm Crisis
 
