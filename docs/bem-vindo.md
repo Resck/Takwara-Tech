@@ -1,8 +1,7 @@
 
 # Takwara: Uma Abordagem Autoral e Irreverente para a Sustentabilidade com Bambu
 
-![Licença CC BY 4.0](https://i.creativecommons.org/l/by/4.0/88x31.png)
-*Este trabalho está licenciado sob a Creative Commons Atribuição 4.0 Internacional.*
+[![DOI](https://zenodo.org/badge/993477628.svg)](https://doi.org/10.5281/zenodo.17225867) [![Licença: CC BY 4.0](https://img.shields.io/badge/Licen%C3%A7a-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![🇧🇷 PT](https://img.shields.io/badge/🇧🇷-Português-green)](./bem-vindo.md) [![🇺🇸 EN](https://img.shields.io/badge/🇺🇸-English-blue)](./bem-vindo-EN.md) ![Status](https://img.shields.io/badge/status-Pesquisa%20Ativa-green)
 
 ## Bem-vindo ao Repositório Takwara: O Seu Portal para a Inovação Aberta em Construção Sustentável
 

@@ -1,5 +1,7 @@
 # Ultimato Climático: Para Além do Capitalismo, Rumo a uma Transição Justa e Democrática
 
+[![DOI](https://zenodo.org/badge/993477628.svg)](https://doi.org/10.5281/zenodo.17225867) [![Licença: CC BY 4.0](https://img.shields.io/badge/Licen%C3%A7a-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![🇧🇷 PT](https://img.shields.io/badge/🇧🇷-Português-green)](./Ultimato-Climático.md) [![🇺🇸 EN](https://img.shields.io/badge/🇺🇸-English-blue)](./ultimato-climatico-EN.md) ![Status](https://img.shields.io/badge/status-Pesquisa%20Ativa-green)
+
 ## Introdução: O Ultimato Científico e a Crise de Paradigma
 
 A humanidade enfrenta um ultimato. Não se trata de uma exigência política ou de uma negociação diplomática, mas de um veredito emitido pelas leis da física e da química que governam o sistema climático do nosso planeta. Os dados científicos são inequívocos e formam a base deste ultimato: a atividade industrial humana, organizada sob a égide do capitalismo global, desestabilizou o clima da Terra a um ponto que ameaça a própria continuidade da civilização organizada. A temperatura média global já aumentou aproximadamente 1,18 °C (2,12 °F) acima da média do século XX, com a taxa de aquecimento desde 1982 sendo mais de três vezes superior à média histórica desde 1850. Os dez anos mais quentes já registrados ocorreram todos na última década (2015-2024), com 2024 estabelecendo um novo e alarmante recorde de ano mais quente da história.  
