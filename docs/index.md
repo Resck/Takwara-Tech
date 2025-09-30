@@ -1,42 +1,10 @@
-[![DOI](https://zenodo.org/badge/993477628.svg)](https://doi.org/10.5281/zenodo.17225867)
 
-### Executive Summary
-
-## Brazil at a Crossroads: Science, Greenwashing, and the Battle for True Sustainability Ahead of COP30
-
-On September 23, 2025, Brazilian President Luiz Inácio Lula da Silva stood before the United Nations General Assembly to promise "the COP of truth." Yet, behind this uplifting rhetoric, the real story is a complex mix of progress, contradiction, and untapped potential.
-
-This report, structured as a documentary in eight Acts, exposes the stark dichotomies between official discourse and what the evidence actually reveals. Reviewing legislative rollbacks, record-setting wildfires, and the chronic inertia that keeps groundbreaking environmental policies stalled for over a decade, it draws a map of Brazil's environmental crossroads.
-
-Key findings include:
-
-Civilizational risk: Scientific modeling shows a less than 10% probability of humanity surviving the current rate of deforestation and resource consumption—framing an urgent global ultimatum that also dictates Brazil’s choices.
-
-Legislative setbacks: The approval of the "Time Frame" Law (Marco Temporal), a weakened Environmental Licensing Law, and the "Poison Package" for pesticides, collectively creating a legal architecture that deepens risk instead of guarding it.
-
-Wildfires and climate feedbacks: In 2024 alone, 30.8 million hectares burned (+79%), emitting a record 180 megatonnes of carbon—while official reporting systematically underestimates emissions by leaving out degradation and small-scale deforestation.
-
-Bamboo paradox: Brazilian studies highlight how unmanaged native bamboo fuels fire feedback loops in the Amazon, turning a potential climate solution into an agent of accelerated degradation due to regulatory neglect.
-
-Toxic legacy: A Life Cycle Assessment (2025) reveals that 93% of carcinogenic impact from bamboo production comes not from the chemicals used, but from the mismanagement of chemically-contaminated waste, a blind spot perpetuated by lack of enforcement and oversight.
-
-Urban injustice and COP30 "Greenwashing": Over R$1 billion was spent on infrastructure for Belém, the host city of COP30, but 66.7% of its population still lacks basic sanitation, highlighting the gap between climate spectacle and social reality.
-
-Regulatory vacuum: The failure to enforce the National Solid Waste Policy (PNRS) and the National Bamboo Policy (PNMCB) has cost Brazil billions, created artificial chemical dependencies, and suffocated innovation and inclusion in the circular bioeconomy.
-
-Policy schizophrenia: While the government debates "sustainable management" of Amazonian hardwoods—often centuries- or millennia-old—with minimal recovery periods, it ignores the true sustainability of native bamboo forests, which regenerate in 3-5 years.
-
-Conclusion: Brazil finds itself posing as a global leader in "green" diplomacy, while the domestic reality is one of scientific, social, and institutional paradox. This document is not a catalog of defeat but a citizen science call to action: contribute, sign the petition for full enforcement of the Bamboo Law, and help build a transparent, sovereign, and inclusive bioeconomy.
-
-The future is not written—it is being written, and your action is part of the story.
-
-[**Repository Takwara**](https://resck.github.io/Takwara-Tech/bem-vindo/)
-
-[**Congress Petition**](https://www12.senado.leg.br/ecidadania/visualizacaoideia?id=205855)
-
-[**Regulamentary Proposition**](http://127.0.0.1:8000/Takwara-Tech/decreto-presidencial/)
 
 # Encruzilhadas Ambientais do Brasil: O Greenwashing Oficial na COP30
+[![DOI](https://zenodo.org/badge/993477628.svg)](https://doi.org/10.5281/zenodo.17225867)
+ [![Licença: CC BY 4.0](https://img.shields.io/badge/Licen%C3%A7a-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![🇧🇷 PT](https://img.shields.io/badge/🇧🇷-Português-green)](./index.md) [![🇺🇸 EN](https://img.shields.io/badge/🇺🇸-English-blue)](./index-EN.md) ![Status](https://img.shields.io/badge/status-Pesquisa%20Ativa-green)
+
+
 
 ## PREÂMBULO: O Grande Teatro da Diplomacia Ambiental — Quando a Retórica Encontra a Realidade
 
