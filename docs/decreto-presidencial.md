@@ -1,3 +1,5 @@
+**📝 [ASSINE A PETIÇÃO → Regulamentação Urgente da Lei do Bambu]
+
 # JUSTIFICATIVA
 
 Este Projeto de Lei consolida 14 anos de omissão governamental sobre uma das políticas mais estratégicas para o desenvolvimento sustentável brasileiro. A regulamentação da PNMCB não é apenas uma questão ambiental, mas de **soberania nacional, justiça social e segurança sanitária**.
@@ -126,4 +128,6 @@ III - Percentual da arrecadação da **CFEM** destinado a projetos de bioecono
 **Art. 12º** Esta Lei entra em vigor **90 dias** após sua publicação.
 
 ---
+
+**📝 [ASSINE A PETIÇÃO → Regulamentação Urgente da Lei do Bambu]
 

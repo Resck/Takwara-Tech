@@ -15,8 +15,8 @@ theme:
   logo: assets/images/takwara_logo.png
   favicon: assets/images/favicon.png
   features:
-    - navigation.tabs
-    - navigation.instant
+    # - navigation.tabs
+    # - navigation.instant
     - content.code.annotate
     - search.suggest
     - search.highlight
