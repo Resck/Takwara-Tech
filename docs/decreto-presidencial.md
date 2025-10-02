@@ -1,4 +1,4 @@
-**📝 [ASSINE A PETIÇÃO → Regulamentação Urgente da Lei do Bambu]
+**📝 [ASSINE A PETIÇÃO → Regulamentação Urgente da Lei do Bambu](https://www12.senado.leg.br/ecidadania/visualizacaoideia?id=205855)**
 
 # JUSTIFICATIVA
 
@@ -128,6 +128,4 @@ III - Percentual da arrecadação da **CFEM** destinado a projetos de bioecono
 **Art. 12º** Esta Lei entra em vigor **90 dias** após sua publicação.
 
 ---
-
-**📝 [ASSINE A PETIÇÃO → Regulamentação Urgente da Lei do Bambu]
 

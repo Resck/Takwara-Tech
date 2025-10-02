@@ -1,6 +1,7 @@
 
 **📝 [ASSINE A PETIÇÃO → Regulamentação Urgente da Lei do Bambu](https://www12.senado.leg.br/ecidadania/visualizacaoideia?id=205855)**
 
+
 # Encruzilhadas Ambientais do Brasil: O Greenwashing Oficial na COP30
 [![DOI](https://zenodo.org/badge/993477628.svg)](https://doi.org/10.5281/zenodo.17225867)
  [![Licença: CC BY 4.0](https://img.shields.io/badge/Licen%C3%A7a-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![🇧🇷 PT](https://img.shields.io/badge/🇧🇷-Português-green)](./index.md) [![🇺🇸 EN](https://img.shields.io/badge/🇺🇸-English-blue)](./index-EN.md) ![Status](https://img.shields.io/badge/status-Pesquisa%20Ativa-green)
