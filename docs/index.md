@@ -1,6 +1,7 @@
 
 **📝 [ASSINE A PETIÇÃO → Regulamentação Urgente da Lei do Bambu](https://www12.senado.leg.br/ecidadania/visualizacaoideia?id=205855)**
 
+📝 [**Leia a proposta do decreto de regulamentação**](http://127.0.0.1:8000/Takwara-Tech/decreto-presidencial.md/)
 
 # Encruzilhadas Ambientais do Brasil: O Greenwashing Oficial na COP30
 [![DOI](https://zenodo.org/badge/993477628.svg)](https://doi.org/10.5281/zenodo.17225867)
