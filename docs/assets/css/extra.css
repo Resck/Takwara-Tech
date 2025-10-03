@@ -179,3 +179,31 @@ header .md-tabs__list .md-tabs__item:first-child {
   align-items: center;
   width: 100%; /* Ocupa toda a largura */
 }
+/* ========================================================== */
+/* ESTILOS PARA DISPOSITIVOS MÓVEIS (VERSÃO CORRIGIDA)      */
+/* ========================================================== */
+
+/* Aplica estas regras apenas em ecrãs com largura máxima de 768px */
+@media screen and (max-width: 768px) {
+
+  /* --- Corrige a Rolagem do Menu Lateral --- */
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    overflow-y: auto;
+  }
+
+  /* --- Deixa o Menu Lateral Mais Compacto --- */
+
+  /* Anula o negrito e o tamanho grande dos itens principais */
+  .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
+    font-size: 1em;
+    font-weight: normal;
+  }
+  
+  /* A REGRA MAIS IMPORTANTE: Reduz o espaçamento de TODOS os links do menu */
+  .md-nav__link {
+    padding-top: 0.35rem;    /* Reduz o espaçamento superior */
+    padding-bottom: 0.35rem; /* Reduz o espaçamento inferior */
+    height: auto;            /* Garante que a altura se ajuste ao conteúdo */
+  }
+
+}
