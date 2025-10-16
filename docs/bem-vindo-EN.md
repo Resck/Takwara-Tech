@@ -1,4 +1,3 @@
-Of course. Here is the complete translation of the text into English, preserving the original formatting.
 
 # Takwara: An Authorial and Irreverent Approach to Sustainability with Bamboo
 
