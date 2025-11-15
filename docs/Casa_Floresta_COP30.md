@@ -649,8 +649,8 @@ ZHANG, J.; XU, J.; WU, Y.; XIE, T.; BO, L.; LI, Z. Life cycle assessment of stee
 
 ---
 
-**Documento preparado em: 15 de novembro de 2025**
+**Documento preparado em: de 1 a 13 de novembro de 2025**
 
-**Atualização: Relatório final a ser consolidado, consolidando pesquisa de campo, documentação oficial COP30 e publicações científicas de 2025**
+**Atualização: Relatório final a ser finalizado, consolidando pesquisa de campo, documentação oficial COP30 e publicações científicas de 2025 adicionais**
 
 ---
