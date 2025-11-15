@@ -1,5 +1,7 @@
-# RELATÓRIO COMPLETO: PROJETO CASA DA FLORESTA NA COP30
+# PROJETO CASA DA FLORESTA NA COP30
 ## Sustentabilidade, Arquitetura Biodegradável e Protocolos de Tratamento de Bambu
+
+[![DOI](https://zenodo.org/badge/993477628.svg)](https://doi.org/10.5281/zenodo.17225867) [![Licença: CC BY 4.0](https://img.shields.io/badge/Licen%C3%A7a-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![🇧🇷 PT](https://img.shields.io/badge/🇧🇷-Português-green)](./Casa_Floresta_COP30.md) [![🇺🇸 EN](https://img.shields.io/badge/🇺🇸-English-blue)](./Casa_Floresta_COP30.md) ![Status](https://img.shields.io/badge/status-Pesquisa%20Ativa-green)
 
 ---
 
@@ -649,6 +651,6 @@ ZHANG, J.; XU, J.; WU, Y.; XIE, T.; BO, L.; LI, Z. Life cycle assessment of stee
 
 **Documento preparado em: 15 de novembro de 2025**
 
-**Atualização: Relatório final consolidando pesquisa de campo, documentação oficial COP30 e publicações científicas de 2025**
+**Atualização: Relatório final a ser consolidado, consolidando pesquisa de campo, documentação oficial COP30 e publicações científicas de 2025**
 
 ---
