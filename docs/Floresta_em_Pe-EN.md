@@ -6,7 +6,7 @@
 # **Analytical and Critical Report of the COP30 Panel: Challenges for Maintaining the Standing Forest**
 
 [![DOI](https://zenodo.org/badge/993477628.svg)](https://doi.org/10.5281/zenodo.17225867)
- [![Licença: CC BY 4.0](https://img.shields.io/badge/Licen%C3%A7a-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![🇧🇷 PT](https://img.shields.io/badge/🇧🇷-Português-green)](./Floresta_em-Pe.md) [![🇺🇸 EN](https://img.shields.io/badge/🇺🇸-English-blue)](./Floresta_em_Pe-EN.md) ![Status](https://img.shields.io/badge/status-Pesquisa%20Ativa-green)
+ [![Licença: CC BY 4.0](https://img.shields.io/badge/Licen%C3%A7a-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![🇧🇷 PT](https://img.shields.io/badge/🇧🇷-Português-green)](./Floresta_em_Pe.md) [![🇺🇸 EN](https://img.shields.io/badge/🇺🇸-English-blue)](./Floresta_em_Pe-EN.md) ![Status](https://img.shields.io/badge/status-Pesquisa%20Ativa-green)
 
 Event: Panel "Challenges for Maintaining the Standing Forest" (Parallel Event of the 30th Conference of the Parties to the United Nations Framework Convention on Climate Change – COP30)  
 Date: November 15, 2025  
