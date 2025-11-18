@@ -1,0 +1,1555 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://resck.github.io/Takwara-Tech/COP30_analise_critica/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Relatório em Áudio - Tecnologia Takwara</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/style.css">
+    
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
+      <link rel="stylesheet" href="../assets/css/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#relatorio-em-audio" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Tecnologia Takwara" class="md-header__button md-logo" aria-label="Tecnologia Takwara" data-md-component="logo">
+      
+  <img src="../assets/images/takwara_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tecnologia Takwara
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Relatório em Áudio
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="indigo"  aria-label="Mudar para o modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para o modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="indigo"  aria-label="Mudar para o modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para o modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Resck/Takwara-Tech" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Resck/Takwara-Tech
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <ul class="md-nav__list" data-md-scrollfix>
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../decreto-presidencial/" class="md-nav__link">
+      Decreto Presidencial
+    </a>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../bem-vindo/" class="md-nav__link">
+      Bem Vind@!
+    </a>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../Ultimato-Clim%C3%A1tico/" class="md-nav__link">
+      ULTIMATO CLIMÁTICO
+    </a>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../bambu_toxico/" class="md-nav__link">
+      O Bambu Tóxico
+    </a>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../a-rota-do-bambu/" class="md-nav__link">
+      A Rota do Bambu
+    </a>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../maloca-concreto/" class="md-nav__link">
+      A Maloca de Concreto
+    </a>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../athis-concreto-bambu/" class="md-nav__link">
+      ATHIS-Colonialismo e Resistência
+    </a>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../arquitetura-resistencia/" class="md-nav__link">
+      A Vanguarda da Arquitetura Circular
+    </a>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../ha-solucao/" class="md-nav__link">
+      Bio-Revolução Verde e Amarela
+    </a>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../Arando-Rolls-Royce/" class="md-nav__link">
+      O Mapa da Mina
+    </a>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../bambu-urgente/" class="md-nav__link">
+      Bambu Urgente!!!
+    </a>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../reforma-agraria/" class="md-nav__link">
+      Reforma Agrária
+    </a>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../o-pl-da-devastacao/" class="md-nav__link">
+      O PL da Devastação
+    </a>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../A6.%20COP30/a6.3%20Col%C3%B4mbia%20X%20Brasil/" class="md-nav__link">
+      Colômbia X Brasil
+    </a>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../O%20Tecnofeudalismo%20no%20Brasil/" class="md-nav__link">
+      O Tecnofeudalismo no Brasil
+    </a>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="cop30" >
+    <label class="md-nav__link" for="cop30">
+      COP30
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="COP30" data-md-level="">
+      <label class="md-nav__title" for="cop30">
+        <span class="md-nav__icon md-icon"></span>
+        COP30
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A6.%20COP30/a5.0%20Dossi%C3%AA%20COP30/" class="md-nav__link">
+      Dossiê COP30
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A6.%20COP30/a5.2%20Deficit%20Habitacional/" class="md-nav__link">
+      Deficit Habitacional
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="tecnologias " >
+    <label class="md-nav__link" for="tecnologias ">
+      Tecnologias 
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tecnologias " data-md-level="">
+      <label class="md-nav__title" for="tecnologias ">
+        <span class="md-nav__icon md-icon"></span>
+        Tecnologias 
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A1.%20Tecnologias%20/a1.2%20Forno%20Ecol%C3%B3gico/" class="md-nav__link">
+      Forno Ecológico
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A1.%20Tecnologias%20/a1.3%20Sistema%20de%20Refor%C3%A7o/" class="md-nav__link">
+      Sistema de Reforço
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A1.%20Tecnologias%20/a1.4%20Conex%C3%B5es%20Geod%C3%A9sicos/" class="md-nav__link">
+      Conexões Geodésicos
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A1.%20Tecnologias%20/a1.5%20PU%20%2B%20Bambu/" class="md-nav__link">
+      PU + Bambu
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A1.%20Tecnologias%20/a1.6%20Pain%C3%A9is%20de%20Bambu/" class="md-nav__link">
+      Painéis de Bambu
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A1.%20Tecnologias%20/a1.7%20Tijolos%20e%20Briquetes/" class="md-nav__link">
+      Tijolos e Briquetes
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A1.%20Tecnologias%20/a1.8%20Roteiro%20para%20Ensaios/" class="md-nav__link">
+      Roteiro para Ensaios
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A1.%20Tecnologias%20/a1.9%20HIS%20Tijolos%20Ecol%C3%B3gicos/" class="md-nav__link">
+      HIS Tijolos Ecológicos
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A1.%20Tecnologias%20/a1.10%20cabos-para-ferramentas/" class="md-nav__link">
+      Cabos para Ferramentas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="o bambu" >
+    <label class="md-nav__link" for="o bambu">
+      O Bambu
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="O Bambu" data-md-level="">
+      <label class="md-nav__title" for="o bambu">
+        <span class="md-nav__icon md-icon"></span>
+        O Bambu
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A2.%20%20O%20Bambu/a1.0%20O%20Papel%20do%20Bambu%20nas%20Queimadas/" class="md-nav__link">
+      O Papel do Bambu nas Queimadas
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A2.%20%20O%20Bambu/a1.1%20O%20Paradoxo%20do%20Bambu%20no%20Brasil/" class="md-nav__link">
+      O Paradoxo do Bambu no Brasil
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A2.%20%20O%20Bambu/a2.1%20Vis%C3%A3o%20Geral/" class="md-nav__link">
+      Visão Geral
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A2.%20%20O%20Bambu/a2.2%20Caracteriza%C3%A7%C3%A3o%20F%C3%ADsica/" class="md-nav__link">
+      Caracterização Física
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A2.%20%20O%20Bambu/a2.4%20Mercado%20Global/" class="md-nav__link">
+      Mercado Global
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A2.%20%20O%20Bambu/a2.5%20O%20Bambu%20na%20%C3%81sia/" class="md-nav__link">
+      O Bambu na Ásia
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A2.%20%20O%20Bambu/a2.6%20Fitorremedia%C3%A7%C3%A3o/" class="md-nav__link">
+      Fitorremediação
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A2.%20%20O%20Bambu/a2.7%20O%20carv%C3%A3o%20e%20o%20Pirolenhoso/" class="md-nav__link">
+      O carvão e o Pirolenhoso
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A2.%20%20O%20Bambu/a2.8%20O%20Tratamento%20Qu%C3%ADmico%20do%20Bambu/" class="md-nav__link">
+      O Tratamento Químico do Bambu
+    </a>
+  </li>
+
+        
+          
+          
+        
+      </ul>
+    </nav>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="personalidades" >
+    <label class="md-nav__link" for="personalidades">
+      Personalidades
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Personalidades" data-md-level="">
+      <label class="md-nav__title" for="personalidades">
+        <span class="md-nav__icon md-icon"></span>
+        Personalidades
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A2.a%20Personalidades/a2.a1%20Jayme%20Gon%C3%A7alves/" class="md-nav__link">
+      Jayme Gonçalves
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A2.a%20Personalidades/a2.a2%20Khorow%20Ghavami/" class="md-nav__link">
+      Khorow Ghavami
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A2.a%20Personalidades/a2.a3%20Ludovico%20Beraldo%20e%20Reis%20Pereira/" class="md-nav__link">
+      Ludovico Beraldo e Reis Pereira
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A2.a%20Personalidades/a2.a4%20Oscar%20Hidalgo/" class="md-nav__link">
+      Oscar Hidalgo
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A2.a%20Personalidades/a2.a5%20Simon%20Velez/" class="md-nav__link">
+      Simon Velez
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="o pu vegetal" >
+    <label class="md-nav__link" for="o pu vegetal">
+      O PU Vegetal
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="O PU Vegetal" data-md-level="">
+      <label class="md-nav__title" for="o pu vegetal">
+        <span class="md-nav__icon md-icon"></span>
+        O PU Vegetal
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A3.%20O%20PU%20Vegetal/a4.1%20A%20Imperveg%20Pol%C3%ADmeros%20Vegetais/" class="md-nav__link">
+      A Imperveg Polímeros Vegetais
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A3.%20O%20PU%20Vegetal/a4.2%20Org%C3%A2nicos%20X%20Sint%C3%A9ticos%20/" class="md-nav__link">
+      Orgânicos X Sintéticos 
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="domos geodésicos" >
+    <label class="md-nav__link" for="domos geodésicos">
+      Domos Geodésicos
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Domos Geodésicos" data-md-level="">
+      <label class="md-nav__title" for="domos geodésicos">
+        <span class="md-nav__icon md-icon"></span>
+        Domos Geodésicos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A4.%20Domos%20Geod%C3%A9sicos/a3.1%20Dados%20Estruturais/" class="md-nav__link">
+      Dados Estruturais
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A4.%20Domos%20Geod%C3%A9sicos/a3.2%20Especifica%C3%A7%C3%B5es%20Tecnicas/" class="md-nav__link">
+      Especificações Tecnicas
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A4.%20Domos%20Geod%C3%A9sicos/a3.3%20Ferramentas%20para%20Layout/" class="md-nav__link">
+      Ferramentas para Layout
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A4.%20Domos%20Geod%C3%A9sicos/a3.0Jos%C3%A9%20Luiz%20Mendes%20Ripper/" class="md-nav__link">
+      a3.0José Luiz Mendes Ripper
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="como  contribuir" >
+    <label class="md-nav__link" for="como  contribuir">
+      Como  Contribuir
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Como  Contribuir" data-md-level="">
+      <label class="md-nav__title" for="como  contribuir">
+        <span class="md-nav__icon md-icon"></span>
+        Como  Contribuir
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A7.%20Como%20%20Contribuir/a6.1%20Anais%20T%C3%A9cnicos/" class="md-nav__link">
+      Anais Técnicos
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A7.%20Como%20%20Contribuir/a6.2%20Colabora%C3%A7%C3%A3o/" class="md-nav__link">
+      Colaboração
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A7.%20Como%20%20Contribuir/a6.3%20O%20Github/" class="md-nav__link">
+      O Github
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A7.%20Como%20%20Contribuir/" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" type="checkbox" id="anais da pesquisa" >
+    <label class="md-nav__link" for="anais da pesquisa">
+      Anais da pesquisa
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Anais da pesquisa" data-md-level="">
+      <label class="md-nav__title" for="anais da pesquisa">
+        <span class="md-nav__icon md-icon"></span>
+        Anais da pesquisa
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/10%20-%20Jan%20-19%20Relato%CC%81rio%20de%20atividades%20LaPeCFaS.pdf" class="md-nav__link">
+      - Jan -19 Relatório de atividades LaPeCFaS
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/12%20-%20AGO-19%20Relatorio%20final%20%28PEAC%2060224%29Educacao%20e%20Trabalho.pdf" class="md-nav__link">
+      - AGO-19 Relatorio final (PEAC 60224)Educacao e Trabalho
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/16%20-%20JAN-20%20-%20Certificado%20de%20Compete%CC%82ncia-IFB.pdf" class="md-nav__link">
+      - JAN-20 - Certificado de Competência-IFB
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/18%20-%20JUL-20%20-%20RESPOSTA%20DA%20PRAD.pdf" class="md-nav__link">
+      - JUL-20 - RESPOSTA DA PRAD
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/19%20-%20Relat%C3%B3rio%20-PIBIT_Barreira%20Acustica%20de%20Baixo%20Custo%20-%20CEUB_2021.pdf" class="md-nav__link">
+      - Relatório -PIBIT_Barreira Acustica de Baixo Custo - CEUB_2021
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/2023%20-%20Nature-Awards-2024.pdf" class="md-nav__link">
+      - Nature-Awards-2024
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/01-%20ABR-18%20Oficina%20FUP.pdf" class="md-nav__link">
+      01- ABR-18 Oficina FUP
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/01a-%20Mai18-Relato%CC%81rio%20Curso%20de%20Capacitac%CC%A7a%CC%83o%20Ba%CC%81sica%20do%20Manuseio%20do%20Bambu%20e%20Criac%CC%A7a%CC%83o%20de%20Estruturas%20Arquiteto%CC%82nicas%20e%20Mobilia%CC%81rias.docx%20-%20Documentos%20Google.pdf" class="md-nav__link">
+      01a- Mai18-Relatório Curso de Capacitação Básica do Manuseio do Bambu e Criação de Estruturas Arquitetônicas e Mobiliárias.docx - Documentos Google
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/02-MAI-18%20SIEX-60015.pdf" class="md-nav__link">
+      02-MAI-18 SIEX-60015
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/03-%20JUL-18%20-%20PEAC%2060224.pdf" class="md-nav__link">
+      03- JUL-18 - PEAC 60224
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/04-%20JUL-18%20Relato%CC%81rio%20de%20atividades.pdf" class="md-nav__link">
+      04- JUL-18 Relatório de atividades
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/05-%20SET-18%20-%20Memorando-IBRAM.pdf" class="md-nav__link">
+      05- SET-18 - Memorando-IBRAM
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/06a-%20OUT-18%20Edital%20CFDD.pdf" class="md-nav__link">
+      06a- OUT-18 Edital CFDD
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/07-%20NOV-18%20Relato%CC%81rio%20de%20atividades.pdf" class="md-nav__link">
+      07- NOV-18 Relatório de atividades
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/08-%20NOV-18%20Projeto%20Gerac%CC%A7a%CC%83o%20de%20Autonomia%20sustenta%CC%81vel%20-%20IFB.pdf" class="md-nav__link">
+      08- NOV-18 Projeto Geração de Autonomia sustentável - IFB
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/08a-%20NOV-18%20Projeto%20Gerac%CC%A7a%CC%83o%20de%20Autonomia%20sustenta%CC%81vel%20-%20IFB.pdf" class="md-nav__link">
+      08a- NOV-18 Projeto Geração de Autonomia sustentável - IFB
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/08b-NOV2018%20-%20IFB%20Edital%20pro%CC%81%20grupos%20usina%20de%20bambu%20ANEXO%20I.pdf" class="md-nav__link">
+      08b-NOV2018 - IFB Edital pró grupos usina de bambu ANEXO I
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/09-%20DEZ-18%20-%20Ementa%20do%20curso-PEAC60224.pdf" class="md-nav__link">
+      09- DEZ-18 - Ementa do curso-PEAC60224
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/10-%20ABR-19%20Cartaz%20oficina%20IFB.pdf" class="md-nav__link">
+      10- ABR-19 Cartaz oficina IFB
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/10a-%20MAR-19%20-%20DEP%20FABIO%20FELIX.pdf" class="md-nav__link">
+      10a- MAR-19 - DEP FABIO FELIX
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/13-%20SET-19%20ARTIGO%20Relato%20Popular.pdf" class="md-nav__link">
+      13- SET-19 ARTIGO Relato Popular
+    </a>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    <a href="../A8.%20Anais%20da%20pesquisa/14-%20SET-19%20Mutira%CC%81o%20Tecnologico.pdf" class="md-nav__link">
+      14- SET-19 Mutiráo Tecnologico
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+  
+    
+    
+  <li class="md-nav__item">
+    <a href="../LICENSE/" class="md-nav__link">
+      LICENSE
+    </a>
+  </li>
+
+  
+</ul>
+
+<div class="md-nav__custom">
+  <hr>
+  <div style="padding: 0 1.2rem;">
+      
+      <h4>Conecte-se e Apoie</h4>
+      
+      <div class="donation-info">
+          <h5>Apoie (PIX):</h5>
+          <img id="pix-qrcode" src="../assets/images/pix.png" alt="QR Code PIX" style="width: 100px; display: block; margin: 0.5rem 0;">
+      </div>
+
+      <div class="donation-info">
+          <h5>Bitcoin:</h5>
+          <img id="btc-qrcode" src="../assets/images/qrcode.png" alt="QR Code BTC" style="width: 100px; display: block; margin: 0.5rem 0;">
+      </div>
+
+      <div class="license-info" style="font-size: 0.7rem; margin-top: 1rem;">
+          <p>Conteúdo sob <a href="https://creativecommons.org/licenses/by/4.0/deed.pt" target="_blank" rel="noopener">Licença CC BY 4.0</a></p>
+      </div>
+
+      <div class="contact-info" style="font-size: 0.7rem;">
+          <p>Contato:<br><a href="mailto:fabiotakwara@gmail.com" target="_blank">fabiotakwara@gmail.com</a></p>
+      </div>
+
+  </div>
+</div>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <div class="md-sidebar__scrollwrap">
+  <div class="md-sidebar__inner">
+    <div id="chatbot-container" class="takwara-chatbot">
+  <div id="chat-box" class="chat-box">
+    <div class="message bot-message">
+      Olá! Sou a assistente virtual Takwara. Como posso ajudar?
+    </div>
+  </div>
+  <form id="chat-form" class="chat-form">
+    <input 
+      type="text" 
+      id="user-input" 
+      class="user-input" 
+      placeholder="Faça uma pergunta..." 
+      autocomplete="off"
+    >
+    <button type="submit" class="submit-button" title="Enviar">Enviar</button>
+  </form>
+</div>
+    <hr>
+    <h4>Ferramentas</h4>
+<p>Conteúdo das ferramentas aparecerá aqui.</p>
+<hr>
+    <hr>
+    <div id="calculator-fixed-box">
+    <h2 id="calculator-title">Calculadora de Domos</h2>
+    <form id="calculator-form-widget">
+        <div class="form-group-widget">
+            <label for="diameter-widget">Diâmetro (m):</label>
+            <input type="number" id="diameter-input-widget" step="0.01" required>
+        </div>
+        <div class="form-group-widget">
+            <label for="base-solid-widget">Sólido Base:</label>
+            <select id="base-solid-input-widget"></select>
+        </div>
+        <div class="form-group-widget">
+            <label for="frequency-widget">Frequência/Variante:</label>
+            <select id="frequency-input-widget"></select>
+        </div>
+        <div class="form-group-widget">
+            <label for="truncation-widget">Tipo de Esfera:</label>
+            <select id="truncation-input-widget"></select>
+        </div>
+        <div class="form-group-widget">
+            <label for="pole-diameter-widget">Diâmetro das Varas (cm):</label>
+            <input type="number" id="pole-diameter-input-widget" step="0.01" value="5">
+            <small id="pole-diameter-note" style="display: none; color: gray; font-size: 0.8em; margin-top: 5px;">Se não preenchido, o cálculo de PU e Cabo de Aço será N/A ou padrão.</small>
+        </div>
+        <button type="submit" id="calculate-button">Calcular</button>
+    </form>
+    <div id="results-container-widget" style="margin-top: 1rem;">
+        <h4>resultados:</h4>
+        <div id="results-table-widget"></div>
+        <div id="material-costs-widget"></div>
+        <div id="diagram-section-widget" style="display: none; text-align: center; margin-top: 15px;">
+            <img id="dome-diagram-img" src="" alt="Diagrama da Cúpula" style="max-width: 100%; height: auto; border-radius: 8px;">
+            <button id="view-diagram-button" style="margin-top: 10px; padding: 8px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Ver Diagrama Grande</button>
+        </div>
+        <button id="download-results-button" style="margin-top: 15px; padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; display: none;">Baixar Resultados (.md)</button>
+    </div>
+    <p id="error-message-widget" style="color: red;"></p>
+    <p id="footer-notes" style="font-size: 0.8em; color: gray; margin-top: 15px; display: none;"></p>
+</div>
+
+<div id="diagram-modal" style="display: none; position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8);">
+    <span class="close-button" id="close-diagram-modal" style="position: absolute; right: 25px; top: 15px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+    <img class="modal-content" id="modal-diagram-img" style="margin: auto; display: block; width: 80%; max-width: 700px; border-radius: 8px;">
+</div>
+    <hr>
+    <div id="knowledge-graph-container">
+  <p>O Grafo de Conhecimento visualiza as conexões entre os conceitos do projeto.</p>
+  <div id="knowledge-graph" class="knowledge-graph-canvas"></div>
+</div>mk
+  </div>
+</div>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+
+<h1 id="relatorio-em-audio">Relatório em Áudio</h1>
+<p><audio controls style="width: 100%; max-width: 600px;">
+  <source src="../audio/COP30-critica-EN.m4a" type="audio/mp4">
+</audio></p>
+<h1 id="a-dupla-face-da-lideranca-climatica-brasileira-na-cop30-uma-analise-das-contradicoes-estruturais-e-vieses-politicos"><strong>A Dupla Face da Liderança Climática Brasileira na COP30 – Uma Análise das Contradições Estruturais e Vieses Políticos</strong></h1>
+<p><a href="https://doi.org/10.5281/zenodo.17225867"><img alt="DOI" src="https://zenodo.org/badge/993477628.svg" /></a>
+ <a href="https://creativecommons.org/licenses/by/4.0/"><img alt="Licença: CC BY 4.0" src="https://img.shields.io/badge/Licen%C3%A7a-CC%20BY%204.0-lightgrey.svg" /></a> <a href="./"><img alt="🇧🇷 PT" src="https://img.shields.io/badge/🇧🇷-Português-green" /></a> <a href="../COP30_analise_critica-EN/"><img alt="🇺🇸 EN" src="https://img.shields.io/badge/🇺🇸-English-blue" /></a> <img alt="Status" src="https://img.shields.io/badge/status-Pesquisa%20Ativa-green" /></p>
+<h2 id="resumo-executivo"><strong>Resumo Executivo</strong></h2>
+<p>Este relatório apresenta uma análise crítica consolidada da política climática brasileira durante a presidência da COP30 em Belém, em novembro de 2025. A análise expõe uma "dupla face" fundamental: o Brasil projeta uma imagem de liderança climática global, centrada na tese econômica da "floresta em pé", ao mesmo tempo em que essa narrativa é minada por contradições políticas e falhas estruturais de implementação.</p>
+<p><strong>A Contradição Política (Análise de Alto Nível):</strong></p>
+<p>A liderança diplomática do Brasil na COP30 é enfraquecida por duas contradições principais:</p>
+<ol>
+<li><strong>A Anfibologia dos Dados de Desmatamento:</strong> O governo utiliza seletivamente os dados anuais consolidados (PRODES 2025), que mostram "expressiva queda", como um "trunfo diplomático". Contudo, ignora os dados de alerta em tempo real (DETER) do mesmo período, que revelam um <em>aumento</em> de 8,4% nos alertas, impulsionado por incêndios florestais.  </li>
+<li><strong>O Paradoxo Fóssil:</strong> A contradição mais flagrante é a promoção ativa da expansão de combustíveis fósseis, notavelmente a licença para perfuração na Foz do Amazonas. Esta política é classificada por ONGs como uma "hipocrisia alarmante" e um "contrassenso".</li>
+</ol>
+<p><strong>A Dicotomia da Implementação (Análise de Nível de Solo):</strong></p>
+<p>Complementando essa contradição política, uma análise técnica dos projetos de "floresta em pé" revela uma profunda dicotomia entre o potencial científico e a realidade da governança:</p>
+<ol>
+<li><strong>De um lado, avanços científicos robustos:</strong> A academia brasileira demonstrou a capacidade de valorar a floresta. Isso inclui novas metodologias (UNESP/Sassari) que quantificam o carbono com mais precisão que o IPCC e novos paradigmas econômicos (UFPA/NAEA) para a "bioeconomia da sociobiodiversidade".  </li>
+<li><strong>Do outro, falhas críticas de governança:</strong> Estes avanços são minados por um caos fundiário. Denúncias graves no Pará (Breves e Portel) expõem o "neocolonialismo de carbono": empresas (como a Eco Mapuá) usam o Cadastro Ambiental Rural (CAR) autodeclaratório — um "metaverso agrário" — para vender créditos sobre territórios de comunidades tradicionais sem consulta prévia.</li>
+</ol>
+<p><strong>Síntese Conclusiva:</strong></p>
+<p>O desafio central da política climática brasileira não é a falta de ciência para valorar a floresta. O desafio é a falha estrutural do Estado em estabelecer uma governança fundiária eficaz. Esta "profunda debilidade fundiária" permite que os vieses políticos do "desenvolvimentismo nacionalista" e do "greenwashing institucional" dominem a agenda. Na ausência de regulação e controle territorial, os instrumentos de mercado (Artigo 6), promovidos pelo Brasil na "Zona Azul" da COP30, tornam-se, na prática, ferramentas de "apropriação verde" (green grabbing) e espoliação de direitos comunitários.</p>
+<hr />
+<h2 id="parte-i-o-palco-de-belem-a-narrativa-oficial-e-os-bastidores-da-cop30"><strong>Parte I: O Palco de Belém – A Narrativa Oficial e os Bastidores da COP30</strong></h2>
+<p>Em meados de novembro de 2025, a COP30 em Belém representa o ápice do esforço diplomático brasileiro para se reposicionar como protagonista climático global. A narrativa oficial foca na consolidação deste protagonismo através de uma agenda técnica e financeira ambiciosa.</p>
+<h3 id="11-o-andamento-das-negociacoes-a-busca-por-lideranca-diplomatica"><strong>1.1 O Andamento das Negociações: A Busca por Liderança Diplomática</strong></h3>
+<p>A atividade diplomática brasileira foi caracterizada por uma estratégia proativa para evitar o "travamento" das discussões, focando em financiamento climático, regulação do comércio e a "falta de ambição" das NDCs de outros países. O ponto central da narrativa foi o lançamento da "Declaração de Belém", que visa consolidar uma "agenda global de industrialização verde".</p>
+<p>Esta ênfase na "industrialização verde" enquadra a crise climática como uma oportunidade econômica para o setor privado, alinhando-se a interesses empresariais. A mensagem é clara: a descarbonização será buscada <em>através</em> dos mecanismos de mercado.</p>
+<h3 id="12-o-eixo-financeiro-o-mapa-do-caminho-baku-belem"><strong>1.2 O Eixo Financeiro: O Mapa do Caminho "Baku-Belém"</strong></h3>
+<p>A principal "entregável" financeira em negociação é a consolidação do financiamento climático. Após os resultados insuficientes da COP29 em Baku (US$ 300 bilhões/ano), Belém herdou a responsabilidade de provar a viabilidade do multilateralismo.</p>
+<p>Para gerir esta expectativa, as presidências lançaram o "Mapa do Caminho de Baku a Belém para $1.3 trilhão". Este <em>roadmap</em> funciona como um mecanismo diplomático para gerir o fracasso anterior e criar uma narrativa de progresso, mesmo que a mobilização de $1,3 trilhão ainda seja considerada "longe" de ser alcançada.</p>
+<h3 id="13-o-eixo-tecnico-o-debate-do-mercado-de-carbono-artigo-6"><strong>1.3 O Eixo Técnico: O Debate do Mercado de Carbono (Artigo 6)</strong></h3>
+<p>O eixo técnico dominante é a regulamentação dos mercados de carbono (Artigo 6). O Brasil assumiu liderança ativa, propondo a "integração mundial dos mercados de carbono". Esta forte defesa de um mercado regulado está diretamente ligada à principal vantagem comparativa do Brasil: a Amazônia. Ao liderar a regulamentação do Artigo 6, o Brasil tenta <em>criar, regular e capturar</em> o valor econômico de seu vasto sumidouro de carbono, uma política econômica clara de <em>commoditização</em> da natureza.</p>
+<hr />
+<h2 id="parte-ii-a-tese-da-floresta-em-pe-a-dupla-face-da-teoria-e-pratica"><strong>Parte II: A Tese da "Floresta em Pé" – A Dupla Face da Teoria e Prática</strong></h2>
+<p>A credibilidade diplomática do Brasil (Parte I) assenta-se na tese econômica da "floresta em pé". Esta tese argumenta que a conservação e o desenvolvimento econômico são sinérgicos. Contudo, a análise de sua implementação revela uma fratura profunda entre o potencial científico e a prática de mercado.</p>
+<h3 id="21-a-promessa-nivel-macro-a-estrategia-dos-think-tanks"><strong>2.1 A Promessa (Nível Macro): A Estratégia dos Think Tanks</strong></h3>
+<p>A nível macro, "floresta em pé" evoluiu para um modelo de negócio e bioeconomia. Esta abordagem é sustentada por um ecossistema de relatórios técnicos que procuram quantificar e monetizar o carbono amazônico.</p>
+<ul>
+<li><strong>O Valor do Carbono (Instituto Escolhas):</strong> Relatórios como o do Instituto Escolhas quantificam o potencial de créditos REDD+ em concessões florestais (5,6 milhões de créditos/ano, ou US$ 24 milhões/ano), argumentando que essa receita poderia aumentar em 43% as receitas das concessões. Este estudo subsidiou ativamente o PL nº 5.518/2020, numa cadeia de influência política deliberada para criar um novo mercado.  </li>
+<li><strong>A Governança do Carbono (ISPN e Fundo Amazônia):</strong> Relatórios como o do ISPN analisam o impacto de projetos comunitários (PPP–ECOS) financiados pelo Fundo Amazônia, demonstrando a capacidade de aliar "conservação e desenvolvimento" a nível local. O Fundo Amazônia, gerido pelo BNDES, é o principal mecanismo de REDD+ do Brasil e atrai confiança internacional, como a doação de 20 milhões de euros da UE durante a COP30.</li>
+</ul>
+<h3 id="22-a-vanguarda-cientifica-e-economica-o-potencial"><strong>2.2 A Vanguarda Científica e Econômica (O Potencial)</strong></h3>
+<p>Em paralelo à COP30, um painel na Universidade Federal do Pará (UFPA) detalhou a robusta base científica que sustenta o <em>potencial</em> da tese da "floresta em pé":</p>
+<ul>
+<li><strong>Quantificação de Carbono (UNESP/Sassari):</strong> Foi apresentada uma nova metodologia de quantificação de carbono, validada pela revista <em>Scientific Reports</em>. Esta metodologia critica os padrões do IPCC (que sugerem amostragem de 30 cm de profundidade) por subestimarem drasticamente o carbono em solos tropicais. No Acará (PA), a metodologia UNESP/CHN encontrou 211 ton/ha, contra 111 ton/ha do método IPCC — um aumento de 90%. O objetivo, segundo os pesquisadores, é ser "justo e preciso".  </li>
+<li><strong>Paradigma Econômico (UFPA/NAEA):</strong> Economistas do Núcleo de Altos Estudos Amazônicos (NAEA) apresentaram o paradigma da "bioeconomia da sociobiodiversidade". Este modelo opõe a lógica "orgânica" (gestão da diversidade, conhecimento tradicional) à lógica "mecânico-química" (homogeneização, escala industrial). Foi denunciado o risco da "açaização", onde a pressão do mercado global transforma um produto da biodiversidade em um monocultivo.  </li>
+<li><strong>Saúde do Solo (USP/ESALQ):</strong> Pesquisadores da ESALQ/USP argumentaram que a métrica correta para a agropecuária não é a "Pegada de Carbono" (apenas emissões), mas o "Balanço de Carbono" (Entradas - Saídas). A tese central é que "não há qualquer possibilidade desse balanço ser neutro ou negativo se a gente não mantiver a floresta em pé", provando a interdependência entre produção e conservação.</li>
+</ul>
+<h3 id="23-a-implementacao-fraturada-a-realidade"><strong>2.3 A Implementação Fraturada (A Realidade)</strong></h3>
+<p>O mesmo painel que apresentou o potencial científico (2.2) expôs como a implementação prática desses conceitos está sendo corrompida por falhas de governança e mercado:</p>
+<ul>
+<li><strong>O Lado Positivo (PSA Voluntário):</strong> Foi apresentado o estudo de caso "Aripuanã-Guariba" (Sul do Amazonas), uma parceria com o INCRA. Utilizando a "metodologia Unesp", o projeto de "crédito de conservação" (PSA) está financiando o que o Estado não entrega em uma área "dominada por bandidos": banheiros de alvenaria, fossas biodigestoras e poços artesianos para famílias em extrema vulnerabilidade. A conclusão é que a floresta em pé "transforma vidas".  </li>
+<li><strong>O Lado Negativo (Neocolonialismo de Carbono):</strong> Em contraste direto, o Prof. Carlos Augusto Ramos (UFPA) denunciou graves conflitos em projetos REDD+ no Pará.  </li>
+<li><strong>Caso Breves (Eco Mapuá):</strong> A empresa Eco Mapuá usou o CAR para registrar 53 mil hectares sobrepostos a duas Reservas Extrativistas (RESEX) federais, com o objetivo de "vender creches de carbono" para famílias que sequer sabiam do projeto.  </li>
+<li><strong>Caso Portel:</strong> O município possui 154% de seu território coberto por CAR. Cerca de 1 milhão de hectares de projetos de carbono estão sobrepostos a assentamentos, com contratos de 30 anos e repartição de benefícios "pífia" (fogareiros, cestas básicas).  </li>
+<li><strong>Publicação:</strong> Esta denúncia foi formalizada no artigo "Carbono e Neocolonialismo", que estima o valor desses projetos em US$ 115 milhões, caracterizando-os como "espoliação e expropriação".</li>
+</ul>
+<hr />
+<h2 id="parte-iii-evidencia-contraditoria-1-a-anfibologia-dos-dados-de-desmatamento-2024-2025"><strong>Parte III: Evidência Contraditória 1 – A Anfibologia dos Dados de Desmatamento (2024-2025)</strong></h2>
+<p>A tese da "floresta em pé", baseada em pagamentos por resultados de REDD+, depende da redução contínua do desmatamento. No entanto, os dados oficiais do INPE de 2024-2025 revelam uma contradição usada politicamente.</p>
+<h3 id="31-a-narrativa-do-sucesso-o-trunfo-diplomatico-do-prodes"><strong>3.1 A Narrativa do Sucesso: O "Trunfo Diplomático" do PRODES</strong></h3>
+<p>O governo utiliza os dados consolidados do PRODES 2025 (ago/24-jul/25) como seu principal "trunfo diplomático". Estes dados indicam uma "expressiva queda" (5.796 km²), a "terceira menor taxa da série histórica", creditada ao aumento de 26% nos embargos do IBAMA e aos R$ 3,64 bilhões do Fundo Amazônia. O PRODES, por ser a taxa oficial de "corte raso", é a métrica usada para justificar a confiança internacional.</p>
+<h3 id="32-a-narrativa-da-crise-o-aumento-nos-alertas-do-deter"><strong>3.2 A Narrativa da Crise: O Aumento nos Alertas do DETER</strong></h3>
+<p>Em contradição, os dados do DETER (alertas em tempo real) mostram uma reversão. Relatórios do próprio governo indicam que o desmatamento <em>subiu 8,4%</em> no acumulado de agosto de 2024 a junho de 2025.</p>
+<p>A explicação oficial expõe a contradição: o secretário do MMA, André Lima, explicou que o aumento foi influenciado por <strong>incêndios em florestas primárias</strong>. Os dados do DETER mostraram que, enquanto o "desmatamento com solo exposto" (corte raso) caiu 3,3%, as áreas de "desmatamento com vegetação" (fogo) <strong>cresceram 245,7%</strong>.</p>
+<p>O governo encontra-se preso numa "anfibologia": diplomaticamente, usa o dado passado (PRODES) para reivindicar sucesso; internamente, admite a crise presente (DETER) causada por incêndios, demonstrando um <em>viés de seleção de dados</em>.</p>
+<h3 id="tabela-1-a-analise-contraditoria-dos-dados-de-desmatamento-na-amazonia-2024-2025"><strong>Tabela 1: A Análise Contraditória dos Dados de Desmatamento na Amazônia (2024-2025)</strong></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica / Sistema</th>
+<th style="text-align: left;">Fonte(s)</th>
+<th style="text-align: left;">Período de Referência</th>
+<th style="text-align: left;">Resultado Reportado</th>
+<th style="text-align: left;">Análise / Viés Político</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>PRODES 2025</strong></td>
+<td style="text-align: left;">(MARIOTTI REGEN, 2025; INPE, 2025a)</td>
+<td style="text-align: left;">Anual (Ago 2024 - Jul 2025)</td>
+<td style="text-align: left;"><strong>"Expressiva Queda"</strong>. 5.796 km². Terceira menor taxa histórica.</td>
+<td style="text-align: left;"><strong>O "Trunfo Diplomático"</strong>. Usado na COP30 para provar sucesso e atrair fundos. Foca no "corte raso".</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>DETER</strong></td>
+<td style="text-align: left;">(AGÊNCIA GOV, 2025a; 2025b)</td>
+<td style="text-align: left;">Acumulado (Ago 2024 - Jun 2025)</td>
+<td style="text-align: left;"><strong>Aumento de 8,4%</strong>.</td>
+<td style="text-align: left;"><strong>A Crise Emergente.</strong> Explicado pelo governo como um aumento de 245,7% em "desmatamento com vegetação" (fogo).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ICV</strong> (Inst. Centro de Vida)</td>
+<td style="text-align: left;">(ICV, 2025)</td>
+<td style="text-align: left;">Anual (Ago 2024 - Jul 2025)</td>
+<td style="text-align: left;"><strong>90% do desmatamento foi ilegal.</strong></td>
+<td style="text-align: left;"><strong>A Falha na Governança.</strong> Independentemente da quantidade, a <em>qualidade</em> do desmatamento é majoritariamente ilegal.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="parte-iv-evidencia-contraditoria-2-o-paradoxo-fossil-do-anfitriao-amazonico"><strong>Parte IV: Evidência Contraditória 2 – O Paradoxo Fóssil do Anfitrião Amazônico</strong></h2>
+<p>Se os dados de desmatamento (Parte III) minam a <em>métrica</em> da política climática, a expansão fóssil mina sua <em>essência</em>. Esta é a contradição mais flagrante da COP30.</p>
+<h3 id="41-a-hipocrisia-alarmante-a-expansao-na-foz-do-amazonas"><strong>4.1 A "Hipocrisia Alarmante": A Expansão na Foz do Amazonas</strong></h3>
+<p>A decisão do IBAMA de conceder, sob pressão, licenças de pesquisa para a Petrobras perfurar na bacia da Foz do Amazonas é o epicentro da controvérsia.</p>
+<ul>
+<li>O <strong>Instituto Socioambiental (ISA)</strong> classifica a decisão como uma "sombra de contrassenso" que "fragiliza o discurso climático do país".  </li>
+<li>O relatório <strong>Global Oil &amp; Gas Exit List (GOGEL) 2025</strong> (Urgewald e Instituto Arayara) denuncia um "alarmante nível de hipocrisia climática". O relatório identifica a Petrobras como a 15ª maior exploradora do mundo. A exploração ameaça um sistema de recifes de coral de 9.300 km² e pode liberar 4,7 bilhões de toneladas de $\text{CO}_2$ equivalente.  </li>
+<li>A <strong>Rede de Ação Climática (RAC)</strong> denunciou a "ambivalência" do Brasil por conceder a licença às vésperas da COP30.</li>
+</ul>
+<h3 id="42-a-retorica-da-contradicao-e-a-logistica-fossil"><strong>4.2 A Retórica da Contradição e a Logística Fóssil</strong></h3>
+<p>O governo admite publicamente as "dificuldades e contradições", justificando que os lucros do petróleo seriam (supostamente) usados para financiar a transição energética. Esta lógica é um <em>greenwashing</em> institucional, pois exige a <em>expansão</em> da atividade fóssil para financiar sua redução.</p>
+<p>Esta contradição é visível na logística do evento, com delegados alojados em "navios de cruzeiro movidos a diesel". Politicamente, a COP30 bateu o recorde de <strong>1.600 lobistas da indústria de combustíveis fósseis</strong> credenciados, um número que supera o tamanho de quase todas as delegações nacionais, exceto a do Brasil.</p>
+<hr />
+<h2 id="parte-v-a-avaliacao-independente-a-falha-da-ambicao-brasileira-ndcs-e-emissoes-globais"><strong>Parte V: A Avaliação Independente – A Falha da Ambição Brasileira (NDCs e Emissões Globais)</strong></h2>
+<p>Avaliações técnicas independentes expõem a insuficiência dos compromissos climáticos do Brasil.</p>
+<h3 id="51-o-cenario-global-a-meta-de-15c-e-praticamente-inviavel"><strong>5.1 O Cenário Global: A Meta de 1.5°C é "Praticamente Inviável"</strong></h3>
+<p>O relatório <strong>Global Carbon Budget 2025</strong>, apresentado na COP30, aponta que as emissões globais de $\text{CO}_2$ fóssil deverão <em>aumentar 1,1% em 2025</em>, atingindo um recorde. A conclusão é que "provavelmente é tarde demais para $1,5^\circ\text{C}$", e que 1,7°C é o objetivo "mais plausível".</p>
+<p>Ironicamente, o relatório elogia o Brasil pela redução de emissões em 2024, um resultado impulsionado <em>apenas pela queda do desmatamento</em> (a métrica do PRODES). O Brasil é, assim, elogiado por uma <em>métrica de ontem</em> (desmatamento) enquanto acelera na <em>ação de hoje</em> (expansão fóssil) que o relatório condena.</p>
+<h3 id="52-a-critica-a-ndc-brasileira-observatorio-do-clima"><strong>5.2 A Crítica à NDC Brasileira (Observatório do Clima)</strong></h3>
+<p>O Observatório do Clima (OC), numa análise à segunda NDC brasileira (2031-2035), conclui que a ambição do país é inadequada:</p>
+<ol>
+<li><strong>Metas Não Alinhadas com 1.5°C:</strong> A meta (1,05 GtCO2e) não levaria o Brasil à neutralidade carbônica até 2050.  </li>
+<li><strong>Permissividade com o Desmatamento:</strong> A NDC "permite altos níveis de desmatamento legal", indicando que a promessa de "desmatamento zero" não será cumprida.  </li>
+<li><strong>O Silêncio Fóssil:</strong> A crítica mais severa é que o Brasil "deve uma explicação sobre seus planos de expansão de combustíveis fósseis", sobre os quais a NDC se mantém silenciosa.</li>
+</ol>
+<hr />
+<h2 id="parte-vi-relatorio-conclusivo-os-vieses-politicos-e-a-falha-estrutural"><strong>Parte VI: Relatório Conclusivo – Os Vieses Políticos e a Falha Estrutural</strong></h2>
+<p>As contradições observadas não são acidentais; são o resultado de forças políticas e falhas estruturais que disputam a agenda nacional.</p>
+<h3 id="61-vies-1-o-desenvolvimentismo-nacionalista-a-doutrina-aldo-rebelo"><strong>6.1 Viés 1: O Desenvolvimentismo Nacionalista (A Doutrina Aldo Rebelo)</strong></h3>
+<p>O motor por trás do paradoxo fóssil (Parte IV) é um viés desenvolvimentista e nacionalista que vê a agenda ambiental como uma ameaça à soberania. Figuras como Aldo Rebelo classificaram a COP30 como um "fiasco político" e acusam as ONGs de serem um "governo paralelo". Para esta facção, a exploração de petróleo na Foz do Amazonas não é um problema climático; é uma afirmação de <em>soberania</em>.</p>
+<h3 id="62-vies-2-o-greenwashing-institucional-a-retorica-de-lula-e-marina"><strong>6.2 Viés 2: O Greenwashing Institucional (A Retórica de Lula e Marina)</strong></h3>
+<p>A segunda força é o próprio governo federal, que atua como mediador entre o Viés 1 e a comunidade internacional. A estratégia é o <em>greenwashing</em> institucional:</p>
+<ul>
+<li><strong>Retórica Ambígua:</strong> Admite as "contradições" (petróleo) e lança propostas retóricas ousadas (mapa do caminho para o fim dos fósseis) que contradizem suas ações domésticas.  </li>
+<li><strong>Uso do Protesto como Virtude:</strong> O governo usa a <em>existência</em> da "Cúpula dos Povos" (o evento paralelo da sociedade civil) como prova de "avanço" democrático, mesmo que as <em>demandas</em> centrais desse protesto (o fim do petróleo na Amazônia) sejam sistematicamente ignoradas.  </li>
+<li><strong>O Trunfo Diplomático:</strong> A tese da "floresta em pé" é o principal ativo de greenwashing, focando no <em>único indicador</em> positivo (queda do desmatamento no PRODES) para desviar a atenção das falhas (fósseis, metano, NDCs fracas).</li>
+</ul>
+<h3 id="63-vies-3-a-exclusao-da-justica-climatica-e-a-falha-de-governanca"><strong>6.3 Viés 3: A Exclusão da Justiça Climática e a Falha de Governança</strong></h3>
+<p>A contradição final é a <em>exclusão</em> das pautas da sociedade civil (justiça social, direitos, demarcação) das negociações oficiais, que se focam em soluções de mercado. A COP30 são duas conferências: a "Cúpula dos Povos" nas ruas exigindo direitos, e a "Zona Azul" (oficial) dominada por técnicos e 1.600 lobistas fósseis discutindo mercados.</p>
+<p>A análise do painel da UFPA (Relatório 2) expõe que este viés não é apenas retórico; ele é <strong>estrutural e viabilizado por falhas de governança fundiária</strong>:</p>
+<ul>
+<li><strong>A Causa Raiz (A "Profunda Debilidade Fundiária"):</strong> O Brasil possui <strong>50 milhões de hectares de terras públicas federais não destinadas</strong> na Amazônia. O Prof. Richard Toziano (FAO/ONU) descreve isso como um vácuo de governança, onde o Estado não conhece seu próprio território, tornando-o alvo da grilagem.  </li>
+<li><strong>A Ferramenta (O "Metaverso Agrário"):</strong> O Prof. Carlos Ramos (UFPA) define o CAR (Cadastro Ambiental Rural) como o "Metaverso Agrário". Sendo "autodeclaratório" em meio ao caos fundiário, o CAR tornou-se um instrumento de "simulação da realidade" usado para legitimar a grilagem e os projetos de carbono fraudulentos (como os de Breves e Portel).  </li>
+<li><strong>A Consequência (O "Green Grabbing"):</strong> Este vácuo de governança (a debilidade fundiária) e a ferramenta (o CAR) permitem o "Green Grabbing" (apropriação verde). O Prof. Toziano identificou a <strong>Lei do Fiagro</strong> (Lei 14.130/2021) como uma brecha legal à Lei 5.709/1971 (que limita compra por estrangeiros), permitindo que fundos internacionais burlem o controle de soberania para especulação verde.  </li>
+<li><strong>A Estrutura Público-Privada:</strong> O acordo do Pará com a Coalizão LEAF (Nestlé, Bayer, etc.), executado pela <strong>CAAP S.A.</strong> (Companhia de Ativos Ambientais do Pará S.A., uma sociedade anônima de capital misto), foi criticado por precificar o carbono a US$ 15/tonelada. Este valor é considerado vil perto do "Custo Social do Carbono", estimado em US$ 185/tonelada (Rennert et al., 2022).</li>
+</ul>
+<p>A análise consolidada prova que a "Zona Azul" (Relatório 1) negocia mercados (Artigo 6) que, no território (Relatório 2), operam sobre um caos fundiário, ameaçando direitos e se tornando uma forma de "neocolonialismo de carbono".</p>
+<hr />
+<h2 id="vii-bibliografia-geral-consolidada-formato-abnt"><strong>VII. Bibliografia Geral Consolidada (Formato ABNT)</strong></h2>
+<p>ABC DO ABC. <strong>Fundo Amazônia: doação de 20 milhões de euros da UE</strong>. Publicado em 13 nov. 2025. Disponível em: <a href="https://abcdoabc.com.br/fundo-amazonia-doacao-20-milhoes-euros-ue/">https://abcdoabc.com.br/fundo-amazonia-doacao-20-milhoes-euros-ue/</a>. Acesso em: 17 nov. 2025.</p>
+<p>AEPET (Associação dos Engenheiros da Petrobrás). <strong>Aldo Rebelo vê riscos à soberania com a atuação das ONGs na Amazônia</strong>. Publicado em 11 nov. 2025. Disponível em: <a href="https://aepet.org.br/noticia/aldo-rebelo-ve-riscos-a-soberania-com-a-atuacao-das-ongs-na-amazonia/">https://aepet.org.br/noticia/aldo-rebelo-ve-riscos-a-soberania-com-a-atuacao-das-ongs-na-amazonia/</a>. Acesso em: 17 nov. 2025.</p>
+<p>AGÊNCIA BRASIL. <strong>Marcha pelo Clima reúne 70 mil e leva força amazônica às ruas de Belém</strong>. Publicado em 14 nov. 2025. (2025a). Disponível em: <a href="https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2025-11/marcha-pelo-clima-reune-70-mil-e-leva-forca-amazonica-ruas-de-belem">https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2025-11/marcha-pelo-clima-reune-70-mil-e-leva-forca-amazonica-ruas-de-belem</a>. Acesso em: 17 nov. 2025.</p>
+<p>AGÊNCIA BRASIL. <strong>Em 12 meses, desmatamento cai 20% no Cerrado e sobe 4% na Amazônia</strong>. Publicado em ago. 2025. (2025b). Disponível em: <a href="https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2025-08/em-12-meses-desmatamento-cai-20-no-cerrado-e-sobe-4-na-amazonia">https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2025-08/em-12-meses-desmatamento-cai-20-no-cerrado-e-sobe-4-na-amazonia</a>. Acesso em: 17 nov. 2025.</p>
+<p>AGÊNCIA GOV. <strong>Devido a incêndios, desmatamento sobe 8,4% na Amazônia de agosto de 2024 a junho de 2025; Cerrado tem queda de 22,5%</strong>. Publicado em 15 jul. 2025. (2025a). Disponível em: <a href="https://agenciagov.ebc.com.br/noticias/202507/devido-a-incendios-desmatamento-sobe-8-4-na-amazonia-de-agosto-de-2024-a-junho-de-2025-cerrado-tem-queda-de-22-5">https://agenciagov.ebc.com.br/noticias/202507/devido-a-incendios-desmatamento-sobe-8-4-na-amazonia-de-agosto-de-2024-a-junho-de-2025-cerrado-tem-queda-de-22-5</a>. Acesso em: 17 nov. 2025.</p>
+<p>AGÊNCIA GOV. <strong>Desmatamento sobe 8,4% na Amazônia de agosto de 2024 a junho de 2025; Cerrado tem queda de 22,5%</strong>. Publicado em jul. 2025. (2025b). Disponível em: <a href="https://www.gov.br/mma/pt-br/noticias/devido-a-incendios-desmatamento-sobe-8-4-na-amazonia-de-agosto-de-2024-a-junho-de-2025-cerrado-tem-queda-de-22-5">https://www.gov.br/mma/pt-br/noticias/devido-a-incendios-desmatamento-sobe-8-4-na-amazonia-de-agosto-de-2024-a-junho-de-2025-cerrado-tem-queda-de-22-5</a>. Acesso em: 17 nov. 2025.</p>
+<p>AGÊNCIA PARÁ. <strong>Pará registra a menor área de desmatamento da década e lidera resultados positivos na Amazônia Legal</strong>. Publicado em 2025. Disponível em: <a href="https://agenciapara.com.br/noticia/69503/para-registra-a-menor-area-de-desmatamento-da-decada-e-lidera-resultados-positivos-na-amazonia-legal">https://agenciapara.com.br/noticia/69503/para-registra-a-menor-area-de-desmatamento-da-decada-e-lidera-resultados-positivos-na-amazonia-legal</a>. Acesso em: 17 nov. 2025.</p>
+<p>AGÊNCIA PÚBLICA. <strong>Dicionário da COP30: entenda os dez principais termos da conferência do clima</strong>. Publicado em 10 nov. 2025. (2025a). Disponível em: <a href="https://apublica.org/2025/11/dicionario-da-cop30-entenda-os-dez-principais-termos-da-conferencia-do-clima/">https://apublica.org/2025/11/dicionario-da-cop30-entenda-os-dez-principais-termos-da-conferencia-do-clima/</a>. Acesso em: 17 nov. 2025.</p>
+<p>AGÊNCIA PÚBLICA. <strong>Lobistas de empresas de combustíveis fósseis batem recorde na COP30</strong>. Publicado em 14 nov. 2025. (2025b). Disponível em: <a href="https://envolverde.com.br/noticia/agencia-publica-lobistas-de-empresas-de-combustiveis-fosseis-batem-recorde-na-cop30">https://envolverde.com.br/noticia/agencia-publica-lobistas-de-empresas-de-combustiveis-fosseis-batem-recorde-na-cop30</a>. Acesso em: 17 nov. 2025.</p>
+<p>ALMA PRETA. <strong>COP30 começa em Belém com impasse sobre financiamento climático e fim dos combustíveis fósseis</strong>. Publicado em 2025. Disponível em: <a href="https://almapreta.com.br/sessao/cotidiano/cop30-comeca-em-belem-com-impasse-sobre-financiamento-climatico-e-fim-dos-combustiveis-fosseis/">https://almapreta.com.br/sessao/cotidiano/cop30-comeca-em-belem-com-impasse-sobre-financiamento-climatico-e-fim-dos-combustiveis-fosseis/</a>. Acesso em: 17 nov. 2025.</p>
+<p>ASSEMBLEIA LEGISLATIVA DE RORAIMA (AL-RR). <strong>Conservação e futuro: ex-ministro Aldo Rebelo defende proteção da Amazônia...</strong>. Publicado em 19 abr. 2023. Disponível em: <a href="https://al.rr.leg.br/2023/04/19/conservacao-e-futuro-ex-ministro-aldo-rebelo-defende-protecao-da-amazonia-e-participacao-dos-poderes-para-evitar-dominio-estrangeiro-de-bioma/">https://al.rr.leg.br/2023/04/19/conservacao-e-futuro-ex-ministro-aldo-rebelo-defende-protecao-da-amazonia-e-participacao-dos-poderes-para-evitar-dominio-estrangeiro-de-bioma/</a>. Acesso em: 17 nov. 2025.</p>
+<p>BNDES. <strong>Relatório de Atividades do Fundo Amazônia 2024</strong>. Rio de Janeiro: BNDES, 2024. Disponível em: <a href="https://www.bndes.gov.br/wps/portal/site/home/conhecimento/publicacoes/relatorios/relatorio-de-atividades-do-fundo-amazonia-2024/">https://www.bndes.gov.br/wps/portal/site/home/conhecimento/publicacoes/relatorios/relatorio-de-atividades-do-fundo-amazonia-2024/</a>. Acesso em: 17 nov. 2025.</p>
+<p>BNDES. <strong>Fundo Amazônia</strong>. Rio de Janeiro: BNDES,</p>
+<p>$$s.d.$$<br />
+. (2025a). Disponível em: <a href="https://www.bndes.gov.br/wps/portal/site/home/financiamento/produto/fundo-amazonia">https://www.bndes.gov.br/wps/portal/site/home/financiamento/produto/fundo-amazonia</a>. Acesso em: 17 nov. 2025.</p>
+<p>BNDES. <strong>MMA e BNDES anunciam R$ 210 milhões do Fundo Amazônia...</strong>. Brasília: BNDES/MMA,</p>
+<p>$$s.d.$$<br />
+. (2025b). Disponível em: <a href="https://www.gov.br/mma/pt-br/noticias/mma-e-bndes-anunciam-r-210-milhoes-do-fundo-amazonia-para-iniciativas-de-desenvolvimento-sustentavel">https://www.gov.br/mma/pt-br/noticias/mma-e-bndes-anunciam-r-210-milhoes-do-fundo-amazonia-para-iniciativas-de-desenvolvimento-sustentavel</a>. Acesso em: 17 nov. 2025.</p>
+<p>BRASIL DE FATO. <strong>A 'COP da implementação' e as contradições do modelo de concertação internacional na política ambiental</strong>. Publicado em 21 out. 2025. (2025a). Disponível em: <a href="https://www.brasildefato.com.br/colunista/observatorio-das-metropoles/2025/10/21/a-cop-da-implementacao-e-as-contradicoes-do-modelo-de-concertacao-internacional-na-politica-ambiental/">https://www.brasildefato.com.br/colunista/observatorio-das-metropoles/2025/10/21/a-cop-da-implementacao-e-as-contradicoes-do-modelo-de-concertacao-internacional-na-politica-ambiental/</a>. Acesso em: 17 nov. 2025.</p>
+<p>BRASIL DE FATO. <strong>Casa das ONGs reúne movimentos da Amazônia e democratiza debate climático durante COP30</strong>. Publicado em 12 nov. 2025. (2025b). Disponível em: <a href="https://www.brasildefato.com.br/2025/11/12/casa-das-ongs-reune-movimentos-da-amazonia-e-democratiza-debate-climatico-durante-cop30/">https://www.brasildefato.com.br/2025/11/12/casa-das-ongs-reune-movimentos-da-amazonia-e-democratiza-debate-climatico-durante-cop30/</a>. Acesso em: 17 nov. 2025.</p>
+<p>BRASIL. Lei nº 5.709, de 7 de outubro de 1971. Regula a Aquisição de Imóvel Rural por Estrangeiro Residente no País ou Pessoa Jurídica Estrangeira Autorizada a Funcionar no Brasil. <em>Diário Oficial da União</em>, Brasília, DF, 8 out. 1971.</p>
+<p>BRASIL. Lei nº 14.119, de 13 de janeiro de 2021. Institui a Política Nacional de Pagamento por Serviços Ambientais. <em>Diário Oficial da União</em>, Brasília, DF, 14 jan. 2021.</p>
+<p>BRASIL. Lei nº 14.130, de 29 de março de 2021. Institui os Fundos de Investimento nas Cadeias Produtivas Agroindustriais (Fiagro). <em>Diário Oficial da União</em>, Brasília, DF, 30 mar. 2021.</p>
+<p>BRASIL. Lei nº 14.790, de 29 de dezembro de 2023. Institui o Sistema Brasileiro de Comércio de Emissões de Gases de Efeito Estufa (SBCE). <em>Diário Oficial da União</em>, Brasília, DF, 30 dez. 2023.</p>
+<p>CÂMARA, Altair. <strong>COP30 inicia com definição de prioridades para próximas duas semanas</strong>. Portal B4. Publicado em 10 nov. 2025. Disponível em: <a href="https://portalb4.capital/noticia/183/cop30-inicia-com-definicao-de-prioridades-para-proximas-duas-semanas/amp">https://portalb4.capital/noticia/183/cop30-inicia-com-definicao-de-prioridades-para-proximas-duas-semanas/amp</a>. Acesso em: 17 nov. 2025.</p>
+<p>CAPITAL RESET. <strong>Azarão da COP30, saída dos fósseis ganha tração</strong>. Publicado em 2025. Disponível em: <a href="https://capitalreset.uol.com.br/clima/cop/azarao-da-cop30-saida-dos-fosseis-ganha-tracao/">https://capitalreset.uol.com.br/clima/cop/azarao-da-cop30-saida-dos-fosseis-ganha-tracao/</a>. Acesso em: 17 nov. 2025.</p>
+<p>CARBON FREE BRASIL. <strong>Artigo 6: como o Acordo de Paris redefine o mercado de carbono</strong>. Publicado em 2025. Disponível em: <a href="https://carbonfreebrasil.com/blog/artigo-6-acordo-de-paris-mercado-de-carbono/">https://carbonfreebrasil.com/blog/artigo-6-acordo-de-paris-mercado-de-carbono/</a>. Acesso em: 17 nov. 2025.</p>
+<p>CEOBS (Conflict and Environment Observatory). <strong>COP30: what to expect on conflict, climate and militarism</strong>. Publicado em 2025. Disponível em: <a href="https://ceobs.org/cop30-what-to-expect-on-conflict-climate-and-militarism/">https://ceobs.org/cop30-what-to-expect-on-conflict-climate-and-militarism/</a>. Acesso em: 17 nov. 2025.</p>
+<p>CHERUBIN, Maurício Roberto et al. (Ed.). <em>Saúde do solo em ecossistemas tropicais: a base para mitigação e adaptação às mudanças climáticas</em>. Piracicaba, SP: FEALQ, 2025. 774 p. ISBN: 9786589722892.</p>
+<p>COP30. <strong>Notícias</strong>. Belém: Governo Federal do Brasil, 2025. (2025a). Disponível em: <a href="https://cop30.br/">https://cop30.br/</a>. Acesso em: 17 nov. 2025.</p>
+<p>COP30. <strong>Boletim da manhã da COP30 – 15 de Novembro</strong>. Publicado em 15 nov. 2025. (2025b). Disponível em: <a href="https://cop30.br/pt-br/noticias-da-cop30/boletim-da-manha-da-cop30-15-de-novembro">https://cop30.br/pt-br/noticias-da-cop30/boletim-da-manha-da-cop30-15-de-novembro</a>. Acesso em: 17 nov. 2025.</p>
+<p>COP30. <strong>Brasil propõe integração mundial dos mercados de carbono na COP30</strong>. Publicado em 2025. (2025c). Disponível em: <a href="https://cop30.br/pt-br/noticias-da-cop30/brasil-propoe-integracao-mundial-dos-mercados-de-carbono-na-cop30">https://cop30.br/pt-br/noticias-da-cop30/brasil-propoe-integracao-mundial-dos-mercados-de-carbono-na-cop30</a>. Acesso em: 17 nov. 2025.</p>
+<p>COSTA, Francisco de Assis et al. <em>Bioeconomia da sociobiodiversidade no estado do Pará: Matrizes de Insumo-Produto</em>. Belém, PA: The Nature Conservancy; Banco Interamericano de Desenvolvimento, 2021.</p>
+<p>COSTA, Francisco de Assis; FERNANDES, Danilo. A bioeconomia e o desenvolvimento regional: uma abordagem baseada em biomas. <em>In</em>: NOBRE, Carlos (Org.). <em>Novas trajetórias para o desenvolvimento amazônico</em>. São Paulo: Editora Blucher, 2023. p. 24.</p>
+<p>DEFENSORIA PÚBLICA DO ESTADO DO PARÁ (DPE-PA). PA: Defensoria ajuíza cinco ações para suspender construção de projetos de crédito de carbono em Portel. <em>Associação Nacional das Defensoras e Defensores Públicos (ANADEP)</em>, Brasília, DF, 31 jul. 2023. Disponível em: <a href="https://www.anadep.org.br/wtk/pagina/materia?id=55313">https://www.anadep.org.br/wtk/pagina/materia?id=55313</a>. Acesso em: 15 nov. 2025.</p>
+<p>DIÁRIO ONLINE (DOL). <strong>COP30: sexto dia debate energia, transporte e mercados de carbono</strong>. Publicado em 15 nov. 2025. Disponível em: <a href="https://cop.dol.com.br/belem-para/cop30-sexto-dia-debate-energia-transporte-e-mercados-de-carbono/9717/">https://cop.dol.com.br/belem-para/cop30-sexto-dia-debate-energia-transporte-e-mercados-de-carbono/9717/</a>. Acesso em: 17 nov. 2025.</p>
+<p>ESTUDO propõe nova metodologia para calcular montante de carbono sequestrado por florestas tropicais. <em>Jornal da Unesp</em>, São Paulo, 4 jul. 2024. Disponível em: <a href="https://jornal.unesp.br/2024/07/04/estudo-propoe-nova-metodologia-para-calcular-montante-de-carbono-sequestrado-por-florestas-tropicais/">https://jornal.unesp.br/2024/07/04/estudo-propoe-nova-metodologia-para-calcular-montante-de-carbono-sequestrado-por-florestas-tropicais/</a>. Acesso em: 15 nov. 2025.</p>
+<p>FECOMERCIOSP. <strong>Sustentabilidade</strong>. São Paulo: FecomercioSP, 2025. Disponível em: <a href="https://www.fecomercio.com.br/cop30/materias">https://www.fecomercio.com.br/cop30/materias</a>. Acesso em: 17 nov. 2025.</p>
+<p>FLORESTA EM PÉ. <strong>Sobre Nós</strong>.: Floresta em Pé,</p>
+<p>$$s.d.$$<br />
+. Publicado em 2025. Disponível em: <a href="https://souflorestaempe.com.br/sobre-nos/">https://souflorestaempe.com.br/sobre-nos/</a>. Acesso em: 17 nov. 2025.</p>
+<p>FOLHA DE S.PAULO. <strong>Defendido por Lula, plano contra combustíveis fósseis tenta driblar resistências na COP30</strong>. Publicado em nov. 2025. (2025a). Disponível em: <a href="https://www1.folha.uol.com.br/ambiente/2025/11/defendido-por-lula-plano-contra-combustiveis-fosseis-tenta-driblar-resistencias-na-cop30.shtml">https://www1.folha.uol.com.br/ambiente/2025/11/defendido-por-lula-plano-contra-combustiveis-fosseis-tenta-driblar-resistencias-na-cop30.shtml</a>. Acesso em: 17 nov. 2025.</p>
+<p>FOLHA DE S.PAULO. <strong>Enterrada antes da COP30, meta de 1,5°C pode reviver e deve ser farol climático</strong>. Publicado em nov. 2025. (2025b). Disponível em: <a href="https://www1.folha.uol.com.br/ambiente/2025/11/enterrada-antes-da-cop30-meta-de-15c-pode-reviver-e-deve-ser-farol-climatico.shtml">https://www1.folha.uol.com.br/ambiente/2025/11/enterrada-antes-da-cop30-meta-de-15c-pode-reviver-e-deve-ser-farol-climatico.shtml</a>. Acesso em: 17 nov. 2025.</p>
+<p>FOLHA DE S.PAULO. <strong>Cúpula dos Povos se encerra com 'banquetaço' em praça de Belém</strong>. Publicado em 16 nov. 2025. (2025c). Disponível em: <a href="https://aovivo.folha.uol.com.br/ambiente/2025/11/06/6432-cop30-acompanhe-a-conferencia-do-clima-da-onu-no-brasil.shtml">https://aovivo.folha.uol.com.br/ambiente/2025/11/06/6432-cop30-acompanhe-a-conferencia-do-clima-da-onu-no-brasil.shtml</a>. Acesso em: 17 nov. 2025.</p>
+<p>FOLHA DE S.PAULO. <strong>COP30: Marcha do Clima tem críticas...</strong>. Publicado em nov. 2025. (2025d). Disponível em: <a href="https://www.poder360.com.br/cop30/cop30-marcha-do-clima-tem-criticas-a-trump-e-homenagem-a-chico-mendes/">https://www.poder360.com.br/cop30/cop30-marcha-do-clima-tem-criticas-a-trump-e-homenagem-a-chico-mendes/</a>. Acesso em: 17 nov. 2025.</p>
+<p>FOLHA DE S.PAULO. <strong>Cúpula dos Povos encerra atividades com banquetaço...</strong>. Publicado em nov. 2025. (2025e). Disponível em: <a href="https://www1.folha.uol.com.br/ambiente/2025/11/cupula-dos-povos-encerra-atividades-com-banquetaco-e-entrega-de-carta-a-presidente-da-cop30.shtml">https://www1.folha.uol.com.br/ambiente/2025/11/cupula-dos-povos-encerra-atividades-com-banquetaco-e-entrega-de-carta-a-presidente-da-cop30.shtml</a>. Acesso em: 17 nov. 2025.</p>
+<p>FOLHA DE S.PAULO. <strong>Jovens protestam pelas ruas de Belém e pedem para serem ouvidos na COP30</strong>. Publicado em nov. 2025. (2025f). Disponível em: <a href="https://www1.folha.uol.com.br/ambiente/2025/11/jovens-protestam-pelas-ruas-de-belem-e-pedem-para-serem-ouvidos-na-cop30.shtml">https://www1.folha.uol.com.br/ambiente/2025/11/jovens-protestam-pelas-ruas-de-belem-e-pedem-para-serem-ouvidos-na-cop30.shtml</a>. Acesso em: 17 nov. 2025.</p>
+<p>FOOD AND AGRICULTURE ORGANIZATION OF THE UNITED NATIONS (FAO). <em>Guia Voluntário sobre Governança Responsável da Posse da Terra, Pesca e Florestas no Contexto da Segurança Alimentar Nacional</em>. Roma: FAO, 2012.</p>
+<p>FORBES BRASIL. <strong>Negociações da COP30 estão chegando ao meio do caminho, mas acordos parecem longe</strong>. Publicado em 2025. Disponível em: <a href="https://forbes.com.br/forbesesg/2025/11/negociacoes-da-cop30-estao-chegando-ao-meio-do-caminho-mas-acordos-parecem-longe/">https://forbes.com.br/forbesesg/2025/11/negociacoes-da-cop30-estao-chegando-ao-meio-do-caminho-mas-acordos-parecem-longe/</a>. Acesso em: 17 nov. 2025.</p>
+<p>FRANCAVIGLIA, R. et al. Organic carbon pools and soil biological fertility are affected by land use intensity in Mediterranean ecosystems of Sardinia, Italy. <em>Agriculture, Ecosystems &amp; Environment</em>, v. 242, p. 70-81, 2017.</p>
+<p>FUNDO AMAZÔNIA. <strong>Governança</strong>. Brasília: Fundo Amazônia,</p>
+<p>$$s.d.$$<br />
+. Atualizado em 2023. Disponível em: <a href="https://www.fundoamazonia.gov.br/pt/fundo-amazonia/governanca/">https://www.fundoamazonia.gov.br/pt/fundo-amazonia/governanca/</a>. Acesso em: 17 nov. 2025.</p>
+<p>FUNDAÇÃO DE AMPARO À PESQUISA DO ESTADO DE SÃO PAULO (FAPESP). <em>Centro de Pesquisa de Carbono em Agricultura Tropical (CCARBON)</em>. Processo CEPID 21/10573-4. São Paulo: FAPESP,. Disponível em: <a href="https://bv.fapesp.br/pt/auxilios/112091/centro-de-pesquisa-de-carbono-em-agricultura-tropical-ccarbon/">https://bv.fapesp.br/pt/auxilios/112091/centro-de-pesquisa-de-carbono-em-agricultura-tropical-ccarbon/</a>. Acesso em: 15 nov. 2025.</p>
+<p>GANGA, Antonio et al. Soils with andic properties on alkaline basalt in Mediterranean climate: A toposequence study in the Marghine district (Sardinia, Italy). <em>Geoderma</em>, v. 430, 116316, fev. 2023. DOI: 10.1016/j.geoderma.2023.116316.</p>
+<p>GATTI, Luciana V. et al. Amazonia as a carbon source linked to deforestation and climate change. <em>Nature</em>, v. 595, n. 7867, p. 388–393, 14 jul. 2021. DOI: 10.1038/s41586-021-03629-6.</p>
+<p>ICV (Instituto Centro de Vida). <strong>Quase 90% do desmatamento na Amazônia em 2025 ocorreu sem autorização, aponta ICV</strong>. Publicado em 2025. Disponível em: <a href="https://concertacaoamazonia.com.br/en/quase-90-do-desmatamento-na-amazonia-em-2025-ocorreu-sem-autorizacao-aponta-icv/">https://concertacaoamazonia.com.br/en/quase-90-do-desmatamento-na-amazonia-em-2025-ocorreu-sem-autorizacao-aponta-icv/</a>. Acesso em: 17 nov. 2025.</p>
+<p>IMAZON (Instituto do Homem e Meio Ambiente da Amazônia). <strong>Empreender com a floresta em pé</strong>. Publicado em 30 set. 2020. Disponível em: <a href="https://imazon.org.br/imprensa/empreender-com-a-floresta-em-pe/">https://imazon.org.br/imprensa/empreender-com-a-floresta-em-pe/</a>. Acesso em: 17 nov. 2025.</p>
+<p>INPE (Instituto Nacional de Pesquisas Espaciais). <strong>Dados do PRODES apontam redução no desmatamento na Amazônia e no Cerrado brasileiros</strong>. Publicado em 03 nov. 2025. (2025a). Disponível em: <a href="https://data.inpe.br/biomasbr/dados-do-prodes-apontam-reducao-no-desmatamento-na-amazonia-e-no-cerrado-brasileiros/">https://data.inpe.br/biomasbr/dados-do-prodes-apontam-reducao-no-desmatamento-na-amazonia-e-no-cerrado-brasileiros/</a>. Acesso em: 17 nov. 2025.</p>
+<p>INPE (Instituto Nacional de Pesquisas Espaciais). <strong>DETER — Coordenação-Geral de Observação da Terra</strong>. São José dos Campos: INPE,</p>
+<p>$$s.d.$$<br />
+. (2025b). Disponível em: <a href="http://www.obt.inpe.br/OBT/assuntos/programas/amazonia/deter/deter">http://www.obt.inpe.br/OBT/assuntos/programas/amazonia/deter/deter</a>. Acesso em: 17 nov. 2025.</p>
+<p>INSTITUTO ARAYARA. <strong>ARAYARA na Mídia: Críticos de Foz do Amazonas veem contradição de Lula...</strong>. Publicado em 2025. Disponível em: <a href="https://arayara.org/arayara-na-midia-criticos-de-foz-do-amazonas-veem-contradicao-de-lula-e-usam-cop30-para-buscar-apoio-contra-petroleo/">https://arayara.org/arayara-na-midia-criticos-de-foz-do-amazonas-veem-contradicao-de-lula-e-usam-cop30-para-buscar-apoio-contra-petroleo/</a>. Acesso em: 17 nov. 2025.</p>
+<p>INSTITUTO ESCOLHAS. <strong>Créditos de carbono em concessões florestais</strong>. São Paulo: Instituto Escolhas, 2021. Disponível em: <a href="https://escolhas.org/publicacao/creditos-de-carbono-em-concessoes-florestais/">https://escolhas.org/publicacao/creditos-de-carbono-em-concessoes-florestais/</a>. Acesso em: 17 nov. 2025.</p>
+<p>INSTITUTO ESCOLHAS. <strong>Transparência</strong>.: Instituto Escolhas,</p>
+<p>$$s.d.$$<br />
+. (2025a). Disponível em: <a href="https://escolhas.org/transparencia/">https://escolhas.org/transparencia/</a>. Acesso em: 17 nov. 2025.</p>
+<p>INSTITUTO ESCOLHAS. <strong>O que faz o Instituto Escolhas?</strong></p>
+<p>$$Vídeo$$<br />
+. YouTube, 2022. (2025b). Disponível em: <a href="https://www.youtube.com/watch?v=QSdjqpCM8Lk">https://www.youtube.com/watch?v=QSdjqpCM8Lk</a>. Acesso em: 17 nov. 2025.</p>
+<p>INSTITUTO IGARAPÉ. <strong>Relatório do BID mostra o potencial da bioeconomia para reverter o desmatamento na região amazônica</strong>.: Instituto Igarapé,</p>
+<p>$$s.d.$$<br />
+. Publicado em 2025. Disponível em: <a href="https://igarape.org.br/relatorio-do-bid-mostra-o-potencial-da-bioeconomia-para-reverter-o-desmatamento-na-regiao-amazonica/">https://igarape.org.br/relatorio-do-bid-mostra-o-potencial-da-bioeconomia-para-reverter-o-desmatamento-na-regiao-amazonica/</a>. Acesso em: 17 nov. 2025.</p>
+<p>INSTITUTO PEABIRU; UNESP. <em>Casa da Floresta</em>. Acará, PA: Instituto Peabiru, 2025. Disponível em: <a href="https://casafloresta.peabiru.org.br/">https://casafloresta.peabiru.org.br/</a>. Acesso em: 15 nov. 2025.</p>
+<p>INSTITUTO SOCIOAMBIENTAL (ISA). <strong>COP 30: crise de confiança global e contradição do petróleo na Foz do Amazonas</strong>. Publicado em 06 nov. 2025. (2025a). Disponível em: <a href="https://www.socioambiental.org/noticias-socioambientais/cop-30-crise-de-confianca-global-e-contradicao-do-petroleo-na-foz-do">https://www.socioambiental.org/noticias-socioambientais/cop-30-crise-de-confianca-global-e-contradicao-do-petroleo-na-foz-do</a>. Acesso em: 17 nov. 2025.</p>
+<p>INSTITUTO SOCIOAMBIENTAL (ISA). <strong>Relatório 2024</strong>. São Paulo: ISA, 2025. (2025b). Disponível em: <a href="https://www.socioambiental.org/sites/default/files/2025-06/rel2024.pdf">https://www.socioambiental.org/sites/default/files/2025-06/rel2024.pdf</a>. Acesso em: 17 nov. 2025.</p>
+<p>INTERNATIONAL ORGANIZATION FOR STANDARDIZATION (ISO). <em>ISO 19152:2012: Geographic information — Land Administration Domain Model (LADM)</em>. Genebra: ISO, 2012.</p>
+<p>ISPN (Instituto Sociedade, População e Natureza). <strong>Quem Somos</strong>. Brasília: ISPN,</p>
+<p>$$s.d.$$<br />
+. (2025a). Disponível em: <a href="https://ispn.org.br/">https://ispn.org.br/</a>. Acesso em: 17 nov. 2025.</p>
+<p>ISPN (Instituto Sociedade, População e Natureza). <strong>Como Atuamos</strong>. Brasília: ISPN,</p>
+<p>$$s.d.$$<br />
+. (2025b). Disponível em: <a href="https://ispn.org.br/como-atuamos/">https://ispn.org.br/como-atuamos/</a>. Acesso em: 17 nov. 2025.</p>
+<p>ISPN (Instituto Sociedade, População e Natureza). <strong>Estimativa de emissões evitadas e remoções de dióxido de carbono (CO2) em projetos apoiados pelo Programa de Pequenos Projetos Ecossociais (PPP–ECOS) no Arco do Desmatamento</strong>. Brasília: ISPN,</p>
+<p>$$s.d.$$<br />
+. (2025c). Disponível em: <a href="https://www.fundoamazonia.gov.br/pt/.galleries/documentos/acervo-projetos-cartilhas-outros/ISPN-Relatorio-Carbono-PPP-ECOS-FA.pdf">https://www.fundoamazonia.gov.br/pt/.galleries/documentos/acervo-projetos-cartilhas-outros/ISPN-Relatorio-Carbono-PPP-ECOS-FA.pdf</a>. Acesso em: 17 nov. 2025.</p>
+<p>KICK BIG POLLUTERS OUT. <strong>Release: Kick Out The Suits - COP30</strong>. Publicado em 2025. Disponível em: <a href="https://kickbigpollutersout.org/Release-Kick-Out-The-Suits-COP30">https://kickbigpollutersout.org/Release-Kick-Out-The-Suits-COP30</a>. Acesso em: 17 nov. 2025.</p>
+<p>LOS ANGELES TIMES. <strong>Climate summit built on contradiction</strong>. Publicado em 17 nov. 2025. Disponível em: <a href="https://www.latimes.com/politics/story/2025-11-17/climate-summit-built-on-contradiction">https://www.latimes.com/politics/story/2025-11-17/climate-summit-built-on-contradiction</a>. Acesso em: 17 nov. 2025.</p>
+<p>MACHADO, Edivandro Ferreira; BRANDÃO, Leonaldo de Carvalho; GONÇALVES, Jakson da Silva. A Açaização da Amazônia: o caminho reverso da floresta antropogênica. <em>In</em>: SIMPÓSIO INTERNACIONAL DE CIÊNCIAS AGRÁRIAS E SOCIAIS DA AMAZÔNIA, 10., 2024, Belém. Anais</p>
+<p>$$...$$<br />
+. Belém: SIALAT, 2024.</p>
+<p>MAPBIOMAS. <strong>Desmatamento caiu em todos os biomas brasileiros em 2024</strong>. Publicado em 15 maio 2025. Disponível em: <a href="https://brasil.mapbiomas.org/2025/05/15/mapbiomas-desmatamento-caiu-em-todos-os-biomas-brasileiros-em-2024/">https://brasil.mapbiomas.org/2025/05/15/mapbiomas-desmatamento-caiu-em-todos-os-biomas-brasileiros-em-2024/</a>. Acesso em: 17 nov. 2025.</p>
+<p>MARIOTTI REGEN. <strong>INPE confirma queda no desmatamento: o que a COP30 e os novos polígonos do PRODES significam para sua fazenda?</strong>: Mariotti Regen, 2025. Disponível em: <a href="https://mariottiregen.com.br/inpe-confirma-queda-no-desmatamento-o-que-a-cop30-e-os-novos-poligonos-do-prodes-significam-para-sua-fazenda/">https://mariottiregen.com.br/inpe-confirma-queda-no-desmatamento-o-que-a-cop30-e-os-novos-poligonos-do-prodes-significam-para-sua-fazenda/</a>. Acesso em: 17 nov. 2025.</p>
+<p>MPMT (Ministério Público do Estado de Mato Grosso). <strong>Meio Ambiente em Números – Edição N° 7 – Setembro 2025</strong>. (Citando Observatório do Clima/SEEG). Cuiabá: MPMT, 2025. Disponível em: <a href="https://mpmt.mp.br/site/storage/webdisco/arquivos/2025%20MEIO%20AMBIENTE%20EM%20N%C3%9AMEROS%20-%20EDI%C3%87%C3%83O%20N_%207%20-%20SETEMBRO.pdf">https://mpmt.mp.br/site/storage/webdisco/arquivos/2025%20MEIO%20AMBIENTE%20EM%20N%C3%9AMEROS%20-%20EDI%C3%87%C3%83O%20N_%207%20-%20SETEMBRO.pdf</a>. Acesso em: 17 nov. 2025.</p>
+<p>NEXO JORNAL. <strong>Lobistas de empresas de combustíveis fósseis batem recorde na COP30</strong>. Publicado em 14 nov. 2025. Disponível em: <a href="https://www.nexojornal.com.br/externo/2025/11/14/cop30-setor-combustiveis-fosseis-participacao-lobistas">https://www.nexojornal.com.br/externo/2025/11/14/cop30-setor-combustiveis-fosseis-participacao-lobistas</a>. Acesso em: 17 nov. 2025.</p>
+<p>OBSERVATÓRIO DO CLIMA. <strong>Breve Análise da Segunda NDC do Brasil</strong>.: Observatório do Clima, nov. 2024. Disponível em: <a href="https://oc.eco.br/wp-content/uploads/2024/11/BREVE-ANALISE-DA-SEGUNDA-NDC-DO-BRASIL-1.pdf">https://oc.eco.br/wp-content/uploads/2024/11/BREVE-ANALISE-DA-SEGUNDA-NDC-DO-BRASIL-1.pdf</a>. Acesso em: 17 nov. 2025.</p>
+<p>OBSERVATÓRIO DO CLIMA. <strong>Com novo recorde de emissões em 2025, meta de 1,5º C é praticamente inviável, diz estudo</strong>. Publicado em 13 nov. 2025. (2025a). Disponível em: <a href="https://www.oc.eco.br/com-novo-recorde-de-emissoes-em-2025-meta-de-15o-c-e-praticamente-inviavel-diz-estudo/">https://www.oc.eco.br/com-novo-recorde-de-emissoes-em-2025-meta-de-15o-c-e-praticamente-inviavel-diz-estudo/</a>. Acesso em: 17 nov. 2025.</p>
+<p>OBSERVATÓRIO DO CLIMA. <strong>Notícias</strong>.: OC, 2025. (2025b). Disponível em: <a href="https://www.oc.eco.br/">https://www.oc.eco.br/</a>. Acesso em: 17 nov. 2025.</p>
+<p>OSMAN, Matthew B. et al. Global temperatures over the last 24,000 years. <em>Nature</em>, v. 599, n. 7885, p. 239–244, 10 nov. 2021. DOI: 10.1038/s41586-021-03984-4.</p>
+<p>PARÁ. Lei nº 10.258, de 11 de dezembro de 2023. Autoriza a constituição da Companhia de Ativos Ambientais e Participações do Pará S.A. (CAAPP). <em>Diário Oficial do Estado do Pará</em>, Belém, PA, 12 dez. 2023.</p>
+<p>PODER360. <strong>Aldo Rebelo chama COP30 de "fiasco político" e critica governo Lula</strong>. Publicado em 2025. (2025a). Disponível em: <a href="https://www.poder360.com.br/brasil/aldo-rebelo-chama-cop30-de-fiasco-politico-e-critica-governo-lula/">https://www.poder360.com.br/brasil/aldo-rebelo-chama-cop30-de-fiasco-politico-e-critica-governo-lula/</a>. Acesso em: 17 nov. 2025.</p>
+<p>PODER360. <strong>O que há por trás do discurso de internacionalização da Amazônia</strong>. Publicado em 2025. (2025b). Disponível em: <a href="https://www.poder360.com.br/opiniao/o-que-ha-por-tras-do-discurso-de-internacionalizacao-da-amazonia/">https://www.poder360.com.br/opiniao/o-que-ha-por-tras-do-discurso-de-internacionalizacao-da-amazonia/</a>. Acesso em: 17 nov. 2025.</p>
+<p>PONTANEGRANEWS. <strong>COP30: mercado de carbono domina debates no 6º dia</strong>. Publicado em 15 nov. 2025. Disponível em: <a href="https://pontanegranews.com.br/2025/11/15/cop30-mercado-de-carbono-domina-debates-no-6o-dia/">https://pontanegranews.com.br/2025/11/15/cop30-mercado-de-carbono-domina-debates-no-6o-dia/</a>. Acesso em: 17 nov. 2025.</p>
+<p>RAMOS, Carlos Augusto Pantoja. Metaverso agrário: a simulação da realidade como gerador de conflitos no campo. <em>Cadernos da Defensoria Pública do Estado de São Paulo</em>, São Paulo,.</p>
+<p>RAMOS, Carlos Augusto Pantoja; MIRANDA, Iná Camila Ramos Favacho de; TORRES, Maurício Gonsalves. Carbono e Neocolonialismo: o mercado voluntário e a espoliação das comunidades tradicionais de Portel/PA. <em>Revista de Estudos Interdisciplinares</em>,, v. 6, n. 5, p. 1287-1309, 2024. DOI: 10.56579/rei.v6i5.1287.</p>
+<p>RENNERT, Kevin et al. Comprehensive evidence implies a higher social cost of CO2. <em>Nature</em>, v. 610, n. 7933, p. 687–692, 27 out. 2022. DOI: 10.1038/s41586-022-05224-9.</p>
+<p>REUTERS. Pará assina acordo inédito e vende quase R$ 1 bilhão de créditos de carbono. <em>Agência Pará</em>, Belém, PA, 24 set. 2024. Disponível em: <a href="https://www.agenciapara.com.br/noticia/59887/para-assina-acordo-inedito-e-vende-quase-r-1-bilhao-de-creditos-de-carbono">https://www.agenciapara.com.br/noticia/59887/para-assina-acordo-inedito-e-vende-quase-r-1-bilhao-de-creditos-de-carbono</a>. Acesso em: 15 nov. 2025.</p>
+<p>RONDON, Daniel. Extrativistas denunciam assédio de empresa responsável por um dos maiores projetos de sequestro de carbono do Pará. <em>Conselho Nacional das Populações Extrativistas (CNS)</em>,, 24 out. 2023. Disponível em: <a href="https://cnsbrasil.org/extrativistas-denunciam-assedio-de-empresa-responsavel-por-um-dos-maiores-projetos-de-sequestro-de-carbono-do-para/">https://cnsbrasil.org/extrativistas-denunciam-assedio-de-empresa-responsavel-por-um-dos-maiores-projetos-de-sequestro-de-carbono-do-para/</a>. Acesso em: 15 nov. 2025.</p>
+<p>SBT NEWS. <strong>COP 30: 6º dia conta com debates sobre mercado de carbono e freio de super poluentes</strong>. Publicado em 15 nov. 2025. Disponível em: <a href="https://www.google.com/search?q=httpss://sbtnews.sbt.com.br/noticia/brasil/cop-30-6-dia-conta-com-debates-sobre-mercado-de-carbono-e-freio-de-super-poluentes">https://sbtnews.sbt.com.br/noticia/brasil/cop-30-6-dia-conta-com-debates-sobre-mercado-de-carbono-e-freio-de-super-poluentes</a>. Acesso em: 17 nov. 2025.</p>
+<p>SENADO FEDERAL. <strong>Notícia: Aldo Rebelo...</strong>. Publicado em 2008. Disponível em: <a href="https://www2.senado.leg.br/bdsf/bitstream/handle/id/416104/noticia.htm?sequence=1&amp;isAllowed=y">https://www2.senado.leg.br/bdsf/bitstream/handle/id/416104/noticia.htm?sequence=1\&amp;isAllowed=y</a>. Acesso em: 17 nov. 2025.</p>
+<p>SINDCT. <strong>INPE detecta queda expressiva no desmatamento na Amazônia e no Cerrado em 2025</strong>. Publicado em 2025. Disponível em: <a href="https://sindct.org.br/sindct/comunicacao/noticias-do-sindct/inpe-detecta-queda-expressiva-no-desmatamento-na-amazonia-e-no-cerrado-em-2025/">https://sindct.org.br/sindct/comunicacao/noticias-do-sindct/inpe-detecta-queda-expressiva-no-desmatamento-na-amazonia-e-no-cerrado-em-2025/</a>. Acesso em: 17 nov. 2025.</p>
+<p>SWISSINFO. <strong>COP30: ONGs denunciam 'ambivalência' do Brasil e falta de ambição e recursos</strong>. Publicado em 21 maio 2025. Disponível em: <a href="https://www.swissinfo.ch/por/cop30%3A-ongs-denunciam-%27ambival%C3%AAncia%27-do-brasil-e-falta-de-ambi%C3%A7%C3%A3o-e-recursos/90203592">https://www.swissinfo.ch/por/cop30%3A-ongs-denunciam-%27ambival%C3%AAncia%27-do-brasil-e-falta-de-ambi%C3%A7%C3%A3o-e-recursos/90203592</a>. Acesso em: 17 nov. 2025.</p>
+<p>TERRA ANALYTICS. <em>Serviços para Empresas: Gestão Territorial e Regularização Fundiária</em>.: Terra Analytics,. Disponível em: <a href="https://www.terranalytics.com.br/services/empresas">https://www.terranalytics.com.br/services/empresas</a>. Acesso em: 15 nov. 2025.</p>
+<p>THE GUARDIAN. <strong>Brazil: Amazon summit juggles climate and social priorities</strong>. Publicado em 08 nov. 2025. Disponível em: <a href="https://www.theguardian.com/environment/2025/nov/08/brazil-amazon-summit-juggles-climate-and-social-priorities">https://www.theguardian.com/environment/2025/nov/08/brazil-amazon-summit-juggles-climate-and-social-priorities</a>. Acesso em: 17 nov. 2025.</p>
+<p>THE WASHINGTON POST. <strong>Brazil's climate policy struggles with contradictions...</strong>. Publicado em 17 nov. 2025. Disponível em: <a href="https://www.washingtonpost.com/climate-environment/2025/11/17/brazil-amazon-drilling-emissions-cop30/">https://www.washingtonpost.com/climate-environment/2025/11/17/brazil-amazon-drilling-emissions-cop30/</a>. Acesso em: 17 nov. 2025.</p>
+<p>UNFCCC (Convenção-Quadro das Nações Unidas sobre Mudança do Clima). <strong>UN Climate Change Conference - Belém, November 2025</strong>. Publicado em nov. 2025. Disponível em: <a href="https://unfccc.int/cop30">https://unfccc.int/cop30</a>. Acesso em: 17 nov. 2025.</p>
+<p>URGEWALD; INSTITUTO INTERNACIONAL ARAYARA. <strong>Global Oil &amp; Gas Exit List (GOGEL) 2025</strong>. Berlin/Brasil: Urgewald/Arayara, 04 nov. 2025. Disponível em: <a href="https://gogel.org/sites/default/files/2025-11/Urgewald_PR_GOGEL-2025.pdf">https://gogel.org/sites/default/files/2025-11/Urgewald_PR_GOGEL-2025.pdf</a>. Acesso em: 17 nov. 2025.</p>
+<p>VEJA. <strong>ONGs atuam na Amazônia como um 'governo paralelo', diz Aldo Rebelo</strong>. Publicado em 13 out. 2023. Disponível em: <a href="https://veja.abril.com.br/brasil/ongs-atuam-na-amazonia-como-um-governo-paralelo-diz-aldo-rebelo/">https://veja.abril.com.br/brasil/ongs-atuam-na-amazonia-como-um-governo-paralelo-diz-aldo-rebelo/</a>. Acesso em: 17 nov. 2025.</p>
+<p>VERRA. <em>Projects Open for Public Comment: April 28, 2025</em>. Washington, DC: Verra, 28 abr. 2025. Disponível em: <a href="https://verra.org/projects-open-for-public-comment-april-28-2025/">https://verra.org/projects-open-for-public-comment-april-28-2025/</a>. Acesso em: 15 nov. 2025.</p>
+<p>VERRA. <em>Transition Process for AUDD (REDD) Projects</em>. Washington, DC: Verra,. Disponível em: <a href="https://verra.org/methodologies-main/transition-process-for-aud-redd-projects/">https://verra.org/methodologies-main/transition-process-for-aud-redd-projects/</a>. Acesso em: 15 nov. 2025.</p>
+<p>WSWS (World Socialist Web Site). <strong>O discurso otimista do governo do PT está em total contradição com a realidade</strong>. Publicado em 17 nov. 2025. Disponível em: <a href="https://www.wsws.org/pt/articles/2025/11/17/vneq-n17.html">https://www.wsws.org/pt/articles/2025/11/17/vneq-n17.html</a>. Acesso em: 17 nov. 2025.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <div class="takwara-impact-panel takwara-footer-panel">
+    <div class="takwara-panel-content">
+    
+        <div class="footer-section-simple">
+            <p>
+                Email: <a href="mailto:fabiotakwara@gmail.com" target="_blank">fabiotakwara@gmail.com</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                Conteúdo sob <a href="https://creativecommons.org/licenses/by/4.0/deed.pt" target="_blank">Licença CC BY 4.0</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <p>Leia mais sobre <a href="/license/">nos termos de licença</a>.</p>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<template id="takwara-tools-template">
+    <h4>Ferramentas</h4>
+<p>Conteúdo das ferramentas aparecerá aqui.</p>
+<hr>
+</template>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "search.suggest", "search.highlight", "navigation.sticky", "navigation.tabs.sticky", "navigation.tracking", "navigation.collapse"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+  
+      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js" defer></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+      
+        <script src="../assets/js/script.js" defer></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
+      
+        <script src="../assets/js/custom.js" defer></script>
+      
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+      
+    
+  <template id="takwara-chatbot-template">
+      <div id="chatbot-container" class="takwara-chatbot">
+  <div id="chat-box" class="chat-box">
+    <div class="message bot-message">
+      Olá! Sou a assistente virtual Takwara. Como posso ajudar?
+    </div>
+  </div>
+  <form id="chat-form" class="chat-form">
+    <input 
+      type="text" 
+      id="user-input" 
+      class="user-input" 
+      placeholder="Faça uma pergunta..." 
+      autocomplete="off"
+    >
+    <button type="submit" class="submit-button" title="Enviar">Enviar</button>
+  </form>
+</div>
+  </template>
+
+  </body>
+</html>
