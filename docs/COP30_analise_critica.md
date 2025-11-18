@@ -1,7 +1,7 @@
 # Relatório em Áudio
 
 <audio controls style="width: 100%; max-width: 600px;">
-  <source src="../audio/COP30-critica-EN.m4a" type="audio/mp4">
+  <source src="../audio/COP30-critica.m4a" type="audio/mp4">
 </audio>
 
 # **A Dupla Face da Liderança Climática Brasileira na COP30 – Uma Análise das Contradições Estruturais e Vieses Políticos**
