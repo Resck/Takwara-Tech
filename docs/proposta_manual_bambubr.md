@@ -7,7 +7,7 @@
 
 # **Manual de Gestão de Projetos de Manejo Sustentável de Bambu (BambuBR) \- Nível 4: Edição Pós-COP30**
 
-[![DOI](https://zenodo.org/badge/993477628.svg)](https://doi.org/10.5281/zenodo.17225867) [![Licença: CC BY 4.0](https://img.shields.io/badge/Licen%C3%A7a-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![🇧🇷 PT](https://img.shields.io/badge/🇧🇷-Português-green)](./manual_carbono_bambuBR.md) [![🇺🇸 EN](https://img.shields.io/badge/🇺🇸-English-blue)](./manual_carbono_bambuBR.md) ![Status](https://img.shields.io/badge/status-Pesquisa%20Ativa-green)
+[![DOI](https://zenodo.org/badge/993477628.svg)](https://doi.org/10.5281/zenodo.17225867) [![Licença: CC BY 4.0](https://img.shields.io/badge/Licen%C3%A7a-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![🇧🇷 PT](https://img.shields.io/badge/🇧🇷-Português-green)](./proposta_manual_bambubr.md) [![🇺🇸 EN](https://img.shields.io/badge/🇺🇸-English-blue)](./proposta_manual_bambubr.md) ![Status](https://img.shields.io/badge/status-Pesquisa%20Ativa-green)
 
 
 ### **Introdução: A Filosofia Nível 4 no Contexto Pós-Acordo de Belém**
